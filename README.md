@@ -10,9 +10,15 @@ The sheet called *survey* includes the different elements of the questionnaire.
 
 The sheet called *choices* includes the items used for large multiple choice questions (choice of country and of MPA).
 
-Note that running the script requires to create (or own) a large R object.
+## About the scripts
+
+Note that the scripts are only drafts and thus poorly organised so far.
+
+It is assumed that `prepare_choices.R` is run before `prepare_survey.R`.
+
+Note also that running the script `prepare_choices.R` requires to create (or own) a large R object.
 Doing so is computationally intensive and should not be attempted on a laptop.
-So better ask Alex for the data in case you need them.
+So better ask me for the data in case you need them.
 
 ## Useful links
 
