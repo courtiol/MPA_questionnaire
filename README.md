@@ -16,11 +16,15 @@ Note that the scripts are only drafts and thus poorly organised so far.
 
 It is assumed that `prepare_choices.R` is run before `prepare_survey.R`.
 
+#### Caution
+
 Note also that running the script `prepare_choices.R` requires to create (or own) a large R object.
+
 Doing so is computationally intensive and should not be attempted on a laptop.
+
 So better ask me for the data in case you need them.
 
 ## Useful links
 
-- [the admin platform](https://www.rforms.org/admin/)
 - [test run](https://test-mpa.rforms.org)
+- [admin platform](https://www.rforms.org/admin/)
