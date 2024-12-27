@@ -5,6 +5,9 @@
 ## - 2) maxType in select_or_add_one does not work with comma as documented
 ## - 3) select_one works with the number of the choices and stores it as"number". select_or_ad_one instead works with the "choicename" itself.  Not documented.
 
+library(wdpar) #contains codelist
+library(dplyr)
+
 add_element <- function(label="unnamed", name="element", class="", type="", value="", optional="", showif = "", ...) {
   data.frame(label = label,
              name = name,
@@ -28,7 +31,7 @@ convert_country_label(c("FRA", "CAN", "FRA", "ATG"))
 
 add_MPA_country <- function(countrycode) {
   add_element(label = "### Select the MPA you are responding for
-#### *info*: these are the MPAs listed in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPA, please select 'MPA not listed - NA'.
+#### *info*: these are the MPAs listed in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPA, please select 'MPA not listed'.
 #### *tip*: you can search using name, partial name, or  WDPA PID.",
               name = paste0("MPA_", countrycode, "_mc"),
               class = "cant_add_choice",
@@ -72,6 +75,8 @@ survey_unlistedMPAs <- add_element(label = "### Comments (optional)
 # Upload survey -----------------------------------------------------------
 
 survey_tbl <- bind_rows(survey_beginning, survey_MPAs, survey_unlistedMPAs)
+if (!dir.exists("cleandata")) dir.create("cleandata")
+write.csv(survey_tbl, file = "cleandata/survey.csv", row.names = FALSE)
 
 
 ## Note: the name of the google sheet must be the same as that of the survey
