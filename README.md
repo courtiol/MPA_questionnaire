@@ -11,4 +11,4 @@ They are used to setup a formr questionnaire.
 ## Useful links
 
 - [the admin platform](https://www.rforms.org/admin/)
-- [test run](https://test-mpa.rforms.org
+- [test run](https://test-mpa.rforms.org)
