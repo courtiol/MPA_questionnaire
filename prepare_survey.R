@@ -72,16 +72,19 @@ survey_unlistedMPAs <- add_element(label = "### Comments (optional)
             showif = "country != ''"
 )
 
-# Upload survey -----------------------------------------------------------
+# Save survey -----------------------------------------------------------
 
 survey_tbl <- bind_rows(survey_beginning, survey_MPAs, survey_unlistedMPAs)
 if (!dir.exists("cleandata")) dir.create("cleandata")
 write.csv(survey_tbl, file = "cleandata/survey.csv", row.names = FALSE)
 
-
+# Upload complex survey -------------------------------------------------
 ## Note: the name of the google sheet must be the same as that of the survey
-
 choices_tbl <- read.csv("cleandata/choices.csv")
-
 #googlesheets4::gs4_auth(email = "alexandre.courtiol@gmail.com")
-googlesheets4::gs4_create(name = "test_MPA", sheets = list(survey = survey_tbl, choices = choices_tbl))
+#googlesheets4::gs4_create(name = "test_MPA", sheets = list(survey = survey_tbl, choices = choices_tbl)) ## if does not exist
+
+possible_sheets <- googlesheets4::gs4_find("test_MPA")
+sheet_id <- possible_sheets[possible_sheets$name == "test_MPA", "id"][[1]]
+googlesheets4::sheet_write(survey_tbl, ss = sheet_id, sheet = "survey")
+googlesheets4::sheet_write(choices_tbl, ss = sheet_id, sheet = "choices")
