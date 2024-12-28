@@ -24,61 +24,58 @@ convert_country_label <- function(countrycode) {
   countryname <- codelist$country.name.en[match(countrycode, codelist$iso3c)]
   label <- paste0(countryname, " (", countrycode, ")")
   stringr::str_replace_all(label, "&", "+")
-}
-
-convert_country_label(c("FRA", "CAN", "FRA", "ATG"))
-
+} # convert_country_label(c("FRA", "CAN", "FRA", "ATG"))
 
 add_MPA_country <- function(countrycode) {
-  add_element(label = "### Select the MPA you are responding for
-#### *info*: these are the MPAs listed in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPA, please select 'MPA not listed'.
-#### *tip*: you can search using name, partial name, or  WDPA PID.",
+  add_element(label = "#### Select the MPA(s) you are responding for
+##### 💡 the MPAs listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find any of your MPAs, please select 'MPA not listed'.
+##### 💙 you can search using name, partial name, or WDPA PID.",
               name = paste0("MPA_", countrycode, "_mc"),
               class = "cant_add_choice",
-              type = paste0("select_or_add_one MPA_", countrycode),
+              type = paste0("select_or_add_multiple MPA_", countrycode),
               showif = paste0("country == '", convert_country_label(countrycode), "'"))
 }
 
 
-survey_beginning <- bind_rows(
-  add_element(label = "## Select your Marine Protected Area (MPA)",
-              name = "sectionA",
-              type = "note",),
-  
-  add_element(label = "### Select the type of the MPA you are responding for",
-              name = "MPA_type",
-              class = "mc_vertical",
-              type = "mc",
-              value = "1",
-              choice1 = "PA (i.e. classified as Protected Areas)",
-              choice2 = "OECM (i.e. classified as Other Effective area-based Conservation Measures)",
-              choice3 = "LMMA (i.e. classified as Locally-Managed Marine Area)",
-              choice4 = "other (please do explain in the text field 'Comments (optional)' that will appear below)"),
-  
-  add_element(label = "### Select the country (or overseas land) with the MPA you are responding for
-#### *info*: some overseas lands or islands are listed under their own name, e.g. Guadeloupe is listed under 'Guadeloupe (GLP)' and not under 'France (FRA)'.",
-              name = "country",
-              class = "cant_add_choice", 
-              type = "select_or_add_one countries")
-)
+# First page of questionnaire ---------------------------------------------
 
-survey_MPAs <- do.call("rbind", lapply(sort(na.omit(codelist$iso3c)), add_MPA_country))
+Q1 <- add_element(label = "#### Select the country (or overseas land) with the MPA(s) you are responding for
+##### 💡some overseas lands or islands are listed under their own name, e.g. Guadeloupe is listed under 'Guadeloupe (GLP)' and not under 'France (FRA)'.",
+                  name = "country",
+                  class = "cant_add_choice", 
+                  type = "select_or_add_one countries")
 
-survey_unlistedMPAs <- add_element(label = "### Comments (optional)
-#### If the selection above did not fully work for you, please write some information to help us understand where is the MPA you are responding for and what is its type. Otherwise, leave this field blank.",
-            name = "other_type",
-            type = "textarea",
-            optional = "*",
-            showif = "country != ''"
-)
+S1 <- add_element(label = "Let's begin",
+                  name = "S1",
+                  type = "submit")
+
+Q2 <- do.call("rbind", lapply(sort(na.omit(codelist$iso3c)), add_MPA_country))
+
+Q3 <- add_element(label = "#### Select the type of the MPA(s) you are responding for",
+                  name = "MPA_type",
+                  class = "mc_vertical",
+                  type = "mc_multiple",
+                  choice1 = "PA (i.e. classified as Protected Areas)",
+                  choice2 = "OECM (i.e. classified as Other Effective area-based Conservation Measures)",
+                  choice3 = "LMMA (i.e. classified as Locally-Managed Marine Area)",
+                  choice4 = "other (please do document the type in the next text field)")
+
+Q4 <- add_element(label = "#### Comments (optional)
+##### If the selections above did not fully work for you -- MPA(s) and/or type missing--, please explain where are the MPAs you are responding for and what are their type(s). Otherwise, please leave this field blank.",
+                  name = "other_type",
+                  type = "textarea",
+                  optional = "*",
+                  showif = "country != ''")
 
 # Save survey -----------------------------------------------------------
 
-survey_tbl <- bind_rows(survey_beginning, survey_MPAs, survey_unlistedMPAs)
+survey_tbl <- bind_rows(Q1, S1, Q2, Q3, Q4)
 if (!dir.exists("cleandata")) dir.create("cleandata")
 write.csv(survey_tbl, file = "cleandata/survey.csv", row.names = FALSE)
 
+
 # Upload complex survey -------------------------------------------------
+
 ## Note: the name of the google sheet must be the same as that of the survey
 choices_tbl <- read.csv("cleandata/choices.csv")
 #googlesheets4::gs4_auth(email = "alexandre.courtiol@gmail.com")
@@ -86,5 +83,8 @@ choices_tbl <- read.csv("cleandata/choices.csv")
 
 possible_sheets <- googlesheets4::gs4_find("test_MPA")
 sheet_id <- possible_sheets[possible_sheets$name == "test_MPA", "id"][[1]]
+sheet_id
+
 googlesheets4::sheet_write(survey_tbl, ss = sheet_id, sheet = "survey")
+
 googlesheets4::sheet_write(choices_tbl, ss = sheet_id, sheet = "choices")
