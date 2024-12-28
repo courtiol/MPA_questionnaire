@@ -64,13 +64,15 @@ Q3 <- add_element(label = "#### Select the type of the MPA(s) you are responding
                   name = "MPA_type",
                   class = "mc_vertical",
                   type = "mc",
+                  value = "1",
                   choice1 = "PA (i.e. classified as Protected Areas)",
                   choice2 = "OECM (i.e. classified as Other Effective area-based Conservation Measures)",
                   choice3 = "LMMA (i.e. classified as Locally-Managed Marine Area)",
-                  choice4 = "other (including mixed situations in case of several MPAs; please explain below)")
+                  choice4 = "other (including mixed situations in case of several MPAs; please explain below)",
+                  choice5 = "I don't know")
 
 Q4 <- add_element(label = "#### Comments (optional)
-##### If the selections above did not fully work for you -- MPA(s) and/or type missing, or complex situations --, please provide details here. Otherwise, please leave this field blank.",
+##### If the selections above did not fully work for you -- MPA(s) and/or type missing, or complex situations --, please provide details here. Otherwise, please leave this field blank and continue.",
                   name = "other_type",
                   type = "textarea",
                   optional = "*",
