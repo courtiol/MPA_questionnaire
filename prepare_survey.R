@@ -29,7 +29,7 @@ convert_country_label <- function(countrycode) {
 add_MPA_country <- function(countrycode) {
   add_element(label = "#### Select the MPA(s) you are responding for
 ##### 💙 you can search using name, partial name, or WDPA PID.
-##### 💡 the MPAs listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find any of your MPAs, please select 'MPA not listed'.",
+##### 💡 the MPAs listed here are those present in WDPA for the country (or overseas land) you have selected. If you cannot find any of your MPAs, please select 'MPA not listed'.",
               name = paste0("MPA_", countrycode, "_mc"),
               class = "cant_add_choice",
               type = paste0("select_or_add_multiple MPA_", countrycode),
