@@ -213,12 +213,19 @@ table(MPA_tbl_clean$replicate) # should all be 1
 MPA_tbl_clean$replicate <- NULL
 nrow(MPA_tbl_clean) # 16777 number of MPA with distinct ID (once no letter appended)
 
-MPAs <- data.frame(list_name = paste0("MPA_", MPA_tbl_clean$country_code),
-                   label = paste0(MPA_tbl_clean$name_ori, " - ", MPA_tbl_clean$id))
+data.frame(list_name = paste0("MPA_", MPA_tbl_clean$country_code),
+           label_name_ori = MPA_tbl_clean$name_ori,
+           label_name_en = MPA_tbl_clean$name_en,
+           label_id = MPA_tbl_clean$id) |>
+  mutate(label = if_else(label_name_ori == label_name_en,
+                         paste0(label_name_en, " - ", label_id),
+                         paste0(label_name_ori, " = ", label_name_en, " - ", label_id)), .by = "label_id") |> ## combine original and english names if needed (ori first, otherwise formatting problematic in arabic)
+  select(-label_name_ori, -label_name_en, -label_id) -> MPAs
+
 
 filler_noMPAs <- function(countrycode) {
   data.frame(list_name = paste0("MPA_", countrycode),
-             label = "\UFFFF. MPA not listed - NA") ## prefix with last possible unicode to be ranked last
+             label = "\UFFFF. MPA not listed") ## prefix with last possible unicode to be ranked last
 }
 
 noMPAS <- do.call("rbind", lapply(na.omit(codelist$iso3c), filler_noMPAs))
@@ -233,7 +240,7 @@ bind_rows(MPAs, noMPAS) |>
          label = stringr::str_replace_all(label, "  ", " "),
          label = stringr::str_remove_all(label, "\r"), 
          label = stringr::str_remove_all(label, "\n"),
-         label = ifelse(label == "\UFFFF. MPA not listed - NA", "MPA not listed - NA", label)) -> MPAs_all
+         label = ifelse(label == "\UFFFF. MPA not listed", "MPA not listed", label)) -> MPAs_all
 
 ## check order
 MPAs_all |>
