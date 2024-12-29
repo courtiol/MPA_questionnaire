@@ -4,6 +4,17 @@
 ##### 💙 you can search using name, partial name, or ISO code.
 ##### 💡some overseas lands or islands are listed under their own name, e.g. Guadeloupe is listed under 'Guadeloupe (GLP)' and not under 'France (FRA)'.","country","cant_add_choice","select_or_add_one countries","","","",NA,NA,NA,NA,NA
 "Let's begin","S1","","submit","","","",NA,NA,NA,NA,NA
+"<script>
+$(document).ready(function () {
+    // for Select2, one must use the 'change' event
+    $('input[name^=""MPA""]').on('change', function () {
+        var textread = $(this).val();
+        var match = [...textread.matchAll(/ - (\d+)/g)].map(match => match[1]);
+        const urls = match.map(num => `🐠 <a href='https://protectedplanet.net/${num}' target='_blank'>https://protectedplanet.net/${num}</a>`);
+        document.getElementById('textURLs').innerHTML = urls.join('<br>');
+    });
+});
+</script>","C1","","note","","","",NA,NA,NA,NA,NA
 "## Step 2: select your Marine Protected Area(s) -- MPA(s)","N2","","note","","","",NA,NA,NA,NA,NA
 "#### Select the MPA(s) you are responding for
 ##### 💙 you can search using name, partial name, or WDPA PID.
@@ -752,6 +763,9 @@
 "#### Select the MPA(s) you are responding for
 ##### 💙 you can search using name, partial name, or WDPA PID.
 ##### 💡 the MPAs listed here are those present in WDPA for the country (or overseas land) you have selected. If you cannot find any of your MPAs, please select 'MPA not listed'.","MPA_ZWE_mc","cant_add_choice","select_or_add_multiple MPA_ZWE","","","country == 'Zimbabwe (ZWE)'",NA,NA,NA,NA,NA
-"#### Select the type of the MPA(s) you are responding for","MPA_type","mc_vertical","mc","1","","","PA (i.e. classified as Protected Areas)","OECM (i.e. classified as Other Effective area-based Conservation Measures)","LMMA (i.e. classified as Locally-Managed Marine Area)","other (including mixed situations in case of several MPAs; please explain below)","I don't know"
+"##### Please inspect each selected MPAs (if any) on Protected Planet by clicking on the following links:
+##### <span id='textURLs'></span>
+##### 💡 if some are incorrect, please revise your choices above until you are satisfied.","N3","","note","","","",NA,NA,NA,NA,NA
+"#### Select the type of the MPA(s) you are responding for","typeMPA","mc_vertical","mc","1","","","PA (i.e. classified as Protected Areas)","OECM (i.e. classified as Other Effective area-based Conservation Measures)","LMMA (i.e. classified as Locally-Managed Marine Area)","other (including mixed situations in case of several MPAs; please explain below)","I don't know"
 "#### Comments (optional)
 ##### If the selections above did not fully work for you -- MPA(s) and/or type missing, or complex situations --, please provide details here. Otherwise, please leave this field blank and continue.","other_type","","textarea","","*","country != ''",NA,NA,NA,NA,NA

@@ -1,9 +1,9 @@
 ## Note: this script is used to prepare the survey sheet used in formr
 
-## Buglist to maybe report on Github (from Leonie):
+## Buglist to maybe report on Github's formr org repo (from Leonie):
 ## - 1) The list_name in the choices sheet is filled in automatically when uploaded. BUT: the showif does not work if the list_name is not given explicitly for all items of this list. The example given does work strangely.
 ## - 2) maxType in select_or_add_one does not work with comma as documented
-## - 3) select_one works with the number of the choices and stores it as"number". select_or_ad_one instead works with the "choicename" itself.  Not documented.
+## - 3) select_one works with the number of the choices and stores it as "number". select_or_add_one instead works with the "choicename" itself. Not documented.
 
 library(wdpar) #contains codelist
 library(dplyr)
@@ -54,14 +54,34 @@ S1 <- add_element(label = "Let's begin",
                   name = "S1",
                   type = "submit")
 
+C1 <- add_element(label = r"(<script>
+$(document).ready(function () {
+    // for Select2, one must use the 'change' event
+    $('input[name^="MPA"]').on('change', function () {
+        var textread = $(this).val();
+        var match = [...textread.matchAll(/ - (\d+)/g)].map(match => match[1]);
+        const urls = match.map(num => `🐠 <a href='https://protectedplanet.net/${num}' target='_blank'>https://protectedplanet.net/${num}</a>`);
+        document.getElementById('textURLs').innerHTML = urls.join('<br>');
+    });
+});
+</script>)",
+                  name = "C1",
+                  type = "note")  ## note that `r"()"` allows for triple quoting which is here needed
+
 N2 <-  add_element(label = "## Step 2: select your Marine Protected Area(s) -- MPA(s)",
                    name = "N2",
                    type = "note")
 
 Q2 <- do.call("rbind", lapply(sort(na.omit(codelist$iso3c)), add_MPA_country))
 
+N3 <- add_element(label = "##### Please inspect each selected MPAs (if any) on Protected Planet by clicking on the following links:
+##### <span id='textURLs'></span>
+##### 💡 if some are incorrect, please revise your choices above until you are satisfied.",
+                  name = "N3",
+                  type = "note")
+
 Q3 <- add_element(label = "#### Select the type of the MPA(s) you are responding for",
-                  name = "MPA_type",
+                  name = "typeMPA",
                   class = "mc_vertical",
                   type = "mc",
                   value = "1",
@@ -80,7 +100,7 @@ Q4 <- add_element(label = "#### Comments (optional)
 
 # Save survey -----------------------------------------------------------
 
-survey_tbl <- bind_rows(N1, Q1, S1, N2, Q2, Q3, Q4)
+survey_tbl <- bind_rows(N1, Q1, S1, C1, N2, Q2, N3, Q3, Q4)
 if (!dir.exists("cleandata")) dir.create("cleandata")
 write.csv(survey_tbl, file = "cleandata/survey.csv", row.names = FALSE)
 
@@ -99,4 +119,3 @@ sheet_id
 googlesheets4::sheet_write(choices_tbl, ss = sheet_id, sheet = "choices")
 
 googlesheets4::sheet_write(survey_tbl, ss = sheet_id, sheet = "survey")
-
