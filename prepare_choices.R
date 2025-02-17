@@ -225,7 +225,8 @@ data.frame(list_name = paste0("MPA_", MPA_tbl_clean$country_code),
 
 filler_noMPAs <- function(countrycode) {
   data.frame(list_name = paste0("MPA_", countrycode),
-             label = "\UFFFF. MPA not listed") ## prefix with last possible unicode to be ranked last
+             label = "\U0020. MPA not listed") ## prefix with first possible unicode to be ranked first
+             #label = "\UFFFF. MPA not listed") ## prefix with last possible unicode to be ranked last
 }
 
 noMPAS <- do.call("rbind", lapply(na.omit(codelist$iso3c), filler_noMPAs))
@@ -240,11 +241,11 @@ bind_rows(MPAs, noMPAS) |>
          label = stringr::str_replace_all(label, "  ", " "),
          label = stringr::str_remove_all(label, "\r"), 
          label = stringr::str_remove_all(label, "\n"),
-         label = ifelse(label == "\UFFFF. MPA not listed", "MPA not listed", label)) -> MPAs_all
+         label = ifelse(label == "\U0020. MPA not listed", "MPA not listed", label)) -> MPAs_all
 
 ## check order
 MPAs_all |>
-  slice(n(), .by = list_name) |>
+  slice(1, .by = list_name) |>
   filter(label != "MPA not listed") # output should be empty df
 
 ## Combine and export
