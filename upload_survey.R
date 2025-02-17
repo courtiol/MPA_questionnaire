@@ -14,7 +14,7 @@ if (shorten_for_testing) {
            (list_name == "MPA_CAN")) -> choices_tbl_short
   
   survey_tbl |> 
-    filter(type == "MPA_CAN" | !grepl(x = type, pattern = "MPA\\_")) -> survey_tbl_short
+    filter(grepl(x = type, pattern = "^(?!.*MPA_(?!CAN).*).*$|MPA_CAN", perl = TRUE)) -> survey_tbl_short
 }
 
 #googlesheets4::gs4_auth(email = "alexandre.courtiol@gmail.com")
