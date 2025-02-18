@@ -12,9 +12,11 @@ The sheet called *choices* includes the items used for large multiple choice que
 
 ## About the scripts
 
-Note that the scripts are only drafts and thus poorly organised so far.
+Run the scripts in the following order:
 
-It is assumed that `prepare_choices.R` is run before `prepare_survey.R`.
+1. `prepare_survey.R`
+2. `prepare_choices.R`
+3. `upload_survey.R`
 
 #### Caution
 
@@ -28,3 +30,4 @@ So better ask me for the data in case you need them.
 
 - [test run](https://test-mpa.rforms.org)
 - [admin platform](https://www.rforms.org/admin/)
+- [possible items in formr](https://formr.org/documentation/#available_items)
