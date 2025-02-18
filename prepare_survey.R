@@ -107,6 +107,7 @@ Q2 <- do.call("rbind", lapply(sort(na.omit(codelist$iso3c)), add_MPAs_country))
 
 C1 <- add_element(label = r"(<script>
 var hasItems = false;
+var hasNA = false;
 $(document).ready(function () {
     // for Select2, one must use the 'change' event
     $('input[name^="MPA"]').on('change', function () {
@@ -114,16 +115,21 @@ $(document).ready(function () {
         var match = [...textread.matchAll(/ - (\d+)/g)].map(match => match[1]);
         const urls = match.map(num => `🐠 <a href='https://protectedplanet.net/${num}' target='_blank'>https://protectedplanet.net/${num}</a>`);
         document.getElementById('textURLs').innerHTML = urls.join('<br>');
-        hasItems = $(this).select2('data').length > 0;
+        hasItems = $(this).select2('data').filter(item => item.text !== "MPA not listed").length > 0;
+        hasNA = $(this).select2('data').filter(item => item.text === "MPA not listed").length > 0;
     });
 });
 </script>)",
                    name = "C1",
                    type = "note")  ## note that `r"()"` allows for triple quoting which is here needed (R language)
 
+Qmissing <- add_element(label = "#### 🛟 If you do not see your MPA, please enter the name here:",
+                        name = "Qmissing",
+                        type = "text 160",
+                        showif = "hasNA //js_only")
 
-N3 <- add_element(label = "#### 🔎 Please inspect the selected MPA on Protected Planet by clicking on the following link:
-##### <span id='textURLs'></span>",
+N3 <- add_element(label = "#### 🔎 Inspect information on your MPA on Protected Planet by clicking on the link:
+##### <span id='textURLs'style='font-size:150%'></span>",
                   name = "N3",
                   showif = "hasItems //js_only",
                   type = "note")
@@ -139,31 +145,17 @@ N3 <- add_element(label = "#### 🔎 Please inspect the selected MPA on Protecte
 #                   choice4 = "other (including mixed situations in case of several MPAs; please explain below)",
 #                   choice5 = "I don't know")
 
-N_issues <- add_element(label = "### In case this ain't right 🤔",
-                        name = "N_issues",
-                        showif = "hasItems //js_only",
-                        type = "note")
-
-Q_issue1 <- add_element(label = "#### I spotted wrong information on Protected Planet about my MPA",
+Q_issue1 <- add_element(label = "#### 🚫 You spotted wrong information on Protected Planet",
                         type = "check",
                         showif = "hasItems //js_only",
                         name = "Q_issue1")
 
-Q_issue1_text <- add_element(label = "#### Please tell us what is wrong:",
+Q_issue1_text <- add_element(label = "#### 🛟 Tell us what is wrong:",
                   name = "Q_issue1_text",
                   type = "textarea",
                   optional = "*",
                   showif = "Q_issue1")
 
-Q_issue2 <- add_element(label = "#### My MPA is missing from the list",
-                        type = "check",
-                        showif = "hasItems //js_only",
-                        name = "Q_issue2")
-
-Q_issue2_text <- add_element(label = "#### Please enter the name of your MPA:",
-                             name = "other_type",
-                             type = "text 160",
-                             showif = "Q_issue2")
 
 S3 <- add_element(label = "Continue",
                   name = "S3",
@@ -346,8 +338,7 @@ S6 <- add_element(label = "Continue",
 
 survey_tbl <- bind_rows(N0, S0,
                         P1, N1, Q1, S1,
-                        P2, N2, Q2, C1, N3,
-                        N_issues, Q_issue1, Q_issue1_text, Q_issue2, Q_issue2_text, S3,
+                        P2, N2, Q2, C1, Qmissing, N3, Q_issue1, Q_issue1_text, S3,
                         P4, N4, M1, B1, B2, S4,
                         P5, N5,
                         PERS1, PERS2, PERS3, PERS4, PERS5, PERS6, S5,

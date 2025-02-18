@@ -780,6 +780,7 @@
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_ZWE_mc_multiple","cant_add_choice","select_or_add_multiple MPA_ZWE","","","country == 'Zimbabwe (ZWE)'",NA,NA,NA,NA,NA,NA,NA,NA
 "<script>
 var hasItems = false;
+var hasNA = false;
 $(document).ready(function () {
     // for Select2, one must use the 'change' event
     $('input[name^=""MPA""]').on('change', function () {
@@ -787,17 +788,16 @@ $(document).ready(function () {
         var match = [...textread.matchAll(/ - (\d+)/g)].map(match => match[1]);
         const urls = match.map(num => `🐠 <a href='https://protectedplanet.net/${num}' target='_blank'>https://protectedplanet.net/${num}</a>`);
         document.getElementById('textURLs').innerHTML = urls.join('<br>');
-        hasItems = $(this).select2('data').length > 0;
+        hasItems = $(this).select2('data').filter(item => item.text !== ""MPA not listed"").length > 0;
+        hasNA = $(this).select2('data').filter(item => item.text === ""MPA not listed"").length > 0;
     });
 });
 </script>","C1","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
-"#### 🔎 Please inspect the selected MPA on Protected Planet by clicking on the following link:
-##### <span id='textURLs'></span>","N3","","note","","","hasItems //js_only",NA,NA,NA,NA,NA,NA,NA,NA
-"### In case this ain't right 🤔","N_issues","","note","","","hasItems //js_only",NA,NA,NA,NA,NA,NA,NA,NA
-"#### I spotted wrong information on Protected Planet about my MPA","Q_issue1","","check","","","hasItems //js_only",NA,NA,NA,NA,NA,NA,NA,NA
-"#### Please tell us what is wrong:","Q_issue1_text","","textarea","","*","Q_issue1",NA,NA,NA,NA,NA,NA,NA,NA
-"#### My MPA is missing from the list","Q_issue2","","check","","","hasItems //js_only",NA,NA,NA,NA,NA,NA,NA,NA
-"#### Please enter the name of your MPA:","other_type","","text 160","","","Q_issue2",NA,NA,NA,NA,NA,NA,NA,NA
+"#### 🛟 If you do not see your MPA, please enter the name here:","Qmissing","","text 160","","","hasNA //js_only",NA,NA,NA,NA,NA,NA,NA,NA
+"#### 🔎 Inspect information on your MPA on Protected Planet by clicking on the link:
+##### <span id='textURLs'style='font-size:150%'></span>","N3","","note","","","hasItems //js_only",NA,NA,NA,NA,NA,NA,NA,NA
+"#### 🚫 You spotted wrong information on Protected Planet","Q_issue1","","check","","","hasItems //js_only",NA,NA,NA,NA,NA,NA,NA,NA
+"#### 🛟 Tell us what is wrong:","Q_issue1_text","","textarea","","*","Q_issue1",NA,NA,NA,NA,NA,NA,NA,NA
 "Continue","S3","","submit","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "# <mark style='background-color:#6495ED;color:#FFD700'> Part B: Tell us about your MPA (6 questions) </mark>","P4","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "## 1: Roles of the people who work on this MPA","N4","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
