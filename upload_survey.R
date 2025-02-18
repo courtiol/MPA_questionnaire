@@ -1,4 +1,5 @@
 # Upload complex survey -------------------------------------------------
+rm(list = ls())
 library(dplyr)
 
 ## Decide to use a short version for testing things more quickly
