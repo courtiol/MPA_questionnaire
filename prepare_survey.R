@@ -36,6 +36,36 @@ convert_label_country <- function(countrylabel) {
 
 # First page of questionnaire ---------------------------------------------
 
+N0 <-  add_element(label = "# Study for MPA managers and staff:
+# Who's working on your marine protected area?	
+
+<br>
+
+#### We invite you to participate in this Global Marine Protected Area Workforce Study!	
+	
+#### As the world moves toward protecting 30% of the ocean by 2030, Blue Nature Alliance, Marine Conservation Institute (MPAtlas), eOceans and Leibniz-IZW have partnered to help understand the MPA workforce — the individuals who actively contribute to helping Marine Protected Areas (MPAs) work.	
+	
+#### This study will help create a clear picture of the workforce behind current MPAs and give us an idea of what may be needed as the number of MPAs grows.	
+	
+### Here's how it works:	
+#### XX questions about the workforce behind your specific MPA.
+  
+#### Click [here] to learn about Data Access, Risks, Support, Funders, and more.	
+
+#### This can’t be done without you — Thank you for being part of this important study and for playing a key part in the global MPA network.	
+
+### Sincerely,	
+
+#### Beth Pike, Marine Conservation Institute	
+#### Dr. Christine Ward-Paige, eOceans, christine@eOceans.co	
+#### Dr. Alexandre Courtiol, Leibniz-IZW",
+                    name = "N0",
+                    type = "note")
+
+S0 <- add_element(label = "Let's begin",
+                  name = "S0",
+                  type = "submit")
+
 P1 <-  add_element(label = "# <mark style='background-color:#6495ED;color:#FFD700'> Part A: Let's find your MPA </mark>", #FIXME? abreviation not yet defined
                    name = "P1",
                    type = "note")
@@ -51,7 +81,7 @@ Q1 <- add_element(label = "#### Select the country (or overseas land) with the M
                   class = "cant_add_choice", 
                   type = "select_or_add_one countries")
 
-S1 <- add_element(label = "Let's begin",
+S1 <- add_element(label = "Continue",
                   name = "S1",
                   type = "submit")
 
@@ -76,6 +106,7 @@ add_MPAs_country <- function(countrycode) {
 Q2 <- do.call("rbind", lapply(sort(na.omit(codelist$iso3c)), add_MPAs_country))
 
 C1 <- add_element(label = r"(<script>
+var hasItems = false;
 $(document).ready(function () {
     // for Select2, one must use the 'change' event
     $('input[name^="MPA"]').on('change', function () {
@@ -83,15 +114,18 @@ $(document).ready(function () {
         var match = [...textread.matchAll(/ - (\d+)/g)].map(match => match[1]);
         const urls = match.map(num => `🐠 <a href='https://protectedplanet.net/${num}' target='_blank'>https://protectedplanet.net/${num}</a>`);
         document.getElementById('textURLs').innerHTML = urls.join('<br>');
+        hasItems = $(this).select2('data').length > 0;
     });
 });
 </script>)",
                    name = "C1",
-                   type = "note")  ## note that `r"()"` allows for triple quoting which is here needed
+                   type = "note")  ## note that `r"()"` allows for triple quoting which is here needed (R language)
+
 
 N3 <- add_element(label = "#### 🔎 Please inspect the selected MPA on Protected Planet by clicking on the following link:
 ##### <span id='textURLs'></span>",
                   name = "N3",
+                  showif = "hasItems //js_only",
                   type = "note")
 
 # Q3 <- add_element(label = "#### Select the type of the MPA(s) you are responding for",
@@ -107,10 +141,12 @@ N3 <- add_element(label = "#### 🔎 Please inspect the selected MPA on Protecte
 
 N_issues <- add_element(label = "### In case this ain't right 🤔",
                         name = "N_issues",
+                        showif = "hasItems //js_only",
                         type = "note")
 
 Q_issue1 <- add_element(label = "#### I spotted wrong information on Protected Planet about my MPA",
                         type = "check",
+                        showif = "hasItems //js_only",
                         name = "Q_issue1")
 
 Q_issue1_text <- add_element(label = "#### Please tell us what is wrong:",
@@ -121,6 +157,7 @@ Q_issue1_text <- add_element(label = "#### Please tell us what is wrong:",
 
 Q_issue2 <- add_element(label = "#### My MPA is missing from the list",
                         type = "check",
+                        showif = "hasItems //js_only",
                         name = "Q_issue2")
 
 Q_issue2_text <- add_element(label = "#### Please enter the name of your MPA:",
@@ -307,7 +344,8 @@ S6 <- add_element(label = "Continue",
 
 # Save survey -----------------------------------------------------------
 
-survey_tbl <- bind_rows(P1, N1, Q1, S1,
+survey_tbl <- bind_rows(N0, S0,
+                        P1, N1, Q1, S1,
                         P2, N2, Q2, C1, N3,
                         N_issues, Q_issue1, Q_issue1_text, Q_issue2, Q_issue2_text, S3,
                         P4, N4, M1, B1, B2, S4,

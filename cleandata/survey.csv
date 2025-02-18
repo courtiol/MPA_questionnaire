@@ -1,10 +1,34 @@
 "label","name","class","type","value","optional","showif","choice1","choice2","choice3","choice4","choice5","choice6","choice7","choice8"
+"# Study for MPA managers and staff:
+# Who's working on your marine protected area?	
+
+<br>
+
+#### We invite you to participate in this Global Marine Protected Area Workforce Study!	
+	
+#### As the world moves toward protecting 30% of the ocean by 2030, Blue Nature Alliance, Marine Conservation Institute (MPAtlas), eOceans and Leibniz-IZW have partnered to help understand the MPA workforce — the individuals who actively contribute to helping Marine Protected Areas (MPAs) work.	
+	
+#### This study will help create a clear picture of the workforce behind current MPAs and give us an idea of what may be needed as the number of MPAs grows.	
+	
+### Here's how it works:	
+#### XX questions about the workforce behind your specific MPA.
+  
+#### Click [here] to learn about Data Access, Risks, Support, Funders, and more.	
+
+#### This can’t be done without you — Thank you for being part of this important study and for playing a key part in the global MPA network.	
+
+### Sincerely,	
+
+#### Beth Pike, Marine Conservation Institute	
+#### Dr. Christine Ward-Paige, eOceans, christine@eOceans.co	
+#### Dr. Alexandre Courtiol, Leibniz-IZW","N0","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
+"Let's begin","S0","","submit","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "# <mark style='background-color:#6495ED;color:#FFD700'> Part A: Let's find your MPA </mark>","P1","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "## 1: Select your country","N1","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the country (or overseas land) with the MPA(s) you are responding for
 💙 You can search using name, partial name, or ISO code.
 💡 Some overseas lands or islands are listed under their own name, e.g. Guadeloupe is listed under 'Guadeloupe (GLP)' and not under 'France (FRA)'.","country","cant_add_choice","select_or_add_one countries","","","",NA,NA,NA,NA,NA,NA,NA,NA
-"Let's begin","S1","","submit","","","",NA,NA,NA,NA,NA,NA,NA,NA
+"Continue","S1","","submit","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "# <mark style='background-color:#6495ED;color:#FFD700'> Part A: Let's find your MPA </mark>","P2","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "## 2: Select your Marine Protected Area (MPA)","N2","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
@@ -755,6 +779,7 @@
 💙 You can search using name, partial name, or WDPA PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_ZWE_mc_multiple","cant_add_choice","select_or_add_multiple MPA_ZWE","","","country == 'Zimbabwe (ZWE)'",NA,NA,NA,NA,NA,NA,NA,NA
 "<script>
+var hasItems = false;
 $(document).ready(function () {
     // for Select2, one must use the 'change' event
     $('input[name^=""MPA""]').on('change', function () {
@@ -762,15 +787,16 @@ $(document).ready(function () {
         var match = [...textread.matchAll(/ - (\d+)/g)].map(match => match[1]);
         const urls = match.map(num => `🐠 <a href='https://protectedplanet.net/${num}' target='_blank'>https://protectedplanet.net/${num}</a>`);
         document.getElementById('textURLs').innerHTML = urls.join('<br>');
+        hasItems = $(this).select2('data').length > 0;
     });
 });
 </script>","C1","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "#### 🔎 Please inspect the selected MPA on Protected Planet by clicking on the following link:
-##### <span id='textURLs'></span>","N3","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
-"### In case this ain't right 🤔","N_issues","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
-"#### I spotted wrong information on Protected Planet about my MPA","Q_issue1","","check","","","",NA,NA,NA,NA,NA,NA,NA,NA
+##### <span id='textURLs'></span>","N3","","note","","","hasItems //js_only",NA,NA,NA,NA,NA,NA,NA,NA
+"### In case this ain't right 🤔","N_issues","","note","","","hasItems //js_only",NA,NA,NA,NA,NA,NA,NA,NA
+"#### I spotted wrong information on Protected Planet about my MPA","Q_issue1","","check","","","hasItems //js_only",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Please tell us what is wrong:","Q_issue1_text","","textarea","","*","Q_issue1",NA,NA,NA,NA,NA,NA,NA,NA
-"#### My MPA is missing from the list","Q_issue2","","check","","","",NA,NA,NA,NA,NA,NA,NA,NA
+"#### My MPA is missing from the list","Q_issue2","","check","","","hasItems //js_only",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Please enter the name of your MPA:","other_type","","text 160","","","Q_issue2",NA,NA,NA,NA,NA,NA,NA,NA
 "Continue","S3","","submit","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "# <mark style='background-color:#6495ED;color:#FFD700'> Part B: Tell us about your MPA (6 questions) </mark>","P4","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
