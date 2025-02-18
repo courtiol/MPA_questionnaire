@@ -3,10 +3,12 @@
 ## It is based on the overall WDPA dump, which prevents coping with downloading issues
 ## and which implies all is based on a single file, improving reproducibility.
 
+rm(list = ls())
 library(wdpar) #contains codelist
 library(dplyr)
 library(ggplot2)
 library(rnaturalearth)
+data("codelist", package = "countrycode")
 
 
 # Download full dump from WDPA --------------------------------------------
@@ -64,8 +66,9 @@ foo[foo > 1]
 
 ## example of duplicate
 
-quick_plot <- function(location, scale = "medium") {
-  example <- MPA_tbl[MPA_tbl$name_en %in% location, ]
+quick_plot <- function(location, scale = "medium", regex = FALSE) {
+  if (!regex) example <- MPA_tbl[MPA_tbl$name_en %in% location, ]
+  if (regex) example <- MPA_tbl[grep(MPA_tbl$name_en, pattern = paste(location), perl = TRUE), ]
   example <- sf::st_transform(example, "EPSG:4326")
   
   country <- ne_countries(country = unique(example$country_name), scale = scale, returnclass = "sf")
@@ -80,11 +83,8 @@ quick_plot <- function(location, scale = "medium") {
     labs(fill = "PA")
 }
 
-#location <- names(foo[foo > 1])[[4]]
-location <- "Hol Chan"
-#location <- "Mangrove"
-#location <- c("Namuncurá - Banco Burdwood I", "Namuncurá - Banco Burdwood II")
-quick_plot(location = location)
+quick_plot(location = "Baie Ternay|Port Launay", regex = TRUE, scale = "large")
+quick_plot(location = "Hol Chan", scale = "large")
 
 # Export for formr --------------------------------------------------------
 
