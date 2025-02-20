@@ -29,6 +29,28 @@
 💙 You can search using name, partial name, or ISO code.
 💡 Some overseas lands or islands are listed under their own name, e.g. Guadeloupe is listed under 'Guadeloupe (GLP)' and not under 'France (FRA)'.","country","cant_add_choice","select_or_add_one countries","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "Continue","S1","","submit","","","",NA,NA,NA,NA,NA,NA,NA,NA
+"<style>
+.alert {
+  padding: 20px;
+  background-color: #f44336;
+  color: white;
+}
+
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: black;
+}
+</style>","CSS","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "# <mark style='background-color:#6495ED;color:#FFD700'> Part A: Let's find your MPA </mark>","P2","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "## 2: Select your Marine Protected Area (MPA)","N2","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
@@ -779,7 +801,7 @@
 💙 You can search using name, partial name, or WDPA PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_ZWE_mc_multiple","cant_add_choice","select_or_add_multiple MPA_ZWE","","","country == 'Zimbabwe (ZWE)'",NA,NA,NA,NA,NA,NA,NA,NA
 "<script>
-var hasItems = false;
+var lengthItems = 0;
 var hasNA = false;
 $(document).ready(function () {
     // for Select2, one must use the 'change' event
@@ -788,16 +810,23 @@ $(document).ready(function () {
         var match = [...textread.matchAll(/ - (\d+)/g)].map(match => match[1]);
         const urls = match.map(num => `🐠 <a href='https://protectedplanet.net/${num}' target='_blank'>https://protectedplanet.net/${num}</a>`);
         document.getElementById('textURLs').innerHTML = urls.join('<br>');
-        hasItems = $(this).select2('data').filter(item => item.text !== ""MPA not listed"").length > 0;
+        lengthItems = $(this).select2('data').filter(item => item.text !== ""MPA not listed"").length;
         hasNA = $(this).select2('data').filter(item => item.text === ""MPA not listed"").length > 0;
     });
 });
 </script>","C1","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "#### 🛟 If you do not see your MPA, please enter the name here:","Qmissing","","text 160","","","hasNA //js_only",NA,NA,NA,NA,NA,NA,NA,NA
 "#### 🔎 Inspect information on your MPA on Protected Planet by clicking on the link:
-##### <span id='textURLs'style='font-size:150%'></span>","N3","","note","","","hasItems //js_only",NA,NA,NA,NA,NA,NA,NA,NA
-"#### 🚫 You spotted wrong information on Protected Planet","Q_issue1","","check","","","hasItems //js_only",NA,NA,NA,NA,NA,NA,NA,NA
+##### <span id='textURLs'style='font-size:150%'></span>","N3","","note","","","lengthItems > 0 //js_only",NA,NA,NA,NA,NA,NA,NA,NA
+"#### 🚫 You spotted wrong information on Protected Planet","Q_issue1","","check","","","lengthItems > 0 //js_only",NA,NA,NA,NA,NA,NA,NA,NA
 "#### 🛟 Tell us what is wrong:","Q_issue1_text","","textarea","","*","Q_issue1",NA,NA,NA,NA,NA,NA,NA,NA
+"
+<div class='alert'>
+<span class=""closebtn"" onclick=""this.parentElement.style.display='none';"">&times;</span> 
+<p style='font-size:150%'><strong>WARNING!</strong> you selected multiple MPAs.</p>
+<p style='font-size:150%'>💡 If you continue, the MPAs will be merged and treated as a single entity.</p>
+<p style='font-size:150%'>💙 To fill in separate surveys per MPA, select one above and follow instructions at the end of this survey.</p>
+</div>","WarnM_multiple","","note","","","lengthItems > 1 //js_only",NA,NA,NA,NA,NA,NA,NA,NA
 "Continue","S3","","submit","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "# <mark style='background-color:#6495ED;color:#FFD700'> Part B: Tell us about your MPA (6 questions) </mark>","P4","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "## 1: Roles of the people who work on this MPA","N4","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA

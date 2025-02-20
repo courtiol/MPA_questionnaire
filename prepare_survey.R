@@ -34,6 +34,35 @@ convert_label_country <- function(countrylabel) {
 } # convert_label_country(c("France (FRA)", "Canada (CAN)", "France (FRA)", "Antigua + Barbuda (ATG)"))
 
 
+
+# CSS definition ----------------------------------------------------------
+# Note that the CSS definition is only active on the page it is loaded
+
+CSS <- add_element(label = "<style>
+.alert {
+  padding: 20px;
+  background-color: #f44336;
+  color: white;
+}
+
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: black;
+}
+</style>", 
+type = "note",
+name = "CSS")
+
 # First page of questionnaire ---------------------------------------------
 
 N0 <-  add_element(label = "# Study for MPA managers and staff:
@@ -106,7 +135,7 @@ add_MPAs_country <- function(countrycode) {
 Q2 <- do.call("rbind", lapply(sort(na.omit(codelist$iso3c)), add_MPAs_country))
 
 C1 <- add_element(label = r"(<script>
-var hasItems = false;
+var lengthItems = 0;
 var hasNA = false;
 $(document).ready(function () {
     // for Select2, one must use the 'change' event
@@ -115,7 +144,7 @@ $(document).ready(function () {
         var match = [...textread.matchAll(/ - (\d+)/g)].map(match => match[1]);
         const urls = match.map(num => `🐠 <a href='https://protectedplanet.net/${num}' target='_blank'>https://protectedplanet.net/${num}</a>`);
         document.getElementById('textURLs').innerHTML = urls.join('<br>');
-        hasItems = $(this).select2('data').filter(item => item.text !== "MPA not listed").length > 0;
+        lengthItems = $(this).select2('data').filter(item => item.text !== "MPA not listed").length;
         hasNA = $(this).select2('data').filter(item => item.text === "MPA not listed").length > 0;
     });
 });
@@ -131,7 +160,7 @@ Qmissing <- add_element(label = "#### 🛟 If you do not see your MPA, please en
 N3 <- add_element(label = "#### 🔎 Inspect information on your MPA on Protected Planet by clicking on the link:
 ##### <span id='textURLs'style='font-size:150%'></span>",
                   name = "N3",
-                  showif = "hasItems //js_only",
+                  showif = "lengthItems > 0 //js_only",
                   type = "note")
 
 # Q3 <- add_element(label = "#### Select the type of the MPA(s) you are responding for",
@@ -147,7 +176,7 @@ N3 <- add_element(label = "#### 🔎 Inspect information on your MPA on Protecte
 
 Q_issue1 <- add_element(label = "#### 🚫 You spotted wrong information on Protected Planet",
                         type = "check",
-                        showif = "hasItems //js_only",
+                        showif = "lengthItems > 0 //js_only",
                         name = "Q_issue1")
 
 Q_issue1_text <- add_element(label = "#### 🛟 Tell us what is wrong:",
@@ -156,6 +185,17 @@ Q_issue1_text <- add_element(label = "#### 🛟 Tell us what is wrong:",
                   optional = "*",
                   showif = "Q_issue1")
 
+
+Warn_multiple <- add_element(label = r"(
+<div class='alert'>
+<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+<p style='font-size:200%'><strong>WARNING!</strong> you selected multiple MPAs.</p>
+<p style='font-size:150%'>💡 If you continue, the MPAs will be merged and treated as a single entity.</p>
+<p style='font-size:150%'>💙 To fill in separate surveys per MPA, select one above and follow instructions at the end of this survey.</p>
+</div>)",
+                             name = "WarnM_multiple",
+                             type = "note",
+                             showif = "lengthItems > 1 //js_only")
 
 S3 <- add_element(label = "Continue",
                   name = "S3",
@@ -338,7 +378,7 @@ S6 <- add_element(label = "Continue",
 
 survey_tbl <- bind_rows(N0, S0,
                         P1, N1, Q1, S1,
-                        P2, N2, Q2, C1, Qmissing, N3, Q_issue1, Q_issue1_text, S3,
+                        CSS, P2, N2, Q2, C1, Qmissing, N3, Q_issue1, Q_issue1_text, Warn_multiple, S3,
                         P4, N4, M1, B1, B2, S4,
                         P5, N5,
                         PERS1, PERS2, PERS3, PERS4, PERS5, PERS6, S5,
