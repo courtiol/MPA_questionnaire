@@ -357,17 +357,27 @@ FTE_other <- add_element(label = "### **Other**",
 
 total_note <- add_element(label = r"(### **TOTAL**
 <script>
-var FTE_total = 0;
-$(document).ready(function () {
-    // for Select2, one must use the 'change' event
-    $('input[name^="FTE"]').on('change', function () {
-        var textread = $(this).val();
-        FTE_total = textread.reduce((sum, num) => sum + Number(num), 0).toString();;
+$(document).ready(function() {
+  // Set the total_note field to be readonly on DOM ready
+  $('[name="total_note"]').prop('readonly', true);
+
+  // Attach a change event handler to the only form in the document
+  $('form').on('change', function() {
+    var total = 0;
+    // Select all inputs whose name begins with "FTE_"
+    $('input[name^="FTE_"]').each(function() {
+      // Convert the value to a float; if NaN (missing/empty), default to 0
+      var val = parseFloat($(this).val());
+      if (isNaN(val)) {
+        val = 0;
+      }
+      total += val;
+      total = Math.round(total * 100) / 100;
     });
+    // Update the total_note field with the computed total
+    $('[name="total_note"]').val(total);
+  }).trigger("change");
 });
-if (input) {
-  input.readOnly = true;
-}
 </script>)",
                          name = "total_note",
                          type = "text") ##FIXME compute sum and prevent modifications
