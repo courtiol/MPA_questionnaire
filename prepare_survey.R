@@ -434,7 +434,7 @@ S7 <- S1; S7$name <- "S7"
 
 P8 <- P4; P8$name <- "P8"
 
-Others_note <-  add_element(label = "## 5: Who else is nearby?",
+Others_note <-  add_element(label = "## 4: Who else is nearby?",
                             name = "Others_note",
                             type = "note")
 
@@ -479,13 +479,32 @@ Others_comment_check <- add_element(label = "Add a COMMENT",
                                     name = "Others_comment_check",
                                     type = "check")
 
-Others_comment <- add_element(label = "Tell us more, so we fully understand",
+Others_comment <- add_element(label = "💡 Tell us more, so we fully understand",
                               name = "Others_comment",
                               showif = "Others_comment_check",
                               type = "textarea")
 
 
 S8 <- S1; S8$name <- "S8"
+
+# Nineth page of questionnaire -------------------------------------------
+
+P9 <- P4; P9$name <- "P9"
+
+Anythingelse_note <-  add_element(label = "## 5: Anything else?",
+                            name = "Anythingelse_note",
+                            type = "note")
+
+Anythingelse_comment <- add_element(label = "#### Is there anything else you would like us to know about this specific MPA workforce?
+💡 Tell us more, so we fully understand",
+                                    name = "Anythingelse_comment",
+                                    type = "textarea",
+                                    optional = "*")
+
+S9 <- S1; S9$name <- "S9"
+
+# Tenth page of questionnaire -------------------------------------------
+
 
 # Save survey -----------------------------------------------------------
 
@@ -498,7 +517,8 @@ survey_tbl <- bind_rows(N0, S0,
                         P6, SUMM_note, FTE_site, FTE_stakeholder, FTE_support, FTE_scientists, FTE_leadership, FTE_other,
                         total_note, total_info, S6,
                         P7, Tech_note, Tech_choice, Block_tech1, Block_tech2, Other_tech, Other_tech_comment_check, Other_tech_comment, S7,
-                        P8, Others_note, Others_choice, Block_others1, Block_others2, Block_others3, Others, Others_comment_check, Others_comment, S8)
+                        P8, Others_note, Others_choice, Block_others1, Block_others2, Block_others3, Others, Others_comment_check, Others_comment, S8,
+                        P9, Anythingelse_note, Anythingelse_comment, S9)
 
 names_tbl <- table(survey_tbl$name)
 if (any(names_tbl > 1)) stop(paste(names(names_tbl)[names_tbl > 1], "duplicated. All name must be unique."))
