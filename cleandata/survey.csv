@@ -914,7 +914,7 @@ if (input) {
 "## 3: Technology used to help?","Tech_note","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "#### If you use technology or other aids to help your MPA workforce expand its effectiveness in THIS specific MPA, please list.
 💡 Select all that apply.","Tech_choice","mc_vertical","mc_multiple","","!","","**Satellite technologies**","**Radar technologies**","**Underwater acoustic technologies**","**Drone technologies**","**Reporting tools**: Phone, email, or app reporting for marine species, activities, incidents","**None of the above**","**I don’t know**",NA
-"The answer **None** cannot be combined with another category","Block_tech1","","block","","","(Tech_choice %contains_word% '1' | Tech_choice %contains_word% '2' | Tech_choice %contains_word% '3' | Tech_choice %contains_word% '4' | Tech_choice %contains_word% '5') && Tech_choice %contains_word% '6'",NA,NA,NA,NA,NA,NA,NA,NA
+"The answer **None of the above** cannot be combined with another category","Block_tech1","","block","","","(Tech_choice %contains_word% '1' | Tech_choice %contains_word% '2' | Tech_choice %contains_word% '3' | Tech_choice %contains_word% '4' | Tech_choice %contains_word% '5') && Tech_choice %contains_word% '6'",NA,NA,NA,NA,NA,NA,NA,NA
 "The answer **I don't know** cannot be combined with another category","Block_tech2","","block","","","(Tech_choice %contains_word% '1' | Tech_choice %contains_word% '2' | Tech_choice %contains_word% '3' | Tech_choice %contains_word% '4' | Tech_choice %contains_word% '5' | Tech_choice %contains_word% '6') && Tech_choice %contains_word% '7'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### 🦀 Add other technologies that qualify
 💙 Brand names are fine too.
@@ -923,4 +923,14 @@ if (input) {
 "Tell us more, so we fully understand","Other_tech_comment","","textarea","","","Other_tech_comment_check",NA,NA,NA,NA,NA,NA,NA,NA
 "Continue","S7","","submit","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "# <mark style='background-color:#6495ED;color:#FFD700'> Part B: Tell us about your MPA (5 questions) </mark>","P8","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
+"## 5: Who else is nearby?","Others_note","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
+"#### Who else operates seasonally or more within or nearby this specific MPA who is *not* formally responsible for working for this MPA?
+💡 Select all that apply.","Others_choice","mc_vertical","mc_multiple","","!","","**Fishers**","**Divers**","**Boat operators**","**Cultural practitioners**","**None** — no one uses this MPA","**None of the above**","**I don’t know**",NA
+"The answer **None of the above** cannot be combined with another category","Block_others1","","block","","","(Others_choice %contains_word% '1' | Others_choice %contains_word% '2' | Others_choice %contains_word% '3' | Others_choice %contains_word% '4' | Others_choice %contains_word% '5') && Others_choice %contains_word% '6'",NA,NA,NA,NA,NA,NA,NA,NA
+"The answer **I don't know** cannot be combined with another category","Block_others2","","block","","","(Others_choice %contains_word% '1' | Others_choice %contains_word% '2' | Others_choice %contains_word% '3' | Others_choice %contains_word% '4' | Others_choice %contains_word% '5' | Others_choice %contains_word% '6') && Others_choice %contains_word% '7'",NA,NA,NA,NA,NA,NA,NA,NA
+"The answer **None of the above** cannot be combined with another category","Block_others3","","block","","","(Others_choice %contains_word% '1' | Others_choice %contains_word% '2' | Others_choice %contains_word% '3' | Others_choice %contains_word% '4') && Others_choice %contains_word% '5'",NA,NA,NA,NA,NA,NA,NA,NA
+"#### 🦀 Add other operators that qualify
+💡 After typing, press enter to validate what you added.","Others","","select_or_add_multiple","","*","","I can't think of any",NA,NA,NA,NA,NA,NA,NA
+"Add a COMMENT","Others_comment_check","","check","","","",NA,NA,NA,NA,NA,NA,NA,NA
+"Tell us more, so we fully understand","Others_comment","","textarea","","","Others_comment_check",NA,NA,NA,NA,NA,NA,NA,NA
 "Continue","S8","","submit","","","",NA,NA,NA,NA,NA,NA,NA,NA

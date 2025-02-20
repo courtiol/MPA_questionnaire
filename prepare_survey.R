@@ -401,7 +401,7 @@ Tech_choice <-  add_element(label = "#### If you use technology or other aids to
                             choice7 = "**I don’t know**",
                             optional = "!")
 
-Block_tech1 <- add_element(label = "The answer **None** cannot be combined with another category",
+Block_tech1 <- add_element(label = "The answer **None of the above** cannot be combined with another category",
                            name = "Block_tech1",
                            type = "block",
                            showif = "(Tech_choice %contains_word% '1' | Tech_choice %contains_word% '2' | Tech_choice %contains_word% '3' | Tech_choice %contains_word% '4' | Tech_choice %contains_word% '5') && Tech_choice %contains_word% '6'")
@@ -434,6 +434,57 @@ S7 <- S1; S7$name <- "S7"
 
 P8 <- P4; P8$name <- "P8"
 
+Others_note <-  add_element(label = "## 5: Who else is nearby?",
+                            name = "Others_note",
+                            type = "note")
+
+Others_choice <-  add_element(label = "#### Who else operates seasonally or more within or nearby this specific MPA who is *not* formally responsible for working for this MPA?
+💡 Select all that apply.",
+                            name = "Others_choice",
+                            type = "mc_multiple",
+                            class = "mc_vertical",
+                            choice1 = "**Fishers**",
+                            choice2 = "**Divers**",
+                            choice3 = "**Boat operators**",
+                            choice4 = "**Cultural practitioners**",
+                            choice5 = "**None** — no one uses this MPA",
+                            choice6 = "**None of the above**",
+                            choice7 = "**I don’t know**",
+                            optional = "!")
+
+Block_others1 <- add_element(label = "The answer **None of the above** cannot be combined with another category",
+                             name = "Block_others1",
+                             type = "block",
+                             showif = "(Others_choice %contains_word% '1' | Others_choice %contains_word% '2' | Others_choice %contains_word% '3' | Others_choice %contains_word% '4' | Others_choice %contains_word% '5') && Others_choice %contains_word% '6'")
+
+Block_others2 <- add_element(label = "The answer **I don't know** cannot be combined with another category",
+                             name = "Block_others2",
+                             type = "block",
+                             showif = "(Others_choice %contains_word% '1' | Others_choice %contains_word% '2' | Others_choice %contains_word% '3' | Others_choice %contains_word% '4' | Others_choice %contains_word% '5' | Others_choice %contains_word% '6') && Others_choice %contains_word% '7'")
+
+Block_others3 <- add_element(label = "The answer **None of the above** cannot be combined with another category",
+                             name = "Block_others3",
+                             type = "block",
+                             showif = "(Others_choice %contains_word% '1' | Others_choice %contains_word% '2' | Others_choice %contains_word% '3' | Others_choice %contains_word% '4') && Others_choice %contains_word% '5'")
+
+
+Others <- add_element(label = "#### 🦀 Add other operators that qualify
+💡 After typing, press enter to validate what you added.",
+type = "select_or_add_multiple",
+name = "Others",
+choice1 = "I can't think of any",
+optional = "*") ##FIXME decide on whether this should be optional or not
+
+Others_comment_check <- add_element(label = "Add a COMMENT",
+                                    name = "Others_comment_check",
+                                    type = "check")
+
+Others_comment <- add_element(label = "Tell us more, so we fully understand",
+                              name = "Others_comment",
+                              showif = "Others_comment_check",
+                              type = "textarea")
+
+
 S8 <- S1; S8$name <- "S8"
 
 # Save survey -----------------------------------------------------------
@@ -447,7 +498,7 @@ survey_tbl <- bind_rows(N0, S0,
                         P6, SUMM_note, FTE_site, FTE_stakeholder, FTE_support, FTE_scientists, FTE_leadership, FTE_other,
                         total_note, total_info, S6,
                         P7, Tech_note, Tech_choice, Block_tech1, Block_tech2, Other_tech, Other_tech_comment_check, Other_tech_comment, S7,
-                        P8, S8)
+                        P8, Others_note, Others_choice, Block_others1, Block_others2, Block_others3, Others, Others_comment_check, Others_comment, S8)
 
 names_tbl <- table(survey_tbl$name)
 if (any(names_tbl > 1)) stop(paste(names(names_tbl)[names_tbl > 1], "duplicated. All name must be unique."))
