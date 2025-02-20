@@ -1,6 +1,6 @@
 "label","name","class","type","value","optional","showif","choice1","choice2","choice3","choice4","choice5","choice6","choice7","choice8"
-"# Study for MPA managers and staff:
-# Who's working on your marine protected area?	
+"# Study for Marine Protected Area managers and staff:
+# Who's working on your MPA?	
 
 <br>
 
@@ -23,9 +23,9 @@
 #### Dr. Christine Ward-Paige, eOceans, christine@eOceans.co	
 #### Dr. Alexandre Courtiol, Leibniz-IZW","N0","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "Let's begin","S0","","submit","","","",NA,NA,NA,NA,NA,NA,NA,NA
-"# <mark style='background-color:#6495ED;color:#FFD700'> Part A: Let's find your MPA </mark>","P1","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
+"# <mark style='background-color:#6495ED;color:#FFD700'> Part A: Let's find your Marine Protected Area (MPA)</mark>","P1","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "## 1: Select your country","N1","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
-"#### Select the country (or overseas land) with the MPA(s) you are responding for
+"#### Select the country (or overseas land) with the MPA you are responding for
 💙 You can search using name, partial name, or ISO code.
 💡 Some overseas lands or islands are listed under their own name, e.g. Guadeloupe is listed under 'Guadeloupe (GLP)' and not under 'France (FRA)'.","country","cant_add_choice","select_or_add_one countries","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "Continue","S1","","submit","","","",NA,NA,NA,NA,NA,NA,NA,NA
@@ -51,754 +51,754 @@
   color: black;
 }
 </style>","CSS","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
-"# <mark style='background-color:#6495ED;color:#FFD700'> Part A: Let's find your MPA </mark>","P2","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
-"## 2: Select your Marine Protected Area (MPA)","N2","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
+"# <mark style='background-color:#6495ED;color:#FFD700'> Part A: Let's find your Marine Protected Area (MPA)</mark>","P2","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
+"## 2: Select your MPA","N2","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_ABW_mc_multiple","cant_add_choice","select_or_add_multiple MPA_ABW","","","country == 'Aruba (ABW)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_AFG_mc_multiple","cant_add_choice","select_or_add_multiple MPA_AFG","","","country == 'Afghanistan (AFG)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_AGO_mc_multiple","cant_add_choice","select_or_add_multiple MPA_AGO","","","country == 'Angola (AGO)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_AIA_mc_multiple","cant_add_choice","select_or_add_multiple MPA_AIA","","","country == 'Anguilla (AIA)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_ALA_mc_multiple","cant_add_choice","select_or_add_multiple MPA_ALA","","","country == 'Åland Islands (ALA)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_ALB_mc_multiple","cant_add_choice","select_or_add_multiple MPA_ALB","","","country == 'Albania (ALB)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_AND_mc_multiple","cant_add_choice","select_or_add_multiple MPA_AND","","","country == 'Andorra (AND)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_ARE_mc_multiple","cant_add_choice","select_or_add_multiple MPA_ARE","","","country == 'United Arab Emirates (ARE)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_ARG_mc_multiple","cant_add_choice","select_or_add_multiple MPA_ARG","","","country == 'Argentina (ARG)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_ARM_mc_multiple","cant_add_choice","select_or_add_multiple MPA_ARM","","","country == 'Armenia (ARM)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_ASM_mc_multiple","cant_add_choice","select_or_add_multiple MPA_ASM","","","country == 'American Samoa (ASM)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_ATA_mc_multiple","cant_add_choice","select_or_add_multiple MPA_ATA","","","country == 'Antarctica (ATA)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_ATF_mc_multiple","cant_add_choice","select_or_add_multiple MPA_ATF","","","country == 'French Southern Territories (ATF)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_ATG_mc_multiple","cant_add_choice","select_or_add_multiple MPA_ATG","","","country == 'Antigua + Barbuda (ATG)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_AUS_mc_multiple","cant_add_choice","select_or_add_multiple MPA_AUS","","","country == 'Australia (AUS)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_AUT_mc_multiple","cant_add_choice","select_or_add_multiple MPA_AUT","","","country == 'Austria (AUT)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_AZE_mc_multiple","cant_add_choice","select_or_add_multiple MPA_AZE","","","country == 'Azerbaijan (AZE)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_BDI_mc_multiple","cant_add_choice","select_or_add_multiple MPA_BDI","","","country == 'Burundi (BDI)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_BEL_mc_multiple","cant_add_choice","select_or_add_multiple MPA_BEL","","","country == 'Belgium (BEL)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_BEN_mc_multiple","cant_add_choice","select_or_add_multiple MPA_BEN","","","country == 'Benin (BEN)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_BES_mc_multiple","cant_add_choice","select_or_add_multiple MPA_BES","","","country == 'Caribbean Netherlands (BES)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_BFA_mc_multiple","cant_add_choice","select_or_add_multiple MPA_BFA","","","country == 'Burkina Faso (BFA)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_BGD_mc_multiple","cant_add_choice","select_or_add_multiple MPA_BGD","","","country == 'Bangladesh (BGD)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_BGR_mc_multiple","cant_add_choice","select_or_add_multiple MPA_BGR","","","country == 'Bulgaria (BGR)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_BHR_mc_multiple","cant_add_choice","select_or_add_multiple MPA_BHR","","","country == 'Bahrain (BHR)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_BHS_mc_multiple","cant_add_choice","select_or_add_multiple MPA_BHS","","","country == 'Bahamas (BHS)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_BIH_mc_multiple","cant_add_choice","select_or_add_multiple MPA_BIH","","","country == 'Bosnia + Herzegovina (BIH)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_BLM_mc_multiple","cant_add_choice","select_or_add_multiple MPA_BLM","","","country == 'St. Barthélemy (BLM)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_BLR_mc_multiple","cant_add_choice","select_or_add_multiple MPA_BLR","","","country == 'Belarus (BLR)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_BLZ_mc_multiple","cant_add_choice","select_or_add_multiple MPA_BLZ","","","country == 'Belize (BLZ)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_BMU_mc_multiple","cant_add_choice","select_or_add_multiple MPA_BMU","","","country == 'Bermuda (BMU)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_BOL_mc_multiple","cant_add_choice","select_or_add_multiple MPA_BOL","","","country == 'Bolivia (BOL)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_BRA_mc_multiple","cant_add_choice","select_or_add_multiple MPA_BRA","","","country == 'Brazil (BRA)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_BRB_mc_multiple","cant_add_choice","select_or_add_multiple MPA_BRB","","","country == 'Barbados (BRB)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_BRN_mc_multiple","cant_add_choice","select_or_add_multiple MPA_BRN","","","country == 'Brunei (BRN)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_BTN_mc_multiple","cant_add_choice","select_or_add_multiple MPA_BTN","","","country == 'Bhutan (BTN)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_BVT_mc_multiple","cant_add_choice","select_or_add_multiple MPA_BVT","","","country == 'Bouvet Island (BVT)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_BWA_mc_multiple","cant_add_choice","select_or_add_multiple MPA_BWA","","","country == 'Botswana (BWA)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_CAF_mc_multiple","cant_add_choice","select_or_add_multiple MPA_CAF","","","country == 'Central African Republic (CAF)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_CAN_mc_multiple","cant_add_choice","select_or_add_multiple MPA_CAN","","","country == 'Canada (CAN)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_CCK_mc_multiple","cant_add_choice","select_or_add_multiple MPA_CCK","","","country == 'Cocos (Keeling) Islands (CCK)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_CHE_mc_multiple","cant_add_choice","select_or_add_multiple MPA_CHE","","","country == 'Switzerland (CHE)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_CHL_mc_multiple","cant_add_choice","select_or_add_multiple MPA_CHL","","","country == 'Chile (CHL)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_CHN_mc_multiple","cant_add_choice","select_or_add_multiple MPA_CHN","","","country == 'China (CHN)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_CIV_mc_multiple","cant_add_choice","select_or_add_multiple MPA_CIV","","","country == 'Côte d’Ivoire (CIV)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_CMR_mc_multiple","cant_add_choice","select_or_add_multiple MPA_CMR","","","country == 'Cameroon (CMR)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_COD_mc_multiple","cant_add_choice","select_or_add_multiple MPA_COD","","","country == 'Congo - Kinshasa (COD)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_COG_mc_multiple","cant_add_choice","select_or_add_multiple MPA_COG","","","country == 'Congo - Brazzaville (COG)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_COK_mc_multiple","cant_add_choice","select_or_add_multiple MPA_COK","","","country == 'Cook Islands (COK)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_COL_mc_multiple","cant_add_choice","select_or_add_multiple MPA_COL","","","country == 'Colombia (COL)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_COM_mc_multiple","cant_add_choice","select_or_add_multiple MPA_COM","","","country == 'Comoros (COM)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_CPV_mc_multiple","cant_add_choice","select_or_add_multiple MPA_CPV","","","country == 'Cape Verde (CPV)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_CRI_mc_multiple","cant_add_choice","select_or_add_multiple MPA_CRI","","","country == 'Costa Rica (CRI)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_CUB_mc_multiple","cant_add_choice","select_or_add_multiple MPA_CUB","","","country == 'Cuba (CUB)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_CUW_mc_multiple","cant_add_choice","select_or_add_multiple MPA_CUW","","","country == 'Curaçao (CUW)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_CXR_mc_multiple","cant_add_choice","select_or_add_multiple MPA_CXR","","","country == 'Christmas Island (CXR)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_CYM_mc_multiple","cant_add_choice","select_or_add_multiple MPA_CYM","","","country == 'Cayman Islands (CYM)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_CYP_mc_multiple","cant_add_choice","select_or_add_multiple MPA_CYP","","","country == 'Cyprus (CYP)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_CZE_mc_multiple","cant_add_choice","select_or_add_multiple MPA_CZE","","","country == 'Czechia (CZE)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_DEU_mc_multiple","cant_add_choice","select_or_add_multiple MPA_DEU","","","country == 'Germany (DEU)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_DJI_mc_multiple","cant_add_choice","select_or_add_multiple MPA_DJI","","","country == 'Djibouti (DJI)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_DMA_mc_multiple","cant_add_choice","select_or_add_multiple MPA_DMA","","","country == 'Dominica (DMA)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_DNK_mc_multiple","cant_add_choice","select_or_add_multiple MPA_DNK","","","country == 'Denmark (DNK)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_DOM_mc_multiple","cant_add_choice","select_or_add_multiple MPA_DOM","","","country == 'Dominican Republic (DOM)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_DZA_mc_multiple","cant_add_choice","select_or_add_multiple MPA_DZA","","","country == 'Algeria (DZA)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_ECU_mc_multiple","cant_add_choice","select_or_add_multiple MPA_ECU","","","country == 'Ecuador (ECU)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_EGY_mc_multiple","cant_add_choice","select_or_add_multiple MPA_EGY","","","country == 'Egypt (EGY)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_ERI_mc_multiple","cant_add_choice","select_or_add_multiple MPA_ERI","","","country == 'Eritrea (ERI)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_ESH_mc_multiple","cant_add_choice","select_or_add_multiple MPA_ESH","","","country == 'Western Sahara (ESH)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_ESP_mc_multiple","cant_add_choice","select_or_add_multiple MPA_ESP","","","country == 'Spain (ESP)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_EST_mc_multiple","cant_add_choice","select_or_add_multiple MPA_EST","","","country == 'Estonia (EST)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_ETH_mc_multiple","cant_add_choice","select_or_add_multiple MPA_ETH","","","country == 'Ethiopia (ETH)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_FIN_mc_multiple","cant_add_choice","select_or_add_multiple MPA_FIN","","","country == 'Finland (FIN)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_FJI_mc_multiple","cant_add_choice","select_or_add_multiple MPA_FJI","","","country == 'Fiji (FJI)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_FLK_mc_multiple","cant_add_choice","select_or_add_multiple MPA_FLK","","","country == 'Falkland Islands (FLK)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_FRA_mc_multiple","cant_add_choice","select_or_add_multiple MPA_FRA","","","country == 'France (FRA)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_FRO_mc_multiple","cant_add_choice","select_or_add_multiple MPA_FRO","","","country == 'Faroe Islands (FRO)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_FSM_mc_multiple","cant_add_choice","select_or_add_multiple MPA_FSM","","","country == 'Micronesia (Federated States of) (FSM)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_GAB_mc_multiple","cant_add_choice","select_or_add_multiple MPA_GAB","","","country == 'Gabon (GAB)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_GBR_mc_multiple","cant_add_choice","select_or_add_multiple MPA_GBR","","","country == 'United Kingdom (GBR)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_GEO_mc_multiple","cant_add_choice","select_or_add_multiple MPA_GEO","","","country == 'Georgia (GEO)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_GGY_mc_multiple","cant_add_choice","select_or_add_multiple MPA_GGY","","","country == 'Guernsey (GGY)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_GHA_mc_multiple","cant_add_choice","select_or_add_multiple MPA_GHA","","","country == 'Ghana (GHA)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_GIB_mc_multiple","cant_add_choice","select_or_add_multiple MPA_GIB","","","country == 'Gibraltar (GIB)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_GIN_mc_multiple","cant_add_choice","select_or_add_multiple MPA_GIN","","","country == 'Guinea (GIN)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_GLP_mc_multiple","cant_add_choice","select_or_add_multiple MPA_GLP","","","country == 'Guadeloupe (GLP)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_GMB_mc_multiple","cant_add_choice","select_or_add_multiple MPA_GMB","","","country == 'Gambia (GMB)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_GNB_mc_multiple","cant_add_choice","select_or_add_multiple MPA_GNB","","","country == 'Guinea-Bissau (GNB)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_GNQ_mc_multiple","cant_add_choice","select_or_add_multiple MPA_GNQ","","","country == 'Equatorial Guinea (GNQ)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_GRC_mc_multiple","cant_add_choice","select_or_add_multiple MPA_GRC","","","country == 'Greece (GRC)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_GRD_mc_multiple","cant_add_choice","select_or_add_multiple MPA_GRD","","","country == 'Grenada (GRD)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_GRL_mc_multiple","cant_add_choice","select_or_add_multiple MPA_GRL","","","country == 'Greenland (GRL)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_GTM_mc_multiple","cant_add_choice","select_or_add_multiple MPA_GTM","","","country == 'Guatemala (GTM)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_GUF_mc_multiple","cant_add_choice","select_or_add_multiple MPA_GUF","","","country == 'French Guiana (GUF)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_GUM_mc_multiple","cant_add_choice","select_or_add_multiple MPA_GUM","","","country == 'Guam (GUM)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_GUY_mc_multiple","cant_add_choice","select_or_add_multiple MPA_GUY","","","country == 'Guyana (GUY)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_HKG_mc_multiple","cant_add_choice","select_or_add_multiple MPA_HKG","","","country == 'Hong Kong SAR China (HKG)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_HMD_mc_multiple","cant_add_choice","select_or_add_multiple MPA_HMD","","","country == 'Heard + McDonald Islands (HMD)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_HND_mc_multiple","cant_add_choice","select_or_add_multiple MPA_HND","","","country == 'Honduras (HND)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_HRV_mc_multiple","cant_add_choice","select_or_add_multiple MPA_HRV","","","country == 'Croatia (HRV)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_HTI_mc_multiple","cant_add_choice","select_or_add_multiple MPA_HTI","","","country == 'Haiti (HTI)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_HUN_mc_multiple","cant_add_choice","select_or_add_multiple MPA_HUN","","","country == 'Hungary (HUN)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_IDN_mc_multiple","cant_add_choice","select_or_add_multiple MPA_IDN","","","country == 'Indonesia (IDN)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_IMN_mc_multiple","cant_add_choice","select_or_add_multiple MPA_IMN","","","country == 'Isle of Man (IMN)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_IND_mc_multiple","cant_add_choice","select_or_add_multiple MPA_IND","","","country == 'India (IND)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_IOT_mc_multiple","cant_add_choice","select_or_add_multiple MPA_IOT","","","country == 'British Indian Ocean Territory (IOT)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_IRL_mc_multiple","cant_add_choice","select_or_add_multiple MPA_IRL","","","country == 'Ireland (IRL)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_IRN_mc_multiple","cant_add_choice","select_or_add_multiple MPA_IRN","","","country == 'Iran (IRN)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_IRQ_mc_multiple","cant_add_choice","select_or_add_multiple MPA_IRQ","","","country == 'Iraq (IRQ)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_ISL_mc_multiple","cant_add_choice","select_or_add_multiple MPA_ISL","","","country == 'Iceland (ISL)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_ISR_mc_multiple","cant_add_choice","select_or_add_multiple MPA_ISR","","","country == 'Israel (ISR)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_ITA_mc_multiple","cant_add_choice","select_or_add_multiple MPA_ITA","","","country == 'Italy (ITA)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_JAM_mc_multiple","cant_add_choice","select_or_add_multiple MPA_JAM","","","country == 'Jamaica (JAM)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_JEY_mc_multiple","cant_add_choice","select_or_add_multiple MPA_JEY","","","country == 'Jersey (JEY)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_JOR_mc_multiple","cant_add_choice","select_or_add_multiple MPA_JOR","","","country == 'Jordan (JOR)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_JPN_mc_multiple","cant_add_choice","select_or_add_multiple MPA_JPN","","","country == 'Japan (JPN)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_KAZ_mc_multiple","cant_add_choice","select_or_add_multiple MPA_KAZ","","","country == 'Kazakhstan (KAZ)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_KEN_mc_multiple","cant_add_choice","select_or_add_multiple MPA_KEN","","","country == 'Kenya (KEN)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_KGZ_mc_multiple","cant_add_choice","select_or_add_multiple MPA_KGZ","","","country == 'Kyrgyzstan (KGZ)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_KHM_mc_multiple","cant_add_choice","select_or_add_multiple MPA_KHM","","","country == 'Cambodia (KHM)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_KIR_mc_multiple","cant_add_choice","select_or_add_multiple MPA_KIR","","","country == 'Kiribati (KIR)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_KNA_mc_multiple","cant_add_choice","select_or_add_multiple MPA_KNA","","","country == 'St. Kitts + Nevis (KNA)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_KOR_mc_multiple","cant_add_choice","select_or_add_multiple MPA_KOR","","","country == 'South Korea (KOR)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_KWT_mc_multiple","cant_add_choice","select_or_add_multiple MPA_KWT","","","country == 'Kuwait (KWT)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_LAO_mc_multiple","cant_add_choice","select_or_add_multiple MPA_LAO","","","country == 'Laos (LAO)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_LBN_mc_multiple","cant_add_choice","select_or_add_multiple MPA_LBN","","","country == 'Lebanon (LBN)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_LBR_mc_multiple","cant_add_choice","select_or_add_multiple MPA_LBR","","","country == 'Liberia (LBR)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_LBY_mc_multiple","cant_add_choice","select_or_add_multiple MPA_LBY","","","country == 'Libya (LBY)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_LCA_mc_multiple","cant_add_choice","select_or_add_multiple MPA_LCA","","","country == 'St. Lucia (LCA)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_LIE_mc_multiple","cant_add_choice","select_or_add_multiple MPA_LIE","","","country == 'Liechtenstein (LIE)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_LKA_mc_multiple","cant_add_choice","select_or_add_multiple MPA_LKA","","","country == 'Sri Lanka (LKA)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_LSO_mc_multiple","cant_add_choice","select_or_add_multiple MPA_LSO","","","country == 'Lesotho (LSO)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_LTU_mc_multiple","cant_add_choice","select_or_add_multiple MPA_LTU","","","country == 'Lithuania (LTU)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_LUX_mc_multiple","cant_add_choice","select_or_add_multiple MPA_LUX","","","country == 'Luxembourg (LUX)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_LVA_mc_multiple","cant_add_choice","select_or_add_multiple MPA_LVA","","","country == 'Latvia (LVA)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_MAC_mc_multiple","cant_add_choice","select_or_add_multiple MPA_MAC","","","country == 'Macao SAR China (MAC)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_MAF_mc_multiple","cant_add_choice","select_or_add_multiple MPA_MAF","","","country == 'Saint Martin (French part) (MAF)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_MAR_mc_multiple","cant_add_choice","select_or_add_multiple MPA_MAR","","","country == 'Morocco (MAR)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_MCO_mc_multiple","cant_add_choice","select_or_add_multiple MPA_MCO","","","country == 'Monaco (MCO)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_MDA_mc_multiple","cant_add_choice","select_or_add_multiple MPA_MDA","","","country == 'Moldova (MDA)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_MDG_mc_multiple","cant_add_choice","select_or_add_multiple MPA_MDG","","","country == 'Madagascar (MDG)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_MDV_mc_multiple","cant_add_choice","select_or_add_multiple MPA_MDV","","","country == 'Maldives (MDV)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_MEX_mc_multiple","cant_add_choice","select_or_add_multiple MPA_MEX","","","country == 'Mexico (MEX)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_MHL_mc_multiple","cant_add_choice","select_or_add_multiple MPA_MHL","","","country == 'Marshall Islands (MHL)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_MKD_mc_multiple","cant_add_choice","select_or_add_multiple MPA_MKD","","","country == 'North Macedonia (MKD)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_MLI_mc_multiple","cant_add_choice","select_or_add_multiple MPA_MLI","","","country == 'Mali (MLI)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_MLT_mc_multiple","cant_add_choice","select_or_add_multiple MPA_MLT","","","country == 'Malta (MLT)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_MMR_mc_multiple","cant_add_choice","select_or_add_multiple MPA_MMR","","","country == 'Myanmar (Burma) (MMR)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_MNE_mc_multiple","cant_add_choice","select_or_add_multiple MPA_MNE","","","country == 'Montenegro (MNE)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_MNG_mc_multiple","cant_add_choice","select_or_add_multiple MPA_MNG","","","country == 'Mongolia (MNG)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_MNP_mc_multiple","cant_add_choice","select_or_add_multiple MPA_MNP","","","country == 'Northern Mariana Islands (MNP)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_MOZ_mc_multiple","cant_add_choice","select_or_add_multiple MPA_MOZ","","","country == 'Mozambique (MOZ)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_MRT_mc_multiple","cant_add_choice","select_or_add_multiple MPA_MRT","","","country == 'Mauritania (MRT)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_MSR_mc_multiple","cant_add_choice","select_or_add_multiple MPA_MSR","","","country == 'Montserrat (MSR)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_MTQ_mc_multiple","cant_add_choice","select_or_add_multiple MPA_MTQ","","","country == 'Martinique (MTQ)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_MUS_mc_multiple","cant_add_choice","select_or_add_multiple MPA_MUS","","","country == 'Mauritius (MUS)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_MWI_mc_multiple","cant_add_choice","select_or_add_multiple MPA_MWI","","","country == 'Malawi (MWI)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_MYS_mc_multiple","cant_add_choice","select_or_add_multiple MPA_MYS","","","country == 'Malaysia (MYS)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_MYT_mc_multiple","cant_add_choice","select_or_add_multiple MPA_MYT","","","country == 'Mayotte (MYT)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_NAM_mc_multiple","cant_add_choice","select_or_add_multiple MPA_NAM","","","country == 'Namibia (NAM)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_NCL_mc_multiple","cant_add_choice","select_or_add_multiple MPA_NCL","","","country == 'New Caledonia (NCL)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_NER_mc_multiple","cant_add_choice","select_or_add_multiple MPA_NER","","","country == 'Niger (NER)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_NFK_mc_multiple","cant_add_choice","select_or_add_multiple MPA_NFK","","","country == 'Norfolk Island (NFK)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_NGA_mc_multiple","cant_add_choice","select_or_add_multiple MPA_NGA","","","country == 'Nigeria (NGA)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_NIC_mc_multiple","cant_add_choice","select_or_add_multiple MPA_NIC","","","country == 'Nicaragua (NIC)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_NIU_mc_multiple","cant_add_choice","select_or_add_multiple MPA_NIU","","","country == 'Niue (NIU)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_NLD_mc_multiple","cant_add_choice","select_or_add_multiple MPA_NLD","","","country == 'Netherlands (NLD)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_NOR_mc_multiple","cant_add_choice","select_or_add_multiple MPA_NOR","","","country == 'Norway (NOR)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_NPL_mc_multiple","cant_add_choice","select_or_add_multiple MPA_NPL","","","country == 'Nepal (NPL)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_NRU_mc_multiple","cant_add_choice","select_or_add_multiple MPA_NRU","","","country == 'Nauru (NRU)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_NZL_mc_multiple","cant_add_choice","select_or_add_multiple MPA_NZL","","","country == 'New Zealand (NZL)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_OMN_mc_multiple","cant_add_choice","select_or_add_multiple MPA_OMN","","","country == 'Oman (OMN)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_PAK_mc_multiple","cant_add_choice","select_or_add_multiple MPA_PAK","","","country == 'Pakistan (PAK)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_PAN_mc_multiple","cant_add_choice","select_or_add_multiple MPA_PAN","","","country == 'Panama (PAN)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_PCN_mc_multiple","cant_add_choice","select_or_add_multiple MPA_PCN","","","country == 'Pitcairn Islands (PCN)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_PER_mc_multiple","cant_add_choice","select_or_add_multiple MPA_PER","","","country == 'Peru (PER)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_PHL_mc_multiple","cant_add_choice","select_or_add_multiple MPA_PHL","","","country == 'Philippines (PHL)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_PLW_mc_multiple","cant_add_choice","select_or_add_multiple MPA_PLW","","","country == 'Palau (PLW)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_PNG_mc_multiple","cant_add_choice","select_or_add_multiple MPA_PNG","","","country == 'Papua New Guinea (PNG)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_POL_mc_multiple","cant_add_choice","select_or_add_multiple MPA_POL","","","country == 'Poland (POL)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_PRI_mc_multiple","cant_add_choice","select_or_add_multiple MPA_PRI","","","country == 'Puerto Rico (PRI)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_PRK_mc_multiple","cant_add_choice","select_or_add_multiple MPA_PRK","","","country == 'North Korea (PRK)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_PRT_mc_multiple","cant_add_choice","select_or_add_multiple MPA_PRT","","","country == 'Portugal (PRT)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_PRY_mc_multiple","cant_add_choice","select_or_add_multiple MPA_PRY","","","country == 'Paraguay (PRY)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_PSE_mc_multiple","cant_add_choice","select_or_add_multiple MPA_PSE","","","country == 'Palestinian Territories (PSE)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_PYF_mc_multiple","cant_add_choice","select_or_add_multiple MPA_PYF","","","country == 'French Polynesia (PYF)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_QAT_mc_multiple","cant_add_choice","select_or_add_multiple MPA_QAT","","","country == 'Qatar (QAT)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_REU_mc_multiple","cant_add_choice","select_or_add_multiple MPA_REU","","","country == 'Réunion (REU)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_ROU_mc_multiple","cant_add_choice","select_or_add_multiple MPA_ROU","","","country == 'Romania (ROU)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_RUS_mc_multiple","cant_add_choice","select_or_add_multiple MPA_RUS","","","country == 'Russia (RUS)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_RWA_mc_multiple","cant_add_choice","select_or_add_multiple MPA_RWA","","","country == 'Rwanda (RWA)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_SAU_mc_multiple","cant_add_choice","select_or_add_multiple MPA_SAU","","","country == 'Saudi Arabia (SAU)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_SDN_mc_multiple","cant_add_choice","select_or_add_multiple MPA_SDN","","","country == 'Sudan (SDN)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_SEN_mc_multiple","cant_add_choice","select_or_add_multiple MPA_SEN","","","country == 'Senegal (SEN)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_SGP_mc_multiple","cant_add_choice","select_or_add_multiple MPA_SGP","","","country == 'Singapore (SGP)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_SGS_mc_multiple","cant_add_choice","select_or_add_multiple MPA_SGS","","","country == 'South Georgia + South Sandwich Islands (SGS)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_SHN_mc_multiple","cant_add_choice","select_or_add_multiple MPA_SHN","","","country == 'St. Helena (SHN)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_SJM_mc_multiple","cant_add_choice","select_or_add_multiple MPA_SJM","","","country == 'Svalbard + Jan Mayen (SJM)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_SLB_mc_multiple","cant_add_choice","select_or_add_multiple MPA_SLB","","","country == 'Solomon Islands (SLB)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_SLE_mc_multiple","cant_add_choice","select_or_add_multiple MPA_SLE","","","country == 'Sierra Leone (SLE)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_SLV_mc_multiple","cant_add_choice","select_or_add_multiple MPA_SLV","","","country == 'El Salvador (SLV)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_SMR_mc_multiple","cant_add_choice","select_or_add_multiple MPA_SMR","","","country == 'San Marino (SMR)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_SOM_mc_multiple","cant_add_choice","select_or_add_multiple MPA_SOM","","","country == 'Somalia (SOM)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_SPM_mc_multiple","cant_add_choice","select_or_add_multiple MPA_SPM","","","country == 'St. Pierre + Miquelon (SPM)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_SRB_mc_multiple","cant_add_choice","select_or_add_multiple MPA_SRB","","","country == 'Serbia (SRB)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_SSD_mc_multiple","cant_add_choice","select_or_add_multiple MPA_SSD","","","country == 'South Sudan (SSD)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_STP_mc_multiple","cant_add_choice","select_or_add_multiple MPA_STP","","","country == 'São Tomé + Príncipe (STP)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_SUR_mc_multiple","cant_add_choice","select_or_add_multiple MPA_SUR","","","country == 'Suriname (SUR)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_SVK_mc_multiple","cant_add_choice","select_or_add_multiple MPA_SVK","","","country == 'Slovakia (SVK)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_SVN_mc_multiple","cant_add_choice","select_or_add_multiple MPA_SVN","","","country == 'Slovenia (SVN)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_SWE_mc_multiple","cant_add_choice","select_or_add_multiple MPA_SWE","","","country == 'Sweden (SWE)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_SWZ_mc_multiple","cant_add_choice","select_or_add_multiple MPA_SWZ","","","country == 'Eswatini (SWZ)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_SXM_mc_multiple","cant_add_choice","select_or_add_multiple MPA_SXM","","","country == 'Sint Maarten (SXM)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_SYC_mc_multiple","cant_add_choice","select_or_add_multiple MPA_SYC","","","country == 'Seychelles (SYC)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_SYR_mc_multiple","cant_add_choice","select_or_add_multiple MPA_SYR","","","country == 'Syria (SYR)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_TCA_mc_multiple","cant_add_choice","select_or_add_multiple MPA_TCA","","","country == 'Turks + Caicos Islands (TCA)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_TCD_mc_multiple","cant_add_choice","select_or_add_multiple MPA_TCD","","","country == 'Chad (TCD)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_TGO_mc_multiple","cant_add_choice","select_or_add_multiple MPA_TGO","","","country == 'Togo (TGO)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_THA_mc_multiple","cant_add_choice","select_or_add_multiple MPA_THA","","","country == 'Thailand (THA)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_TJK_mc_multiple","cant_add_choice","select_or_add_multiple MPA_TJK","","","country == 'Tajikistan (TJK)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_TKL_mc_multiple","cant_add_choice","select_or_add_multiple MPA_TKL","","","country == 'Tokelau (TKL)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_TKM_mc_multiple","cant_add_choice","select_or_add_multiple MPA_TKM","","","country == 'Turkmenistan (TKM)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_TLS_mc_multiple","cant_add_choice","select_or_add_multiple MPA_TLS","","","country == 'Timor-Leste (TLS)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_TON_mc_multiple","cant_add_choice","select_or_add_multiple MPA_TON","","","country == 'Tonga (TON)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_TTO_mc_multiple","cant_add_choice","select_or_add_multiple MPA_TTO","","","country == 'Trinidad + Tobago (TTO)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_TUN_mc_multiple","cant_add_choice","select_or_add_multiple MPA_TUN","","","country == 'Tunisia (TUN)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_TUR_mc_multiple","cant_add_choice","select_or_add_multiple MPA_TUR","","","country == 'Turkey (TUR)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_TUV_mc_multiple","cant_add_choice","select_or_add_multiple MPA_TUV","","","country == 'Tuvalu (TUV)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_TWN_mc_multiple","cant_add_choice","select_or_add_multiple MPA_TWN","","","country == 'Taiwan (TWN)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_TZA_mc_multiple","cant_add_choice","select_or_add_multiple MPA_TZA","","","country == 'Tanzania (TZA)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_UGA_mc_multiple","cant_add_choice","select_or_add_multiple MPA_UGA","","","country == 'Uganda (UGA)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_UKR_mc_multiple","cant_add_choice","select_or_add_multiple MPA_UKR","","","country == 'Ukraine (UKR)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_UMI_mc_multiple","cant_add_choice","select_or_add_multiple MPA_UMI","","","country == 'United States Minor Outlying Islands (the) (UMI)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_URY_mc_multiple","cant_add_choice","select_or_add_multiple MPA_URY","","","country == 'Uruguay (URY)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_USA_mc_multiple","cant_add_choice","select_or_add_multiple MPA_USA","","","country == 'United States (USA)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_UZB_mc_multiple","cant_add_choice","select_or_add_multiple MPA_UZB","","","country == 'Uzbekistan (UZB)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_VAT_mc_multiple","cant_add_choice","select_or_add_multiple MPA_VAT","","","country == 'Vatican City (VAT)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_VCT_mc_multiple","cant_add_choice","select_or_add_multiple MPA_VCT","","","country == 'St. Vincent + Grenadines (VCT)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_VEN_mc_multiple","cant_add_choice","select_or_add_multiple MPA_VEN","","","country == 'Venezuela (VEN)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_VGB_mc_multiple","cant_add_choice","select_or_add_multiple MPA_VGB","","","country == 'British Virgin Islands (VGB)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_VIR_mc_multiple","cant_add_choice","select_or_add_multiple MPA_VIR","","","country == 'U.S. Virgin Islands (VIR)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_VNM_mc_multiple","cant_add_choice","select_or_add_multiple MPA_VNM","","","country == 'Vietnam (VNM)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_VUT_mc_multiple","cant_add_choice","select_or_add_multiple MPA_VUT","","","country == 'Vanuatu (VUT)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_WLF_mc_multiple","cant_add_choice","select_or_add_multiple MPA_WLF","","","country == 'Wallis + Futuna (WLF)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_WSM_mc_multiple","cant_add_choice","select_or_add_multiple MPA_WSM","","","country == 'Samoa (WSM)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_YEM_mc_multiple","cant_add_choice","select_or_add_multiple MPA_YEM","","","country == 'Yemen (YEM)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_ZAF_mc_multiple","cant_add_choice","select_or_add_multiple MPA_ZAF","","","country == 'South Africa (ZAF)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_ZMB_mc_multiple","cant_add_choice","select_or_add_multiple MPA_ZMB","","","country == 'Zambia (ZMB)'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
-💙 You can search using name, partial name, or WDPA PID.
+💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.","MPA_ZWE_mc_multiple","cant_add_choice","select_or_add_multiple MPA_ZWE","","","country == 'Zimbabwe (ZWE)'",NA,NA,NA,NA,NA,NA,NA,NA
 "<script>
 var lengthItems = 0;
@@ -823,7 +823,7 @@ $(document).ready(function () {
 "
 <div class='alert'>
 <span class=""closebtn"" onclick=""this.parentElement.style.display='none';"">&times;</span> 
-<p style='font-size:150%'><strong>WARNING!</strong> you selected multiple MPAs.</p>
+<p style='font-size:200%'><strong>WARNING!</strong> you selected multiple MPAs.</p>
 <p style='font-size:150%'>💡 If you continue, the MPAs will be merged and treated as a single entity.</p>
 <p style='font-size:150%'>💙 To fill in separate surveys per MPA, select one above and follow instructions at the end of this survey.</p>
 </div>","WarnM_multiple","","note","","","lengthItems > 1 //js_only",NA,NA,NA,NA,NA,NA,NA,NA
@@ -831,13 +831,13 @@ $(document).ready(function () {
 "# <mark style='background-color:#6495ED;color:#FFD700'> Part B: Tell us about your MPA (6 questions) </mark>","P4","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "## 1: Roles of the people who work on this MPA","N4","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Including yourself, what formal roles are involved in working on this specific MPA to contribute to achieving its goals?
-💡 Select all that apply.","M1","mc_vertical","mc_multiple","","","","**Site Focused** — such as rangers and ranger-like roles (with and without enforcement capabilities)","**Stakeholder Focused** — such as education and outreach roles","**Support Focused** — such as supporting staff","**Scientists** — such as those collecting and analyzing data to address questions","**Leadership Focused** — such as decision making","**Other** — for roles unlisted above","**None** — no one works on this MPA in a formal role","**I don't know**"
-"The answer **None** cannot be combined with another category","B1","","block","",""," (M1 %contains_word% '1' | M1 %contains_word% '2' | M1 %contains_word% '3' | M1 %contains_word% '4' | M1 %contains_word% '5' | M1 %contains_word% '6') && M1 %contains_word% '7'",NA,NA,NA,NA,NA,NA,NA,NA
-"The answer **I don't know** cannot be combined with another category","B2","","block","",""," (M1 %contains_word% '1' | M1 %contains_word% '2' | M1 %contains_word% '3' | M1 %contains_word% '4' | M1 %contains_word% '5' | M1 %contains_word% '6' | M1 %contains_word% '7') && M1 %contains_word% '8'",NA,NA,NA,NA,NA,NA,NA,NA
+💡 Select all that apply.","M1","mc_vertical","mc_multiple","","!","","**Site Focused** — such as rangers and ranger-like roles (with and without enforcement capabilities)","**Stakeholder Focused** — such as education and outreach roles","**Support Focused** — such as supporting staff","**Scientists** — such as those collecting and analyzing data to address questions","**Leadership Focused** — such as decision making","**Other** — for roles unlisted above","**None** — no one works on this MPA in a formal role","**I don't know**"
+"The answer **None** cannot be combined with another category","B1","","block","","","(M1 %contains_word% '1' | M1 %contains_word% '2' | M1 %contains_word% '3' | M1 %contains_word% '4' | M1 %contains_word% '5' | M1 %contains_word% '6') && M1 %contains_word% '7'",NA,NA,NA,NA,NA,NA,NA,NA
+"The answer **I don't know** cannot be combined with another category","B2","","block","","","(M1 %contains_word% '1' | M1 %contains_word% '2' | M1 %contains_word% '3' | M1 %contains_word% '4' | M1 %contains_word% '5' | M1 %contains_word% '6' | M1 %contains_word% '7') && M1 %contains_word% '8'",NA,NA,NA,NA,NA,NA,NA,NA
 "Continue","S4","","submit","","","",NA,NA,NA,NA,NA,NA,NA,NA
-"# <mark style='background-color:#6495ED;color:#FFD700'> Part B: Tell us about your MPA (6 questions) </mark>","P5","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
+"# <mark style='background-color:#6495ED;color:#FFD700'> Part B: Tell us about your MPA (6 questions) </mark>","P5","","note","","","!M1 %contains_word% '7' && !M1 %contains_word% '8'",NA,NA,NA,NA,NA,NA,NA,NA
 "## 2: Number of people in each role. 
-#### For each workforce category selected previously, indicate the number of formal staff who work on this specific MPA
+#### For each workforce category selected previously, indicate the number of formal staff who work on this specific MPA.
 💙 For each role, report the number of staff in that role or use COMMENT to record in your own way.
 💡 FTE = Full-time equivalent.
 🦀 Add a COMMENT to add more options or to explain anything you think we should know.      
@@ -884,14 +884,31 @@ $(document).ready(function () {
 "Occcasional personel (working few weeks a year; counted as 0.1 FTE each)","PERS_other_Occasional","","number 0,999999,1","0","","M1 %contains_word% '6'",NA,NA,NA,NA,NA,NA,NA,NA
 "Add a COMMENT","PERS_other_NeedComment","","check","","","M1 %contains_word% '6'",NA,NA,NA,NA,NA,NA,NA,NA
 "Add more options or explain anything you think we should know about this workforce category","PERS_otherComment","","textarea","","","PERS_other_NeedComment",NA,NA,NA,NA,NA,NA,NA,NA
-"Continue","S5","","submit","","","",NA,NA,NA,NA,NA,NA,NA,NA
+"Continue","S5","","submit","","","!M1 %contains_word% '7' && !M1 %contains_word% '8'",NA,NA,NA,NA,NA,NA,NA,NA
 "# <mark style='background-color:#6495ED;color:#FFD700'> Part B: Tell us about your MPA (6 questions) </mark>","P6","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "## Confirm the number of FTE. 
-#### For each workforce category please review the number of FTE corresponding to your previous choices and adjust if necessary","SUMM_note","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
+#### For each workforce category please review the number of FTE corresponding to your previous choices and adjust if necessary.","SUMM_note","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "### **Site Focused**","FTE_site","","number 0,999999,0.1","ifelse(is.na(PERS_site_FullTime + PERS_site_PartTime*0.5 + PERS_site_Seasonal*0.25 + PERS_site_Occasional*0.1), 0,PERS_site_FullTime + PERS_site_PartTime*0.5 + PERS_site_Seasonal*0.25 + PERS_site_Occasional*0.1)","","",NA,NA,NA,NA,NA,NA,NA,NA
 "### **Stakeholder Focused**","FTE_stakeholder","","number 0,999999,0.1","ifelse(is.na(PERS_stakeholder_FullTime + PERS_stakeholder_PartTime*0.5 + PERS_stakeholder_Seasonal*0.25 + PERS_stakeholder_Occasional*0.1), 0,PERS_stakeholder_FullTime + PERS_stakeholder_PartTime*0.5 + PERS_stakeholder_Seasonal*0.25 + PERS_stakeholder_Occasional*0.1)","","",NA,NA,NA,NA,NA,NA,NA,NA
 "### **Support Focused**","FTE_support","","number 0,999999,0.1","ifelse(is.na(PERS_support_FullTime + PERS_support_PartTime*0.5 + PERS_support_Seasonal*0.25 + PERS_support_Occasional*0.1), 0,PERS_support_FullTime + PERS_support_PartTime*0.5 + PERS_support_Seasonal*0.25 + PERS_support_Occasional*0.1)","","",NA,NA,NA,NA,NA,NA,NA,NA
 "### **Scientists**","FTE_scientists","","number 0,999999,0.1","ifelse(is.na(PERS_scientists_FullTime + PERS_scientists_PartTime*0.5 + PERS_scientists_Seasonal*0.25 + PERS_scientists_Occasional*0.1), 0,PERS_scientists_FullTime + PERS_scientists_PartTime*0.5 + PERS_scientists_Seasonal*0.25 + PERS_scientists_Occasional*0.1)","","",NA,NA,NA,NA,NA,NA,NA,NA
 "### **Leadership Focused**","FTE_leadership","","number 0,999999,0.1","ifelse(is.na(PERS_leadership_FullTime + PERS_leadership_PartTime*0.5 + PERS_leadership_Seasonal*0.25 + PERS_leadership_Occasional*0.1), 0,PERS_leadership_FullTime + PERS_leadership_PartTime*0.5 + PERS_leadership_Seasonal*0.25 + PERS_leadership_Occasional*0.1)","","",NA,NA,NA,NA,NA,NA,NA,NA
 "### **Other**","FTE_other","","number 0,999999,0.1","ifelse(is.na(PERS_other_FullTime + PERS_other_PartTime*0.5 + PERS_other_Seasonal*0.25 + PERS_other_Occasional*0.1), 0,PERS_other_FullTime + PERS_other_PartTime*0.5 + PERS_other_Seasonal*0.25 + PERS_other_Occasional*0.1)","","",NA,NA,NA,NA,NA,NA,NA,NA
+"<script>
+var FTE_total = 0;
+$(document).ready(function () {
+    // for Select2, one must use the 'change' event
+    $('input[name^=""FTE""]').on('change', function () {
+        var textread = $(this).val();
+        FTE_total = textread.reduce((sum, num) => sum + Number(num), 0).toString();;
+    });
+});
+</script>","FTE_total_compute","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
+"### **TOTAL**
+<script>
+if (input) {
+  input.readOnly = true;
+}
+</script>","FTE_total","","text","FTE_total","","",NA,NA,NA,NA,NA,NA,NA,NA
+"💡 The TOTAL is just the sum of the categories above; you cannot modify it directly.","FTE_note","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "Continue","S6","","submit","","","",NA,NA,NA,NA,NA,NA,NA,NA
