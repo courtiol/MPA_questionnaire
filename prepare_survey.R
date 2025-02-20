@@ -118,9 +118,7 @@ S1 <- add_element(label = "Continue",
 
 # Third page of questionnaire ---------------------------------------------
 
-P2 <-  add_element(label = "# <mark style='background-color:#6495ED;color:#FFD700'> Part A: Let's find your Marine Protected Area (MPA)</mark>",
-                   name = "P2",
-                   type = "note")
+P2 <-  P1; P2$name <- "P2"
 
 N2 <-  add_element(label = "## 2: Select your MPA",
                    name = "N2",
@@ -200,9 +198,7 @@ Warn_multiple <- add_element(label = r"(
                              type = "note",
                              showif = "lengthItems > 1 //js_only")
 
-S3 <- add_element(label = "Continue",
-                  name = "S3",
-                  type = "submit")
+S2 <- S1; S2$name <- "S2"
 
 # Fourth page of questionnaire ---------------------------------------------
 
@@ -239,16 +235,11 @@ B2 <- add_element(label = "The answer **I don't know** cannot be combined with a
                   type = "block",
                   showif = "(M1 %contains_word% '1' | M1 %contains_word% '2' | M1 %contains_word% '3' | M1 %contains_word% '4' | M1 %contains_word% '5' | M1 %contains_word% '6' | M1 %contains_word% '7') && M1 %contains_word% '8'")
 
-S4 <- add_element(label = "Continue",
-                  name = "S4",
-                  type = "submit")
+S4 <- S1; S4$name <- "S4"
 
 # Fifth page of questionnaire ---------------------------------------------
 
-P5 <-  add_element(label = "# <mark style='background-color:#6495ED;color:#FFD700'> Part B: Tell us about your MPA (6 questions) </mark>", ##FIXME replace "your MPA" by its name
-                   name = "P5",
-                   type = "note",
-                   showif = "!M1 %contains_word% '7' && !M1 %contains_word% '8'")
+P5 <-  P4; P5$name <- "P5"; P5$showif <- "!M1 %contains_word% '7' && !M1 %contains_word% '8'"
 
 N5 <-  add_element(label = "## 2: Number of people in each role. 
 #### For each workforce category selected previously, indicate the number of formal staff who work on this specific MPA.
@@ -319,16 +310,11 @@ PERS5 <- add_personel_questions(label = "### **Leadership Focused**", category =
 PERS6 <- add_personel_questions(label = "### **Other**", category = "other",
                                 showif = "M1 %contains_word% '6'")
 
-S5 <- add_element(label = "Continue",
-                  name = "S5",
-                  type = "submit",
-                  showif = "!M1 %contains_word% '7' && !M1 %contains_word% '8'")
+S5 <- S1; S5$name <- "S5"; S5$showif = "!M1 %contains_word% '7' && !M1 %contains_word% '8'"
 
 # Sixth page of questionnaire (optional) ---------------------------------------
 
-P6 <-  add_element(label = "# <mark style='background-color:#6495ED;color:#FFD700'> Part B: Tell us about your MPA (6 questions) </mark>", ##FIXME replace "your MPA" by its name
-                   name = "P6",
-                   type = "note")
+P6 <- P4; P6$name <- "P6"
 
 SUMM_note <- add_element(label = "## Confirm the number of FTE. 
 #### For each workforce category please review the number of FTE corresponding to your previous choices and adjust if necessary.",
@@ -397,23 +383,28 @@ FTE_note <- add_element(label = "💡 The TOTAL is just the sum of the categorie
                         name = "FTE_note",
                         type = "note")
 
-S6 <- add_element(label = "Continue",
-                  name = "S6",
-                  type = "submit")
+S6 <- S1; S6$name <- "S6"
 
-# Seventh page of questionnaire (optional) ---------------------------------------
+# Seventh page of questionnaire -----------------------------------------
+
+P7 <- P4; P7$name <- "P7"
+S7 <- S1; S7$name <- "S7"
 
 
 # Save survey -----------------------------------------------------------
 
 survey_tbl <- bind_rows(N0, S0,
                         P1, N1, Q1, S1,
-                        CSS, P2, N2, Q2, C1, Qmissing, N3, Q_issue1, Q_issue1_text, Warn_multiple, S3,
+                        CSS, P2, N2, Q2, C1, Qmissing, N3, Q_issue1, Q_issue1_text, Warn_multiple, S2,
                         P4, N4, M1, B1, B2, S4,
                         P5, N5,
                         PERS1, PERS2, PERS3, PERS4, PERS5, PERS6, S5,
                         P6, SUMM_note, FTE_site, FTE_stakeholder, FTE_support, FTE_scientists, FTE_leadership, FTE_other,
-                        FTE_total_compute, FTE_total, FTE_note, S6)
+                        FTE_total_compute, FTE_total, FTE_note, S6,
+                        P7, S7)
+
+names_tbl <- table(survey_tbl$name)
+if (any(names_tbl > 1)) stop(paste(names(names_tbl)[names_tbl > 1], "duplicated. All name must be unique."))
 
 if (!dir.exists("cleandata")) dir.create("cleandata")
 write.csv(survey_tbl, file = "cleandata/survey.csv", row.names = FALSE)

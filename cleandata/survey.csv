@@ -827,7 +827,7 @@ $(document).ready(function () {
 <p style='font-size:150%'>💡 If you continue, the MPAs will be merged and treated as a single entity.</p>
 <p style='font-size:150%'>💙 To fill in separate surveys per MPA, select one above and follow instructions at the end of this survey.</p>
 </div>","WarnM_multiple","","note","","","lengthItems > 1 //js_only",NA,NA,NA,NA,NA,NA,NA,NA
-"Continue","S3","","submit","","","",NA,NA,NA,NA,NA,NA,NA,NA
+"Continue","S2","","submit","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "# <mark style='background-color:#6495ED;color:#FFD700'> Part B: Tell us about your MPA (6 questions) </mark>","P4","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "## 1: Roles of the people who work on this MPA","N4","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Including yourself, what formal roles are involved in working on this specific MPA to contribute to achieving its goals?
@@ -912,3 +912,5 @@ if (input) {
 </script>","FTE_total","","text","FTE_total","","",NA,NA,NA,NA,NA,NA,NA,NA
 "💡 The TOTAL is just the sum of the categories above; you cannot modify it directly.","FTE_note","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "Continue","S6","","submit","","","",NA,NA,NA,NA,NA,NA,NA,NA
+"# <mark style='background-color:#6495ED;color:#FFD700'> Part B: Tell us about your MPA (6 questions) </mark>","P7","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
+"Continue","S7","","submit","","","",NA,NA,NA,NA,NA,NA,NA,NA
