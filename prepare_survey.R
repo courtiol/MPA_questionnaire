@@ -76,7 +76,7 @@ N0 <-  add_element(label = "# Study for Marine Protected Area managers and staff
 #### This study will help create a clear picture of the workforce behind current MPAs and give us an idea of what may be needed as the number of MPAs grows.	
 	
 ### Here's how it works:	
-#### XX questions about the workforce behind your specific MPA.
+#### 12 questions about the workforce behind your specific MPA.
   
 #### Click [here] to learn about Data Access, Risks, Support, Funders, and more.	
 
@@ -88,7 +88,8 @@ N0 <-  add_element(label = "# Study for Marine Protected Area managers and staff
 #### Dr. Christine Ward-Paige, eOceans, christine@eOceans.co	
 #### Dr. Alexandre Courtiol, Leibniz-IZW",
                     name = "N0",
-                    type = "note")
+                    type = "note") ## FIXME, some phrasing is weird... 
+                                   ## FIXME, what to link in [here]?
 
 S0 <- add_element(label = "Let's begin",
                   name = "S0",
@@ -96,7 +97,7 @@ S0 <- add_element(label = "Let's begin",
 
 # Second page of questionnaire ---------------------------------------------
 
-P1 <-  add_element(label = "# <mark style='background-color:#6495ED;color:#FFD700'> Part A: Let's find your Marine Protected Area (MPA)</mark>",
+P1 <-  add_element(label = "# <mark style='background-color:#6495ED;color:#FFD700'> Part A: Let's find your Marine Protected Area (MPA) (2 Questions)</mark>",
                    name = "P1",
                    type = "note")
 
@@ -117,7 +118,9 @@ S1 <- add_element(label = "Continue",
 
 # Page 3 of questionnaire ---------------------------------------------
 
-P2 <-  P1; P2$name <- "P2"
+P2 <-  add_element(label = "# <mark style='background-color:#6495ED;color:#FFD700'> Part A: Let's find your MPA (2 Questions)</mark>",
+                   name = "P2",
+                   type = "note")
 
 N2 <-  add_element(label = "## 2: Select your MPA",
                    name = "N2",
@@ -222,7 +225,7 @@ M1 <- add_element(label = "#### Including yourself, what formal roles are involv
                  choice6 = "**Other** — for roles unlisted above",
                  choice7 = "**None** — no one works on this MPA in a formal role",
                  choice8 = "**I don't know**",
-                 optional = "!")
+                 optional = "!") ## FIXME do we need to make them detail Other in a field?
 
 B1 <- add_element(label = "The answer **None** cannot be combined with another category",
                   name = "B1",
@@ -276,12 +279,12 @@ add_personel_questions <- function(label = "### **what**",
                     name = paste0("PERS_", category, "_Occasional"),
                     value = value, showif = showif, type = type)
   
-  C1 <- add_element(label = "Add a COMMENT",
+  C1 <- add_element(label = "#### Add a COMMENT",
                     name = paste0("PERS_", category, "_NeedComment"),
                     showif = showif,
                     type = "check")
   
-  C2 <- add_element(label = "Add more options or explain anything you think we should know about this workforce category",
+  C2 <- add_element(label = "#### Add more options or explain anything you think we should know about this workforce category",
                     name = paste0("PERS_", category, "Comment"),
                     showif = paste0("PERS_", category, "_NeedComment"),
                     type = "textarea")
@@ -292,22 +295,22 @@ add_personel_questions <- function(label = "### **what**",
 ## Those are personnel questions, do make sure that this agrees with category numbers in M1 above!
 
 PERS1 <- add_personel_questions(label = "### **Site Focused**", category = "site",
-                                showif = "M1 %contains_word% '1'")
+                                showif = "M1 %contains_word% '1'") ## FIXME: do we allow 0?
 
 PERS2 <- add_personel_questions(label = "### **Stakeholder Focused**", category = "stakeholder",
-                                showif = "M1 %contains_word% '2'")
+                                showif = "M1 %contains_word% '2'") ## FIXME: do we allow 0?
 
 PERS3 <- add_personel_questions(label = "### **Support Focused**", category = "support",
-                                showif = "M1 %contains_word% '3'")
+                                showif = "M1 %contains_word% '3'") ## FIXME: do we allow 0?
 
 PERS4 <- add_personel_questions(label = "### **Scientists**", category = "scientists",
-                                showif = "M1 %contains_word% '4'")
+                                showif = "M1 %contains_word% '4'") ## FIXME: do we allow 0?
 
 PERS5 <- add_personel_questions(label = "### **Leadership Focused**", category = "leadership",
-                                showif = "M1 %contains_word% '5'")
+                                showif = "M1 %contains_word% '5'") ## FIXME: do we allow 0?
 
 PERS6 <- add_personel_questions(label = "### **Other**", category = "other",
-                                showif = "M1 %contains_word% '6'")
+                                showif = "M1 %contains_word% '6'") ## FIXME: do we allow 0?
 
 S5 <- S1; S5$name <- "S5"; S5$showif = "!M1 %contains_word% '7' && !M1 %contains_word% '8'"
 
@@ -428,11 +431,11 @@ Other_tech <- add_element(label = "#### 🦀 Add other technologies that qualify
                           choice1 = "I can't think of anything",
                           optional = "*") ##FIXME decide on whether this should be optional or not
 
-Other_tech_comment_check <- add_element(label = "Add a COMMENT",
+Other_tech_comment_check <- add_element(label = "#### Add a COMMENT",
                                         name = "Other_tech_comment_check",
                                         type = "check")
 
-Other_tech_comment <- add_element(label = "Tell us more, so we fully understand",
+Other_tech_comment <- add_element(label = "#### Tell us more, so we fully understand",
                                   name = "Other_tech_comment",
                                   showif = "Other_tech_comment_check",
                                   type = "textarea")
@@ -471,7 +474,7 @@ Block_others2 <- add_element(label = "The answer **I don't know** cannot be comb
                              type = "block",
                              showif = "(Others_choice %contains_word% '1' | Others_choice %contains_word% '2' | Others_choice %contains_word% '3' | Others_choice %contains_word% '4' | Others_choice %contains_word% '5' | Others_choice %contains_word% '6') && Others_choice %contains_word% '7'")
 
-Block_others3 <- add_element(label = "The answer **None of the above** cannot be combined with another category",
+Block_others3 <- add_element(label = "The answer **None** cannot be combined with another category",
                              name = "Block_others3",
                              type = "block",
                              showif = "(Others_choice %contains_word% '1' | Others_choice %contains_word% '2' | Others_choice %contains_word% '3' | Others_choice %contains_word% '4') && Others_choice %contains_word% '5'")
@@ -483,11 +486,11 @@ name = "Others",
 choice1 = "I can't think of any",
 optional = "*") ##FIXME decide on whether this should be optional or not
 
-Others_comment_check <- add_element(label = "Add a COMMENT",
+Others_comment_check <- add_element(label = "#### Add a COMMENT",
                                     name = "Others_comment_check",
                                     type = "check")
 
-Others_comment <- add_element(label = "💡 Tell us more, so we fully understand",
+Others_comment <- add_element(label = "#### 💡 Tell us more, so we fully understand",
                               name = "Others_comment",
                               showif = "Others_comment_check",
                               type = "textarea")
@@ -512,7 +515,7 @@ S9 <- S1; S9$name <- "S9"
 
 # Page 10 ----------------------------------------------------------------------
 
-P10 <-  add_element(label = "# <mark style='background-color:#6495ED;color:#FFD700'> Part C: A little about you (4 questions) </mark>",
+P10 <-  add_element(label = "# <mark style='background-color:#6495ED;color:#FFD700'> Part C: A little about you (5 questions) </mark>",
                     name = "P10",
                     type = "note")
 
@@ -545,11 +548,11 @@ Role_block2 <- add_element(label = "The answer **I don't know** cannot be combin
                            type = "block",
                            showif = "(Role_choice %contains_word% '1' | Role_choice %contains_word% '2' | Role_choice %contains_word% '3' | Role_choice %contains_word% '4' | Role_choice %contains_word% '5' | Role_choice %contains_word% '6' | Role_choice %contains_word% '7') && Role_choice %contains_word% '8'")
 
-Role_comment_check <- add_element(label = "Add a COMMENT",
+Role_comment_check <- add_element(label = "#### Add a COMMENT",
                                   name = "Role_comment_check",
                                   type = "check")
 
-Role_comment <- add_element(label = "💡 Tell us more, so we fully understand",
+Role_comment <- add_element(label = "#### 💡 Tell us more, so we fully understand",
                             name = "Role_comment",
                             showif = "Role_comment_check",
                             type = "textarea")
@@ -584,6 +587,23 @@ Name_note <-  add_element(label = "## 2: Your name?",
                           name = "Name_note",
                           type = "note")
 
+Name_input <- add_element(label = "#### What is your name?
+💙 We may use this for follow-up questions or to share the report. 
+💡It will not be distributed unless you request us to do so in question 4 (see later).",
+                          name = "Name_input",
+                          type = "text") ## FIXME make optional?
+
+Name_comment_check <- add_element(label = "#### Add a COMMENT",
+                                  name = "Name_comment_check",
+                                  type = "check")
+
+Name_comment <- add_element(label = "#### 💡 Tell us more, so we fully understand",
+                            name = "Name_comment",
+                            showif = "Name_comment_check",
+                            type = "textarea")
+
+E11 <- E10; E11$name <- "E11"
+
 S11 <- S1; S11$name <- "S11"
 
 # Page 12 ----------------------------------------------------------------------
@@ -593,6 +613,23 @@ P12 <- P10; P12$name <- "P12"
 Email_note <-  add_element(label = "## 3: Contact email?",
                            name = "Email_note",
                            type = "note")
+
+Email_input <- add_element(label = "#### What is your email address?
+💙 We may use this for follow-up questions or to share the report. 
+💡It will not be distributed.",
+                           name = "Email_input",
+                           type = "email")
+
+Email_comment_check <- add_element(label = "#### Add a COMMENT",
+                                   name = "Email_comment_check",
+                                   type = "check")
+
+Email_comment <- add_element(label = "#### 💡 Tell us more, so we fully understand",
+                             name = "Email_comment",
+                             showif = "Email_comment_check",
+                             type = "textarea")
+
+E12 <- E10; E12$name <- "E12"
 
 S12 <- S1; S12$name <- "S12"
 
@@ -604,6 +641,15 @@ Acknowledgement_note <-  add_element(label = "## 4: Acknowledgement?",
                                      name = "Acknowledgement_note",
                                      type = "note")
 
+Acknowledgement_input <- add_element(label = "#### We can't do this without you! If you would like to be listed in the acknowledgments of the report and other publications, please share how you would like this to appear.
+💙 You may use your first and/or last name. 
+💡If you add nothing, your name will not appear.",
+                                     name = "Acknowledgement_input",
+                                     type = "textarea",
+                                     optional  = "*")
+
+E13 <- E10; E13$name <- "E13"
+
 S13 <- S1; S13$name <- "S13"
 
 # Page 14 ----------------------------------------------------------------------
@@ -614,11 +660,26 @@ Referrals_note <-  add_element(label = "## 5: Referrals?",
                                name = "Referrals_note",
                                type = "note")
 
+Referrals_text <- add_element(label = "#### Please, if there is anyone you believe we need to hear from for this or any other MPA, please enter their names and emails here, or send the link of this questionnaire to them directly. Please also share with any of your networks. 
+💙 If an email is provided, we will only send personal messages and will not distribute or store them. 
+💡Add a COMMENT to explain any other suggestions to get wide distribution.",
+                              name = "Referrals_text",
+                              type = "textarea",
+                              optional = "*")
+
+E14 <- E10; E14$name <- "E14"
+
 S14 <- S1; S14$name <- "S14"
 
 # Page 15 ----------------------------------------------------------------------
 
-S15 <- S1; S15$name <- "S15"
+P15 <-  add_element(label = "# <mark style='background-color:#6495ED;color:#FFD700'>THANK YOU</mark>",
+                    name = "P15",
+                    type = "note")
+
+S15 <- add_element(label = "End the survey",
+                  name = "S15",
+                  type = "submit") ## FIXME: point to new survey
 
 # Save survey -----------------------------------------------------------
 
@@ -634,11 +695,11 @@ survey_tbl <- bind_rows(N0, S0,
                         P8, Others_note, Others_choice, Block_others1, Block_others2, Block_others3, Others, Others_comment_check, Others_comment, S8,
                         P9, Anythingelse_note, Anythingelse_comment, S9,
                         P10, Role_note, Role_choice, Role_block1, Role_block2, Role_comment_check, Role_comment, E10, S10,
-                        P11, Name_note, S11,
-                        P12, Email_note, S12,
-                        P13, Acknowledgement_note, S13,
-                        P14, Referrals_note, S14,
-                        S15)
+                        P11, Name_note, Name_input, Name_comment_check, Name_comment, E11, S11,
+                        P12, Email_note, Email_input, Email_comment_check, Email_comment, E12, S12,
+                        P13, Acknowledgement_note, Acknowledgement_input, E13, S13,
+                        P14, Referrals_note, Referrals_text, E14, S14,
+                        P15, S15)
 
 names_tbl <- table(survey_tbl$name)
 if (any(names_tbl > 1)) stop(paste(names(names_tbl)[names_tbl > 1], "duplicated. All name must be unique."))

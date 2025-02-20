@@ -11,7 +11,7 @@
 #### This study will help create a clear picture of the workforce behind current MPAs and give us an idea of what may be needed as the number of MPAs grows.	
 	
 ### Here's how it works:	
-#### XX questions about the workforce behind your specific MPA.
+#### 12 questions about the workforce behind your specific MPA.
   
 #### Click [here] to learn about Data Access, Risks, Support, Funders, and more.	
 
@@ -23,7 +23,7 @@
 #### Dr. Christine Ward-Paige, eOceans, christine@eOceans.co	
 #### Dr. Alexandre Courtiol, Leibniz-IZW","N0","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "Let's begin","S0","","submit","","","",NA,NA,NA,NA,NA,NA,NA,NA
-"# <mark style='background-color:#6495ED;color:#FFD700'> Part A: Let's find your Marine Protected Area (MPA)</mark>","P1","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
+"# <mark style='background-color:#6495ED;color:#FFD700'> Part A: Let's find your Marine Protected Area (MPA) (2 Questions)</mark>","P1","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "## 1: Select your country","N1","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the country (or overseas land) with the MPA you are responding for
 💙 You can search using name, partial name, or ISO code.
@@ -51,7 +51,7 @@
   color: black;
 }
 </style>","CSS","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
-"# <mark style='background-color:#6495ED;color:#FFD700'> Part A: Let's find your Marine Protected Area (MPA)</mark>","P2","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
+"# <mark style='background-color:#6495ED;color:#FFD700'> Part A: Let's find your MPA (2 Questions)</mark>","P2","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "## 2: Select your MPA","N2","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
 💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
@@ -847,43 +847,43 @@ $(document).ready(function () {
 "Part time personel (counted as 0.5 FTE each)","PERS_site_PartTime","","number 0,999999,1","0","","M1 %contains_word% '1'",NA,NA,NA,NA,NA,NA,NA,NA
 "Seasonal personel (working during e.g. summer; counted as 0.25 FTE each)","PERS_site_Seasonal","","number 0,999999,1","0","","M1 %contains_word% '1'",NA,NA,NA,NA,NA,NA,NA,NA
 "Occcasional personel (working few weeks a year; counted as 0.1 FTE each)","PERS_site_Occasional","","number 0,999999,1","0","","M1 %contains_word% '1'",NA,NA,NA,NA,NA,NA,NA,NA
-"Add a COMMENT","PERS_site_NeedComment","","check","","","M1 %contains_word% '1'",NA,NA,NA,NA,NA,NA,NA,NA
-"Add more options or explain anything you think we should know about this workforce category","PERS_siteComment","","textarea","","","PERS_site_NeedComment",NA,NA,NA,NA,NA,NA,NA,NA
+"#### Add a COMMENT","PERS_site_NeedComment","","check","","","M1 %contains_word% '1'",NA,NA,NA,NA,NA,NA,NA,NA
+"#### Add more options or explain anything you think we should know about this workforce category","PERS_siteComment","","textarea","","","PERS_site_NeedComment",NA,NA,NA,NA,NA,NA,NA,NA
 "### **Stakeholder Focused**","PERS_stakeholder_note","","note","","","M1 %contains_word% '2'",NA,NA,NA,NA,NA,NA,NA,NA
 "Full time personel (working all year; counted as 1 FTE each)","PERS_stakeholder_FullTime","","number 0,999999,1","0","","M1 %contains_word% '2'",NA,NA,NA,NA,NA,NA,NA,NA
 "Part time personel (counted as 0.5 FTE each)","PERS_stakeholder_PartTime","","number 0,999999,1","0","","M1 %contains_word% '2'",NA,NA,NA,NA,NA,NA,NA,NA
 "Seasonal personel (working during e.g. summer; counted as 0.25 FTE each)","PERS_stakeholder_Seasonal","","number 0,999999,1","0","","M1 %contains_word% '2'",NA,NA,NA,NA,NA,NA,NA,NA
 "Occcasional personel (working few weeks a year; counted as 0.1 FTE each)","PERS_stakeholder_Occasional","","number 0,999999,1","0","","M1 %contains_word% '2'",NA,NA,NA,NA,NA,NA,NA,NA
-"Add a COMMENT","PERS_stakeholder_NeedComment","","check","","","M1 %contains_word% '2'",NA,NA,NA,NA,NA,NA,NA,NA
-"Add more options or explain anything you think we should know about this workforce category","PERS_stakeholderComment","","textarea","","","PERS_stakeholder_NeedComment",NA,NA,NA,NA,NA,NA,NA,NA
+"#### Add a COMMENT","PERS_stakeholder_NeedComment","","check","","","M1 %contains_word% '2'",NA,NA,NA,NA,NA,NA,NA,NA
+"#### Add more options or explain anything you think we should know about this workforce category","PERS_stakeholderComment","","textarea","","","PERS_stakeholder_NeedComment",NA,NA,NA,NA,NA,NA,NA,NA
 "### **Support Focused**","PERS_support_note","","note","","","M1 %contains_word% '3'",NA,NA,NA,NA,NA,NA,NA,NA
 "Full time personel (working all year; counted as 1 FTE each)","PERS_support_FullTime","","number 0,999999,1","0","","M1 %contains_word% '3'",NA,NA,NA,NA,NA,NA,NA,NA
 "Part time personel (counted as 0.5 FTE each)","PERS_support_PartTime","","number 0,999999,1","0","","M1 %contains_word% '3'",NA,NA,NA,NA,NA,NA,NA,NA
 "Seasonal personel (working during e.g. summer; counted as 0.25 FTE each)","PERS_support_Seasonal","","number 0,999999,1","0","","M1 %contains_word% '3'",NA,NA,NA,NA,NA,NA,NA,NA
 "Occcasional personel (working few weeks a year; counted as 0.1 FTE each)","PERS_support_Occasional","","number 0,999999,1","0","","M1 %contains_word% '3'",NA,NA,NA,NA,NA,NA,NA,NA
-"Add a COMMENT","PERS_support_NeedComment","","check","","","M1 %contains_word% '3'",NA,NA,NA,NA,NA,NA,NA,NA
-"Add more options or explain anything you think we should know about this workforce category","PERS_supportComment","","textarea","","","PERS_support_NeedComment",NA,NA,NA,NA,NA,NA,NA,NA
+"#### Add a COMMENT","PERS_support_NeedComment","","check","","","M1 %contains_word% '3'",NA,NA,NA,NA,NA,NA,NA,NA
+"#### Add more options or explain anything you think we should know about this workforce category","PERS_supportComment","","textarea","","","PERS_support_NeedComment",NA,NA,NA,NA,NA,NA,NA,NA
 "### **Scientists**","PERS_scientists_note","","note","","","M1 %contains_word% '4'",NA,NA,NA,NA,NA,NA,NA,NA
 "Full time personel (working all year; counted as 1 FTE each)","PERS_scientists_FullTime","","number 0,999999,1","0","","M1 %contains_word% '4'",NA,NA,NA,NA,NA,NA,NA,NA
 "Part time personel (counted as 0.5 FTE each)","PERS_scientists_PartTime","","number 0,999999,1","0","","M1 %contains_word% '4'",NA,NA,NA,NA,NA,NA,NA,NA
 "Seasonal personel (working during e.g. summer; counted as 0.25 FTE each)","PERS_scientists_Seasonal","","number 0,999999,1","0","","M1 %contains_word% '4'",NA,NA,NA,NA,NA,NA,NA,NA
 "Occcasional personel (working few weeks a year; counted as 0.1 FTE each)","PERS_scientists_Occasional","","number 0,999999,1","0","","M1 %contains_word% '4'",NA,NA,NA,NA,NA,NA,NA,NA
-"Add a COMMENT","PERS_scientists_NeedComment","","check","","","M1 %contains_word% '4'",NA,NA,NA,NA,NA,NA,NA,NA
-"Add more options or explain anything you think we should know about this workforce category","PERS_scientistsComment","","textarea","","","PERS_scientists_NeedComment",NA,NA,NA,NA,NA,NA,NA,NA
+"#### Add a COMMENT","PERS_scientists_NeedComment","","check","","","M1 %contains_word% '4'",NA,NA,NA,NA,NA,NA,NA,NA
+"#### Add more options or explain anything you think we should know about this workforce category","PERS_scientistsComment","","textarea","","","PERS_scientists_NeedComment",NA,NA,NA,NA,NA,NA,NA,NA
 "### **Leadership Focused**","PERS_leadership_note","","note","","","M1 %contains_word% '5'",NA,NA,NA,NA,NA,NA,NA,NA
 "Full time personel (working all year; counted as 1 FTE each)","PERS_leadership_FullTime","","number 0,999999,1","0","","M1 %contains_word% '5'",NA,NA,NA,NA,NA,NA,NA,NA
 "Part time personel (counted as 0.5 FTE each)","PERS_leadership_PartTime","","number 0,999999,1","0","","M1 %contains_word% '5'",NA,NA,NA,NA,NA,NA,NA,NA
 "Seasonal personel (working during e.g. summer; counted as 0.25 FTE each)","PERS_leadership_Seasonal","","number 0,999999,1","0","","M1 %contains_word% '5'",NA,NA,NA,NA,NA,NA,NA,NA
 "Occcasional personel (working few weeks a year; counted as 0.1 FTE each)","PERS_leadership_Occasional","","number 0,999999,1","0","","M1 %contains_word% '5'",NA,NA,NA,NA,NA,NA,NA,NA
-"Add a COMMENT","PERS_leadership_NeedComment","","check","","","M1 %contains_word% '5'",NA,NA,NA,NA,NA,NA,NA,NA
-"Add more options or explain anything you think we should know about this workforce category","PERS_leadershipComment","","textarea","","","PERS_leadership_NeedComment",NA,NA,NA,NA,NA,NA,NA,NA
+"#### Add a COMMENT","PERS_leadership_NeedComment","","check","","","M1 %contains_word% '5'",NA,NA,NA,NA,NA,NA,NA,NA
+"#### Add more options or explain anything you think we should know about this workforce category","PERS_leadershipComment","","textarea","","","PERS_leadership_NeedComment",NA,NA,NA,NA,NA,NA,NA,NA
 "### **Other**","PERS_other_note","","note","","","M1 %contains_word% '6'",NA,NA,NA,NA,NA,NA,NA,NA
 "Full time personel (working all year; counted as 1 FTE each)","PERS_other_FullTime","","number 0,999999,1","0","","M1 %contains_word% '6'",NA,NA,NA,NA,NA,NA,NA,NA
 "Part time personel (counted as 0.5 FTE each)","PERS_other_PartTime","","number 0,999999,1","0","","M1 %contains_word% '6'",NA,NA,NA,NA,NA,NA,NA,NA
 "Seasonal personel (working during e.g. summer; counted as 0.25 FTE each)","PERS_other_Seasonal","","number 0,999999,1","0","","M1 %contains_word% '6'",NA,NA,NA,NA,NA,NA,NA,NA
 "Occcasional personel (working few weeks a year; counted as 0.1 FTE each)","PERS_other_Occasional","","number 0,999999,1","0","","M1 %contains_word% '6'",NA,NA,NA,NA,NA,NA,NA,NA
-"Add a COMMENT","PERS_other_NeedComment","","check","","","M1 %contains_word% '6'",NA,NA,NA,NA,NA,NA,NA,NA
-"Add more options or explain anything you think we should know about this workforce category","PERS_otherComment","","textarea","","","PERS_other_NeedComment",NA,NA,NA,NA,NA,NA,NA,NA
+"#### Add a COMMENT","PERS_other_NeedComment","","check","","","M1 %contains_word% '6'",NA,NA,NA,NA,NA,NA,NA,NA
+"#### Add more options or explain anything you think we should know about this workforce category","PERS_otherComment","","textarea","","","PERS_other_NeedComment",NA,NA,NA,NA,NA,NA,NA,NA
 "Continue","S5","","submit","","","!M1 %contains_word% '7' && !M1 %contains_word% '8'",NA,NA,NA,NA,NA,NA,NA,NA
 "# <mark style='background-color:#6495ED;color:#FFD700'> Part B: Tell us about your MPA (5 questions) </mark>","P6","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "## Confirm the number of FTE. 
@@ -929,8 +929,8 @@ $(document).ready(function() {
 "#### 🦀 Add other technologies that qualify
 💙 Brand names are fine too.
 💡 After typing, press enter to validate what you added.","Other_tech","","select_or_add_multiple","","*","","I can't think of anything",NA,NA,NA,NA,NA,NA,NA
-"Add a COMMENT","Other_tech_comment_check","","check","","","",NA,NA,NA,NA,NA,NA,NA,NA
-"Tell us more, so we fully understand","Other_tech_comment","","textarea","","","Other_tech_comment_check",NA,NA,NA,NA,NA,NA,NA,NA
+"#### Add a COMMENT","Other_tech_comment_check","","check","","","",NA,NA,NA,NA,NA,NA,NA,NA
+"#### Tell us more, so we fully understand","Other_tech_comment","","textarea","","","Other_tech_comment_check",NA,NA,NA,NA,NA,NA,NA,NA
 "Continue","S7","","submit","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "# <mark style='background-color:#6495ED;color:#FFD700'> Part B: Tell us about your MPA (5 questions) </mark>","P8","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "## 4: Who else is nearby?","Others_note","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
@@ -938,25 +938,25 @@ $(document).ready(function() {
 💡 Select all that apply.","Others_choice","mc_vertical","mc_multiple","","!","","**Fishers**","**Divers**","**Boat operators**","**Cultural practitioners**","**None** — no one uses this MPA","**None of the above**","**I don’t know**",NA
 "The answer **None of the above** cannot be combined with another category","Block_others1","","block","","","(Others_choice %contains_word% '1' | Others_choice %contains_word% '2' | Others_choice %contains_word% '3' | Others_choice %contains_word% '4' | Others_choice %contains_word% '5') && Others_choice %contains_word% '6'",NA,NA,NA,NA,NA,NA,NA,NA
 "The answer **I don't know** cannot be combined with another category","Block_others2","","block","","","(Others_choice %contains_word% '1' | Others_choice %contains_word% '2' | Others_choice %contains_word% '3' | Others_choice %contains_word% '4' | Others_choice %contains_word% '5' | Others_choice %contains_word% '6') && Others_choice %contains_word% '7'",NA,NA,NA,NA,NA,NA,NA,NA
-"The answer **None of the above** cannot be combined with another category","Block_others3","","block","","","(Others_choice %contains_word% '1' | Others_choice %contains_word% '2' | Others_choice %contains_word% '3' | Others_choice %contains_word% '4') && Others_choice %contains_word% '5'",NA,NA,NA,NA,NA,NA,NA,NA
+"The answer **None** cannot be combined with another category","Block_others3","","block","","","(Others_choice %contains_word% '1' | Others_choice %contains_word% '2' | Others_choice %contains_word% '3' | Others_choice %contains_word% '4') && Others_choice %contains_word% '5'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### 🦀 Add other operators that qualify
 💡 After typing, press enter to validate what you added.","Others","","select_or_add_multiple","","*","","I can't think of any",NA,NA,NA,NA,NA,NA,NA
-"Add a COMMENT","Others_comment_check","","check","","","",NA,NA,NA,NA,NA,NA,NA,NA
-"💡 Tell us more, so we fully understand","Others_comment","","textarea","","","Others_comment_check",NA,NA,NA,NA,NA,NA,NA,NA
+"#### Add a COMMENT","Others_comment_check","","check","","","",NA,NA,NA,NA,NA,NA,NA,NA
+"#### 💡 Tell us more, so we fully understand","Others_comment","","textarea","","","Others_comment_check",NA,NA,NA,NA,NA,NA,NA,NA
 "Continue","S8","","submit","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "# <mark style='background-color:#6495ED;color:#FFD700'> Part B: Tell us about your MPA (5 questions) </mark>","P9","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "## 5: Anything else?","Anythingelse_note","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Is there anything else you would like us to know about this specific MPA workforce?
 💡 Tell us more, so we fully understand.","Anythingelse_comment","","textarea","","*","",NA,NA,NA,NA,NA,NA,NA,NA
 "Continue","S9","","submit","","","",NA,NA,NA,NA,NA,NA,NA,NA
-"# <mark style='background-color:#6495ED;color:#FFD700'> Part C: A little about you (4 questions) </mark>","P10","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
+"# <mark style='background-color:#6495ED;color:#FFD700'> Part C: A little about you (5 questions) </mark>","P10","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "## 1: Your role?","Role_note","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "#### What role do you serve in this MPA?
 💡 Select all that apply.","Role_choice","mc_vertical","mc_multiple","","!","","**Site Focused** — such as rangers and ranger-like roles (with and without enforcement capabilities)","**Stakeholder Focused** — such as education and outreach roles","**Support Focused** — such as supporting staff","**Scientists** — such as those collecting and analyzing data to address questions","**Leadership Focused** — such as decision making","**Other** — for roles unlisted above","**None** — no one works on this MPA in a formal role","**I don't know**"
 "The answer **None** cannot be combined with another category","Role_block1","","block","","","(Role_choice %contains_word% '1' | Role_choice %contains_word% '2' | Role_choice %contains_word% '3' | Role_choice %contains_word% '4' | Role_choice %contains_word% '5' | Role_choice %contains_word% '6') && Role_choice %contains_word% '7'",NA,NA,NA,NA,NA,NA,NA,NA
 "The answer **I don't know** cannot be combined with another category","Role_block2","","block","","","(Role_choice %contains_word% '1' | Role_choice %contains_word% '2' | Role_choice %contains_word% '3' | Role_choice %contains_word% '4' | Role_choice %contains_word% '5' | Role_choice %contains_word% '6' | Role_choice %contains_word% '7') && Role_choice %contains_word% '8'",NA,NA,NA,NA,NA,NA,NA,NA
-"Add a COMMENT","Role_comment_check","","check","","","",NA,NA,NA,NA,NA,NA,NA,NA
-"💡 Tell us more, so we fully understand","Role_comment","","textarea","","","Role_comment_check",NA,NA,NA,NA,NA,NA,NA,NA
+"#### Add a COMMENT","Role_comment_check","","check","","","",NA,NA,NA,NA,NA,NA,NA,NA
+"#### 💡 Tell us more, so we fully understand","Role_comment","","textarea","","","Role_comment_check",NA,NA,NA,NA,NA,NA,NA,NA
 "## NOTE
 #### 💙 Personal information will not be distributed unless requested.
 #### 💡 The purpose of collecting this information includes:
@@ -975,16 +975,101 @@ li{
   <li>To share the report with you when it is complete.</li>
 </ol>","E10","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "Continue","S10","","submit","","","",NA,NA,NA,NA,NA,NA,NA,NA
-"# <mark style='background-color:#6495ED;color:#FFD700'> Part C: A little about you (4 questions) </mark>","P11","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
+"# <mark style='background-color:#6495ED;color:#FFD700'> Part C: A little about you (5 questions) </mark>","P11","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "## 2: Your name?","Name_note","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
+"#### What is your name?
+💙 We may use this for follow-up questions or to share the report. 
+💡It will not be distributed unless you request us to do so in question 4 (see later).","Name_input","","text","","","",NA,NA,NA,NA,NA,NA,NA,NA
+"#### Add a COMMENT","Name_comment_check","","check","","","",NA,NA,NA,NA,NA,NA,NA,NA
+"#### 💡 Tell us more, so we fully understand","Name_comment","","textarea","","","Name_comment_check",NA,NA,NA,NA,NA,NA,NA,NA
+"## NOTE
+#### 💙 Personal information will not be distributed unless requested.
+#### 💡 The purpose of collecting this information includes:
+<style>
+li{
+  color:#484c50;
+  font-family:Roboto,Arial,sans-serif;
+  font-weight:400;
+  font-size:120%;
+  margin:0 0 2px 0
+}
+</style>
+<ol type='1'>
+  <li>Requesting follow up information if necessary;</li>
+  <li>It may help us understand your answers (e.g., different departments); and </li>
+  <li>To share the report with you when it is complete.</li>
+</ol>","E11","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "Continue","S11","","submit","","","",NA,NA,NA,NA,NA,NA,NA,NA
-"# <mark style='background-color:#6495ED;color:#FFD700'> Part C: A little about you (4 questions) </mark>","P12","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
+"# <mark style='background-color:#6495ED;color:#FFD700'> Part C: A little about you (5 questions) </mark>","P12","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "## 3: Contact email?","Email_note","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
+"#### What is your email address?
+💙 We may use this for follow-up questions or to share the report. 
+💡It will not be distributed.","Email_input","","email","","","",NA,NA,NA,NA,NA,NA,NA,NA
+"#### Add a COMMENT","Email_comment_check","","check","","","",NA,NA,NA,NA,NA,NA,NA,NA
+"#### 💡 Tell us more, so we fully understand","Email_comment","","textarea","","","Email_comment_check",NA,NA,NA,NA,NA,NA,NA,NA
+"## NOTE
+#### 💙 Personal information will not be distributed unless requested.
+#### 💡 The purpose of collecting this information includes:
+<style>
+li{
+  color:#484c50;
+  font-family:Roboto,Arial,sans-serif;
+  font-weight:400;
+  font-size:120%;
+  margin:0 0 2px 0
+}
+</style>
+<ol type='1'>
+  <li>Requesting follow up information if necessary;</li>
+  <li>It may help us understand your answers (e.g., different departments); and </li>
+  <li>To share the report with you when it is complete.</li>
+</ol>","E12","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "Continue","S12","","submit","","","",NA,NA,NA,NA,NA,NA,NA,NA
-"# <mark style='background-color:#6495ED;color:#FFD700'> Part C: A little about you (4 questions) </mark>","P13","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
+"# <mark style='background-color:#6495ED;color:#FFD700'> Part C: A little about you (5 questions) </mark>","P13","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "## 4: Acknowledgement?","Acknowledgement_note","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
+"#### We can't do this without you! If you would like to be listed in the acknowledgments of the report and other publications, please share how you would like this to appear.
+💙 You may use your first and/or last name. 
+💡If you add nothing, your name will not appear.","Acknowledgement_input","","textarea","","*","",NA,NA,NA,NA,NA,NA,NA,NA
+"## NOTE
+#### 💙 Personal information will not be distributed unless requested.
+#### 💡 The purpose of collecting this information includes:
+<style>
+li{
+  color:#484c50;
+  font-family:Roboto,Arial,sans-serif;
+  font-weight:400;
+  font-size:120%;
+  margin:0 0 2px 0
+}
+</style>
+<ol type='1'>
+  <li>Requesting follow up information if necessary;</li>
+  <li>It may help us understand your answers (e.g., different departments); and </li>
+  <li>To share the report with you when it is complete.</li>
+</ol>","E13","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "Continue","S13","","submit","","","",NA,NA,NA,NA,NA,NA,NA,NA
-"# <mark style='background-color:#6495ED;color:#FFD700'> Part C: A little about you (4 questions) </mark>","P14","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
+"# <mark style='background-color:#6495ED;color:#FFD700'> Part C: A little about you (5 questions) </mark>","P14","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "## 5: Referrals?","Referrals_note","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
+"#### Please, if there is anyone you believe we need to hear from for this or any other MPA, please enter their names and emails here, or send the link of this questionnaire to them directly. Please also share with any of your networks. 
+💙 If an email is provided, we will only send personal messages and will not distribute or store them. 
+💡Add a COMMENT to explain any other suggestions to get wide distribution.","Referrals_text","","textarea","","*","",NA,NA,NA,NA,NA,NA,NA,NA
+"## NOTE
+#### 💙 Personal information will not be distributed unless requested.
+#### 💡 The purpose of collecting this information includes:
+<style>
+li{
+  color:#484c50;
+  font-family:Roboto,Arial,sans-serif;
+  font-weight:400;
+  font-size:120%;
+  margin:0 0 2px 0
+}
+</style>
+<ol type='1'>
+  <li>Requesting follow up information if necessary;</li>
+  <li>It may help us understand your answers (e.g., different departments); and </li>
+  <li>To share the report with you when it is complete.</li>
+</ol>","E14","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "Continue","S14","","submit","","","",NA,NA,NA,NA,NA,NA,NA,NA
-"Continue","S15","","submit","","","",NA,NA,NA,NA,NA,NA,NA,NA
+"# <mark style='background-color:#6495ED;color:#FFD700'>THANK YOU</mark>","P15","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
+"End the survey","S15","","submit","","","",NA,NA,NA,NA,NA,NA,NA,NA
