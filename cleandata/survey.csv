@@ -937,5 +937,44 @@ if (input) {
 "# <mark style='background-color:#6495ED;color:#FFD700'> Part B: Tell us about your MPA (5 questions) </mark>","P9","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "## 5: Anything else?","Anythingelse_note","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Is there anything else you would like us to know about this specific MPA workforce?
-💡 Tell us more, so we fully understand","Anythingelse_comment","","textarea","","*","",NA,NA,NA,NA,NA,NA,NA,NA
+💡 Tell us more, so we fully understand.","Anythingelse_comment","","textarea","","*","",NA,NA,NA,NA,NA,NA,NA,NA
 "Continue","S9","","submit","","","",NA,NA,NA,NA,NA,NA,NA,NA
+"# <mark style='background-color:#6495ED;color:#FFD700'> Part C: A little about you (4 questions) </mark>","P10","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
+"## 1: Your role?","Role_note","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
+"#### What role do you serve in this MPA?
+💡 Select all that apply.","Role_choice","mc_vertical","mc_multiple","","!","","**Site Focused** — such as rangers and ranger-like roles (with and without enforcement capabilities)","**Stakeholder Focused** — such as education and outreach roles","**Support Focused** — such as supporting staff","**Scientists** — such as those collecting and analyzing data to address questions","**Leadership Focused** — such as decision making","**Other** — for roles unlisted above","**None** — no one works on this MPA in a formal role","**I don't know**"
+"The answer **None** cannot be combined with another category","Role_block1","","block","","","(Role_choice %contains_word% '1' | Role_choice %contains_word% '2' | Role_choice %contains_word% '3' | Role_choice %contains_word% '4' | Role_choice %contains_word% '5' | Role_choice %contains_word% '6') && Role_choice %contains_word% '7'",NA,NA,NA,NA,NA,NA,NA,NA
+"The answer **I don't know** cannot be combined with another category","Role_block2","","block","","","(Role_choice %contains_word% '1' | Role_choice %contains_word% '2' | Role_choice %contains_word% '3' | Role_choice %contains_word% '4' | Role_choice %contains_word% '5' | Role_choice %contains_word% '6' | Role_choice %contains_word% '7') && Role_choice %contains_word% '8'",NA,NA,NA,NA,NA,NA,NA,NA
+"Add a COMMENT","Role_comment_check","","check","","","",NA,NA,NA,NA,NA,NA,NA,NA
+"💡 Tell us more, so we fully understand","Role_comment","","textarea","","","Role_comment_check",NA,NA,NA,NA,NA,NA,NA,NA
+"## NOTE
+#### 💙 Personal information will not be distributed unless requested.
+#### 💡 The purpose of collecting this information includes:
+<style>
+li{
+  color:#484c50;
+  font-family:Roboto,Arial,sans-serif;
+  font-weight:400;
+  font-size:120%;
+  margin:0 0 2px 0
+}
+</style>
+<ol type='1'>
+  <li>Requesting follow up information if necessary;</li>
+  <li>It may help us understand your answers (e.g., different departments); and </li>
+  <li>To share the report with you when it is complete.</li>
+</ol>","E10","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
+"Continue","S10","","submit","","","",NA,NA,NA,NA,NA,NA,NA,NA
+"# <mark style='background-color:#6495ED;color:#FFD700'> Part C: A little about you (4 questions) </mark>","P11","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
+"## 2: Your name?","Name_note","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
+"Continue","S11","","submit","","","",NA,NA,NA,NA,NA,NA,NA,NA
+"# <mark style='background-color:#6495ED;color:#FFD700'> Part C: A little about you (4 questions) </mark>","P12","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
+"## 3: Contact email?","Email_note","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
+"Continue","S12","","submit","","","",NA,NA,NA,NA,NA,NA,NA,NA
+"# <mark style='background-color:#6495ED;color:#FFD700'> Part C: A little about you (4 questions) </mark>","P13","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
+"## 4: Acknowledgement?","Acknowledgement_note","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
+"Continue","S13","","submit","","","",NA,NA,NA,NA,NA,NA,NA,NA
+"# <mark style='background-color:#6495ED;color:#FFD700'> Part C: A little about you (4 questions) </mark>","P14","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
+"## 5: Referrals?","Referrals_note","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
+"Continue","S14","","submit","","","",NA,NA,NA,NA,NA,NA,NA,NA
+"Continue","S15","","submit","","","",NA,NA,NA,NA,NA,NA,NA,NA

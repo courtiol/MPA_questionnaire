@@ -10,7 +10,6 @@ library(wdpar)
 library(dplyr)
 data("codelist", package = "countrycode")
 
-
 add_element <- function(label="unnamed", name="element", class="", type="", value="", optional="", showif = "", ...) {
   data.frame(label = label,
              name = name,
@@ -116,7 +115,7 @@ S1 <- add_element(label = "Continue",
                   name = "S1",
                   type = "submit")
 
-# Third page of questionnaire ---------------------------------------------
+# Page 3 of questionnaire ---------------------------------------------
 
 P2 <-  P1; P2$name <- "P2"
 
@@ -200,7 +199,7 @@ Warn_multiple <- add_element(label = r"(
 
 S2 <- S1; S2$name <- "S2"
 
-# Fourth page of questionnaire ---------------------------------------------
+# Page 4 -----------------------------------------------------------------------
 
 P4 <-  add_element(label = "# <mark style='background-color:#6495ED;color:#FFD700'> Part B: Tell us about your MPA (5 questions) </mark>", ##FIXME replace "your MPA" by its name
                    name = "P4",
@@ -237,7 +236,7 @@ B2 <- add_element(label = "The answer **I don't know** cannot be combined with a
 
 S4 <- S1; S4$name <- "S4"
 
-# Fifth page of questionnaire ---------------------------------------------
+# Page 5 -----------------------------------------------------------------------
 
 P5 <-  P4; P5$name <- "P5"; P5$showif <- "!M1 %contains_word% '7' && !M1 %contains_word% '8'"
 
@@ -312,7 +311,7 @@ PERS6 <- add_personel_questions(label = "### **Other**", category = "other",
 
 S5 <- S1; S5$name <- "S5"; S5$showif = "!M1 %contains_word% '7' && !M1 %contains_word% '8'"
 
-# Sixth page of questionnaire (optional) ---------------------------------------
+# Page 6 (optional) ------------------------------------------------------------
 
 P6 <- P4; P6$name <- "P6"
 
@@ -379,7 +378,7 @@ total_info <- add_element(label = "💡 The TOTAL is just the sum of the categor
 
 S6 <- S1; S6$name <- "S6"
 
-# Seventh page of questionnaire -----------------------------------------
+# Page 7 -----------------------------------------------------------------------
 
 P7 <- P4; P7$name <- "P7"
 
@@ -430,7 +429,7 @@ Other_tech_comment <- add_element(label = "Tell us more, so we fully understand"
   
 S7 <- S1; S7$name <- "S7"
 
-# Eight page of questionnaire -------------------------------------------
+# Page 8 -----------------------------------------------------------------------
 
 P8 <- P4; P8$name <- "P8"
 
@@ -467,7 +466,6 @@ Block_others3 <- add_element(label = "The answer **None of the above** cannot be
                              type = "block",
                              showif = "(Others_choice %contains_word% '1' | Others_choice %contains_word% '2' | Others_choice %contains_word% '3' | Others_choice %contains_word% '4') && Others_choice %contains_word% '5'")
 
-
 Others <- add_element(label = "#### 🦀 Add other operators that qualify
 💡 After typing, press enter to validate what you added.",
 type = "select_or_add_multiple",
@@ -484,10 +482,9 @@ Others_comment <- add_element(label = "💡 Tell us more, so we fully understand
                               showif = "Others_comment_check",
                               type = "textarea")
 
-
 S8 <- S1; S8$name <- "S8"
 
-# Nineth page of questionnaire -------------------------------------------
+# Page 9 -----------------------------------------------------------------------
 
 P9 <- P4; P9$name <- "P9"
 
@@ -496,15 +493,122 @@ Anythingelse_note <-  add_element(label = "## 5: Anything else?",
                             type = "note")
 
 Anythingelse_comment <- add_element(label = "#### Is there anything else you would like us to know about this specific MPA workforce?
-💡 Tell us more, so we fully understand",
+💡 Tell us more, so we fully understand.",
                                     name = "Anythingelse_comment",
                                     type = "textarea",
                                     optional = "*")
 
 S9 <- S1; S9$name <- "S9"
 
-# Tenth page of questionnaire -------------------------------------------
+# Page 10 ----------------------------------------------------------------------
 
+P10 <-  add_element(label = "# <mark style='background-color:#6495ED;color:#FFD700'> Part C: A little about you (4 questions) </mark>",
+                    name = "P10",
+                    type = "note")
+
+Role_note <-  add_element(label = "## 1: Your role?",
+                          name = "Role_note",
+                          type = "note")
+
+Role_choice <- add_element(label = "#### What role do you serve in this MPA?
+💡 Select all that apply.",
+                           name = "Role_choice",
+                           type = "mc_multiple",
+                           class = "mc_vertical",
+                           choice1 = "**Site Focused** — such as rangers and ranger-like roles (with and without enforcement capabilities)",
+                           choice2 = "**Stakeholder Focused** — such as education and outreach roles",
+                           choice3 = "**Support Focused** — such as supporting staff",
+                           choice4 = "**Scientists** — such as those collecting and analyzing data to address questions",
+                           choice5 = "**Leadership Focused** — such as decision making",
+                           choice6 = "**Other** — for roles unlisted above",
+                           choice7 = "**None** — no one works on this MPA in a formal role",
+                           choice8 = "**I don't know**",
+                           optional = "!")
+
+Role_block1 <- add_element(label = "The answer **None** cannot be combined with another category",
+                           name = "Role_block1",
+                           type = "block",
+                           showif = "(Role_choice %contains_word% '1' | Role_choice %contains_word% '2' | Role_choice %contains_word% '3' | Role_choice %contains_word% '4' | Role_choice %contains_word% '5' | Role_choice %contains_word% '6') && Role_choice %contains_word% '7'")
+
+Role_block2 <- add_element(label = "The answer **I don't know** cannot be combined with another category",
+                           name = "Role_block2",
+                           type = "block",
+                           showif = "(Role_choice %contains_word% '1' | Role_choice %contains_word% '2' | Role_choice %contains_word% '3' | Role_choice %contains_word% '4' | Role_choice %contains_word% '5' | Role_choice %contains_word% '6' | Role_choice %contains_word% '7') && Role_choice %contains_word% '8'")
+
+Role_comment_check <- add_element(label = "Add a COMMENT",
+                                  name = "Role_comment_check",
+                                  type = "check")
+
+Role_comment <- add_element(label = "💡 Tell us more, so we fully understand",
+                            name = "Role_comment",
+                            showif = "Role_comment_check",
+                            type = "textarea")
+
+E10 <- add_element(label = "## NOTE
+#### 💙 Personal information will not be distributed unless requested.
+#### 💡 The purpose of collecting this information includes:
+<style>
+li{
+  color:#484c50;
+  font-family:Roboto,Arial,sans-serif;
+  font-weight:400;
+  font-size:120%;
+  margin:0 0 2px 0
+}
+</style>
+<ol type='1'>
+  <li>Requesting follow up information if necessary;</li>
+  <li>It may help us understand your answers (e.g., different departments); and </li>
+  <li>To share the report with you when it is complete.</li>
+</ol>",
+                     name = "E10",
+                     type = "note")
+
+S10 <- S1; S10$name <- "S10"
+
+# Page 11 ----------------------------------------------------------------------
+
+P11 <- P10; P11$name <- "P11"
+
+Name_note <-  add_element(label = "## 2: Your name?",
+                          name = "Name_note",
+                          type = "note")
+
+S11 <- S1; S11$name <- "S11"
+
+# Page 12 ----------------------------------------------------------------------
+
+P12 <- P10; P12$name <- "P12"
+
+Email_note <-  add_element(label = "## 3: Contact email?",
+                           name = "Email_note",
+                           type = "note")
+
+S12 <- S1; S12$name <- "S12"
+
+# Page 13 ----------------------------------------------------------------------
+
+P13 <- P10; P13$name <- "P13"
+
+Acknowledgement_note <-  add_element(label = "## 4: Acknowledgement?",
+                                     name = "Acknowledgement_note",
+                                     type = "note")
+
+S13 <- S1; S13$name <- "S13"
+
+# Page 14 ----------------------------------------------------------------------
+
+P14 <- P10; P14$name <- "P14"
+
+Referrals_note <-  add_element(label = "## 5: Referrals?",
+                               name = "Referrals_note",
+                               type = "note")
+
+S14 <- S1; S14$name <- "S14"
+
+# Page 15 ----------------------------------------------------------------------
+
+S15 <- S1; S15$name <- "S15"
 
 # Save survey -----------------------------------------------------------
 
@@ -518,7 +622,13 @@ survey_tbl <- bind_rows(N0, S0,
                         total_note, total_info, S6,
                         P7, Tech_note, Tech_choice, Block_tech1, Block_tech2, Other_tech, Other_tech_comment_check, Other_tech_comment, S7,
                         P8, Others_note, Others_choice, Block_others1, Block_others2, Block_others3, Others, Others_comment_check, Others_comment, S8,
-                        P9, Anythingelse_note, Anythingelse_comment, S9)
+                        P9, Anythingelse_note, Anythingelse_comment, S9,
+                        P10, Role_note, Role_choice, Role_block1, Role_block2, Role_comment_check, Role_comment, E10, S10,
+                        P11, Name_note, S11,
+                        P12, Email_note, S12,
+                        P13, Acknowledgement_note, S13,
+                        P14, Referrals_note, S14,
+                        S15)
 
 names_tbl <- table(survey_tbl$name)
 if (any(names_tbl > 1)) stop(paste(names(names_tbl)[names_tbl > 1], "duplicated. All name must be unique."))
