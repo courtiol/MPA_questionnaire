@@ -202,7 +202,7 @@ S2 <- S1; S2$name <- "S2"
 
 # Fourth page of questionnaire ---------------------------------------------
 
-P4 <-  add_element(label = "# <mark style='background-color:#6495ED;color:#FFD700'> Part B: Tell us about your MPA (6 questions) </mark>", ##FIXME replace "your MPA" by its name
+P4 <-  add_element(label = "# <mark style='background-color:#6495ED;color:#FFD700'> Part B: Tell us about your MPA (5 questions) </mark>", ##FIXME replace "your MPA" by its name
                    name = "P4",
                    type = "note")
 
@@ -356,7 +356,8 @@ FTE_other <- add_element(label = "### **Other**",
                          type = "number 0,999999,0.1",
                          value = FTE_formula("other"))
 
-FTE_total_compute <- add_element(label = r"(<script>
+total_note <- add_element(label = r"(### **TOTAL**
+<script>
 var FTE_total = 0;
 $(document).ready(function () {
     // for Select2, one must use the 'change' event
@@ -365,22 +366,15 @@ $(document).ready(function () {
         FTE_total = textread.reduce((sum, num) => sum + Number(num), 0).toString();;
     });
 });
-</script>)",
-                                  name = "FTE_total_compute",
-                                  type = "note")
-
-FTE_total <- add_element(label = "### **TOTAL**
-<script>
 if (input) {
   input.readOnly = true;
 }
-</script>",
-                         name = "FTE_total",
-                         type = "text",
-                         value = "FTE_total") ##FIXME compute sum and prevent modifications
+</script>)",
+                         name = "total_note",
+                         type = "text") ##FIXME compute sum and prevent modifications
 
-FTE_note <- add_element(label = "💡 The TOTAL is just the sum of the categories above; you cannot modify it directly.",
-                        name = "FTE_note",
+total_info <- add_element(label = "💡 The TOTAL is just the sum of the categories above; you cannot modify it directly.",
+                        name = "total_info",
                         type = "note")
 
 S6 <- S1; S6$name <- "S6"
@@ -388,8 +382,59 @@ S6 <- S1; S6$name <- "S6"
 # Seventh page of questionnaire -----------------------------------------
 
 P7 <- P4; P7$name <- "P7"
+
+Tech_note <-  add_element(label = "## 3: Technology used to help?",
+                          name = "Tech_note",
+                          type = "note")
+                          
+Tech_choice <-  add_element(label = "#### If you use technology or other aids to help your MPA workforce expand its effectiveness in THIS specific MPA, please list.
+💡 Select all that apply.",
+                            name = "Tech_choice",
+                            type = "mc_multiple",
+                            class = "mc_vertical",
+                            choice1 = "**Satellite technologies**",
+                            choice2 = "**Radar technologies**",
+                            choice3 = "**Underwater acoustic technologies**",
+                            choice4 = "**Drone technologies**",
+                            choice5 = "**Reporting tools**: Phone, email, or app reporting for marine species, activities, incidents",
+                            choice6 = "**None of the above**",
+                            choice7 = "**I don’t know**",
+                            optional = "!")
+
+Block_tech1 <- add_element(label = "The answer **None** cannot be combined with another category",
+                           name = "Block_tech1",
+                           type = "block",
+                           showif = "(Tech_choice %contains_word% '1' | Tech_choice %contains_word% '2' | Tech_choice %contains_word% '3' | Tech_choice %contains_word% '4' | Tech_choice %contains_word% '5') && Tech_choice %contains_word% '6'")
+
+Block_tech2 <- add_element(label = "The answer **I don't know** cannot be combined with another category",
+                           name = "Block_tech2",
+                           type = "block",
+                           showif = "(Tech_choice %contains_word% '1' | Tech_choice %contains_word% '2' | Tech_choice %contains_word% '3' | Tech_choice %contains_word% '4' | Tech_choice %contains_word% '5' | Tech_choice %contains_word% '6') && Tech_choice %contains_word% '7'")
+
+Other_tech <- add_element(label = "#### 🦀 Add other technologies that qualify
+💙 Brand names are fine too.
+💡 After typing, press enter to validate what you added.",
+                          type = "select_or_add_multiple",
+                          name = "Other_tech",
+                          choice1 = "I can't think of anything",
+                          optional = "*") ##FIXME decide on whether this should be optional or not
+
+Other_tech_comment_check <- add_element(label = "Add a COMMENT",
+                                        name = "Other_tech_comment_check",
+                                        type = "check")
+
+Other_tech_comment <- add_element(label = "Tell us more, so we fully understand",
+                                  name = "Other_tech_comment",
+                                  showif = "Other_tech_comment_check",
+                                  type = "textarea")
+  
 S7 <- S1; S7$name <- "S7"
 
+# Eight page of questionnaire -------------------------------------------
+
+P8 <- P4; P8$name <- "P8"
+
+S8 <- S1; S8$name <- "S8"
 
 # Save survey -----------------------------------------------------------
 
@@ -400,8 +445,9 @@ survey_tbl <- bind_rows(N0, S0,
                         P5, N5,
                         PERS1, PERS2, PERS3, PERS4, PERS5, PERS6, S5,
                         P6, SUMM_note, FTE_site, FTE_stakeholder, FTE_support, FTE_scientists, FTE_leadership, FTE_other,
-                        FTE_total_compute, FTE_total, FTE_note, S6,
-                        P7, S7)
+                        total_note, total_info, S6,
+                        P7, Tech_note, Tech_choice, Block_tech1, Block_tech2, Other_tech, Other_tech_comment_check, Other_tech_comment, S7,
+                        P8, S8)
 
 names_tbl <- table(survey_tbl$name)
 if (any(names_tbl > 1)) stop(paste(names(names_tbl)[names_tbl > 1], "duplicated. All name must be unique."))
