@@ -36,6 +36,7 @@ convert_label_country <- function(countrylabel) {
 
 # CSS definition ----------------------------------------------------------
 # Note that the CSS definition is only active on the page it is loaded
+# It is possible to define a global CSS but only outside the survey sheet so I prefer to define things here
 
 CSS <- add_element(label = "<style>
 .alert {
@@ -58,44 +59,93 @@ CSS <- add_element(label = "<style>
 .closebtn:hover {
   color: black;
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color:#0B1215;
+}
+
+p {
+  color:#484c50;
+}
+
+li{
+  color:#484c50;
+  font-family:Roboto,Arial,sans-serif;
+  font-weight:400;
+  font-size:120%;
+  margin:0 0 2px 0
+}
 </style>", 
 type = "note",
 name = "CSS")
 
 # First page of questionnaire ---------------------------------------------
 
-N0 <-  add_element(label = "# Study for Marine Protected Area managers and staff:
-# Who's working on your MPA?	
+CSS0 <- CSS; CSS0$name <- "CSS0"
+
+N0 <-  add_element(label = "
+<style>
+p {
+  font-size:130%;
+}
+</style>
+# Study for Marine Protected Area managers:
+# What does your workforce include?
 
 <br>
 
-#### We invite you to participate in this Global Marine Protected Area Workforce Study!	
-	
-#### As the world moves toward protecting 30% of the ocean by 2030, Blue Nature Alliance, Marine Conservation Institute (MPAtlas), eOceans and Leibniz-IZW have partnered to help understand the MPA workforce — the individuals who actively contribute to helping Marine Protected Areas (MPAs) work.	
-	
-#### This study will help create a clear picture of the workforce behind current MPAs and give us an idea of what may be needed as the number of MPAs grows.	
+<p>We invite you to participate in this Global Marine Protected Area Workforce Study!</p>
+
+<p>As the world moves toward protecting 30% of the ocean by 2030,
+<a href='https://www.bluenaturealliance.org/' target='_blank'>Blue Nature Alliance</a>,
+<a href='https://marine-conservation.org/' target='_blank'>Marine Conservation Institute (MPAtlas)</a>,
+<a href='https://www.eoceans.app/' target='_blank'>eOceans</a>, and
+<a href='https://www.izw-berlin.de/en/' target='_blank'>Leibniz-IZW</a>
+have partnered to understand the MPA workforce — this includes staff,
+employees, and others who have a formal role actively contributing to achieving the goals of a specific MPA.</p>
+
+<p>This study aims to create a clear picture of the workforce behind current MPAs and give us an idea of what may be needed as the number of MPAs grows.</p>
 	
 ### Here's how it works:	
-#### 12 questions about the workforce behind your specific MPA.
-  
-#### Click [here] to learn about Data Access, Risks, Support, Funders, and more.	
 
-#### This can’t be done without you — Thank you for being part of this important study and for playing a key part in the global MPA network.	
+<ul>
+  <li>Part A: 2 questions: Identify the MPA you are responding for.</li>
+  <li>Part B: 6 questions: Tell us about your specific MPA.</li>
+  <li>Part C: 5 questions: Tell us about you. </li>
+  <li>Part D: 2 final optional questions. </li>
+</ul>
 
-### Sincerely,	
+<p>💡 Click <strong>here</strong> to learn about <em>Data Access</em>, <em>Risks</em>, <em>Support</em>, <em>Funders</em>, and more.</p>
 
-#### Beth Pike, Marine Conservation Institute	
-#### Dr. Christine Ward-Paige, eOceans, christine@eOceans.co	
-#### Dr. Alexandre Courtiol, Leibniz-IZW",
+<p>💙 <strong>Thank you!</strong><br>
+Your input is invaluable to this study and will provide crucial insights for others working on MPAs like you.<br>
+Together, we’re strengthening the global MPA network.</p>
+
+<p><strong>Sincerely,</strong><br>	
+Beth Pike, Marine Conservation Institute<br>
+<a href='mailto:christine@eOceans.co'>Dr. Christine Ward-Paige</a>, eOceans,<br>
+Dr. Alexandre Courtiol, Leibniz-IZW</p>
+
+<img src='https://wordpress.bluenaturealliance.org/wp-content/uploads/2024/06/BNA-Logo-White.svg' alt='Blue Nature Alliance logo' style='height:100px;background-color:rgb(21 45 101);'>
+<img src='https://mpatlas.org/static/mci_logo-a0661cb77b258a220da756c5287df39c.svg' alt='Marine Protection Atlas logo' style='height:100px;'>
+<img src='https://images.squarespace-cdn.com/content/v1/5a3bcce91f318d73497730c0/55f35164-4719-4bcf-ae2e-3f145fdfdfd4/eOceans_small.jpeg?format=1500w' alt='eOceans logo' style='height:100px;'>
+<img src='https://www.izw-berlin.de/files/images/logos/Logo_en.jpg' alt='Leibniz-IZW logo' style='height:160px;'>
+",
                     name = "N0",
-                    type = "note") ## FIXME, some phrasing is weird... 
-                                   ## FIXME, what to link in [here]?
+                    type = "note")## FIXME, what to link in [here]?
 
 S0 <- add_element(label = "Let's begin",
                   name = "S0",
                   type = "submit")
 
 # Second page of questionnaire ---------------------------------------------
+
+CSS1 <- CSS; CSS1$name <- "CSS1"
 
 P1 <-  add_element(label = "# <mark style='background-color:#6495ED;color:#FFD700'> Part A: Let's find your Marine Protected Area (MPA) (2 Questions)</mark>",
                    name = "P1",
@@ -117,6 +167,8 @@ S1 <- add_element(label = "Continue",
                   type = "submit")
 
 # Page 3 of questionnaire ---------------------------------------------
+
+CSS2 <- CSS; CSS2$name <- "CSS2"
 
 P2 <-  add_element(label = "# <mark style='background-color:#6495ED;color:#FFD700'> Part A: Let's find your MPA (2 Questions)</mark>",
                    name = "P2",
@@ -204,6 +256,8 @@ S2 <- S1; S2$name <- "S2"
 
 # Page 4 -----------------------------------------------------------------------
 
+CSS4 <- CSS; CSS4$name <- "CSS4"
+
 P4 <-  add_element(label = "# <mark style='background-color:#6495ED;color:#FFD700'> Part B: Tell us about your MPA (5 questions) </mark>", ##FIXME replace "your MPA" by its name
                    name = "P4",
                    type = "note")
@@ -240,6 +294,8 @@ B2 <- add_element(label = "The answer **I don't know** cannot be combined with a
 S4 <- S1; S4$name <- "S4"
 
 # Page 5 -----------------------------------------------------------------------
+
+CSS5 <- CSS; CSS5$name <- "CSS5"
 
 P5 <-  P4; P5$name <- "P5"; P5$showif <- "!M1 %contains_word% '7' && !M1 %contains_word% '8'"
 
@@ -316,6 +372,8 @@ S5 <- S1; S5$name <- "S5"; S5$showif = "!M1 %contains_word% '7' && !M1 %contains
 
 # Page 6 (optional) ------------------------------------------------------------
 
+CSS6 <- CSS; CSS6$name <- "CSS6"
+
 P6 <- P4; P6$name <- "P6"
 
 SUMM_note <- add_element(label = "## Confirm the number of FTE. 
@@ -330,32 +388,32 @@ FTE_formula <- function(category) {
 
 FTE_site <- add_element(label = "### **Site Focused**",
                         name = "FTE_site",
-                        type = "number 0,999999,0.1",
+                        type = "number 0,999999,0.05",
                         value = FTE_formula("site"))
 
 FTE_stakeholder <- add_element(label = "### **Stakeholder Focused**",
                                name = "FTE_stakeholder",
-                               type = "number 0,999999,0.1",
+                               type = "number 0,999999,0.05",
                                value = FTE_formula("stakeholder"))
 
 FTE_support <- add_element(label = "### **Support Focused**",
                            name = "FTE_support",
-                           type = "number 0,999999,0.1",
+                           type = "number 0,999999,0.05",
                            value = FTE_formula("support"))
 
 FTE_scientists <- add_element(label = "### **Scientists**",
                               name = "FTE_scientists",
-                              type = "number 0,999999,0.1",
+                              type = "number 0,999999,0.05",
                               value = FTE_formula("scientists"))
 
 FTE_leadership <- add_element(label = "### **Leadership Focused**",
                               name = "FTE_leadership",
-                              type = "number 0,999999,0.1",
+                              type = "number 0,999999,0.05",
                               value = FTE_formula("leadership"))
 
 FTE_other <- add_element(label = "### **Other**",
                          name = "FTE_other",
-                         type = "number 0,999999,0.1",
+                         type = "number 0,999999,0.05",
                          value = FTE_formula("other"))
 
 total_note <- add_element(label = r"(### **TOTAL**
@@ -383,7 +441,7 @@ $(document).ready(function() {
 });
 </script>)",
                          name = "total_note",
-                         type = "text") ##FIXME compute sum and prevent modifications
+                         type = "text")
 
 total_info <- add_element(label = "💡 The TOTAL is just the sum of the categories above; you cannot modify it directly.",
                         name = "total_info",
@@ -392,6 +450,8 @@ total_info <- add_element(label = "💡 The TOTAL is just the sum of the categor
 S6 <- S1; S6$name <- "S6"
 
 # Page 7 -----------------------------------------------------------------------
+
+CSS7 <- CSS; CSS7$name <- "CSS7"
 
 P7 <- P4; P7$name <- "P7"
 
@@ -430,6 +490,7 @@ Other_tech <- add_element(label = "#### 🦀 Add other technologies that qualify
                           name = "Other_tech",
                           choice1 = "I can't think of anything",
                           optional = "*") ##FIXME decide on whether this should be optional or not
+                                          ##FIXME if I can't think of anything selected, there should be no other answer
 
 Other_tech_comment_check <- add_element(label = "#### Add a COMMENT",
                                         name = "Other_tech_comment_check",
@@ -443,6 +504,8 @@ Other_tech_comment <- add_element(label = "#### Tell us more, so we fully unders
 S7 <- S1; S7$name <- "S7"
 
 # Page 8 -----------------------------------------------------------------------
+
+CSS8 <- CSS; CSS8$name <- "CSS8"
 
 P8 <- P4; P8$name <- "P8"
 
@@ -499,6 +562,8 @@ S8 <- S1; S8$name <- "S8"
 
 # Page 9 -----------------------------------------------------------------------
 
+CSS9 <- CSS; CSS9$name <- "CSS9"
+
 P9 <- P4; P9$name <- "P9"
 
 Anythingelse_note <-  add_element(label = "## 5: Anything else?",
@@ -514,6 +579,8 @@ Anythingelse_comment <- add_element(label = "#### Is there anything else you wou
 S9 <- S1; S9$name <- "S9"
 
 # Page 10 ----------------------------------------------------------------------
+
+CSS10 <- CSS; CSS10$name <- "CSS10"
 
 P10 <-  add_element(label = "# <mark style='background-color:#6495ED;color:#FFD700'> Part C: A little about you (5 questions) </mark>",
                     name = "P10",
@@ -581,6 +648,8 @@ S10 <- S1; S10$name <- "S10"
 
 # Page 11 ----------------------------------------------------------------------
 
+CSS11 <- CSS; CSS11$name <- "CSS11"
+
 P11 <- P10; P11$name <- "P11"
 
 Name_note <-  add_element(label = "## 2: Your name?",
@@ -608,6 +677,8 @@ S11 <- S1; S11$name <- "S11"
 
 # Page 12 ----------------------------------------------------------------------
 
+CSS12 <- CSS; CSS12$name <- "CSS12"
+
 P12 <- P10; P12$name <- "P12"
 
 Email_note <-  add_element(label = "## 3: Contact email?",
@@ -618,7 +689,7 @@ Email_input <- add_element(label = "#### What is your email address?
 💙 We may use this for follow-up questions or to share the report. 
 💡It will not be distributed.",
                            name = "Email_input",
-                           type = "email")
+                           type = "email") ## FIXME make optional?
 
 Email_comment_check <- add_element(label = "#### Add a COMMENT",
                                    name = "Email_comment_check",
@@ -634,6 +705,8 @@ E12 <- E10; E12$name <- "E12"
 S12 <- S1; S12$name <- "S12"
 
 # Page 13 ----------------------------------------------------------------------
+
+CSS13 <- CSS; CSS13$name <- "CSS13"
 
 P13 <- P10; P13$name <- "P13"
 
@@ -654,6 +727,8 @@ S13 <- S1; S13$name <- "S13"
 
 # Page 14 ----------------------------------------------------------------------
 
+CSS14 <- CSS; CSS14$name <- "CSS14"
+
 P14 <- P10; P14$name <- "P14"
 
 Referrals_note <-  add_element(label = "## 5: Referrals?",
@@ -673,36 +748,81 @@ S14 <- S1; S14$name <- "S14"
 
 # Page 15 ----------------------------------------------------------------------
 
-P15 <-  add_element(label = "# <mark style='background-color:#6495ED;color:#FFD700'>THANK YOU</mark>",
+CSS15 <- CSS; CSS15$name <- "CSS15"
+
+P15 <-  add_element(label = "# <mark style='background-color:#6495ED;color:#FFD700'>Part D: An optional question (1 question) </mark>",
                     name = "P15",
                     type = "note")
 
-S15 <- add_element(label = "End the survey",
-                  name = "S15",
+Adequate_note <-  add_element(label = "## 1: Is this adequate? ",
+                              name = "Adequate_note",
+                              type = "note")
+
+Adequate_input <- add_element(label = "#### In your opinion, is this current level of workforce adequate for ensuring this specific MPA can successfully achieve the objectives (fulfil the purpose) for which it was established?
+💙 Adequacy can refer to both the number of personnel and their training/technical skills to meet management needs. 
+💡Add a COMMENT below to explain anything you think we should know.",
+                              name = "Adequate_input",
+                              type = "mc",
+                              class = "mc_vertical",
+                              choice5 = "**Not Adequate** – Does not meet basic requirements or expectations.",
+                              choice4 = "**Somewhat Adequate** – Meets a few requirements but falls short in key areas.",
+                              choice3 = "**Moderately Adequate** – Meets most requirements but has room for improvement.",
+                              choice2 = "**Mostly Adequate** – Meets nearly all requirements with minor gaps.",
+                              choice1 = "**Fully Adequate** – Meets or exceeds all requirements and expectations.",
+                              optional = "*")
+
+Adequate_comment_check <- add_element(label = "#### Add a COMMENT",
+                                      name = "Adequate_comment_check",
+                                      type = "check")
+
+Adequate_comment <- add_element(label = "#### 💡 Tell us more, so we fully understand",
+                                name = "Adequate_comment",
+                                showif = "Adequate_comment_check",
+                                type = "textarea")
+
+E15 <- add_element(label = "## NOTE
+#### 💙 This information will *not* be connected to your personal information or MPA.",
+                   name = "E15",
+                   type = "note")
+
+S15 <- S1; S15$name <- "S15"
+
+# Page 16 ----------------------------------------------------------------------
+
+CSS16 <- CSS; CSS16$name <- "CSS16"
+
+P16 <-  add_element(label = "# <mark style='background-color:#6495ED;color:#FFD700'>THANK YOU</mark>",
+                    name = "P16",
+                    type = "note")
+
+S16 <- add_element(label = "End the survey",
+                  name = "S16",
                   type = "submit") ## FIXME: point to new survey
 
 # Save survey -----------------------------------------------------------
 
-survey_tbl <- bind_rows(N0, S0,
-                        P1, N1, Q1, S1,
-                        CSS, P2, N2, Q2, C1, Qmissing, N3, Q_issue1, Q_issue1_text, Warn_multiple, S2,
-                        P4, N4, M1, B1, B2, S4,
-                        P5, N5,
-                        PERS1, PERS2, PERS3, PERS4, PERS5, PERS6, S5,
-                        P6, SUMM_note, FTE_site, FTE_stakeholder, FTE_support, FTE_scientists, FTE_leadership, FTE_other,
+survey_tbl <- bind_rows(CSS0, N0, S0,
+                        CSS1, P1, N1, Q1, S1,
+                        CSS2, CSS, P2, N2, Q2, C1, Qmissing, N3, Q_issue1, Q_issue1_text, Warn_multiple, S2,
+                        CSS4, P4, N4, M1, B1, B2, S4,
+                        CSS5, P5, N5, PERS1, PERS2, PERS3, PERS4, PERS5, PERS6, S5,
+                        CSS6, P6, SUMM_note, FTE_site, FTE_stakeholder, FTE_support, FTE_scientists, FTE_leadership, FTE_other,
                         total_note, total_info, S6,
-                        P7, Tech_note, Tech_choice, Block_tech1, Block_tech2, Other_tech, Other_tech_comment_check, Other_tech_comment, S7,
-                        P8, Others_note, Others_choice, Block_others1, Block_others2, Block_others3, Others, Others_comment_check, Others_comment, S8,
-                        P9, Anythingelse_note, Anythingelse_comment, S9,
-                        P10, Role_note, Role_choice, Role_block1, Role_block2, Role_comment_check, Role_comment, E10, S10,
-                        P11, Name_note, Name_input, Name_comment_check, Name_comment, E11, S11,
-                        P12, Email_note, Email_input, Email_comment_check, Email_comment, E12, S12,
-                        P13, Acknowledgement_note, Acknowledgement_input, E13, S13,
-                        P14, Referrals_note, Referrals_text, E14, S14,
-                        P15, S15)
+                        CSS7, P7, Tech_note, Tech_choice, Block_tech1, Block_tech2, Other_tech, Other_tech_comment_check, Other_tech_comment, S7,
+                        CSS8, P8, Others_note, Others_choice, Block_others1, Block_others2, Block_others3, Others, Others_comment_check, Others_comment, S8,
+                        CSS9, P9, Anythingelse_note, Anythingelse_comment, S9,
+                        CSS10, P10, Role_note, Role_choice, Role_block1, Role_block2, Role_comment_check, Role_comment, E10, S10,
+                        CSS11, P11, Name_note, Name_input, Name_comment_check, Name_comment, E11, S11,
+                        CSS12, P12, Email_note, Email_input, Email_comment_check, Email_comment, E12, S12,
+                        CSS13, P13, Acknowledgement_note, Acknowledgement_input, E13, S13,
+                        CSS14, P14, Referrals_note, Referrals_text, E14, S14,
+                        CSS15, P15, Adequate_note, Adequate_input, Adequate_comment_check, Adequate_comment, E15, S15,
+                        CSS16, P16, S16
+                        )
 
 names_tbl <- table(survey_tbl$name)
 if (any(names_tbl > 1)) stop(paste(names(names_tbl)[names_tbl > 1], "duplicated. All name must be unique."))
 
 if (!dir.exists("cleandata")) dir.create("cleandata")
 write.csv(survey_tbl, file = "cleandata/survey.csv", row.names = FALSE)
+
