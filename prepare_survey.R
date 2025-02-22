@@ -80,6 +80,18 @@ li{
   font-size:120%;
   margin:0 0 2px 0
 }
+
+.run-container .btn-info {
+  color:#0B1215;
+  border:5px solid rgb(21 45 101);
+}
+.run-container .btn-info:active,
+.run-container .btn-info:focus,
+.run-container .btn-info:hover {
+  background:rgb(21 45 101)!important;
+  border-color:rgb(21 45 101)!important;
+  color:#fff!important
+}
 </style>", 
 type = "note",
 name = "CSS")
@@ -113,12 +125,14 @@ employees, and others who have a formal role actively contributing to achieving 
 	
 ### Here's how it works:	
 
+<span>
 <ul>
-  <li>Part A: 2 questions: Identify the MPA you are responding for.</li>
-  <li>Part B: 6 questions: Tell us about your specific MPA.</li>
-  <li>Part C: 5 questions: Tell us about you. </li>
-  <li>Part D: 2 final optional questions. </li>
+  <li><strong>Part A</strong>: 2 questions: Identify the MPA you are responding for.</li>
+  <li><strong>Part B</strong>: 6 questions: Tell us about your specific MPA.</li>
+  <li><strong>Part C</strong>: 5 questions: Tell us about you. </li>
+  <li><strong>Part D</strong>: 2 final optional questions. </li>
 </ul>
+</span>
 
 <p>💡 Click <strong>here</strong> to learn about <em>Data Access</em>, <em>Risks</em>, <em>Support</em>, <em>Funders</em>, and more.</p>
 
@@ -127,14 +141,9 @@ Your input is invaluable to this study and will provide crucial insights for oth
 Together, we’re strengthening the global MPA network.</p>
 
 <p><strong>Sincerely,</strong><br>	
+<a href='mailto:christine@eOceans.co'>Dr. Christine Ward-Paige</a>, eOceans<br>
 Beth Pike, Marine Conservation Institute<br>
-<a href='mailto:christine@eOceans.co'>Dr. Christine Ward-Paige</a>, eOceans,<br>
 Dr. Alexandre Courtiol, Leibniz-IZW</p>
-
-<img src='https://wordpress.bluenaturealliance.org/wp-content/uploads/2024/06/BNA-Logo-White.svg' alt='Blue Nature Alliance logo' style='height:100px;background-color:rgb(21 45 101);'>
-<img src='https://mpatlas.org/static/mci_logo-a0661cb77b258a220da756c5287df39c.svg' alt='Marine Protection Atlas logo' style='height:100px;'>
-<img src='https://images.squarespace-cdn.com/content/v1/5a3bcce91f318d73497730c0/55f35164-4719-4bcf-ae2e-3f145fdfdfd4/eOceans_small.jpeg?format=1500w' alt='eOceans logo' style='height:100px;'>
-<img src='https://www.izw-berlin.de/files/images/logos/Logo_en.jpg' alt='Leibniz-IZW logo' style='height:160px;'>
 ",
                     name = "N0",
                     type = "note")## FIXME, what to link in [here]?
@@ -142,6 +151,28 @@ Dr. Alexandre Courtiol, Leibniz-IZW</p>
 S0 <- add_element(label = "Let's begin",
                   name = "S0",
                   type = "submit")
+
+logos <- add_element(label = "
+<style>
+.flex-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+</style>
+
+<ul class='flex-container'>
+  <li><img src='https://wordpress.bluenaturealliance.org/wp-content/uploads/2024/06/BNA-Logo-White.svg' alt='Blue Nature Alliance logo' style='height:100px;background-color:rgb(21 45 101);'></li>
+  <li><img src='https://mpatlas.org/static/mci_logo-a0661cb77b258a220da756c5287df39c.svg' alt='Marine Protection Atlas logo' style='height:100px;'></li>
+  <li><img src='https://images.squarespace-cdn.com/content/v1/5a3bcce91f318d73497730c0/55f35164-4719-4bcf-ae2e-3f145fdfdfd4/eOceans_small.jpeg?format=1500w' alt='eOceans logo' style='height:100px;'></li>
+  <li><img src='https://www.izw-berlin.de/files/images/logos/Logo_en.jpg' alt='Leibniz-IZW logo' style='height:160px;'></li>
+</ul>",
+                     type = "note",
+                     name = "logos")
 
 # Second page of questionnaire ---------------------------------------------
 
@@ -801,7 +832,7 @@ S16 <- add_element(label = "End the survey",
 
 # Save survey -----------------------------------------------------------
 
-survey_tbl <- bind_rows(CSS0, N0, S0,
+survey_tbl <- bind_rows(CSS0, N0, logos, S0,
                         CSS1, P1, N1, Q1, S1,
                         CSS2, CSS, P2, N2, Q2, C1, Qmissing, N3, Q_issue1, Q_issue1_text, Warn_multiple, S2,
                         CSS4, P4, N4, M1, B1, B2, S4,

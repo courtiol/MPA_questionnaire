@@ -41,6 +41,18 @@ li{
   font-size:120%;
   margin:0 0 2px 0
 }
+
+.run-container .btn-info {
+  color:#0B1215;
+  border:5px solid rgb(21 45 101);
+}
+.run-container .btn-info:active,
+.run-container .btn-info:focus,
+.run-container .btn-info:hover {
+  background:rgb(21 45 101)!important;
+  border-color:rgb(21 45 101)!important;
+  color:#fff!important
+}
 </style>","CSS0","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "
 <style>
@@ -67,12 +79,14 @@ employees, and others who have a formal role actively contributing to achieving 
 	
 ### Here's how it works:	
 
+<span>
 <ul>
-  <li>Part A: 2 questions: Identify the MPA you are responding for.</li>
-  <li>Part B: 6 questions: Tell us about your specific MPA.</li>
-  <li>Part C: 5 questions: Tell us about you. </li>
-  <li>Part D: 2 final optional questions. </li>
+  <li><strong>Part A</strong>: 2 questions: Identify the MPA you are responding for.</li>
+  <li><strong>Part B</strong>: 6 questions: Tell us about your specific MPA.</li>
+  <li><strong>Part C</strong>: 5 questions: Tell us about you. </li>
+  <li><strong>Part D</strong>: 2 final optional questions. </li>
 </ul>
+</span>
 
 <p>💡 Click <strong>here</strong> to learn about <em>Data Access</em>, <em>Risks</em>, <em>Support</em>, <em>Funders</em>, and more.</p>
 
@@ -81,15 +95,29 @@ Your input is invaluable to this study and will provide crucial insights for oth
 Together, we’re strengthening the global MPA network.</p>
 
 <p><strong>Sincerely,</strong><br>	
+<a href='mailto:christine@eOceans.co'>Dr. Christine Ward-Paige</a>, eOceans<br>
 Beth Pike, Marine Conservation Institute<br>
-<a href='mailto:christine@eOceans.co'>Dr. Christine Ward-Paige</a>, eOceans,<br>
 Dr. Alexandre Courtiol, Leibniz-IZW</p>
-
-<img src='https://wordpress.bluenaturealliance.org/wp-content/uploads/2024/06/BNA-Logo-White.svg' alt='Blue Nature Alliance logo' style='height:100px;background-color:rgb(21 45 101);'>
-<img src='https://mpatlas.org/static/mci_logo-a0661cb77b258a220da756c5287df39c.svg' alt='Marine Protection Atlas logo' style='height:100px;'>
-<img src='https://images.squarespace-cdn.com/content/v1/5a3bcce91f318d73497730c0/55f35164-4719-4bcf-ae2e-3f145fdfdfd4/eOceans_small.jpeg?format=1500w' alt='eOceans logo' style='height:100px;'>
-<img src='https://www.izw-berlin.de/files/images/logos/Logo_en.jpg' alt='Leibniz-IZW logo' style='height:160px;'>
 ","N0","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
+"
+<style>
+.flex-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+</style>
+
+<ul class='flex-container'>
+  <li><img src='https://wordpress.bluenaturealliance.org/wp-content/uploads/2024/06/BNA-Logo-White.svg' alt='Blue Nature Alliance logo' style='height:100px;background-color:rgb(21 45 101);'></li>
+  <li><img src='https://mpatlas.org/static/mci_logo-a0661cb77b258a220da756c5287df39c.svg' alt='Marine Protection Atlas logo' style='height:100px;'></li>
+  <li><img src='https://images.squarespace-cdn.com/content/v1/5a3bcce91f318d73497730c0/55f35164-4719-4bcf-ae2e-3f145fdfdfd4/eOceans_small.jpeg?format=1500w' alt='eOceans logo' style='height:100px;'></li>
+  <li><img src='https://www.izw-berlin.de/files/images/logos/Logo_en.jpg' alt='Leibniz-IZW logo' style='height:160px;'></li>
+</ul>","logos","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "Let's begin","S0","","submit","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "<style>
 .alert {
@@ -132,6 +160,18 @@ li{
   font-weight:400;
   font-size:120%;
   margin:0 0 2px 0
+}
+
+.run-container .btn-info {
+  color:#0B1215;
+  border:5px solid rgb(21 45 101);
+}
+.run-container .btn-info:active,
+.run-container .btn-info:focus,
+.run-container .btn-info:hover {
+  background:rgb(21 45 101)!important;
+  border-color:rgb(21 45 101)!important;
+  color:#fff!important
 }
 </style>","CSS1","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "# <mark style='background-color:#6495ED;color:#FFD700'> Part A: Let's find your Marine Protected Area (MPA) (2 Questions)</mark>","P1","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
@@ -182,6 +222,18 @@ li{
   font-size:120%;
   margin:0 0 2px 0
 }
+
+.run-container .btn-info {
+  color:#0B1215;
+  border:5px solid rgb(21 45 101);
+}
+.run-container .btn-info:active,
+.run-container .btn-info:focus,
+.run-container .btn-info:hover {
+  background:rgb(21 45 101)!important;
+  border-color:rgb(21 45 101)!important;
+  color:#fff!important
+}
 </style>","CSS2","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "<style>
 .alert {
@@ -224,6 +276,18 @@ li{
   font-weight:400;
   font-size:120%;
   margin:0 0 2px 0
+}
+
+.run-container .btn-info {
+  color:#0B1215;
+  border:5px solid rgb(21 45 101);
+}
+.run-container .btn-info:active,
+.run-container .btn-info:focus,
+.run-container .btn-info:hover {
+  background:rgb(21 45 101)!important;
+  border-color:rgb(21 45 101)!important;
+  color:#fff!important
 }
 </style>","CSS","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "# <mark style='background-color:#6495ED;color:#FFD700'> Part A: Let's find your MPA (2 Questions)</mark>","P2","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
@@ -1045,6 +1109,18 @@ li{
   font-size:120%;
   margin:0 0 2px 0
 }
+
+.run-container .btn-info {
+  color:#0B1215;
+  border:5px solid rgb(21 45 101);
+}
+.run-container .btn-info:active,
+.run-container .btn-info:focus,
+.run-container .btn-info:hover {
+  background:rgb(21 45 101)!important;
+  border-color:rgb(21 45 101)!important;
+  color:#fff!important
+}
 </style>","CSS4","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "# <mark style='background-color:#6495ED;color:#FFD700'> Part B: Tell us about your MPA (5 questions) </mark>","P4","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "## 1: Roles of the people who work on this MPA","N4","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
@@ -1094,6 +1170,18 @@ li{
   font-weight:400;
   font-size:120%;
   margin:0 0 2px 0
+}
+
+.run-container .btn-info {
+  color:#0B1215;
+  border:5px solid rgb(21 45 101);
+}
+.run-container .btn-info:active,
+.run-container .btn-info:focus,
+.run-container .btn-info:hover {
+  background:rgb(21 45 101)!important;
+  border-color:rgb(21 45 101)!important;
+  color:#fff!important
 }
 </style>","CSS5","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "# <mark style='background-color:#6495ED;color:#FFD700'> Part B: Tell us about your MPA (5 questions) </mark>","P5","","note","","","!M1 %contains_word% '7' && !M1 %contains_word% '8'",NA,NA,NA,NA,NA,NA,NA,NA
@@ -1188,6 +1276,18 @@ li{
   font-size:120%;
   margin:0 0 2px 0
 }
+
+.run-container .btn-info {
+  color:#0B1215;
+  border:5px solid rgb(21 45 101);
+}
+.run-container .btn-info:active,
+.run-container .btn-info:focus,
+.run-container .btn-info:hover {
+  background:rgb(21 45 101)!important;
+  border-color:rgb(21 45 101)!important;
+  color:#fff!important
+}
 </style>","CSS6","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "# <mark style='background-color:#6495ED;color:#FFD700'> Part B: Tell us about your MPA (5 questions) </mark>","P6","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "## Confirm the number of FTE. 
@@ -1266,6 +1366,18 @@ li{
   font-size:120%;
   margin:0 0 2px 0
 }
+
+.run-container .btn-info {
+  color:#0B1215;
+  border:5px solid rgb(21 45 101);
+}
+.run-container .btn-info:active,
+.run-container .btn-info:focus,
+.run-container .btn-info:hover {
+  background:rgb(21 45 101)!important;
+  border-color:rgb(21 45 101)!important;
+  color:#fff!important
+}
 </style>","CSS7","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "# <mark style='background-color:#6495ED;color:#FFD700'> Part B: Tell us about your MPA (5 questions) </mark>","P7","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "## 3: Technology used to help?","Tech_note","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
@@ -1320,6 +1432,18 @@ li{
   font-weight:400;
   font-size:120%;
   margin:0 0 2px 0
+}
+
+.run-container .btn-info {
+  color:#0B1215;
+  border:5px solid rgb(21 45 101);
+}
+.run-container .btn-info:active,
+.run-container .btn-info:focus,
+.run-container .btn-info:hover {
+  background:rgb(21 45 101)!important;
+  border-color:rgb(21 45 101)!important;
+  color:#fff!important
 }
 </style>","CSS8","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "# <mark style='background-color:#6495ED;color:#FFD700'> Part B: Tell us about your MPA (5 questions) </mark>","P8","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
@@ -1376,6 +1500,18 @@ li{
   font-size:120%;
   margin:0 0 2px 0
 }
+
+.run-container .btn-info {
+  color:#0B1215;
+  border:5px solid rgb(21 45 101);
+}
+.run-container .btn-info:active,
+.run-container .btn-info:focus,
+.run-container .btn-info:hover {
+  background:rgb(21 45 101)!important;
+  border-color:rgb(21 45 101)!important;
+  color:#fff!important
+}
 </style>","CSS9","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "# <mark style='background-color:#6495ED;color:#FFD700'> Part B: Tell us about your MPA (5 questions) </mark>","P9","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "## 5: Anything else?","Anythingelse_note","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
@@ -1423,6 +1559,18 @@ li{
   font-weight:400;
   font-size:120%;
   margin:0 0 2px 0
+}
+
+.run-container .btn-info {
+  color:#0B1215;
+  border:5px solid rgb(21 45 101);
+}
+.run-container .btn-info:active,
+.run-container .btn-info:focus,
+.run-container .btn-info:hover {
+  background:rgb(21 45 101)!important;
+  border-color:rgb(21 45 101)!important;
+  color:#fff!important
 }
 </style>","CSS10","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "# <mark style='background-color:#6495ED;color:#FFD700'> Part C: A little about you (5 questions) </mark>","P10","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
@@ -1493,6 +1641,18 @@ li{
   font-size:120%;
   margin:0 0 2px 0
 }
+
+.run-container .btn-info {
+  color:#0B1215;
+  border:5px solid rgb(21 45 101);
+}
+.run-container .btn-info:active,
+.run-container .btn-info:focus,
+.run-container .btn-info:hover {
+  background:rgb(21 45 101)!important;
+  border-color:rgb(21 45 101)!important;
+  color:#fff!important
+}
 </style>","CSS11","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "# <mark style='background-color:#6495ED;color:#FFD700'> Part C: A little about you (5 questions) </mark>","P11","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "## 2: Your name?","Name_note","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
@@ -1560,6 +1720,18 @@ li{
   font-weight:400;
   font-size:120%;
   margin:0 0 2px 0
+}
+
+.run-container .btn-info {
+  color:#0B1215;
+  border:5px solid rgb(21 45 101);
+}
+.run-container .btn-info:active,
+.run-container .btn-info:focus,
+.run-container .btn-info:hover {
+  background:rgb(21 45 101)!important;
+  border-color:rgb(21 45 101)!important;
+  color:#fff!important
 }
 </style>","CSS12","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "# <mark style='background-color:#6495ED;color:#FFD700'> Part C: A little about you (5 questions) </mark>","P12","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
@@ -1629,6 +1801,18 @@ li{
   font-size:120%;
   margin:0 0 2px 0
 }
+
+.run-container .btn-info {
+  color:#0B1215;
+  border:5px solid rgb(21 45 101);
+}
+.run-container .btn-info:active,
+.run-container .btn-info:focus,
+.run-container .btn-info:hover {
+  background:rgb(21 45 101)!important;
+  border-color:rgb(21 45 101)!important;
+  color:#fff!important
+}
 </style>","CSS13","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "# <mark style='background-color:#6495ED;color:#FFD700'> Part C: A little about you (5 questions) </mark>","P13","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "## 4: Acknowledgement?","Acknowledgement_note","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
@@ -1694,6 +1878,18 @@ li{
   font-weight:400;
   font-size:120%;
   margin:0 0 2px 0
+}
+
+.run-container .btn-info {
+  color:#0B1215;
+  border:5px solid rgb(21 45 101);
+}
+.run-container .btn-info:active,
+.run-container .btn-info:focus,
+.run-container .btn-info:hover {
+  background:rgb(21 45 101)!important;
+  border-color:rgb(21 45 101)!important;
+  color:#fff!important
 }
 </style>","CSS14","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "# <mark style='background-color:#6495ED;color:#FFD700'> Part C: A little about you (5 questions) </mark>","P14","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
@@ -1761,6 +1957,18 @@ li{
   font-size:120%;
   margin:0 0 2px 0
 }
+
+.run-container .btn-info {
+  color:#0B1215;
+  border:5px solid rgb(21 45 101);
+}
+.run-container .btn-info:active,
+.run-container .btn-info:focus,
+.run-container .btn-info:hover {
+  background:rgb(21 45 101)!important;
+  border-color:rgb(21 45 101)!important;
+  color:#fff!important
+}
 </style>","CSS15","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "# <mark style='background-color:#6495ED;color:#FFD700'>Part D: An optional question (1 question) </mark>","P15","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "## 1: Is this adequate? ","Adequate_note","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
@@ -1813,6 +2021,18 @@ li{
   font-weight:400;
   font-size:120%;
   margin:0 0 2px 0
+}
+
+.run-container .btn-info {
+  color:#0B1215;
+  border:5px solid rgb(21 45 101);
+}
+.run-container .btn-info:active,
+.run-container .btn-info:focus,
+.run-container .btn-info:hover {
+  background:rgb(21 45 101)!important;
+  border-color:rgb(21 45 101)!important;
+  color:#fff!important
 }
 </style>","CSS16","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "# <mark style='background-color:#6495ED;color:#FFD700'>THANK YOU</mark>","P16","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
