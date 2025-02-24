@@ -30,6 +30,10 @@ h6 {
   color:#0B1215;
 }
 
+h4 {
+  margin: 0 0 5px 0;
+}
+
 p {
   color:#484c50;
 }
@@ -82,10 +86,10 @@ employees, and others who have a formal role actively contributing to achieving 
 
 <span>
 <ul>
-  <li><strong>Part A</strong>: 2 questions: Identify the MPA you are responding for.</li>
-  <li><strong>Part B</strong>: 6 questions: Tell us about your specific MPA.</li>
+  <li><strong>Part A</strong>: 2 questions: Let's identify your MPA.</li>
+  <li><strong>Part B</strong>: 6 questions: Tell us about this MPA.</li>
   <li><strong>Part C</strong>: 5 questions: Tell us about you. </li>
-  <li><strong>Part D</strong>: 2 final optional questions. </li>
+  <li><strong>Part D</strong>: 2 (optional) questions: Tell us more?. </li>
 </ul>
 </span>
 
@@ -152,6 +156,10 @@ h6 {
   color:#0B1215;
 }
 
+h4 {
+  margin: 0 0 5px 0;
+}
+
 p {
   color:#484c50;
 }
@@ -177,7 +185,7 @@ li{
 }
 
 </style>","CSS1","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
-"# <mark style='background-color:#6495ED;color:#FFD700'> Part A: Let's find your Marine Protected Area (MPA) (2 Questions)</mark>","P1","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
+"# <mark style='background-color:#6495ED;color:#FFD700'> Part A: Let's identify your Marine Protected Area (MPA)<br>(2 Questions)</mark>","P1","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "## 1: Select your country","N1","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the country (or overseas land) with the MPA you are responding for
 💙 You can search using name, partial name, or ISO code.
@@ -212,6 +220,10 @@ h4,
 h5,
 h6 {
   color:#0B1215;
+}
+
+h4 {
+  margin: 0 0 5px 0;
 }
 
 p {
@@ -270,6 +282,10 @@ h6 {
   color:#0B1215;
 }
 
+h4 {
+  margin: 0 0 5px 0;
+}
+
 p {
   color:#484c50;
 }
@@ -295,7 +311,7 @@ li{
 }
 
 </style>","CSS","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
-"# <mark style='background-color:#6495ED;color:#FFD700'> Part A: Let's find your MPA (2 Questions)</mark>","P2","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
+"# <mark style='background-color:#6495ED;color:#FFD700'> Part A: Let's identify your MPA (2 Questions)</mark>","P2","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "## 2: Select your MPA","N2","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Select the MPA you are responding for
 💙 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
@@ -1103,6 +1119,10 @@ h6 {
   color:#0B1215;
 }
 
+h4 {
+  margin: 0 0 5px 0;
+}
+
 p {
   color:#484c50;
 }
@@ -1128,7 +1148,7 @@ li{
 }
 
 </style>","CSS4","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
-"# <mark style='background-color:#6495ED;color:#FFD700'> Part B: Tell us about your MPA (6 questions) </mark>","P4","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
+"# <mark style='background-color:#6495ED;color:#FFD700'> Part B: Tell us about this MPA (6 questions) </mark>","P4","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "## 1: Roles of the people who work on this MPA","N4","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Including yourself, what formal roles are involved in working on this specific MPA to contribute to achieving its goals?
 💡 Select all that apply.","M1","mc_vertical","mc_multiple","","!","","**Site Focused** — such as rangers and ranger-like roles (with and without enforcement capabilities)","**Stakeholder Focused** — such as education and outreach roles","**Support Focused** — such as supporting staff","**Scientists** — such as those collecting and analyzing data to address questions","**Leadership Focused** — such as decision making","**Other** — for roles unlisted above","**None** — no one works on this MPA in a formal role","**I don't know**"
@@ -1167,6 +1187,10 @@ h6 {
   color:#0B1215;
 }
 
+h4 {
+  margin: 0 0 5px 0;
+}
+
 p {
   color:#484c50;
 }
@@ -1192,7 +1216,7 @@ li{
 }
 
 </style>","CSS5","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
-"# <mark style='background-color:#6495ED;color:#FFD700'> Part B: Tell us about your MPA (6 questions) </mark>","P5","","note","","","!M1 %contains_word% '7' && !M1 %contains_word% '8'",NA,NA,NA,NA,NA,NA,NA,NA
+"# <mark style='background-color:#6495ED;color:#FFD700'> Part B: Tell us about this MPA (6 questions) </mark>","P5","","note","","","!M1 %contains_word% '7' && !M1 %contains_word% '8'",NA,NA,NA,NA,NA,NA,NA,NA
 "## 2: Number of people in each role. 
 #### For each workforce category selected previously, indicate the number of formal staff who work on this specific MPA.
 💙 For each role, report the number of staff in that role or use COMMENT to record in your own way.
@@ -1386,6 +1410,10 @@ h6 {
   color:#0B1215;
 }
 
+h4 {
+  margin: 0 0 5px 0;
+}
+
 p {
   color:#484c50;
 }
@@ -1411,8 +1439,8 @@ li{
 }
 
 </style>","CSS6","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
-"# <mark style='background-color:#6495ED;color:#FFD700'> Part B: Tell us about your MPA (6 questions) </mark>","P6","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
-"## 6: Confirm the number of FTE. 
+"# <mark style='background-color:#6495ED;color:#FFD700'> Part B: Tell us about this MPA (6 questions) </mark>","P6","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
+"## 3: Confirm the number of FTE. 
 #### For each workforce category please review the number of FTE corresponding to your previous choices and adjust if necessary.","SUMM_note","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "### **Site Focused**","FTE_site","","number 0,999999,0.05","ifelse(is.na(PERS_site_FullTime + PERS_site_PartTime*0.5 + PERS_site_Seasonal*0.25 + PERS_site_Occasional*0.1), 0,PERS_site_FullTime + PERS_site_PartTime*0.5 + PERS_site_Seasonal*0.25 + PERS_site_Occasional*0.1)","","",NA,NA,NA,NA,NA,NA,NA,NA
 "### **Stakeholder Focused**","FTE_stakeholder","","number 0,999999,0.05","ifelse(is.na(PERS_stakeholder_FullTime + PERS_stakeholder_PartTime*0.5 + PERS_stakeholder_Seasonal*0.25 + PERS_stakeholder_Occasional*0.1), 0,PERS_stakeholder_FullTime + PERS_stakeholder_PartTime*0.5 + PERS_stakeholder_Seasonal*0.25 + PERS_stakeholder_Occasional*0.1)","","",NA,NA,NA,NA,NA,NA,NA,NA
@@ -1477,6 +1505,10 @@ h6 {
   color:#0B1215;
 }
 
+h4 {
+  margin: 0 0 5px 0;
+}
+
 p {
   color:#484c50;
 }
@@ -1502,8 +1534,8 @@ li{
 }
 
 </style>","CSS7","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
-"# <mark style='background-color:#6495ED;color:#FFD700'> Part B: Tell us about your MPA (6 questions) </mark>","P7","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
-"## 3: Technology used to help?","Tech_note","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
+"# <mark style='background-color:#6495ED;color:#FFD700'> Part B: Tell us about this MPA (6 questions) </mark>","P7","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
+"## 4: Technology used to help?","Tech_note","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "#### If you use technology or other aids to help your MPA workforce expand its effectiveness in THIS specific MPA, please list.
 💡 Select all that apply.","Tech_choice","mc_vertical","mc_multiple","","!","","**Satellite technologies**","**Radar technologies**","**Underwater acoustic technologies**","**Drone technologies**","**Reporting tools**: Phone, email, or app reporting for marine species, activities, incidents","**None of the above**","**I don’t know**",NA
 "<div style='color:#ffff'>The answer <strong>None of the above</strong> cannot be combined with another category</div>","Block_tech1","","block","","","(Tech_choice %contains_word% '1' | Tech_choice %contains_word% '2' | Tech_choice %contains_word% '3' | Tech_choice %contains_word% '4' | Tech_choice %contains_word% '5') && Tech_choice %contains_word% '6'",NA,NA,NA,NA,NA,NA,NA,NA
@@ -1512,7 +1544,7 @@ li{
 💙 Brand names are fine too.
 💡 After typing, press enter to validate what you added.","Other_tech","","select_or_add_multiple","","*","","I can't think of anything",NA,NA,NA,NA,NA,NA,NA
 "#### Add a COMMENT","Other_tech_comment_check","","check","","","",NA,NA,NA,NA,NA,NA,NA,NA
-"#### 💡 Tell us more, so we fully understand","Other_tech_comment","","textarea","","","Other_tech_comment_check",NA,NA,NA,NA,NA,NA,NA,NA
+"#### 💡 Tell us more, so we fully understand","Other_tech_comment","","textarea","","*","Other_tech_comment_check",NA,NA,NA,NA,NA,NA,NA,NA
 "Continue","S7","","submit","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "<style>
 .alert {
@@ -1545,6 +1577,10 @@ h6 {
   color:#0B1215;
 }
 
+h4 {
+  margin: 0 0 5px 0;
+}
+
 p {
   color:#484c50;
 }
@@ -1570,10 +1606,10 @@ li{
 }
 
 </style>","CSS8","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
-"# <mark style='background-color:#6495ED;color:#FFD700'> Part B: Tell us about your MPA (6 questions) </mark>","P8","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
-"## 4: Who else is nearby?","Others_note","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
+"# <mark style='background-color:#6495ED;color:#FFD700'> Part B: Tell us about this MPA (6 questions) </mark>","P8","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
+"## 5: Who else is nearby?","Others_note","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Who else operates seasonally or more within or nearby this specific MPA who is *not* formally responsible for working for this MPA?
-💡 Select all that apply.","Others_choice","mc_vertical","mc_multiple","","!","","**Fishers**","**Divers**","**Boat operators**","**Cultural practitioners**","**None** — no one uses this MPA","**None of the above**","**I don’t know**",NA
+💡 Select all that apply.","Others_choice","mc_vertical","mc_multiple","","!","","**Fishers** 🎣","**Divers** 🤿","**Surfers** 🏄️","**Boat operators** ⛵","**None** — no one uses this MPA🏝️","**None of the above**","**I don’t know**",NA
 "<div style='color:#ffff'>The answer <strong>None of the above</strong> cannot be combined with another category</div>","Block_others1","","block","","","(Others_choice %contains_word% '1' | Others_choice %contains_word% '2' | Others_choice %contains_word% '3' | Others_choice %contains_word% '4' | Others_choice %contains_word% '5') && Others_choice %contains_word% '6'",NA,NA,NA,NA,NA,NA,NA,NA
 "<div style='color:#ffff'>The answer <strong>I don't know</strong> cannot be combined with another category</div>","Block_others2","","block","","","(Others_choice %contains_word% '1' | Others_choice %contains_word% '2' | Others_choice %contains_word% '3' | Others_choice %contains_word% '4' | Others_choice %contains_word% '5' | Others_choice %contains_word% '6') && Others_choice %contains_word% '7'",NA,NA,NA,NA,NA,NA,NA,NA
 "<div style='color:#ffff'>The answer <strong>None</strong> cannot be combined with another category</div>","Block_others3","","block","","","(Others_choice %contains_word% '1' | Others_choice %contains_word% '2' | Others_choice %contains_word% '3' | Others_choice %contains_word% '4') && Others_choice %contains_word% '5'",NA,NA,NA,NA,NA,NA,NA,NA
@@ -1613,6 +1649,10 @@ h6 {
   color:#0B1215;
 }
 
+h4 {
+  margin: 0 0 5px 0;
+}
+
 p {
   color:#484c50;
 }
@@ -1638,8 +1678,8 @@ li{
 }
 
 </style>","CSS9","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
-"# <mark style='background-color:#6495ED;color:#FFD700'> Part B: Tell us about your MPA (6 questions) </mark>","P9","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
-"## 5: Anything else?","Anythingelse_note","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
+"# <mark style='background-color:#6495ED;color:#FFD700'> Part B: Tell us about this MPA (6 questions) </mark>","P9","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
+"## 6: Anything else?","Anythingelse_note","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Is there anything else you would like us to know about this specific MPA workforce?
 💡 Tell us more, so we fully understand.","Anythingelse_comment","","textarea","","*","",NA,NA,NA,NA,NA,NA,NA,NA
 "Continue","S9","","submit","","","",NA,NA,NA,NA,NA,NA,NA,NA
@@ -1674,6 +1714,10 @@ h6 {
   color:#0B1215;
 }
 
+h4 {
+  margin: 0 0 5px 0;
+}
+
 p {
   color:#484c50;
 }
@@ -1699,19 +1743,17 @@ li{
 }
 
 </style>","CSS10","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
-"# <mark style='background-color:#6495ED;color:#FFD700'> Part C: A little about you (5 questions) </mark>","P10","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
-"## 1: Your role?","Role_note","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
-"#### What role do you serve in this MPA?
+"# <mark style='background-color:#6495ED;color:#FFD700'> Part C: Tell us about you (5 questions) </mark>","P10","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
+"## 1: Your role(s)?","Role_note","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
+"#### What role(s) do you serve in this MPA?
 💡 Select all that apply.","Role_choice","mc_vertical","mc_multiple","","!","","**Site Focused** — such as rangers and ranger-like roles (with and without enforcement capabilities)","**Stakeholder Focused** — such as education and outreach roles","**Support Focused** — such as supporting staff","**Scientists** — such as those collecting and analyzing data to address questions","**Leadership Focused** — such as decision making","**Other** — for roles unlisted above","**None** — no one works on this MPA in a formal role","**I don't know**"
 "<div style='color:#ffff'>The answer <strong>None</strong> cannot be combined with another category</div>","Role_block1","","block","","","(Role_choice %contains_word% '1' | Role_choice %contains_word% '2' | Role_choice %contains_word% '3' | Role_choice %contains_word% '4' | Role_choice %contains_word% '5' | Role_choice %contains_word% '6') && Role_choice %contains_word% '7'",NA,NA,NA,NA,NA,NA,NA,NA
 "<div style='color:#ffff'>The answer <strong>I don't know</strong> cannot be combined with another category</div>","Role_block2","","block","","","(Role_choice %contains_word% '1' | Role_choice %contains_word% '2' | Role_choice %contains_word% '3' | Role_choice %contains_word% '4' | Role_choice %contains_word% '5' | Role_choice %contains_word% '6' | Role_choice %contains_word% '7') && Role_choice %contains_word% '8'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Add a COMMENT","Role_comment_check","","check","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "#### 💡 Tell us more, so we fully understand","Role_comment","","textarea","","","Role_comment_check",NA,NA,NA,NA,NA,NA,NA,NA
 "## NOTE
-#### 💙 Personal information will not be distributed unless requested.
-#### 💡 The purpose of collecting this information includes:
 <style>
-li{
+p, summary, li{
   color:#484c50;
   font-family:Roboto,Arial,sans-serif;
   font-weight:400;
@@ -1719,11 +1761,17 @@ li{
   margin:0 0 2px 0
 }
 </style>
-<ol type='1'>
-  <li>Requesting follow up information if necessary;</li>
-  <li>It may help us understand your answers (e.g., different departments); and </li>
-  <li>To share the report with you when it is complete.</li>
-</ol>","E10","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
+#### 💙 Personal information won't be distributed, but it is helpful to us.
+<details>
+  <summary>💡 Click here to know why we need this data.</summary>
+  <p>The purpose of collecting personal information includes:</p>
+  <ol type='1'>
+    <li>Requesting follow up information if necessary;</li>
+    <li>Helping us understand your answers (e.g., different departments); and </li>
+    <li>Sharing the report with you when it is complete.</li>
+  </ol>
+</details>
+","E10","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "Continue","S10","","submit","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "<style>
 .alert {
@@ -1756,6 +1804,10 @@ h6 {
   color:#0B1215;
 }
 
+h4 {
+  margin: 0 0 5px 0;
+}
+
 p {
   color:#484c50;
 }
@@ -1781,18 +1833,15 @@ li{
 }
 
 </style>","CSS11","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
-"# <mark style='background-color:#6495ED;color:#FFD700'> Part C: A little about you (5 questions) </mark>","P11","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
+"# <mark style='background-color:#6495ED;color:#FFD700'> Part C: Tell us about you (5 questions) </mark>","P11","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "## 2: Your name?","Name_note","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
-"#### What is your name?
-💙 We may use this for follow-up questions or to share the report. 
-💡It will not be distributed unless you request us to do so in question 4 (see later).","Name_input","","text","","","",NA,NA,NA,NA,NA,NA,NA,NA
+"#### What is your name?","Name_input","","text","","*","!Anonymous_check",NA,NA,NA,NA,NA,NA,NA,NA
+"#### 🤫 I prefer to remain anonymous","Anonymous_check","","check","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Add a COMMENT","Name_comment_check","","check","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "#### 💡 Tell us more, so we fully understand","Name_comment","","textarea","","","Name_comment_check",NA,NA,NA,NA,NA,NA,NA,NA
 "## NOTE
-#### 💙 Personal information will not be distributed unless requested.
-#### 💡 The purpose of collecting this information includes:
 <style>
-li{
+p, summary, li{
   color:#484c50;
   font-family:Roboto,Arial,sans-serif;
   font-weight:400;
@@ -1800,11 +1849,17 @@ li{
   margin:0 0 2px 0
 }
 </style>
-<ol type='1'>
-  <li>Requesting follow up information if necessary;</li>
-  <li>It may help us understand your answers (e.g., different departments); and </li>
-  <li>To share the report with you when it is complete.</li>
-</ol>","E11","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
+#### 💙 Personal information won't be distributed, but it is helpful to us.
+<details>
+  <summary>💡 Click here to know why we need this data.</summary>
+  <p>The purpose of collecting personal information includes:</p>
+  <ol type='1'>
+    <li>Requesting follow up information if necessary;</li>
+    <li>Helping us understand your answers (e.g., different departments); and </li>
+    <li>Sharing the report with you when it is complete.</li>
+  </ol>
+</details>
+","E11","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "Continue","S11","","submit","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "<style>
 .alert {
@@ -1837,6 +1892,10 @@ h6 {
   color:#0B1215;
 }
 
+h4 {
+  margin: 0 0 5px 0;
+}
+
 p {
   color:#484c50;
 }
@@ -1862,18 +1921,15 @@ li{
 }
 
 </style>","CSS12","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
-"# <mark style='background-color:#6495ED;color:#FFD700'> Part C: A little about you (5 questions) </mark>","P12","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
-"## 3: Contact email?","Email_note","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
-"#### What is your email address?
-💙 We may use this for follow-up questions or to share the report. 
-💡It will not be distributed.","Email_input","","email","","","",NA,NA,NA,NA,NA,NA,NA,NA
+"# <mark style='background-color:#6495ED;color:#FFD700'> Part C: Tell us about you (5 questions) </mark>","P12","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
+"## 3: Your email?","Email_note","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
+"#### What is your email address?","Email_input","","email","","*","!Anonymous_email_check",NA,NA,NA,NA,NA,NA,NA,NA
+"#### 🤫 I prefer to remain anonymous","Anonymous_email_check","","check","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Add a COMMENT","Email_comment_check","","check","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "#### 💡 Tell us more, so we fully understand","Email_comment","","textarea","","","Email_comment_check",NA,NA,NA,NA,NA,NA,NA,NA
 "## NOTE
-#### 💙 Personal information will not be distributed unless requested.
-#### 💡 The purpose of collecting this information includes:
 <style>
-li{
+p, summary, li{
   color:#484c50;
   font-family:Roboto,Arial,sans-serif;
   font-weight:400;
@@ -1881,11 +1937,17 @@ li{
   margin:0 0 2px 0
 }
 </style>
-<ol type='1'>
-  <li>Requesting follow up information if necessary;</li>
-  <li>It may help us understand your answers (e.g., different departments); and </li>
-  <li>To share the report with you when it is complete.</li>
-</ol>","E12","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
+#### 💙 Personal information won't be distributed, but it is helpful to us.
+<details>
+  <summary>💡 Click here to know why we need this data.</summary>
+  <p>The purpose of collecting personal information includes:</p>
+  <ol type='1'>
+    <li>Requesting follow up information if necessary;</li>
+    <li>Helping us understand your answers (e.g., different departments); and </li>
+    <li>Sharing the report with you when it is complete.</li>
+  </ol>
+</details>
+","E12","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "Continue","S12","","submit","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "<style>
 .alert {
@@ -1918,6 +1980,10 @@ h6 {
   color:#0B1215;
 }
 
+h4 {
+  margin: 0 0 5px 0;
+}
+
 p {
   color:#484c50;
 }
@@ -1943,28 +2009,11 @@ li{
 }
 
 </style>","CSS13","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
-"# <mark style='background-color:#6495ED;color:#FFD700'> Part C: A little about you (5 questions) </mark>","P13","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
-"## 4: Acknowledgement?","Acknowledgement_note","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
+"# <mark style='background-color:#6495ED;color:#FFD700'> Part C: Tell us about you (5 questions) </mark>","P13","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
+"## 4: How can we acknowledge you?","Acknowledgement_note","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "#### We can't do this without you! If you would like to be listed in the acknowledgments of the report and other publications, please share how you would like this to appear.
 💙 You may use your first and/or last name. 
 💡If you add nothing, your name will not appear.","Acknowledgement_input","","textarea","","*","",NA,NA,NA,NA,NA,NA,NA,NA
-"## NOTE
-#### 💙 Personal information will not be distributed unless requested.
-#### 💡 The purpose of collecting this information includes:
-<style>
-li{
-  color:#484c50;
-  font-family:Roboto,Arial,sans-serif;
-  font-weight:400;
-  font-size:120%;
-  margin:0 0 2px 0
-}
-</style>
-<ol type='1'>
-  <li>Requesting follow up information if necessary;</li>
-  <li>It may help us understand your answers (e.g., different departments); and </li>
-  <li>To share the report with you when it is complete.</li>
-</ol>","E13","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "Continue","S13","","submit","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "<style>
 .alert {
@@ -1997,6 +2046,10 @@ h6 {
   color:#0B1215;
 }
 
+h4 {
+  margin: 0 0 5px 0;
+}
+
 p {
   color:#484c50;
 }
@@ -2022,28 +2075,11 @@ li{
 }
 
 </style>","CSS14","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
-"# <mark style='background-color:#6495ED;color:#FFD700'> Part C: A little about you (5 questions) </mark>","P14","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
-"## 5: Referrals?","Referrals_note","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
+"# <mark style='background-color:#6495ED;color:#FFD700'>Part D: Tell us more? (2 questions) </mark>","P14","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
+"## 1: Referrals?","Referrals_note","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Please, if there is anyone you believe we need to hear from for this or any other MPA, please enter their names and emails here, or send the link of this questionnaire to them directly. Please also share with any of your networks. 
 💙 If an email is provided, we will only send personal messages and will not distribute or store them. 
 💡Add a COMMENT to explain any other suggestions to get wide distribution.","Referrals_text","","textarea","","*","",NA,NA,NA,NA,NA,NA,NA,NA
-"## NOTE
-#### 💙 Personal information will not be distributed unless requested.
-#### 💡 The purpose of collecting this information includes:
-<style>
-li{
-  color:#484c50;
-  font-family:Roboto,Arial,sans-serif;
-  font-weight:400;
-  font-size:120%;
-  margin:0 0 2px 0
-}
-</style>
-<ol type='1'>
-  <li>Requesting follow up information if necessary;</li>
-  <li>It may help us understand your answers (e.g., different departments); and </li>
-  <li>To share the report with you when it is complete.</li>
-</ol>","E14","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "Continue","S14","","submit","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "<style>
 .alert {
@@ -2076,6 +2112,10 @@ h6 {
   color:#0B1215;
 }
 
+h4 {
+  margin: 0 0 5px 0;
+}
+
 p {
   color:#484c50;
 }
@@ -2101,8 +2141,8 @@ li{
 }
 
 </style>","CSS15","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
-"# <mark style='background-color:#6495ED;color:#FFD700'>Part D: An optional question (1 question) </mark>","P15","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
-"## 1: Is this adequate? ","Adequate_note","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
+"# <mark style='background-color:#6495ED;color:#FFD700'>Part D: Tell us more? (2 questions) </mark>","P15","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
+"## 2: Is your workforce adequate?","Adequate_note","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "#### In your opinion, is this current level of workforce adequate for ensuring this specific MPA can successfully achieve the objectives (fulfil the purpose) for which it was established?
 💙 Adequacy can refer to both the number of personnel and their training/technical skills to meet management needs. 
 💡Add a COMMENT below to explain anything you think we should know.","Adequate_input","mc_vertical","mc","","*","","**Fully Adequate** – Meets or exceeds all requirements and expectations.","**Mostly Adequate** – Meets nearly all requirements with minor gaps.","**Moderately Adequate** – Meets most requirements but has room for improvement.","**Somewhat Adequate** – Meets a few requirements but falls short in key areas.","**Not Adequate** – Does not meet basic requirements or expectations.",NA,NA,NA
@@ -2140,6 +2180,10 @@ h4,
 h5,
 h6 {
   color:#0B1215;
+}
+
+h4 {
+  margin: 0 0 5px 0;
 }
 
 p {

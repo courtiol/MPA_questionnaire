@@ -69,6 +69,10 @@ h6 {
   color:#0B1215;
 }
 
+h4 {
+  margin: 0 0 5px 0;
+}
+
 p {
   color:#484c50;
 }
@@ -128,10 +132,10 @@ employees, and others who have a formal role actively contributing to achieving 
 
 <span>
 <ul>
-  <li><strong>Part A</strong>: 2 questions: Identify the MPA you are responding for.</li>
-  <li><strong>Part B</strong>: 6 questions: Tell us about your specific MPA.</li>
+  <li><strong>Part A</strong>: 2 questions: Let's identify your MPA.</li>
+  <li><strong>Part B</strong>: 6 questions: Tell us about this MPA.</li>
   <li><strong>Part C</strong>: 5 questions: Tell us about you. </li>
-  <li><strong>Part D</strong>: 2 final optional questions. </li>
+  <li><strong>Part D</strong>: 2 (optional) questions: Tell us more?. </li>
 </ul>
 </span>
 
@@ -180,7 +184,7 @@ logos <- add_element(label = "
 
 CSS1 <- CSS; CSS1$name <- "CSS1"
 
-P1 <-  add_element(label = "# <mark style='background-color:#6495ED;color:#FFD700'> Part A: Let's find your Marine Protected Area (MPA) (2 Questions)</mark>",
+P1 <-  add_element(label = "# <mark style='background-color:#6495ED;color:#FFD700'> Part A: Let's identify your Marine Protected Area (MPA)<br>(2 Questions)</mark>",
                    name = "P1",
                    type = "note")
 
@@ -203,7 +207,7 @@ S1 <- add_element(label = "Continue",
 
 CSS2 <- CSS; CSS2$name <- "CSS2"
 
-P2 <-  add_element(label = "# <mark style='background-color:#6495ED;color:#FFD700'> Part A: Let's find your MPA (2 Questions)</mark>",
+P2 <-  add_element(label = "# <mark style='background-color:#6495ED;color:#FFD700'> Part A: Let's identify your MPA (2 Questions)</mark>",
                    name = "P2",
                    type = "note")
 
@@ -291,7 +295,7 @@ S2 <- S1; S2$name <- "S2"
 
 CSS4 <- CSS; CSS4$name <- "CSS4"
 
-P4 <-  add_element(label = "# <mark style='background-color:#6495ED;color:#FFD700'> Part B: Tell us about your MPA (6 questions) </mark>", ##FIXME replace "your MPA" by its name
+P4 <-  add_element(label = "# <mark style='background-color:#6495ED;color:#FFD700'> Part B: Tell us about this MPA (6 questions) </mark>", ##FIXME replace "your MPA" by its name
                    name = "P4",
                    type = "note")
 
@@ -442,7 +446,7 @@ CSS6 <- CSS; CSS6$name <- "CSS6"
 
 P6 <- P4; P6$name <- "P6"
 
-SUMM_note <- add_element(label = "## 6: Confirm the number of FTE. 
+SUMM_note <- add_element(label = "## 3: Confirm the number of FTE. 
 #### For each workforce category please review the number of FTE corresponding to your previous choices and adjust if necessary.",
                          type = "note",
                          name = "SUMM_note")
@@ -521,7 +525,7 @@ CSS7 <- CSS; CSS7$name <- "CSS7"
 
 P7 <- P4; P7$name <- "P7"
 
-Tech_note <-  add_element(label = "## 3: Technology used to help?",
+Tech_note <-  add_element(label = "## 4: Technology used to help?",
                           name = "Tech_note",
                           type = "note")
                           
@@ -565,7 +569,8 @@ Other_tech_comment_check <- add_element(label = "#### Add a COMMENT",
 Other_tech_comment <- add_element(label = "#### 💡 Tell us more, so we fully understand",
                                   name = "Other_tech_comment",
                                   showif = "Other_tech_comment_check",
-                                  type = "textarea")
+                                  type = "textarea",
+                                  optional = "*")
   
 S7 <- S1; S7$name <- "S7"
 
@@ -575,7 +580,7 @@ CSS8 <- CSS; CSS8$name <- "CSS8"
 
 P8 <- P4; P8$name <- "P8"
 
-Others_note <-  add_element(label = "## 4: Who else is nearby?",
+Others_note <-  add_element(label = "## 5: Who else is nearby?",
                             name = "Others_note",
                             type = "note")
 
@@ -584,11 +589,11 @@ Others_choice <-  add_element(label = "#### Who else operates seasonally or more
                             name = "Others_choice",
                             type = "mc_multiple",
                             class = "mc_vertical",
-                            choice1 = "**Fishers**",
-                            choice2 = "**Divers**",
-                            choice3 = "**Boat operators**",
-                            choice4 = "**Cultural practitioners**",
-                            choice5 = "**None** — no one uses this MPA",
+                            choice1 = "**Fishers** 🎣",
+                            choice2 = "**Divers** 🤿",
+                            choice3 = "**Surfers** 🏄️",
+                            choice4 = "**Boat operators** ⛵",
+                            choice5 = "**None** — no one uses this MPA🏝️",
                             choice6 = "**None of the above**",
                             choice7 = "**I don’t know**",
                             optional = "!")
@@ -632,7 +637,7 @@ CSS9 <- CSS; CSS9$name <- "CSS9"
 
 P9 <- P4; P9$name <- "P9"
 
-Anythingelse_note <-  add_element(label = "## 5: Anything else?",
+Anythingelse_note <-  add_element(label = "## 6: Anything else?",
                             name = "Anythingelse_note",
                             type = "note")
 
@@ -648,15 +653,15 @@ S9 <- S1; S9$name <- "S9"
 
 CSS10 <- CSS; CSS10$name <- "CSS10"
 
-P10 <-  add_element(label = "# <mark style='background-color:#6495ED;color:#FFD700'> Part C: A little about you (5 questions) </mark>",
+P10 <-  add_element(label = "# <mark style='background-color:#6495ED;color:#FFD700'> Part C: Tell us about you (5 questions) </mark>",
                     name = "P10",
                     type = "note")
 
-Role_note <-  add_element(label = "## 1: Your role?",
+Role_note <-  add_element(label = "## 1: Your role(s)?",
                           name = "Role_note",
                           type = "note")
 
-Role_choice <- add_element(label = "#### What role do you serve in this MPA?
+Role_choice <- add_element(label = "#### What role(s) do you serve in this MPA?
 💡 Select all that apply.",
                            name = "Role_choice",
                            type = "mc_multiple",
@@ -691,10 +696,8 @@ Role_comment <- add_element(label = "#### 💡 Tell us more, so we fully underst
                             type = "textarea")
 
 E10 <- add_element(label = "## NOTE
-#### 💙 Personal information will not be distributed unless requested.
-#### 💡 The purpose of collecting this information includes:
 <style>
-li{
+p, summary, li{
   color:#484c50;
   font-family:Roboto,Arial,sans-serif;
   font-weight:400;
@@ -702,13 +705,19 @@ li{
   margin:0 0 2px 0
 }
 </style>
-<ol type='1'>
-  <li>Requesting follow up information if necessary;</li>
-  <li>It may help us understand your answers (e.g., different departments); and </li>
-  <li>To share the report with you when it is complete.</li>
-</ol>",
-                     name = "E10",
-                     type = "note")
+#### 💙 Personal information won't be distributed, but it is helpful to us.
+<details>
+  <summary>💡 Click here to know why we need this data.</summary>
+  <p>The purpose of collecting personal information includes:</p>
+  <ol type='1'>
+    <li>Requesting follow up information if necessary;</li>
+    <li>Helping us understand your answers (e.g., different departments); and </li>
+    <li>Sharing the report with you when it is complete.</li>
+  </ol>
+</details>
+",
+                   name = "E10",
+                   type = "note")
 
 S10 <- S1; S10$name <- "S10"
 
@@ -722,11 +731,15 @@ Name_note <-  add_element(label = "## 2: Your name?",
                           name = "Name_note",
                           type = "note")
 
-Name_input <- add_element(label = "#### What is your name?
-💙 We may use this for follow-up questions or to share the report. 
-💡It will not be distributed unless you request us to do so in question 4 (see later).",
+Name_input <- add_element(label = "#### What is your name?",
                           name = "Name_input",
-                          type = "text") ## FIXME make optional?
+                          type = "text",
+                          optional = "*",
+                          showif = "!Anonymous_check")
+
+Anonymous_check <- add_element(label = "#### 🤫 I prefer to remain anonymous",
+                               name = "Anonymous_check",
+                               type = "check")
 
 Name_comment_check <- add_element(label = "#### Add a COMMENT",
                                   name = "Name_comment_check",
@@ -747,15 +760,19 @@ CSS12 <- CSS; CSS12$name <- "CSS12"
 
 P12 <- P10; P12$name <- "P12"
 
-Email_note <-  add_element(label = "## 3: Contact email?",
+Email_note <-  add_element(label = "## 3: Your email?",
                            name = "Email_note",
                            type = "note")
 
-Email_input <- add_element(label = "#### What is your email address?
-💙 We may use this for follow-up questions or to share the report. 
-💡It will not be distributed.",
+Email_input <- add_element(label = "#### What is your email address?",
                            name = "Email_input",
-                           type = "email") ## FIXME make optional?
+                           type = "email",
+                           showif = "!Anonymous_email_check",
+                           optional = "*")
+
+Anonymous_email_check <- add_element(label = "#### 🤫 I prefer to remain anonymous",
+                               name = "Anonymous_email_check",
+                               type = "check")
 
 Email_comment_check <- add_element(label = "#### Add a COMMENT",
                                    name = "Email_comment_check",
@@ -776,7 +793,7 @@ CSS13 <- CSS; CSS13$name <- "CSS13"
 
 P13 <- P10; P13$name <- "P13"
 
-Acknowledgement_note <-  add_element(label = "## 4: Acknowledgement?",
+Acknowledgement_note <-  add_element(label = "## 4: How can we acknowledge you?",
                                      name = "Acknowledgement_note",
                                      type = "note")
 
@@ -787,17 +804,17 @@ Acknowledgement_input <- add_element(label = "#### We can't do this without you!
                                      type = "textarea",
                                      optional  = "*")
 
-E13 <- E10; E13$name <- "E13"
-
 S13 <- S1; S13$name <- "S13"
 
 # Page 14 ----------------------------------------------------------------------
 
 CSS14 <- CSS; CSS14$name <- "CSS14"
 
-P14 <- P10; P14$name <- "P14"
+P14 <-  add_element(label = "# <mark style='background-color:#6495ED;color:#FFD700'>Part D: Tell us more? (2 questions) </mark>",
+                    name = "P14",
+                    type = "note")
 
-Referrals_note <-  add_element(label = "## 5: Referrals?",
+Referrals_note <-  add_element(label = "## 1: Referrals?",
                                name = "Referrals_note",
                                type = "note")
 
@@ -808,19 +825,15 @@ Referrals_text <- add_element(label = "#### Please, if there is anyone you belie
                               type = "textarea",
                               optional = "*")
 
-E14 <- E10; E14$name <- "E14"
-
 S14 <- S1; S14$name <- "S14"
 
 # Page 15 ----------------------------------------------------------------------
 
 CSS15 <- CSS; CSS15$name <- "CSS15"
 
-P15 <-  add_element(label = "# <mark style='background-color:#6495ED;color:#FFD700'>Part D: An optional question (1 question) </mark>",
-                    name = "P15",
-                    type = "note")
+P15 <-  P14; P15$name <- "P15"
 
-Adequate_note <-  add_element(label = "## 1: Is this adequate? ",
+Adequate_note <-  add_element(label = "## 2: Is your workforce adequate?",
                               name = "Adequate_note",
                               type = "note")
 
@@ -878,10 +891,10 @@ survey_tbl <- bind_rows(CSS0, N0, logos, S0,
                         CSS8, P8, Others_note, Others_choice, Block_others1, Block_others2, Block_others3, Others, Others_comment_check, Others_comment, S8,
                         CSS9, P9, Anythingelse_note, Anythingelse_comment, S9,
                         CSS10, P10, Role_note, Role_choice, Role_block1, Role_block2, Role_comment_check, Role_comment, E10, S10,
-                        CSS11, P11, Name_note, Name_input, Name_comment_check, Name_comment, E11, S11,
-                        CSS12, P12, Email_note, Email_input, Email_comment_check, Email_comment, E12, S12,
-                        CSS13, P13, Acknowledgement_note, Acknowledgement_input, E13, S13,
-                        CSS14, P14, Referrals_note, Referrals_text, E14, S14,
+                        CSS11, P11, Name_note, Name_input, Anonymous_check, Name_comment_check, Name_comment, E11, S11,
+                        CSS12, P12, Email_note, Email_input, Anonymous_email_check, Email_comment_check, Email_comment, E12, S12,
+                        CSS13, P13, Acknowledgement_note, Acknowledgement_input, S13,
+                        CSS14, P14, Referrals_note, Referrals_text, S14,
                         CSS15, P15, Adequate_note, Adequate_input, Adequate_comment_check, Adequate_comment, E15, S15,
                         CSS16, P16, S16
                         )
