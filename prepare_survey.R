@@ -92,6 +92,7 @@ li{
   border-color:rgb(21 45 101)!important;
   color:#fff!important
 }
+
 </style>", 
 type = "note",
 name = "CSS")
@@ -276,9 +277,9 @@ Q_issue1_text <- add_element(label = "#### 🛟 Tell us what is wrong:",
 Warn_multiple <- add_element(label = r"(
 <div class='alert'>
 <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
-<p style='font-size:200%'><strong>WARNING!</strong> you selected multiple MPAs.</p>
-<p style='font-size:150%'>💡 If you continue, the MPAs will be merged and treated as a single entity.</p>
-<p style='font-size:150%'>💙 To fill in separate surveys per MPA, select one above and follow instructions at the end of this survey.</p>
+<div style='font-size:200%'><strong>WARNING!</strong> you selected multiple MPAs.</div>
+<div style='font-size:150%'>💡 If you continue, the MPAs will be merged and treated as a single entity.</div>
+<div style='font-size:150%'>💙 To fill in separate surveys per MPA, select one above and follow instructions at the end of this survey.</div>
 </div>)",
                              name = "WarnM_multiple",
                              type = "note",
@@ -313,15 +314,21 @@ M1 <- add_element(label = "#### Including yourself, what formal roles are involv
                  choice8 = "**I don't know**",
                  optional = "!") ## FIXME do we need to make them detail Other in a field?
 
-B1 <- add_element(label = "The answer **None** cannot be combined with another category",
+B1 <- add_element(label = "<div style='color:#ffff'>The answer <strong>None</strong> cannot be combined with another category</div>",
                   name = "B1",
                   type = "block",
                   showif = "(M1 %contains_word% '1' | M1 %contains_word% '2' | M1 %contains_word% '3' | M1 %contains_word% '4' | M1 %contains_word% '5' | M1 %contains_word% '6') && M1 %contains_word% '7'")
 
-B2 <- add_element(label = "The answer **I don't know** cannot be combined with another category",
+B2 <- add_element(label = "<div style='color:#ffff'> The answer <strong>I don't know</strong> cannot be combined with another category</div>",
                   name = "B2",
                   type = "block",
                   showif = "(M1 %contains_word% '1' | M1 %contains_word% '2' | M1 %contains_word% '3' | M1 %contains_word% '4' | M1 %contains_word% '5' | M1 %contains_word% '6' | M1 %contains_word% '7') && M1 %contains_word% '8'")
+
+M1missing <- add_element(label = "#### 🛟 If you selected **Other**, please let us know which roles fall under this category:",
+                         name = "M1missing",
+                         type = "textarea",
+                         showif = "M1 %contains_word% '6'",
+                         optional = "*")
 
 S4 <- S1; S4$name <- "S4"
 
@@ -334,9 +341,8 @@ P5 <-  P4; P5$name <- "P5"; P5$showif <- "!M1 %contains_word% '7' && !M1 %contai
 N5 <-  add_element(label = "## 2: Number of people in each role. 
 #### For each workforce category selected previously, indicate the number of formal staff who work on this specific MPA.
 💙 For each role, report the number of staff in that role or use COMMENT to record in your own way.
-💡 FTE = Full-time equivalent.
-🦀 Add a COMMENT to add more options or to explain anything you think we should know.      
-                   ",
+🦀 FTE = Full-time equivalent.
+💡 Add a COMMENT to add more options or to explain anything you think we should know.",
                    name = "N5",
                    showif = "!M1 %contains_word% '7' && !M1 %contains_word% '8'",
                    type = "note")
@@ -346,6 +352,7 @@ add_personel_questions <- function(label = "### **what**",
                                    showif = NULL,
                                    value = "0",
                                    type = "number 0,999999,1") {
+
   E1 <- add_element(label = label,
                     name = paste0("PERS_", category, "_note"),
                     showif = showif,
@@ -367,17 +374,42 @@ add_personel_questions <- function(label = "### **what**",
                     name = paste0("PERS_", category, "_Occasional"),
                     value = value, showif = showif, type = type)
   
+  CodeBlock <- add_element(label = paste0(r"(<script>
+$(document).ready(function() {
+  $('form').on('change', function() {
+    var total_)", category, r"(= 0;
+    // Select all inputs whose name begins with "FTE_"
+    $('input[name^="PERS_)", category, r"("]').each(function() {
+      // Convert the value to a float; if NaN (missing/empty), default to 0
+      var val = parseFloat($(this).val());
+      if (isNaN(val)) {
+        val = 0;
+      }
+    });
+    total_)", category, r"(+= val;
+  }).trigger("change");
+});
+</script>))"),
+                            name = paste0("PERS_", category, "_BlockCode"),
+                            type = "note")
+  
+  Block <- add_element(label = "### **Test**",
+                       name = paste0("PERS_", category, "_Block"),
+                       type = "block",
+                       showif = paste0("total_", category, "=== 0 //js_only"))
+  
   C1 <- add_element(label = "#### Add a COMMENT",
                     name = paste0("PERS_", category, "_NeedComment"),
                     showif = showif,
                     type = "check")
   
-  C2 <- add_element(label = "#### Add more options or explain anything you think we should know about this workforce category",
+  C2 <- add_element(label = "#### 💡 Add more options or explain anything you think we should know about this workforce category",
                     name = paste0("PERS_", category, "Comment"),
                     showif = paste0("PERS_", category, "_NeedComment"),
-                    type = "textarea")
+                    type = "textarea",
+                    optional = "*")
   
-  bind_rows(E1, E2, E3, E4, E5, C1, C2)
+  bind_rows(E1, E2, E3, E4, E5, CodeBlock, Block, C1, C2)
 }
 
 ## Those are personnel questions, do make sure that this agrees with category numbers in M1 above!
@@ -505,12 +537,12 @@ Tech_choice <-  add_element(label = "#### If you use technology or other aids to
                             choice7 = "**I don’t know**",
                             optional = "!")
 
-Block_tech1 <- add_element(label = "The answer **None of the above** cannot be combined with another category",
+Block_tech1 <- add_element(label = "<div style='color:#ffff'>The answer <strong>None of the above</strong> cannot be combined with another category</div>",
                            name = "Block_tech1",
                            type = "block",
                            showif = "(Tech_choice %contains_word% '1' | Tech_choice %contains_word% '2' | Tech_choice %contains_word% '3' | Tech_choice %contains_word% '4' | Tech_choice %contains_word% '5') && Tech_choice %contains_word% '6'")
 
-Block_tech2 <- add_element(label = "The answer **I don't know** cannot be combined with another category",
+Block_tech2 <- add_element(label = "<div style='color:#ffff'>The answer <strong>I don't know</strong> cannot be combined with another category</div>",
                            name = "Block_tech2",
                            type = "block",
                            showif = "(Tech_choice %contains_word% '1' | Tech_choice %contains_word% '2' | Tech_choice %contains_word% '3' | Tech_choice %contains_word% '4' | Tech_choice %contains_word% '5' | Tech_choice %contains_word% '6') && Tech_choice %contains_word% '7'")
@@ -528,7 +560,7 @@ Other_tech_comment_check <- add_element(label = "#### Add a COMMENT",
                                         name = "Other_tech_comment_check",
                                         type = "check")
 
-Other_tech_comment <- add_element(label = "#### Tell us more, so we fully understand",
+Other_tech_comment <- add_element(label = "#### 💡 Tell us more, so we fully understand",
                                   name = "Other_tech_comment",
                                   showif = "Other_tech_comment_check",
                                   type = "textarea")
@@ -559,22 +591,22 @@ Others_choice <-  add_element(label = "#### Who else operates seasonally or more
                             choice7 = "**I don’t know**",
                             optional = "!")
 
-Block_others1 <- add_element(label = "The answer **None of the above** cannot be combined with another category",
+Block_others1 <- add_element(label = "<div style='color:#ffff'>The answer <strong>None of the above</strong> cannot be combined with another category</div>",
                              name = "Block_others1",
                              type = "block",
                              showif = "(Others_choice %contains_word% '1' | Others_choice %contains_word% '2' | Others_choice %contains_word% '3' | Others_choice %contains_word% '4' | Others_choice %contains_word% '5') && Others_choice %contains_word% '6'")
 
-Block_others2 <- add_element(label = "The answer **I don't know** cannot be combined with another category",
+Block_others2 <- add_element(label = "<div style='color:#ffff'>The answer <strong>I don't know</strong> cannot be combined with another category</div>",
                              name = "Block_others2",
                              type = "block",
                              showif = "(Others_choice %contains_word% '1' | Others_choice %contains_word% '2' | Others_choice %contains_word% '3' | Others_choice %contains_word% '4' | Others_choice %contains_word% '5' | Others_choice %contains_word% '6') && Others_choice %contains_word% '7'")
 
-Block_others3 <- add_element(label = "The answer **None** cannot be combined with another category",
+Block_others3 <- add_element(label = "<div style='color:#ffff'>The answer <strong>None</strong> cannot be combined with another category</div>",
                              name = "Block_others3",
                              type = "block",
                              showif = "(Others_choice %contains_word% '1' | Others_choice %contains_word% '2' | Others_choice %contains_word% '3' | Others_choice %contains_word% '4') && Others_choice %contains_word% '5'")
 
-Others <- add_element(label = "#### 🦀 Add other operators that qualify
+Others <- add_element(label = "#### Add other operators that qualify
 💡 After typing, press enter to validate what you added.",
 type = "select_or_add_multiple",
 name = "Others",
@@ -637,12 +669,12 @@ Role_choice <- add_element(label = "#### What role do you serve in this MPA?
                            choice8 = "**I don't know**",
                            optional = "!")
 
-Role_block1 <- add_element(label = "The answer **None** cannot be combined with another category",
+Role_block1 <- add_element(label = "<div style='color:#ffff'>The answer <strong>None</strong> cannot be combined with another category</div>",
                            name = "Role_block1",
                            type = "block",
                            showif = "(Role_choice %contains_word% '1' | Role_choice %contains_word% '2' | Role_choice %contains_word% '3' | Role_choice %contains_word% '4' | Role_choice %contains_word% '5' | Role_choice %contains_word% '6') && Role_choice %contains_word% '7'")
 
-Role_block2 <- add_element(label = "The answer **I don't know** cannot be combined with another category",
+Role_block2 <- add_element(label = "<div style='color:#ffff'>The answer <strong>I don't know</strong> cannot be combined with another category</div>",
                            name = "Role_block2",
                            type = "block",
                            showif = "(Role_choice %contains_word% '1' | Role_choice %contains_word% '2' | Role_choice %contains_word% '3' | Role_choice %contains_word% '4' | Role_choice %contains_word% '5' | Role_choice %contains_word% '6' | Role_choice %contains_word% '7') && Role_choice %contains_word% '8'")
@@ -836,7 +868,7 @@ S16 <- add_element(label = "End the survey",
 survey_tbl <- bind_rows(CSS0, N0, logos, S0,
                         CSS1, P1, N1, Q1, S1,
                         CSS2, CSS, P2, N2, Q2, C1, Qmissing, N3, Q_issue1, Q_issue1_text, Warn_multiple, S2,
-                        CSS4, P4, N4, M1, B1, B2, S4,
+                        CSS4, P4, N4, M1, B1, B2, M1missing, S4,
                         CSS5, P5, N5, PERS1, PERS2, PERS3, PERS4, PERS5, PERS6, S5,
                         CSS6, P6, SUMM_note, FTE_site, FTE_stakeholder, FTE_support, FTE_scientists, FTE_leadership, FTE_other,
                         total_note, total_info, S6,

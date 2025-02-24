@@ -53,6 +53,7 @@ li{
   border-color:rgb(21 45 101)!important;
   color:#fff!important
 }
+
 </style>","CSS0","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "
 <style>
@@ -174,6 +175,7 @@ li{
   border-color:rgb(21 45 101)!important;
   color:#fff!important
 }
+
 </style>","CSS1","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "# <mark style='background-color:#6495ED;color:#FFD700'> Part A: Let's find your Marine Protected Area (MPA) (2 Questions)</mark>","P1","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "## 1: Select your country","N1","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
@@ -235,6 +237,7 @@ li{
   border-color:rgb(21 45 101)!important;
   color:#fff!important
 }
+
 </style>","CSS2","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "<style>
 .alert {
@@ -290,6 +293,7 @@ li{
   border-color:rgb(21 45 101)!important;
   color:#fff!important
 }
+
 </style>","CSS","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "# <mark style='background-color:#6495ED;color:#FFD700'> Part A: Let's find your MPA (2 Questions)</mark>","P2","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "## 2: Select your MPA","N2","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
@@ -1063,9 +1067,9 @@ $(document).ready(function () {
 "
 <div class='alert'>
 <span class=""closebtn"" onclick=""this.parentElement.style.display='none';"">&times;</span> 
-<p style='font-size:200%'><strong>WARNING!</strong> you selected multiple MPAs.</p>
-<p style='font-size:150%'>💡 If you continue, the MPAs will be merged and treated as a single entity.</p>
-<p style='font-size:150%'>💙 To fill in separate surveys per MPA, select one above and follow instructions at the end of this survey.</p>
+<div style='font-size:200%'><strong>WARNING!</strong> you selected multiple MPAs.</div>
+<div style='font-size:150%'>💡 If you continue, the MPAs will be merged and treated as a single entity.</div>
+<div style='font-size:150%'>💙 To fill in separate surveys per MPA, select one above and follow instructions at the end of this survey.</div>
 </div>","WarnM_multiple","","note","","","lengthItems > 1 //js_only",NA,NA,NA,NA,NA,NA,NA,NA
 "Continue","S2","","submit","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "<style>
@@ -1122,13 +1126,15 @@ li{
   border-color:rgb(21 45 101)!important;
   color:#fff!important
 }
+
 </style>","CSS4","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "# <mark style='background-color:#6495ED;color:#FFD700'> Part B: Tell us about your MPA (5 questions) </mark>","P4","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "## 1: Roles of the people who work on this MPA","N4","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Including yourself, what formal roles are involved in working on this specific MPA to contribute to achieving its goals?
 💡 Select all that apply.","M1","mc_vertical","mc_multiple","","!","","**Site Focused** — such as rangers and ranger-like roles (with and without enforcement capabilities)","**Stakeholder Focused** — such as education and outreach roles","**Support Focused** — such as supporting staff","**Scientists** — such as those collecting and analyzing data to address questions","**Leadership Focused** — such as decision making","**Other** — for roles unlisted above","**None** — no one works on this MPA in a formal role","**I don't know**"
-"The answer **None** cannot be combined with another category","B1","","block","","","(M1 %contains_word% '1' | M1 %contains_word% '2' | M1 %contains_word% '3' | M1 %contains_word% '4' | M1 %contains_word% '5' | M1 %contains_word% '6') && M1 %contains_word% '7'",NA,NA,NA,NA,NA,NA,NA,NA
-"The answer **I don't know** cannot be combined with another category","B2","","block","","","(M1 %contains_word% '1' | M1 %contains_word% '2' | M1 %contains_word% '3' | M1 %contains_word% '4' | M1 %contains_word% '5' | M1 %contains_word% '6' | M1 %contains_word% '7') && M1 %contains_word% '8'",NA,NA,NA,NA,NA,NA,NA,NA
+"<div style='color:#ffff'>The answer <strong>None</strong> cannot be combined with another category</div>","B1","","block","","","(M1 %contains_word% '1' | M1 %contains_word% '2' | M1 %contains_word% '3' | M1 %contains_word% '4' | M1 %contains_word% '5' | M1 %contains_word% '6') && M1 %contains_word% '7'",NA,NA,NA,NA,NA,NA,NA,NA
+"<div style='color:#ffff'> The answer <strong>I don't know</strong> cannot be combined with another category</div>","B2","","block","","","(M1 %contains_word% '1' | M1 %contains_word% '2' | M1 %contains_word% '3' | M1 %contains_word% '4' | M1 %contains_word% '5' | M1 %contains_word% '6' | M1 %contains_word% '7') && M1 %contains_word% '8'",NA,NA,NA,NA,NA,NA,NA,NA
+"#### 🛟 If you selected **Other**, please let us know which roles fall under this category:","M1missing","","textarea","","*","M1 %contains_word% '6'",NA,NA,NA,NA,NA,NA,NA,NA
 "Continue","S4","","submit","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "<style>
 .alert {
@@ -1184,56 +1190,158 @@ li{
   border-color:rgb(21 45 101)!important;
   color:#fff!important
 }
+
 </style>","CSS5","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "# <mark style='background-color:#6495ED;color:#FFD700'> Part B: Tell us about your MPA (5 questions) </mark>","P5","","note","","","!M1 %contains_word% '7' && !M1 %contains_word% '8'",NA,NA,NA,NA,NA,NA,NA,NA
 "## 2: Number of people in each role. 
 #### For each workforce category selected previously, indicate the number of formal staff who work on this specific MPA.
 💙 For each role, report the number of staff in that role or use COMMENT to record in your own way.
-💡 FTE = Full-time equivalent.
-🦀 Add a COMMENT to add more options or to explain anything you think we should know.      
-                   ","N5","","note","","","!M1 %contains_word% '7' && !M1 %contains_word% '8'",NA,NA,NA,NA,NA,NA,NA,NA
+🦀 FTE = Full-time equivalent.
+💡 Add a COMMENT to add more options or to explain anything you think we should know.","N5","","note","","","!M1 %contains_word% '7' && !M1 %contains_word% '8'",NA,NA,NA,NA,NA,NA,NA,NA
 "### **Site Focused**","PERS_site_note","","note","","","M1 %contains_word% '1'",NA,NA,NA,NA,NA,NA,NA,NA
 "Full time personel (working all year; counted as 1 FTE each)","PERS_site_FullTime","","number 0,999999,1","0","","M1 %contains_word% '1'",NA,NA,NA,NA,NA,NA,NA,NA
 "Part time personel (counted as 0.5 FTE each)","PERS_site_PartTime","","number 0,999999,1","0","","M1 %contains_word% '1'",NA,NA,NA,NA,NA,NA,NA,NA
 "Seasonal personel (working during e.g. summer; counted as 0.25 FTE each)","PERS_site_Seasonal","","number 0,999999,1","0","","M1 %contains_word% '1'",NA,NA,NA,NA,NA,NA,NA,NA
 "Occcasional personel (working few weeks a year; counted as 0.1 FTE each)","PERS_site_Occasional","","number 0,999999,1","0","","M1 %contains_word% '1'",NA,NA,NA,NA,NA,NA,NA,NA
+"<script>
+$(document).ready(function() {
+  $('form').on('change', function() {
+    var total_site= 0;
+    // Select all inputs whose name begins with ""FTE_""
+    $('input[name^=""PERS_site""]').each(function() {
+      // Convert the value to a float; if NaN (missing/empty), default to 0
+      var val = parseFloat($(this).val());
+      if (isNaN(val)) {
+        val = 0;
+      }
+    });
+    total_site+= val;
+  }).trigger(""change"");
+});
+</script>)","PERS_site_BlockCode","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
+"### **Test**","PERS_site_Block","","block","","","total_site=== 0 //js_only",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Add a COMMENT","PERS_site_NeedComment","","check","","","M1 %contains_word% '1'",NA,NA,NA,NA,NA,NA,NA,NA
-"#### Add more options or explain anything you think we should know about this workforce category","PERS_siteComment","","textarea","","","PERS_site_NeedComment",NA,NA,NA,NA,NA,NA,NA,NA
+"#### 💡 Add more options or explain anything you think we should know about this workforce category","PERS_siteComment","","textarea","","*","PERS_site_NeedComment",NA,NA,NA,NA,NA,NA,NA,NA
 "### **Stakeholder Focused**","PERS_stakeholder_note","","note","","","M1 %contains_word% '2'",NA,NA,NA,NA,NA,NA,NA,NA
 "Full time personel (working all year; counted as 1 FTE each)","PERS_stakeholder_FullTime","","number 0,999999,1","0","","M1 %contains_word% '2'",NA,NA,NA,NA,NA,NA,NA,NA
 "Part time personel (counted as 0.5 FTE each)","PERS_stakeholder_PartTime","","number 0,999999,1","0","","M1 %contains_word% '2'",NA,NA,NA,NA,NA,NA,NA,NA
 "Seasonal personel (working during e.g. summer; counted as 0.25 FTE each)","PERS_stakeholder_Seasonal","","number 0,999999,1","0","","M1 %contains_word% '2'",NA,NA,NA,NA,NA,NA,NA,NA
 "Occcasional personel (working few weeks a year; counted as 0.1 FTE each)","PERS_stakeholder_Occasional","","number 0,999999,1","0","","M1 %contains_word% '2'",NA,NA,NA,NA,NA,NA,NA,NA
+"<script>
+$(document).ready(function() {
+  $('form').on('change', function() {
+    var total_stakeholder= 0;
+    // Select all inputs whose name begins with ""FTE_""
+    $('input[name^=""PERS_stakeholder""]').each(function() {
+      // Convert the value to a float; if NaN (missing/empty), default to 0
+      var val = parseFloat($(this).val());
+      if (isNaN(val)) {
+        val = 0;
+      }
+    });
+    total_stakeholder+= val;
+  }).trigger(""change"");
+});
+</script>)","PERS_stakeholder_BlockCode","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
+"### **Test**","PERS_stakeholder_Block","","block","","","total_stakeholder=== 0 //js_only",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Add a COMMENT","PERS_stakeholder_NeedComment","","check","","","M1 %contains_word% '2'",NA,NA,NA,NA,NA,NA,NA,NA
-"#### Add more options or explain anything you think we should know about this workforce category","PERS_stakeholderComment","","textarea","","","PERS_stakeholder_NeedComment",NA,NA,NA,NA,NA,NA,NA,NA
+"#### 💡 Add more options or explain anything you think we should know about this workforce category","PERS_stakeholderComment","","textarea","","*","PERS_stakeholder_NeedComment",NA,NA,NA,NA,NA,NA,NA,NA
 "### **Support Focused**","PERS_support_note","","note","","","M1 %contains_word% '3'",NA,NA,NA,NA,NA,NA,NA,NA
 "Full time personel (working all year; counted as 1 FTE each)","PERS_support_FullTime","","number 0,999999,1","0","","M1 %contains_word% '3'",NA,NA,NA,NA,NA,NA,NA,NA
 "Part time personel (counted as 0.5 FTE each)","PERS_support_PartTime","","number 0,999999,1","0","","M1 %contains_word% '3'",NA,NA,NA,NA,NA,NA,NA,NA
 "Seasonal personel (working during e.g. summer; counted as 0.25 FTE each)","PERS_support_Seasonal","","number 0,999999,1","0","","M1 %contains_word% '3'",NA,NA,NA,NA,NA,NA,NA,NA
 "Occcasional personel (working few weeks a year; counted as 0.1 FTE each)","PERS_support_Occasional","","number 0,999999,1","0","","M1 %contains_word% '3'",NA,NA,NA,NA,NA,NA,NA,NA
+"<script>
+$(document).ready(function() {
+  $('form').on('change', function() {
+    var total_support= 0;
+    // Select all inputs whose name begins with ""FTE_""
+    $('input[name^=""PERS_support""]').each(function() {
+      // Convert the value to a float; if NaN (missing/empty), default to 0
+      var val = parseFloat($(this).val());
+      if (isNaN(val)) {
+        val = 0;
+      }
+    });
+    total_support+= val;
+  }).trigger(""change"");
+});
+</script>)","PERS_support_BlockCode","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
+"### **Test**","PERS_support_Block","","block","","","total_support=== 0 //js_only",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Add a COMMENT","PERS_support_NeedComment","","check","","","M1 %contains_word% '3'",NA,NA,NA,NA,NA,NA,NA,NA
-"#### Add more options or explain anything you think we should know about this workforce category","PERS_supportComment","","textarea","","","PERS_support_NeedComment",NA,NA,NA,NA,NA,NA,NA,NA
+"#### 💡 Add more options or explain anything you think we should know about this workforce category","PERS_supportComment","","textarea","","*","PERS_support_NeedComment",NA,NA,NA,NA,NA,NA,NA,NA
 "### **Scientists**","PERS_scientists_note","","note","","","M1 %contains_word% '4'",NA,NA,NA,NA,NA,NA,NA,NA
 "Full time personel (working all year; counted as 1 FTE each)","PERS_scientists_FullTime","","number 0,999999,1","0","","M1 %contains_word% '4'",NA,NA,NA,NA,NA,NA,NA,NA
 "Part time personel (counted as 0.5 FTE each)","PERS_scientists_PartTime","","number 0,999999,1","0","","M1 %contains_word% '4'",NA,NA,NA,NA,NA,NA,NA,NA
 "Seasonal personel (working during e.g. summer; counted as 0.25 FTE each)","PERS_scientists_Seasonal","","number 0,999999,1","0","","M1 %contains_word% '4'",NA,NA,NA,NA,NA,NA,NA,NA
 "Occcasional personel (working few weeks a year; counted as 0.1 FTE each)","PERS_scientists_Occasional","","number 0,999999,1","0","","M1 %contains_word% '4'",NA,NA,NA,NA,NA,NA,NA,NA
+"<script>
+$(document).ready(function() {
+  $('form').on('change', function() {
+    var total_scientists= 0;
+    // Select all inputs whose name begins with ""FTE_""
+    $('input[name^=""PERS_scientists""]').each(function() {
+      // Convert the value to a float; if NaN (missing/empty), default to 0
+      var val = parseFloat($(this).val());
+      if (isNaN(val)) {
+        val = 0;
+      }
+    });
+    total_scientists+= val;
+  }).trigger(""change"");
+});
+</script>)","PERS_scientists_BlockCode","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
+"### **Test**","PERS_scientists_Block","","block","","","total_scientists=== 0 //js_only",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Add a COMMENT","PERS_scientists_NeedComment","","check","","","M1 %contains_word% '4'",NA,NA,NA,NA,NA,NA,NA,NA
-"#### Add more options or explain anything you think we should know about this workforce category","PERS_scientistsComment","","textarea","","","PERS_scientists_NeedComment",NA,NA,NA,NA,NA,NA,NA,NA
+"#### 💡 Add more options or explain anything you think we should know about this workforce category","PERS_scientistsComment","","textarea","","*","PERS_scientists_NeedComment",NA,NA,NA,NA,NA,NA,NA,NA
 "### **Leadership Focused**","PERS_leadership_note","","note","","","M1 %contains_word% '5'",NA,NA,NA,NA,NA,NA,NA,NA
 "Full time personel (working all year; counted as 1 FTE each)","PERS_leadership_FullTime","","number 0,999999,1","0","","M1 %contains_word% '5'",NA,NA,NA,NA,NA,NA,NA,NA
 "Part time personel (counted as 0.5 FTE each)","PERS_leadership_PartTime","","number 0,999999,1","0","","M1 %contains_word% '5'",NA,NA,NA,NA,NA,NA,NA,NA
 "Seasonal personel (working during e.g. summer; counted as 0.25 FTE each)","PERS_leadership_Seasonal","","number 0,999999,1","0","","M1 %contains_word% '5'",NA,NA,NA,NA,NA,NA,NA,NA
 "Occcasional personel (working few weeks a year; counted as 0.1 FTE each)","PERS_leadership_Occasional","","number 0,999999,1","0","","M1 %contains_word% '5'",NA,NA,NA,NA,NA,NA,NA,NA
+"<script>
+$(document).ready(function() {
+  $('form').on('change', function() {
+    var total_leadership= 0;
+    // Select all inputs whose name begins with ""FTE_""
+    $('input[name^=""PERS_leadership""]').each(function() {
+      // Convert the value to a float; if NaN (missing/empty), default to 0
+      var val = parseFloat($(this).val());
+      if (isNaN(val)) {
+        val = 0;
+      }
+    });
+    total_leadership+= val;
+  }).trigger(""change"");
+});
+</script>)","PERS_leadership_BlockCode","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
+"### **Test**","PERS_leadership_Block","","block","","","total_leadership=== 0 //js_only",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Add a COMMENT","PERS_leadership_NeedComment","","check","","","M1 %contains_word% '5'",NA,NA,NA,NA,NA,NA,NA,NA
-"#### Add more options or explain anything you think we should know about this workforce category","PERS_leadershipComment","","textarea","","","PERS_leadership_NeedComment",NA,NA,NA,NA,NA,NA,NA,NA
+"#### 💡 Add more options or explain anything you think we should know about this workforce category","PERS_leadershipComment","","textarea","","*","PERS_leadership_NeedComment",NA,NA,NA,NA,NA,NA,NA,NA
 "### **Other**","PERS_other_note","","note","","","M1 %contains_word% '6'",NA,NA,NA,NA,NA,NA,NA,NA
 "Full time personel (working all year; counted as 1 FTE each)","PERS_other_FullTime","","number 0,999999,1","0","","M1 %contains_word% '6'",NA,NA,NA,NA,NA,NA,NA,NA
 "Part time personel (counted as 0.5 FTE each)","PERS_other_PartTime","","number 0,999999,1","0","","M1 %contains_word% '6'",NA,NA,NA,NA,NA,NA,NA,NA
 "Seasonal personel (working during e.g. summer; counted as 0.25 FTE each)","PERS_other_Seasonal","","number 0,999999,1","0","","M1 %contains_word% '6'",NA,NA,NA,NA,NA,NA,NA,NA
 "Occcasional personel (working few weeks a year; counted as 0.1 FTE each)","PERS_other_Occasional","","number 0,999999,1","0","","M1 %contains_word% '6'",NA,NA,NA,NA,NA,NA,NA,NA
+"<script>
+$(document).ready(function() {
+  $('form').on('change', function() {
+    var total_other= 0;
+    // Select all inputs whose name begins with ""FTE_""
+    $('input[name^=""PERS_other""]').each(function() {
+      // Convert the value to a float; if NaN (missing/empty), default to 0
+      var val = parseFloat($(this).val());
+      if (isNaN(val)) {
+        val = 0;
+      }
+    });
+    total_other+= val;
+  }).trigger(""change"");
+});
+</script>)","PERS_other_BlockCode","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
+"### **Test**","PERS_other_Block","","block","","","total_other=== 0 //js_only",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Add a COMMENT","PERS_other_NeedComment","","check","","","M1 %contains_word% '6'",NA,NA,NA,NA,NA,NA,NA,NA
-"#### Add more options or explain anything you think we should know about this workforce category","PERS_otherComment","","textarea","","","PERS_other_NeedComment",NA,NA,NA,NA,NA,NA,NA,NA
+"#### 💡 Add more options or explain anything you think we should know about this workforce category","PERS_otherComment","","textarea","","*","PERS_other_NeedComment",NA,NA,NA,NA,NA,NA,NA,NA
 "Continue","S5","","submit","","","!M1 %contains_word% '7' && !M1 %contains_word% '8'",NA,NA,NA,NA,NA,NA,NA,NA
 "<style>
 .alert {
@@ -1289,6 +1397,7 @@ li{
   border-color:rgb(21 45 101)!important;
   color:#fff!important
 }
+
 </style>","CSS6","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "# <mark style='background-color:#6495ED;color:#FFD700'> Part B: Tell us about your MPA (5 questions) </mark>","P6","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "## Confirm the number of FTE. 
@@ -1379,18 +1488,19 @@ li{
   border-color:rgb(21 45 101)!important;
   color:#fff!important
 }
+
 </style>","CSS7","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "# <mark style='background-color:#6495ED;color:#FFD700'> Part B: Tell us about your MPA (5 questions) </mark>","P7","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "## 3: Technology used to help?","Tech_note","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "#### If you use technology or other aids to help your MPA workforce expand its effectiveness in THIS specific MPA, please list.
 💡 Select all that apply.","Tech_choice","mc_vertical","mc_multiple","","!","","**Satellite technologies**","**Radar technologies**","**Underwater acoustic technologies**","**Drone technologies**","**Reporting tools**: Phone, email, or app reporting for marine species, activities, incidents","**None of the above**","**I don’t know**",NA
-"The answer **None of the above** cannot be combined with another category","Block_tech1","","block","","","(Tech_choice %contains_word% '1' | Tech_choice %contains_word% '2' | Tech_choice %contains_word% '3' | Tech_choice %contains_word% '4' | Tech_choice %contains_word% '5') && Tech_choice %contains_word% '6'",NA,NA,NA,NA,NA,NA,NA,NA
-"The answer **I don't know** cannot be combined with another category","Block_tech2","","block","","","(Tech_choice %contains_word% '1' | Tech_choice %contains_word% '2' | Tech_choice %contains_word% '3' | Tech_choice %contains_word% '4' | Tech_choice %contains_word% '5' | Tech_choice %contains_word% '6') && Tech_choice %contains_word% '7'",NA,NA,NA,NA,NA,NA,NA,NA
+"<div style='color:#ffff'>The answer <strong>None of the above</strong> cannot be combined with another category</div>","Block_tech1","","block","","","(Tech_choice %contains_word% '1' | Tech_choice %contains_word% '2' | Tech_choice %contains_word% '3' | Tech_choice %contains_word% '4' | Tech_choice %contains_word% '5') && Tech_choice %contains_word% '6'",NA,NA,NA,NA,NA,NA,NA,NA
+"<div style='color:#ffff'>The answer <strong>I don't know</strong> cannot be combined with another category</div>","Block_tech2","","block","","","(Tech_choice %contains_word% '1' | Tech_choice %contains_word% '2' | Tech_choice %contains_word% '3' | Tech_choice %contains_word% '4' | Tech_choice %contains_word% '5' | Tech_choice %contains_word% '6') && Tech_choice %contains_word% '7'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### 🦀 Add other technologies that qualify
 💙 Brand names are fine too.
 💡 After typing, press enter to validate what you added.","Other_tech","","select_or_add_multiple","","*","","I can't think of anything",NA,NA,NA,NA,NA,NA,NA
 "#### Add a COMMENT","Other_tech_comment_check","","check","","","",NA,NA,NA,NA,NA,NA,NA,NA
-"#### Tell us more, so we fully understand","Other_tech_comment","","textarea","","","Other_tech_comment_check",NA,NA,NA,NA,NA,NA,NA,NA
+"#### 💡 Tell us more, so we fully understand","Other_tech_comment","","textarea","","","Other_tech_comment_check",NA,NA,NA,NA,NA,NA,NA,NA
 "Continue","S7","","submit","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "<style>
 .alert {
@@ -1446,15 +1556,16 @@ li{
   border-color:rgb(21 45 101)!important;
   color:#fff!important
 }
+
 </style>","CSS8","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "# <mark style='background-color:#6495ED;color:#FFD700'> Part B: Tell us about your MPA (5 questions) </mark>","P8","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "## 4: Who else is nearby?","Others_note","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Who else operates seasonally or more within or nearby this specific MPA who is *not* formally responsible for working for this MPA?
 💡 Select all that apply.","Others_choice","mc_vertical","mc_multiple","","!","","**Fishers**","**Divers**","**Boat operators**","**Cultural practitioners**","**None** — no one uses this MPA","**None of the above**","**I don’t know**",NA
-"The answer **None of the above** cannot be combined with another category","Block_others1","","block","","","(Others_choice %contains_word% '1' | Others_choice %contains_word% '2' | Others_choice %contains_word% '3' | Others_choice %contains_word% '4' | Others_choice %contains_word% '5') && Others_choice %contains_word% '6'",NA,NA,NA,NA,NA,NA,NA,NA
-"The answer **I don't know** cannot be combined with another category","Block_others2","","block","","","(Others_choice %contains_word% '1' | Others_choice %contains_word% '2' | Others_choice %contains_word% '3' | Others_choice %contains_word% '4' | Others_choice %contains_word% '5' | Others_choice %contains_word% '6') && Others_choice %contains_word% '7'",NA,NA,NA,NA,NA,NA,NA,NA
-"The answer **None** cannot be combined with another category","Block_others3","","block","","","(Others_choice %contains_word% '1' | Others_choice %contains_word% '2' | Others_choice %contains_word% '3' | Others_choice %contains_word% '4') && Others_choice %contains_word% '5'",NA,NA,NA,NA,NA,NA,NA,NA
-"#### 🦀 Add other operators that qualify
+"<div style='color:#ffff'>The answer <strong>None of the above</strong> cannot be combined with another category</div>","Block_others1","","block","","","(Others_choice %contains_word% '1' | Others_choice %contains_word% '2' | Others_choice %contains_word% '3' | Others_choice %contains_word% '4' | Others_choice %contains_word% '5') && Others_choice %contains_word% '6'",NA,NA,NA,NA,NA,NA,NA,NA
+"<div style='color:#ffff'>The answer <strong>I don't know</strong> cannot be combined with another category</div>","Block_others2","","block","","","(Others_choice %contains_word% '1' | Others_choice %contains_word% '2' | Others_choice %contains_word% '3' | Others_choice %contains_word% '4' | Others_choice %contains_word% '5' | Others_choice %contains_word% '6') && Others_choice %contains_word% '7'",NA,NA,NA,NA,NA,NA,NA,NA
+"<div style='color:#ffff'>The answer <strong>None</strong> cannot be combined with another category</div>","Block_others3","","block","","","(Others_choice %contains_word% '1' | Others_choice %contains_word% '2' | Others_choice %contains_word% '3' | Others_choice %contains_word% '4') && Others_choice %contains_word% '5'",NA,NA,NA,NA,NA,NA,NA,NA
+"#### Add other operators that qualify
 💡 After typing, press enter to validate what you added.","Others","","select_or_add_multiple","","*","","I can't think of any",NA,NA,NA,NA,NA,NA,NA
 "#### Add a COMMENT","Others_comment_check","","check","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "#### 💡 Tell us more, so we fully understand","Others_comment","","textarea","","","Others_comment_check",NA,NA,NA,NA,NA,NA,NA,NA
@@ -1513,6 +1624,7 @@ li{
   border-color:rgb(21 45 101)!important;
   color:#fff!important
 }
+
 </style>","CSS9","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "# <mark style='background-color:#6495ED;color:#FFD700'> Part B: Tell us about your MPA (5 questions) </mark>","P9","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "## 5: Anything else?","Anythingelse_note","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
@@ -1573,13 +1685,14 @@ li{
   border-color:rgb(21 45 101)!important;
   color:#fff!important
 }
+
 </style>","CSS10","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "# <mark style='background-color:#6495ED;color:#FFD700'> Part C: A little about you (5 questions) </mark>","P10","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "## 1: Your role?","Role_note","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "#### What role do you serve in this MPA?
 💡 Select all that apply.","Role_choice","mc_vertical","mc_multiple","","!","","**Site Focused** — such as rangers and ranger-like roles (with and without enforcement capabilities)","**Stakeholder Focused** — such as education and outreach roles","**Support Focused** — such as supporting staff","**Scientists** — such as those collecting and analyzing data to address questions","**Leadership Focused** — such as decision making","**Other** — for roles unlisted above","**None** — no one works on this MPA in a formal role","**I don't know**"
-"The answer **None** cannot be combined with another category","Role_block1","","block","","","(Role_choice %contains_word% '1' | Role_choice %contains_word% '2' | Role_choice %contains_word% '3' | Role_choice %contains_word% '4' | Role_choice %contains_word% '5' | Role_choice %contains_word% '6') && Role_choice %contains_word% '7'",NA,NA,NA,NA,NA,NA,NA,NA
-"The answer **I don't know** cannot be combined with another category","Role_block2","","block","","","(Role_choice %contains_word% '1' | Role_choice %contains_word% '2' | Role_choice %contains_word% '3' | Role_choice %contains_word% '4' | Role_choice %contains_word% '5' | Role_choice %contains_word% '6' | Role_choice %contains_word% '7') && Role_choice %contains_word% '8'",NA,NA,NA,NA,NA,NA,NA,NA
+"<div style='color:#ffff'>The answer <strong>None</strong> cannot be combined with another category</div>","Role_block1","","block","","","(Role_choice %contains_word% '1' | Role_choice %contains_word% '2' | Role_choice %contains_word% '3' | Role_choice %contains_word% '4' | Role_choice %contains_word% '5' | Role_choice %contains_word% '6') && Role_choice %contains_word% '7'",NA,NA,NA,NA,NA,NA,NA,NA
+"<div style='color:#ffff'>The answer <strong>I don't know</strong> cannot be combined with another category</div>","Role_block2","","block","","","(Role_choice %contains_word% '1' | Role_choice %contains_word% '2' | Role_choice %contains_word% '3' | Role_choice %contains_word% '4' | Role_choice %contains_word% '5' | Role_choice %contains_word% '6' | Role_choice %contains_word% '7') && Role_choice %contains_word% '8'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Add a COMMENT","Role_comment_check","","check","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "#### 💡 Tell us more, so we fully understand","Role_comment","","textarea","","","Role_comment_check",NA,NA,NA,NA,NA,NA,NA,NA
 "## NOTE
@@ -1654,6 +1767,7 @@ li{
   border-color:rgb(21 45 101)!important;
   color:#fff!important
 }
+
 </style>","CSS11","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "# <mark style='background-color:#6495ED;color:#FFD700'> Part C: A little about you (5 questions) </mark>","P11","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "## 2: Your name?","Name_note","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
@@ -1734,6 +1848,7 @@ li{
   border-color:rgb(21 45 101)!important;
   color:#fff!important
 }
+
 </style>","CSS12","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "# <mark style='background-color:#6495ED;color:#FFD700'> Part C: A little about you (5 questions) </mark>","P12","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "## 3: Contact email?","Email_note","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
@@ -1814,6 +1929,7 @@ li{
   border-color:rgb(21 45 101)!important;
   color:#fff!important
 }
+
 </style>","CSS13","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "# <mark style='background-color:#6495ED;color:#FFD700'> Part C: A little about you (5 questions) </mark>","P13","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "## 4: Acknowledgement?","Acknowledgement_note","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
@@ -1892,6 +2008,7 @@ li{
   border-color:rgb(21 45 101)!important;
   color:#fff!important
 }
+
 </style>","CSS14","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "# <mark style='background-color:#6495ED;color:#FFD700'> Part C: A little about you (5 questions) </mark>","P14","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "## 5: Referrals?","Referrals_note","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
@@ -1970,6 +2087,7 @@ li{
   border-color:rgb(21 45 101)!important;
   color:#fff!important
 }
+
 </style>","CSS15","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "# <mark style='background-color:#6495ED;color:#FFD700'>Part D: An optional question (1 question) </mark>","P15","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "## 1: Is this adequate? ","Adequate_note","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
@@ -2035,6 +2153,7 @@ li{
   border-color:rgb(21 45 101)!important;
   color:#fff!important
 }
+
 </style>","CSS16","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "# <mark style='background-color:#6495ED;color:#FFD700'>THANK YOU</mark>","P16","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "End the survey","S16","","submit","","","",NA,NA,NA,NA,NA,NA,NA,NA
