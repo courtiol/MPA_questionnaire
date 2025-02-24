@@ -1128,7 +1128,7 @@ li{
 }
 
 </style>","CSS4","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
-"# <mark style='background-color:#6495ED;color:#FFD700'> Part B: Tell us about your MPA (5 questions) </mark>","P4","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
+"# <mark style='background-color:#6495ED;color:#FFD700'> Part B: Tell us about your MPA (6 questions) </mark>","P4","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "## 1: Roles of the people who work on this MPA","N4","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Including yourself, what formal roles are involved in working on this specific MPA to contribute to achieving its goals?
 💡 Select all that apply.","M1","mc_vertical","mc_multiple","","!","","**Site Focused** — such as rangers and ranger-like roles (with and without enforcement capabilities)","**Stakeholder Focused** — such as education and outreach roles","**Support Focused** — such as supporting staff","**Scientists** — such as those collecting and analyzing data to address questions","**Leadership Focused** — such as decision making","**Other** — for roles unlisted above","**None** — no one works on this MPA in a formal role","**I don't know**"
@@ -1192,7 +1192,7 @@ li{
 }
 
 </style>","CSS5","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
-"# <mark style='background-color:#6495ED;color:#FFD700'> Part B: Tell us about your MPA (5 questions) </mark>","P5","","note","","","!M1 %contains_word% '7' && !M1 %contains_word% '8'",NA,NA,NA,NA,NA,NA,NA,NA
+"# <mark style='background-color:#6495ED;color:#FFD700'> Part B: Tell us about your MPA (6 questions) </mark>","P5","","note","","","!M1 %contains_word% '7' && !M1 %contains_word% '8'",NA,NA,NA,NA,NA,NA,NA,NA
 "## 2: Number of people in each role. 
 #### For each workforce category selected previously, indicate the number of formal staff who work on this specific MPA.
 💙 For each role, report the number of staff in that role or use COMMENT to record in your own way.
@@ -1411,8 +1411,8 @@ li{
 }
 
 </style>","CSS6","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
-"# <mark style='background-color:#6495ED;color:#FFD700'> Part B: Tell us about your MPA (5 questions) </mark>","P6","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
-"## Confirm the number of FTE. 
+"# <mark style='background-color:#6495ED;color:#FFD700'> Part B: Tell us about your MPA (6 questions) </mark>","P6","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
+"## 6: Confirm the number of FTE. 
 #### For each workforce category please review the number of FTE corresponding to your previous choices and adjust if necessary.","SUMM_note","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "### **Site Focused**","FTE_site","","number 0,999999,0.05","ifelse(is.na(PERS_site_FullTime + PERS_site_PartTime*0.5 + PERS_site_Seasonal*0.25 + PERS_site_Occasional*0.1), 0,PERS_site_FullTime + PERS_site_PartTime*0.5 + PERS_site_Seasonal*0.25 + PERS_site_Occasional*0.1)","","",NA,NA,NA,NA,NA,NA,NA,NA
 "### **Stakeholder Focused**","FTE_stakeholder","","number 0,999999,0.05","ifelse(is.na(PERS_stakeholder_FullTime + PERS_stakeholder_PartTime*0.5 + PERS_stakeholder_Seasonal*0.25 + PERS_stakeholder_Occasional*0.1), 0,PERS_stakeholder_FullTime + PERS_stakeholder_PartTime*0.5 + PERS_stakeholder_Seasonal*0.25 + PERS_stakeholder_Occasional*0.1)","","",NA,NA,NA,NA,NA,NA,NA,NA
@@ -1502,7 +1502,7 @@ li{
 }
 
 </style>","CSS7","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
-"# <mark style='background-color:#6495ED;color:#FFD700'> Part B: Tell us about your MPA (5 questions) </mark>","P7","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
+"# <mark style='background-color:#6495ED;color:#FFD700'> Part B: Tell us about your MPA (6 questions) </mark>","P7","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "## 3: Technology used to help?","Tech_note","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "#### If you use technology or other aids to help your MPA workforce expand its effectiveness in THIS specific MPA, please list.
 💡 Select all that apply.","Tech_choice","mc_vertical","mc_multiple","","!","","**Satellite technologies**","**Radar technologies**","**Underwater acoustic technologies**","**Drone technologies**","**Reporting tools**: Phone, email, or app reporting for marine species, activities, incidents","**None of the above**","**I don’t know**",NA
@@ -1570,7 +1570,7 @@ li{
 }
 
 </style>","CSS8","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
-"# <mark style='background-color:#6495ED;color:#FFD700'> Part B: Tell us about your MPA (5 questions) </mark>","P8","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
+"# <mark style='background-color:#6495ED;color:#FFD700'> Part B: Tell us about your MPA (6 questions) </mark>","P8","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "## 4: Who else is nearby?","Others_note","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Who else operates seasonally or more within or nearby this specific MPA who is *not* formally responsible for working for this MPA?
 💡 Select all that apply.","Others_choice","mc_vertical","mc_multiple","","!","","**Fishers**","**Divers**","**Boat operators**","**Cultural practitioners**","**None** — no one uses this MPA","**None of the above**","**I don’t know**",NA
@@ -1638,7 +1638,7 @@ li{
 }
 
 </style>","CSS9","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
-"# <mark style='background-color:#6495ED;color:#FFD700'> Part B: Tell us about your MPA (5 questions) </mark>","P9","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
+"# <mark style='background-color:#6495ED;color:#FFD700'> Part B: Tell us about your MPA (6 questions) </mark>","P9","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "## 5: Anything else?","Anythingelse_note","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Is there anything else you would like us to know about this specific MPA workforce?
 💡 Tell us more, so we fully understand.","Anythingelse_comment","","textarea","","*","",NA,NA,NA,NA,NA,NA,NA,NA

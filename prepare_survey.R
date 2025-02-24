@@ -291,7 +291,7 @@ S2 <- S1; S2$name <- "S2"
 
 CSS4 <- CSS; CSS4$name <- "CSS4"
 
-P4 <-  add_element(label = "# <mark style='background-color:#6495ED;color:#FFD700'> Part B: Tell us about your MPA (5 questions) </mark>", ##FIXME replace "your MPA" by its name
+P4 <-  add_element(label = "# <mark style='background-color:#6495ED;color:#FFD700'> Part B: Tell us about your MPA (6 questions) </mark>", ##FIXME replace "your MPA" by its name
                    name = "P4",
                    type = "note")
 
@@ -442,7 +442,7 @@ CSS6 <- CSS; CSS6$name <- "CSS6"
 
 P6 <- P4; P6$name <- "P6"
 
-SUMM_note <- add_element(label = "## Confirm the number of FTE. 
+SUMM_note <- add_element(label = "## 6: Confirm the number of FTE. 
 #### For each workforce category please review the number of FTE corresponding to your previous choices and adjust if necessary.",
                          type = "note",
                          name = "SUMM_note")
