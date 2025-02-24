@@ -316,7 +316,7 @@ M1 <- add_element(label = "#### Including yourself, what formal roles are involv
                  choice6 = "**Other** — for roles unlisted above",
                  choice7 = "**None** — no one works on this MPA in a formal role",
                  choice8 = "**I don't know**",
-                 optional = "!") ## FIXME do we need to make them detail Other in a field?
+                 optional = "!")
 
 B1 <- add_element(label = "<div style='color:#ffff'>The answer <strong>None</strong> cannot be combined with another category</div>",
                   name = "B1",
