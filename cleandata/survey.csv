@@ -1198,150 +1198,162 @@ li{
 💙 For each role, report the number of staff in that role or use COMMENT to record in your own way.
 🦀 FTE = Full-time equivalent.
 💡 Add a COMMENT to add more options or to explain anything you think we should know.","N5","","note","","","!M1 %contains_word% '7' && !M1 %contains_word% '8'",NA,NA,NA,NA,NA,NA,NA,NA
-"### **Site Focused**","PERS_site_note","","note","","","M1 %contains_word% '1'",NA,NA,NA,NA,NA,NA,NA,NA
+"### **Site Focused**","PERS_notesite","","note","","","M1 %contains_word% '1'",NA,NA,NA,NA,NA,NA,NA,NA
 "Full time personel (working all year; counted as 1 FTE each)","PERS_site_FullTime","","number 0,999999,1","0","","M1 %contains_word% '1'",NA,NA,NA,NA,NA,NA,NA,NA
 "Part time personel (counted as 0.5 FTE each)","PERS_site_PartTime","","number 0,999999,1","0","","M1 %contains_word% '1'",NA,NA,NA,NA,NA,NA,NA,NA
 "Seasonal personel (working during e.g. summer; counted as 0.25 FTE each)","PERS_site_Seasonal","","number 0,999999,1","0","","M1 %contains_word% '1'",NA,NA,NA,NA,NA,NA,NA,NA
 "Occcasional personel (working few weeks a year; counted as 0.1 FTE each)","PERS_site_Occasional","","number 0,999999,1","0","","M1 %contains_word% '1'",NA,NA,NA,NA,NA,NA,NA,NA
 "<script>
-$(document).ready(function() {
-  $('form').on('change', function() {
-    var total_site= 0;
-    // Select all inputs whose name begins with ""FTE_""
-    $('input[name^=""PERS_site""]').each(function() {
-      // Convert the value to a float; if NaN (missing/empty), default to 0
-      var val = parseFloat($(this).val());
-      if (isNaN(val)) {
-        val = 0;
-      }
-    });
-    total_site+= val;
-  }).trigger(""change"");
-});
-</script>)","PERS_site_BlockCode","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
-"### **Test**","PERS_site_Block","","block","","","total_site=== 0 //js_only",NA,NA,NA,NA,NA,NA,NA,NA
-"#### Add a COMMENT","PERS_site_NeedComment","","check","","","M1 %contains_word% '1'",NA,NA,NA,NA,NA,NA,NA,NA
-"#### 💡 Add more options or explain anything you think we should know about this workforce category","PERS_siteComment","","textarea","","*","PERS_site_NeedComment",NA,NA,NA,NA,NA,NA,NA,NA
-"### **Stakeholder Focused**","PERS_stakeholder_note","","note","","","M1 %contains_word% '2'",NA,NA,NA,NA,NA,NA,NA,NA
+  var total_site = 0;
+  $(document).ready(function() {
+    $('form').on('change', function() {
+      total_site = 0;
+      var val = 0;
+      // Select all inputs whose name begins with ""PERS_site
+      $('input[name^=""PERS_site""]').each(function() {
+        // Convert the value to a float; if NaN (missing/empty), default to 0
+        val = parseFloat($(this).val());
+        if (isNaN(val)) {
+          val = 0;
+        }
+        total_site += val;
+      });
+    }).trigger(""change"");
+  });
+</script>)","PERS_BlockCodesite","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
+"### **Test**","PERS_Blocksite","","block","","","total_site=== 0 && M1 %contains_word%site//js_only",NA,NA,NA,NA,NA,NA,NA,NA
+"#### Add a COMMENT","PERS_NeedComment_site","","check","","","M1 %contains_word% '1'",NA,NA,NA,NA,NA,NA,NA,NA
+"#### 💡 Add more options or explain anything you think we should know about this workforce category","PERS_Commentsite","","textarea","","*","PERS_NeedComment_site",NA,NA,NA,NA,NA,NA,NA,NA
+"### **Stakeholder Focused**","PERS_notestakeholder","","note","","","M1 %contains_word% '2'",NA,NA,NA,NA,NA,NA,NA,NA
 "Full time personel (working all year; counted as 1 FTE each)","PERS_stakeholder_FullTime","","number 0,999999,1","0","","M1 %contains_word% '2'",NA,NA,NA,NA,NA,NA,NA,NA
 "Part time personel (counted as 0.5 FTE each)","PERS_stakeholder_PartTime","","number 0,999999,1","0","","M1 %contains_word% '2'",NA,NA,NA,NA,NA,NA,NA,NA
 "Seasonal personel (working during e.g. summer; counted as 0.25 FTE each)","PERS_stakeholder_Seasonal","","number 0,999999,1","0","","M1 %contains_word% '2'",NA,NA,NA,NA,NA,NA,NA,NA
 "Occcasional personel (working few weeks a year; counted as 0.1 FTE each)","PERS_stakeholder_Occasional","","number 0,999999,1","0","","M1 %contains_word% '2'",NA,NA,NA,NA,NA,NA,NA,NA
 "<script>
-$(document).ready(function() {
-  $('form').on('change', function() {
-    var total_stakeholder= 0;
-    // Select all inputs whose name begins with ""FTE_""
-    $('input[name^=""PERS_stakeholder""]').each(function() {
-      // Convert the value to a float; if NaN (missing/empty), default to 0
-      var val = parseFloat($(this).val());
-      if (isNaN(val)) {
-        val = 0;
-      }
-    });
-    total_stakeholder+= val;
-  }).trigger(""change"");
-});
-</script>)","PERS_stakeholder_BlockCode","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
-"### **Test**","PERS_stakeholder_Block","","block","","","total_stakeholder=== 0 //js_only",NA,NA,NA,NA,NA,NA,NA,NA
-"#### Add a COMMENT","PERS_stakeholder_NeedComment","","check","","","M1 %contains_word% '2'",NA,NA,NA,NA,NA,NA,NA,NA
-"#### 💡 Add more options or explain anything you think we should know about this workforce category","PERS_stakeholderComment","","textarea","","*","PERS_stakeholder_NeedComment",NA,NA,NA,NA,NA,NA,NA,NA
-"### **Support Focused**","PERS_support_note","","note","","","M1 %contains_word% '3'",NA,NA,NA,NA,NA,NA,NA,NA
+  var total_stakeholder = 0;
+  $(document).ready(function() {
+    $('form').on('change', function() {
+      total_stakeholder = 0;
+      var val = 0;
+      // Select all inputs whose name begins with ""PERS_stakeholder
+      $('input[name^=""PERS_stakeholder""]').each(function() {
+        // Convert the value to a float; if NaN (missing/empty), default to 0
+        val = parseFloat($(this).val());
+        if (isNaN(val)) {
+          val = 0;
+        }
+        total_stakeholder += val;
+      });
+    }).trigger(""change"");
+  });
+</script>)","PERS_BlockCodestakeholder","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
+"### **Test**","PERS_Blockstakeholder","","block","","","total_stakeholder=== 0 && M1 %contains_word%stakeholder//js_only",NA,NA,NA,NA,NA,NA,NA,NA
+"#### Add a COMMENT","PERS_NeedComment_stakeholder","","check","","","M1 %contains_word% '2'",NA,NA,NA,NA,NA,NA,NA,NA
+"#### 💡 Add more options or explain anything you think we should know about this workforce category","PERS_Commentstakeholder","","textarea","","*","PERS_NeedComment_stakeholder",NA,NA,NA,NA,NA,NA,NA,NA
+"### **Support Focused**","PERS_notesupport","","note","","","M1 %contains_word% '3'",NA,NA,NA,NA,NA,NA,NA,NA
 "Full time personel (working all year; counted as 1 FTE each)","PERS_support_FullTime","","number 0,999999,1","0","","M1 %contains_word% '3'",NA,NA,NA,NA,NA,NA,NA,NA
 "Part time personel (counted as 0.5 FTE each)","PERS_support_PartTime","","number 0,999999,1","0","","M1 %contains_word% '3'",NA,NA,NA,NA,NA,NA,NA,NA
 "Seasonal personel (working during e.g. summer; counted as 0.25 FTE each)","PERS_support_Seasonal","","number 0,999999,1","0","","M1 %contains_word% '3'",NA,NA,NA,NA,NA,NA,NA,NA
 "Occcasional personel (working few weeks a year; counted as 0.1 FTE each)","PERS_support_Occasional","","number 0,999999,1","0","","M1 %contains_word% '3'",NA,NA,NA,NA,NA,NA,NA,NA
 "<script>
-$(document).ready(function() {
-  $('form').on('change', function() {
-    var total_support= 0;
-    // Select all inputs whose name begins with ""FTE_""
-    $('input[name^=""PERS_support""]').each(function() {
-      // Convert the value to a float; if NaN (missing/empty), default to 0
-      var val = parseFloat($(this).val());
-      if (isNaN(val)) {
-        val = 0;
-      }
-    });
-    total_support+= val;
-  }).trigger(""change"");
-});
-</script>)","PERS_support_BlockCode","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
-"### **Test**","PERS_support_Block","","block","","","total_support=== 0 //js_only",NA,NA,NA,NA,NA,NA,NA,NA
-"#### Add a COMMENT","PERS_support_NeedComment","","check","","","M1 %contains_word% '3'",NA,NA,NA,NA,NA,NA,NA,NA
-"#### 💡 Add more options or explain anything you think we should know about this workforce category","PERS_supportComment","","textarea","","*","PERS_support_NeedComment",NA,NA,NA,NA,NA,NA,NA,NA
-"### **Scientists**","PERS_scientists_note","","note","","","M1 %contains_word% '4'",NA,NA,NA,NA,NA,NA,NA,NA
+  var total_support = 0;
+  $(document).ready(function() {
+    $('form').on('change', function() {
+      total_support = 0;
+      var val = 0;
+      // Select all inputs whose name begins with ""PERS_support
+      $('input[name^=""PERS_support""]').each(function() {
+        // Convert the value to a float; if NaN (missing/empty), default to 0
+        val = parseFloat($(this).val());
+        if (isNaN(val)) {
+          val = 0;
+        }
+        total_support += val;
+      });
+    }).trigger(""change"");
+  });
+</script>)","PERS_BlockCodesupport","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
+"### **Test**","PERS_Blocksupport","","block","","","total_support=== 0 && M1 %contains_word%support//js_only",NA,NA,NA,NA,NA,NA,NA,NA
+"#### Add a COMMENT","PERS_NeedComment_support","","check","","","M1 %contains_word% '3'",NA,NA,NA,NA,NA,NA,NA,NA
+"#### 💡 Add more options or explain anything you think we should know about this workforce category","PERS_Commentsupport","","textarea","","*","PERS_NeedComment_support",NA,NA,NA,NA,NA,NA,NA,NA
+"### **Scientists**","PERS_notescientists","","note","","","M1 %contains_word% '4'",NA,NA,NA,NA,NA,NA,NA,NA
 "Full time personel (working all year; counted as 1 FTE each)","PERS_scientists_FullTime","","number 0,999999,1","0","","M1 %contains_word% '4'",NA,NA,NA,NA,NA,NA,NA,NA
 "Part time personel (counted as 0.5 FTE each)","PERS_scientists_PartTime","","number 0,999999,1","0","","M1 %contains_word% '4'",NA,NA,NA,NA,NA,NA,NA,NA
 "Seasonal personel (working during e.g. summer; counted as 0.25 FTE each)","PERS_scientists_Seasonal","","number 0,999999,1","0","","M1 %contains_word% '4'",NA,NA,NA,NA,NA,NA,NA,NA
 "Occcasional personel (working few weeks a year; counted as 0.1 FTE each)","PERS_scientists_Occasional","","number 0,999999,1","0","","M1 %contains_word% '4'",NA,NA,NA,NA,NA,NA,NA,NA
 "<script>
-$(document).ready(function() {
-  $('form').on('change', function() {
-    var total_scientists= 0;
-    // Select all inputs whose name begins with ""FTE_""
-    $('input[name^=""PERS_scientists""]').each(function() {
-      // Convert the value to a float; if NaN (missing/empty), default to 0
-      var val = parseFloat($(this).val());
-      if (isNaN(val)) {
-        val = 0;
-      }
-    });
-    total_scientists+= val;
-  }).trigger(""change"");
-});
-</script>)","PERS_scientists_BlockCode","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
-"### **Test**","PERS_scientists_Block","","block","","","total_scientists=== 0 //js_only",NA,NA,NA,NA,NA,NA,NA,NA
-"#### Add a COMMENT","PERS_scientists_NeedComment","","check","","","M1 %contains_word% '4'",NA,NA,NA,NA,NA,NA,NA,NA
-"#### 💡 Add more options or explain anything you think we should know about this workforce category","PERS_scientistsComment","","textarea","","*","PERS_scientists_NeedComment",NA,NA,NA,NA,NA,NA,NA,NA
-"### **Leadership Focused**","PERS_leadership_note","","note","","","M1 %contains_word% '5'",NA,NA,NA,NA,NA,NA,NA,NA
+  var total_scientists = 0;
+  $(document).ready(function() {
+    $('form').on('change', function() {
+      total_scientists = 0;
+      var val = 0;
+      // Select all inputs whose name begins with ""PERS_scientists
+      $('input[name^=""PERS_scientists""]').each(function() {
+        // Convert the value to a float; if NaN (missing/empty), default to 0
+        val = parseFloat($(this).val());
+        if (isNaN(val)) {
+          val = 0;
+        }
+        total_scientists += val;
+      });
+    }).trigger(""change"");
+  });
+</script>)","PERS_BlockCodescientists","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
+"### **Test**","PERS_Blockscientists","","block","","","total_scientists=== 0 && M1 %contains_word%scientists//js_only",NA,NA,NA,NA,NA,NA,NA,NA
+"#### Add a COMMENT","PERS_NeedComment_scientists","","check","","","M1 %contains_word% '4'",NA,NA,NA,NA,NA,NA,NA,NA
+"#### 💡 Add more options or explain anything you think we should know about this workforce category","PERS_Commentscientists","","textarea","","*","PERS_NeedComment_scientists",NA,NA,NA,NA,NA,NA,NA,NA
+"### **Leadership Focused**","PERS_noteleadership","","note","","","M1 %contains_word% '5'",NA,NA,NA,NA,NA,NA,NA,NA
 "Full time personel (working all year; counted as 1 FTE each)","PERS_leadership_FullTime","","number 0,999999,1","0","","M1 %contains_word% '5'",NA,NA,NA,NA,NA,NA,NA,NA
 "Part time personel (counted as 0.5 FTE each)","PERS_leadership_PartTime","","number 0,999999,1","0","","M1 %contains_word% '5'",NA,NA,NA,NA,NA,NA,NA,NA
 "Seasonal personel (working during e.g. summer; counted as 0.25 FTE each)","PERS_leadership_Seasonal","","number 0,999999,1","0","","M1 %contains_word% '5'",NA,NA,NA,NA,NA,NA,NA,NA
 "Occcasional personel (working few weeks a year; counted as 0.1 FTE each)","PERS_leadership_Occasional","","number 0,999999,1","0","","M1 %contains_word% '5'",NA,NA,NA,NA,NA,NA,NA,NA
 "<script>
-$(document).ready(function() {
-  $('form').on('change', function() {
-    var total_leadership= 0;
-    // Select all inputs whose name begins with ""FTE_""
-    $('input[name^=""PERS_leadership""]').each(function() {
-      // Convert the value to a float; if NaN (missing/empty), default to 0
-      var val = parseFloat($(this).val());
-      if (isNaN(val)) {
-        val = 0;
-      }
-    });
-    total_leadership+= val;
-  }).trigger(""change"");
-});
-</script>)","PERS_leadership_BlockCode","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
-"### **Test**","PERS_leadership_Block","","block","","","total_leadership=== 0 //js_only",NA,NA,NA,NA,NA,NA,NA,NA
-"#### Add a COMMENT","PERS_leadership_NeedComment","","check","","","M1 %contains_word% '5'",NA,NA,NA,NA,NA,NA,NA,NA
-"#### 💡 Add more options or explain anything you think we should know about this workforce category","PERS_leadershipComment","","textarea","","*","PERS_leadership_NeedComment",NA,NA,NA,NA,NA,NA,NA,NA
-"### **Other**","PERS_other_note","","note","","","M1 %contains_word% '6'",NA,NA,NA,NA,NA,NA,NA,NA
+  var total_leadership = 0;
+  $(document).ready(function() {
+    $('form').on('change', function() {
+      total_leadership = 0;
+      var val = 0;
+      // Select all inputs whose name begins with ""PERS_leadership
+      $('input[name^=""PERS_leadership""]').each(function() {
+        // Convert the value to a float; if NaN (missing/empty), default to 0
+        val = parseFloat($(this).val());
+        if (isNaN(val)) {
+          val = 0;
+        }
+        total_leadership += val;
+      });
+    }).trigger(""change"");
+  });
+</script>)","PERS_BlockCodeleadership","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
+"### **Test**","PERS_Blockleadership","","block","","","total_leadership=== 0 && M1 %contains_word%leadership//js_only",NA,NA,NA,NA,NA,NA,NA,NA
+"#### Add a COMMENT","PERS_NeedComment_leadership","","check","","","M1 %contains_word% '5'",NA,NA,NA,NA,NA,NA,NA,NA
+"#### 💡 Add more options or explain anything you think we should know about this workforce category","PERS_Commentleadership","","textarea","","*","PERS_NeedComment_leadership",NA,NA,NA,NA,NA,NA,NA,NA
+"### **Other**","PERS_noteother","","note","","","M1 %contains_word% '6'",NA,NA,NA,NA,NA,NA,NA,NA
 "Full time personel (working all year; counted as 1 FTE each)","PERS_other_FullTime","","number 0,999999,1","0","","M1 %contains_word% '6'",NA,NA,NA,NA,NA,NA,NA,NA
 "Part time personel (counted as 0.5 FTE each)","PERS_other_PartTime","","number 0,999999,1","0","","M1 %contains_word% '6'",NA,NA,NA,NA,NA,NA,NA,NA
 "Seasonal personel (working during e.g. summer; counted as 0.25 FTE each)","PERS_other_Seasonal","","number 0,999999,1","0","","M1 %contains_word% '6'",NA,NA,NA,NA,NA,NA,NA,NA
 "Occcasional personel (working few weeks a year; counted as 0.1 FTE each)","PERS_other_Occasional","","number 0,999999,1","0","","M1 %contains_word% '6'",NA,NA,NA,NA,NA,NA,NA,NA
 "<script>
-$(document).ready(function() {
-  $('form').on('change', function() {
-    var total_other= 0;
-    // Select all inputs whose name begins with ""FTE_""
-    $('input[name^=""PERS_other""]').each(function() {
-      // Convert the value to a float; if NaN (missing/empty), default to 0
-      var val = parseFloat($(this).val());
-      if (isNaN(val)) {
-        val = 0;
-      }
-    });
-    total_other+= val;
-  }).trigger(""change"");
-});
-</script>)","PERS_other_BlockCode","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
-"### **Test**","PERS_other_Block","","block","","","total_other=== 0 //js_only",NA,NA,NA,NA,NA,NA,NA,NA
-"#### Add a COMMENT","PERS_other_NeedComment","","check","","","M1 %contains_word% '6'",NA,NA,NA,NA,NA,NA,NA,NA
-"#### 💡 Add more options or explain anything you think we should know about this workforce category","PERS_otherComment","","textarea","","*","PERS_other_NeedComment",NA,NA,NA,NA,NA,NA,NA,NA
+  var total_other = 0;
+  $(document).ready(function() {
+    $('form').on('change', function() {
+      total_other = 0;
+      var val = 0;
+      // Select all inputs whose name begins with ""PERS_other
+      $('input[name^=""PERS_other""]').each(function() {
+        // Convert the value to a float; if NaN (missing/empty), default to 0
+        val = parseFloat($(this).val());
+        if (isNaN(val)) {
+          val = 0;
+        }
+        total_other += val;
+      });
+    }).trigger(""change"");
+  });
+</script>)","PERS_BlockCodeother","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
+"### **Test**","PERS_Blockother","","block","","","total_other=== 0 && M1 %contains_word%other//js_only",NA,NA,NA,NA,NA,NA,NA,NA
+"#### Add a COMMENT","PERS_NeedComment_other","","check","","","M1 %contains_word% '6'",NA,NA,NA,NA,NA,NA,NA,NA
+"#### 💡 Add more options or explain anything you think we should know about this workforce category","PERS_Commentother","","textarea","","*","PERS_NeedComment_other",NA,NA,NA,NA,NA,NA,NA,NA
 "Continue","S5","","submit","","","!M1 %contains_word% '7' && !M1 %contains_word% '8'",NA,NA,NA,NA,NA,NA,NA,NA
 "<style>
 .alert {

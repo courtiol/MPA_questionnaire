@@ -354,7 +354,7 @@ add_personel_questions <- function(label = "### **what**",
                                    type = "number 0,999999,1") {
 
   E1 <- add_element(label = label,
-                    name = paste0("PERS_", category, "_note"),
+                    name = paste0("PERS_note", category),
                     showif = showif,
                     type = "note")
   
@@ -375,37 +375,39 @@ add_personel_questions <- function(label = "### **what**",
                     value = value, showif = showif, type = type)
   
   CodeBlock <- add_element(label = paste0(r"(<script>
-$(document).ready(function() {
-  $('form').on('change', function() {
-    var total_)", category, r"(= 0;
-    // Select all inputs whose name begins with "FTE_"
-    $('input[name^="PERS_)", category, r"("]').each(function() {
-      // Convert the value to a float; if NaN (missing/empty), default to 0
-      var val = parseFloat($(this).val());
-      if (isNaN(val)) {
-        val = 0;
-      }
-    });
-    total_)", category, r"(+= val;
-  }).trigger("change");
-});
+  var total_)", category, r"( = 0;
+  $(document).ready(function() {
+    $('form').on('change', function() {
+      total_)", category, r"( = 0;
+      var val = 0;
+      // Select all inputs whose name begins with "PERS_)", category, r"(
+      $('input[name^="PERS_)", category, r"("]').each(function() {
+        // Convert the value to a float; if NaN (missing/empty), default to 0
+        val = parseFloat($(this).val());
+        if (isNaN(val)) {
+          val = 0;
+        }
+        total_)", category, r"( += val;
+      });
+    }).trigger("change");
+  });
 </script>))"),
-                            name = paste0("PERS_", category, "_BlockCode"),
+                            name = paste0("PERS_BlockCode", category), ## Revert naming so that js does not select this and below block
                             type = "note")
   
   Block <- add_element(label = "### **Test**",
-                       name = paste0("PERS_", category, "_Block"),
+                       name = paste0("PERS_Block", category),
                        type = "block",
-                       showif = paste0("total_", category, "=== 0 //js_only"))
+                       showif = paste0("total_", category, "=== 0 && M1 %contains_word%", category, "//js_only"))
   
   C1 <- add_element(label = "#### Add a COMMENT",
-                    name = paste0("PERS_", category, "_NeedComment"),
+                    name = paste0("PERS_NeedComment_", category),
                     showif = showif,
                     type = "check")
   
   C2 <- add_element(label = "#### 💡 Add more options or explain anything you think we should know about this workforce category",
-                    name = paste0("PERS_", category, "Comment"),
-                    showif = paste0("PERS_", category, "_NeedComment"),
+                    name = paste0("PERS_Comment", category),
+                    showif = paste0("PERS_NeedComment_", category),
                     type = "textarea",
                     optional = "*")
   
