@@ -122,7 +122,7 @@ p {
 
 <br>
 
-<p>Thanks for participating in this <b><i>voluntary</i></b> study— your input is valuable. <i>Please consider the information in this “about” document and ask any questions you may have before deciding if you will participate</i></p>
+<p>Thanks for participating in this <b><i>voluntary</i></b> study— your input is valuable. <i>Please consider the information in this <a href='https://www.eoceans.org/mpa-workforce-study-2025-appendix' target='blank'>about</a> document and ask any <a href='mailto:christine@eOceans.co'>questions</a> you may have before deciding if you will participate.</i></p>
 
 <p>As the world moves toward protecting 30% of the ocean by 2030,
 <a href='https://marine-conservation.org/' target='_blank'>Marine Conservation Institute (MPAtlas)</a>,
@@ -425,7 +425,8 @@ CSS6 <- CSS; CSS6$name <- "CSS6"
 P6 <- P4; P6$name <- "P6"
 
 SUMM_note <- add_element(label = "## 3: Confirm the number of FTE. 
-#### For each workforce category please review the number of FTE corresponding to your previous choices and adjust if necessary.",
+#### For each workforce category please review the number of FTE corresponding to your previous choices and <b>adjust</b> the numbers if necessary.
+🦀 FTE = Full-time equivalent.",
                          type = "note",
                          name = "SUMM_note")
 
@@ -491,18 +492,24 @@ $(document).ready(function() {
                          name = "total_note",
                          type = "text")
 
-total_info <- add_element(label = "💡 The TOTAL is just the sum of the categories above; you cannot modify it directly.",
+total_info <- add_element(label = "💡 The TOTAL is just the sum for the categories above; you cannot modify it directly.",
                         name = "total_info",
                         type = "note")
 
-total_validate <- add_element(label = "#### 👀 Confirm ",
+total_validate <- add_element(label = "#### 🔎 <b>Confirm</b>",
                               name = "total_validate",
-                              type = "check")
+                              type = "check",
+                              optional = "!")
 
-total_block <- add_element(label = "<div style='color:#ffff'>You must confirm the numbers before continuing!</div>",
-                           name = "total_block",
-                           type = "block",
-                           showif = "!total_validate")
+total_comment_check <- add_element(label = "#### Add a COMMENT",
+                                        name = "total_comment_check",
+                                        type = "check")
+
+total_comment <- add_element(label = "#### 💡 Tell us more, so we fully understand",
+                                  name = "total_comment",
+                                  showif = "total_comment_check",
+                                  type = "textarea",
+                                  optional = "*")
 
 S6 <- S1; S6$name <- "S6"
 
@@ -525,7 +532,7 @@ Tech_choice <-  add_element(label = "#### If you use technology or other aids to
                             choice2 = "**Radar technologies**",
                             choice3 = "**Underwater acoustic technologies**",
                             choice4 = "**Drone technologies**",
-                            choice5 = "**MPA evaluation technology** (e.g., eOceans)",
+                            choice5 = "**MPA evaluation technology** (e.g., [eOceans](https://www.eoceans.org/))",
                             choice6 = "**Reporting tools**: Phone, email, or app reporting for marine species, activities, incidents",
                             choice7 = "**None of the above**",
                             choice8 = "**I don’t know**",
@@ -581,9 +588,9 @@ Others_choice <-  add_element(label = "#### Who else operates seasonally or more
                             choice2 = "**Divers** 🤿",
                             choice3 = "**Surfers** 🏄️",
                             choice4 = "**Boat operators** ⛵",
-                            choice5 = "**None** — no one uses this MPA 🏝️",
-                            choice6 = "**Other**",
-                            choice7 = "**I don’t know**",
+                            choice5 = "**Other** — for operators not listed above",
+                            choice6 = "None — no one uses this MPA 🏝️",
+                            choice7 = "I don't know",
                             optional = "!")
 
 Block_others2 <- add_element(label = "<div style='color:#ffff'>The answer <strong>I don't know</strong> cannot be combined with another category</div>",
@@ -594,7 +601,7 @@ Block_others2 <- add_element(label = "<div style='color:#ffff'>The answer <stron
 Block_others3 <- add_element(label = "<div style='color:#ffff'>The answer <strong>None</strong> cannot be combined with another category</div>",
                              name = "Block_others3",
                              type = "block",
-                             showif = "(Others_choice %contains_word% '1' | Others_choice %contains_word% '2' | Others_choice %contains_word% '3' | Others_choice %contains_word% '4') && Others_choice %contains_word% '5'")
+                             showif = "(Others_choice %contains_word% '1' | Others_choice %contains_word% '2' | Others_choice %contains_word% '3' | Others_choice %contains_word% '4' | Others_choice %contains_word% '5') && Others_choice %contains_word% '6'")
 
 Fishers <- add_element(label = "#### 🦀 Specify the type of fishers 🎣
 💡 After typing, press enter to validate what you added.",
@@ -617,7 +624,7 @@ Others <- add_element(label = "#### 🦀 Add other operators
 type = "select_or_add_multiple",
 name = "Others",
 choice1 = "I can't think of any",
-showif = "Others_choice %contains_word% '6'",
+showif = "Others_choice %contains_word% '5'",
 optional = "*")
 
 Others_comment_check <- add_element(label = "#### Add a COMMENT",
@@ -899,7 +906,7 @@ survey_tbl <- bind_rows(CSS0, N0, logos, S0,
                         CSS4, P4, N4, M1, B1, B2, M1missing, S4,
                         CSS5, P5, N5, PERS1, PERS2, PERS3, PERS4, PERS5, PERS6, S5,
                         CSS6, P6, SUMM_note, FTE_leadership, FTE_site, FTE_support, FTE_stakeholder, FTE_scientists, FTE_other,
-                        total_note, total_info, total_validate, S6, # total_block
+                        total_note, total_info, total_validate, total_comment_check, total_comment, S6,
                         CSS7, P7, Tech_note, Tech_choice, Block_tech1, Block_tech2, Other_tech, Other_tech_comment_check, Other_tech_comment, S7,
                         CSS8, P8, Others_note, Others_choice, Block_others2, Block_others3, Fishers, Boats, Others, Others_comment_check, Others_comment, S8,
                         CSS9, P9, Anythingelse_note, Anythingelse_comment, S9,
