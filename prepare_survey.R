@@ -534,8 +534,8 @@ Tech_choice <-  add_element(label = "#### If you use technology or other aids to
                             choice4 = "**Drone technologies**",
                             choice5 = "**MPA evaluation technology** (e.g., [eOceans](https://www.eoceans.org/))",
                             choice6 = "**Reporting tools**: Phone, email, or app reporting for marine species, activities, incidents",
-                            choice7 = "**None of the above**",
-                            choice8 = "**I don’t know**",
+                            choice7 = "None of the above",
+                            choice8 = "I don't know",
                             optional = "!")
 
 Block_tech1 <- add_element(label = "<div style='color:#ffff'>The answer <strong>None of the above</strong> cannot be combined with another category</div>",
