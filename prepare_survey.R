@@ -134,7 +134,7 @@ employees, and others who have a formal role actively contributing to achieving 
 <ul>
   <li><strong>Part A</strong>: 2 questions: Let's identify your MPA.</li>
   <li><strong>Part B</strong>: 6 questions: Tell us about this MPA.</li>
-  <li><strong>Part C</strong>: 5 questions: Tell us about you. </li>
+  <li><strong>Part C</strong>: 4 questions: Tell us about you. </li>
   <li><strong>Part D</strong>: 2 (optional) questions: Tell us more?. </li>
 </ul>
 </span>
@@ -378,31 +378,10 @@ add_personel_questions <- function(label = "### **what**",
                     name = paste0("PERS_", category, "_Occasional"),
                     value = value, showif = showif, type = type)
   
-  CodeBlock <- add_element(label = paste0(r"(<script>
-  var total_)", category, r"( = 0;
-  $(document).ready(function() {
-    $('form').on('change', function() {
-      total_)", category, r"( = 0;
-      var val = 0;
-      // Select all inputs whose name begins with "PERS_)", category, r"(
-      $('input[name^="PERS_)", category, r"("]').each(function() {
-        // Convert the value to a float; if NaN (missing/empty), default to 0
-        val = parseFloat($(this).val());
-        if (isNaN(val)) {
-          val = 0;
-        }
-        total_)", category, r"( += val;
-      });
-    }).trigger("change");
-  });
-</script>))"),
-                            name = paste0("PERS_BlockCode", category), ## Revert naming so that js does not select this and below block
-                            type = "note")
-  
-  Block <- add_element(label = "### **Test**",
+  Block <- add_element(label = "<div style='color:#ffff'><strong>NOTE</strong> If you leave all personel to 0, the category will be discarded.</div>",
                        name = paste0("PERS_Block", category),
                        type = "block",
-                       showif = paste0("total_", category, "=== 0 && M1 %contains_word%", category, "//js_only"))
+                       showif = paste0(showif, " && (PERS_", category, "_FullTime + PERS_", category, "_PartTime + PERS_", category, "_Seasonal + PERS_", category, "_Occasional) == 0"))
   
   C1 <- add_element(label = "#### Add a COMMENT",
                     name = paste0("PERS_NeedComment_", category),
@@ -415,7 +394,7 @@ add_personel_questions <- function(label = "### **what**",
                     type = "textarea",
                     optional = "*")
   
-  bind_rows(E1, E2, E3, E4, E5, CodeBlock, Block, C1, C2)
+  bind_rows(E1, E2, E3, E4, E5, Block, C1, C2)
 }
 
 ## Those are personnel questions, do make sure that this agrees with category numbers in M1 above!
@@ -593,7 +572,7 @@ Others_choice <-  add_element(label = "#### Who else operates seasonally or more
                             choice2 = "**Divers** 🤿",
                             choice3 = "**Surfers** 🏄️",
                             choice4 = "**Boat operators** ⛵",
-                            choice5 = "**None** — no one uses this MPA🏝️",
+                            choice5 = "**None** — no one uses this MPA 🏝️",
                             choice6 = "**None of the above**",
                             choice7 = "**I don’t know**",
                             optional = "!")
@@ -653,7 +632,7 @@ S9 <- S1; S9$name <- "S9"
 
 CSS10 <- CSS; CSS10$name <- "CSS10"
 
-P10 <-  add_element(label = "# <mark style='background-color:#6495ED;color:#FFD700'> Part C: Tell us about you (5 questions) </mark>",
+P10 <-  add_element(label = "# <mark style='background-color:#6495ED;color:#FFD700'> Part C: Tell us about you (4 questions) </mark>",
                     name = "P10",
                     type = "note")
 
@@ -808,6 +787,21 @@ S13 <- S1; S13$name <- "S13"
 
 # Page 14 ----------------------------------------------------------------------
 
+thanks_CSS <- CSS; thanks_CSS$name <- "thanks_CSS"
+
+thanks_head <-  add_element(label = "# <mark style='background-color:#6495ED;color:#FFD700'>Thank you</mark>",
+                            name = "thanks_head",
+                            type = "note")
+
+thanks_note <-  add_element(label = "### We greatly appreciate your support for this Global Marine Protected Area Workforce Study—thank you for contributing to this important research initiative.
+#### Before letting you go, we have a couple of additional questions for you...",
+                            name = "thanks_note",
+                            type = "note")
+
+thanks_submit <- S1; thanks_submit$name <- "thanks_submit"
+
+# Page 15 ----------------------------------------------------------------------
+
 CSS14 <- CSS; CSS14$name <- "CSS14"
 
 P14 <-  add_element(label = "# <mark style='background-color:#6495ED;color:#FFD700'>Part D: Tell us more? (2 questions) </mark>",
@@ -827,7 +821,7 @@ Referrals_text <- add_element(label = "#### Please, if there is anyone you belie
 
 S14 <- S1; S14$name <- "S14"
 
-# Page 15 ----------------------------------------------------------------------
+# Page 16 ----------------------------------------------------------------------
 
 CSS15 <- CSS; CSS15$name <- "CSS15"
 
@@ -894,6 +888,7 @@ survey_tbl <- bind_rows(CSS0, N0, logos, S0,
                         CSS11, P11, Name_note, Name_input, Anonymous_check, Name_comment_check, Name_comment, E11, S11,
                         CSS12, P12, Email_note, Email_input, Anonymous_email_check, Email_comment_check, Email_comment, E12, S12,
                         CSS13, P13, Acknowledgement_note, Acknowledgement_input, S13,
+                        thanks_CSS, thanks_head, thanks_note, thanks_submit,
                         CSS14, P14, Referrals_note, Referrals_text, S14,
                         CSS15, P15, Adequate_note, Adequate_input, Adequate_comment_check, Adequate_comment, E15, S15,
                         CSS16, P16, S16

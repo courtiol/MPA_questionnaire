@@ -22,15 +22,12 @@ if (shorten_for_testing) {
 #googlesheets4::gs4_create(name = "test_MPA", sheets = list(survey = survey_tbl, choices = choices_tbl)) ## if does not exist
 #googlesheets4::gs4_create(name = "test_MPA_short", sheets = list(survey = survey_tbl_short, choices = choices_tbl_short)) ## if does not exist
 
-possible_sheets <- googlesheets4::gs4_find("test_MPA")
-sheet_id <- possible_sheets[possible_sheets$name == "test_MPA", "id"][[1]]
-sheet_id
-sheet_id_short <- possible_sheets[possible_sheets$name == "test_MPA_short", "id"][[1]]
-sheet_id_short
+possible_sheets <- googlesheets4::gs4_find("MPA_workforce_survey")
+sheet_id <- possible_sheets[possible_sheets$name == "MPA_workforce_survey", "id"][[1]]
 
 if (shorten_for_testing) {
-  googlesheets4::sheet_write(choices_tbl_short, ss = sheet_id_short, sheet = "choices")
-  googlesheets4::sheet_write(survey_tbl_short, ss = sheet_id_short, sheet = "survey")
+  googlesheets4::sheet_write(choices_tbl_short, ss = sheet_id, sheet = "choices")
+  googlesheets4::sheet_write(survey_tbl_short, ss = sheet_id, sheet = "survey")
 } else {
   googlesheets4::sheet_write(choices_tbl, ss = sheet_id, sheet = "choices")
   googlesheets4::sheet_write(survey_tbl, ss = sheet_id, sheet = "survey")

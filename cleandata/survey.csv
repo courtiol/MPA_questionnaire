@@ -88,7 +88,7 @@ employees, and others who have a formal role actively contributing to achieving 
 <ul>
   <li><strong>Part A</strong>: 2 questions: Let's identify your MPA.</li>
   <li><strong>Part B</strong>: 6 questions: Tell us about this MPA.</li>
-  <li><strong>Part C</strong>: 5 questions: Tell us about you. </li>
+  <li><strong>Part C</strong>: 4 questions: Tell us about you. </li>
   <li><strong>Part D</strong>: 2 (optional) questions: Tell us more?. </li>
 </ul>
 </span>
@@ -1227,25 +1227,7 @@ li{
 "Part time personel (counted as 0.5 FTE each)","PERS_site_PartTime","","number 0,999999,1","0","","M1 %contains_word% '1'",NA,NA,NA,NA,NA,NA,NA,NA
 "Seasonal personel (working during e.g. summer; counted as 0.25 FTE each)","PERS_site_Seasonal","","number 0,999999,1","0","","M1 %contains_word% '1'",NA,NA,NA,NA,NA,NA,NA,NA
 "Occcasional personel (working few weeks a year; counted as 0.1 FTE each)","PERS_site_Occasional","","number 0,999999,1","0","","M1 %contains_word% '1'",NA,NA,NA,NA,NA,NA,NA,NA
-"<script>
-  var total_site = 0;
-  $(document).ready(function() {
-    $('form').on('change', function() {
-      total_site = 0;
-      var val = 0;
-      // Select all inputs whose name begins with ""PERS_site
-      $('input[name^=""PERS_site""]').each(function() {
-        // Convert the value to a float; if NaN (missing/empty), default to 0
-        val = parseFloat($(this).val());
-        if (isNaN(val)) {
-          val = 0;
-        }
-        total_site += val;
-      });
-    }).trigger(""change"");
-  });
-</script>)","PERS_BlockCodesite","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
-"### **Test**","PERS_Blocksite","","block","","","total_site=== 0 && M1 %contains_word%site//js_only",NA,NA,NA,NA,NA,NA,NA,NA
+"<div style='color:#ffff'><strong>NOTE</strong> If you leave all personel to 0, the category will be discarded.</div>","PERS_Blocksite","","block","","","M1 %contains_word% '1' && (PERS_site_FullTime + PERS_site_PartTime + PERS_site_Seasonal + PERS_site_Occasional) == 0",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Add a COMMENT","PERS_NeedComment_site","","check","","","M1 %contains_word% '1'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### 💡 Add more options or explain anything you think we should know about this workforce category","PERS_Commentsite","","textarea","","*","PERS_NeedComment_site",NA,NA,NA,NA,NA,NA,NA,NA
 "### **Stakeholder Focused**","PERS_notestakeholder","","note","","","M1 %contains_word% '2'",NA,NA,NA,NA,NA,NA,NA,NA
@@ -1253,25 +1235,7 @@ li{
 "Part time personel (counted as 0.5 FTE each)","PERS_stakeholder_PartTime","","number 0,999999,1","0","","M1 %contains_word% '2'",NA,NA,NA,NA,NA,NA,NA,NA
 "Seasonal personel (working during e.g. summer; counted as 0.25 FTE each)","PERS_stakeholder_Seasonal","","number 0,999999,1","0","","M1 %contains_word% '2'",NA,NA,NA,NA,NA,NA,NA,NA
 "Occcasional personel (working few weeks a year; counted as 0.1 FTE each)","PERS_stakeholder_Occasional","","number 0,999999,1","0","","M1 %contains_word% '2'",NA,NA,NA,NA,NA,NA,NA,NA
-"<script>
-  var total_stakeholder = 0;
-  $(document).ready(function() {
-    $('form').on('change', function() {
-      total_stakeholder = 0;
-      var val = 0;
-      // Select all inputs whose name begins with ""PERS_stakeholder
-      $('input[name^=""PERS_stakeholder""]').each(function() {
-        // Convert the value to a float; if NaN (missing/empty), default to 0
-        val = parseFloat($(this).val());
-        if (isNaN(val)) {
-          val = 0;
-        }
-        total_stakeholder += val;
-      });
-    }).trigger(""change"");
-  });
-</script>)","PERS_BlockCodestakeholder","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
-"### **Test**","PERS_Blockstakeholder","","block","","","total_stakeholder=== 0 && M1 %contains_word%stakeholder//js_only",NA,NA,NA,NA,NA,NA,NA,NA
+"<div style='color:#ffff'><strong>NOTE</strong> If you leave all personel to 0, the category will be discarded.</div>","PERS_Blockstakeholder","","block","","","M1 %contains_word% '2' && (PERS_stakeholder_FullTime + PERS_stakeholder_PartTime + PERS_stakeholder_Seasonal + PERS_stakeholder_Occasional) == 0",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Add a COMMENT","PERS_NeedComment_stakeholder","","check","","","M1 %contains_word% '2'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### 💡 Add more options or explain anything you think we should know about this workforce category","PERS_Commentstakeholder","","textarea","","*","PERS_NeedComment_stakeholder",NA,NA,NA,NA,NA,NA,NA,NA
 "### **Support Focused**","PERS_notesupport","","note","","","M1 %contains_word% '3'",NA,NA,NA,NA,NA,NA,NA,NA
@@ -1279,25 +1243,7 @@ li{
 "Part time personel (counted as 0.5 FTE each)","PERS_support_PartTime","","number 0,999999,1","0","","M1 %contains_word% '3'",NA,NA,NA,NA,NA,NA,NA,NA
 "Seasonal personel (working during e.g. summer; counted as 0.25 FTE each)","PERS_support_Seasonal","","number 0,999999,1","0","","M1 %contains_word% '3'",NA,NA,NA,NA,NA,NA,NA,NA
 "Occcasional personel (working few weeks a year; counted as 0.1 FTE each)","PERS_support_Occasional","","number 0,999999,1","0","","M1 %contains_word% '3'",NA,NA,NA,NA,NA,NA,NA,NA
-"<script>
-  var total_support = 0;
-  $(document).ready(function() {
-    $('form').on('change', function() {
-      total_support = 0;
-      var val = 0;
-      // Select all inputs whose name begins with ""PERS_support
-      $('input[name^=""PERS_support""]').each(function() {
-        // Convert the value to a float; if NaN (missing/empty), default to 0
-        val = parseFloat($(this).val());
-        if (isNaN(val)) {
-          val = 0;
-        }
-        total_support += val;
-      });
-    }).trigger(""change"");
-  });
-</script>)","PERS_BlockCodesupport","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
-"### **Test**","PERS_Blocksupport","","block","","","total_support=== 0 && M1 %contains_word%support//js_only",NA,NA,NA,NA,NA,NA,NA,NA
+"<div style='color:#ffff'><strong>NOTE</strong> If you leave all personel to 0, the category will be discarded.</div>","PERS_Blocksupport","","block","","","M1 %contains_word% '3' && (PERS_support_FullTime + PERS_support_PartTime + PERS_support_Seasonal + PERS_support_Occasional) == 0",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Add a COMMENT","PERS_NeedComment_support","","check","","","M1 %contains_word% '3'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### 💡 Add more options or explain anything you think we should know about this workforce category","PERS_Commentsupport","","textarea","","*","PERS_NeedComment_support",NA,NA,NA,NA,NA,NA,NA,NA
 "### **Scientists**","PERS_notescientists","","note","","","M1 %contains_word% '4'",NA,NA,NA,NA,NA,NA,NA,NA
@@ -1305,25 +1251,7 @@ li{
 "Part time personel (counted as 0.5 FTE each)","PERS_scientists_PartTime","","number 0,999999,1","0","","M1 %contains_word% '4'",NA,NA,NA,NA,NA,NA,NA,NA
 "Seasonal personel (working during e.g. summer; counted as 0.25 FTE each)","PERS_scientists_Seasonal","","number 0,999999,1","0","","M1 %contains_word% '4'",NA,NA,NA,NA,NA,NA,NA,NA
 "Occcasional personel (working few weeks a year; counted as 0.1 FTE each)","PERS_scientists_Occasional","","number 0,999999,1","0","","M1 %contains_word% '4'",NA,NA,NA,NA,NA,NA,NA,NA
-"<script>
-  var total_scientists = 0;
-  $(document).ready(function() {
-    $('form').on('change', function() {
-      total_scientists = 0;
-      var val = 0;
-      // Select all inputs whose name begins with ""PERS_scientists
-      $('input[name^=""PERS_scientists""]').each(function() {
-        // Convert the value to a float; if NaN (missing/empty), default to 0
-        val = parseFloat($(this).val());
-        if (isNaN(val)) {
-          val = 0;
-        }
-        total_scientists += val;
-      });
-    }).trigger(""change"");
-  });
-</script>)","PERS_BlockCodescientists","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
-"### **Test**","PERS_Blockscientists","","block","","","total_scientists=== 0 && M1 %contains_word%scientists//js_only",NA,NA,NA,NA,NA,NA,NA,NA
+"<div style='color:#ffff'><strong>NOTE</strong> If you leave all personel to 0, the category will be discarded.</div>","PERS_Blockscientists","","block","","","M1 %contains_word% '4' && (PERS_scientists_FullTime + PERS_scientists_PartTime + PERS_scientists_Seasonal + PERS_scientists_Occasional) == 0",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Add a COMMENT","PERS_NeedComment_scientists","","check","","","M1 %contains_word% '4'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### 💡 Add more options or explain anything you think we should know about this workforce category","PERS_Commentscientists","","textarea","","*","PERS_NeedComment_scientists",NA,NA,NA,NA,NA,NA,NA,NA
 "### **Leadership Focused**","PERS_noteleadership","","note","","","M1 %contains_word% '5'",NA,NA,NA,NA,NA,NA,NA,NA
@@ -1331,25 +1259,7 @@ li{
 "Part time personel (counted as 0.5 FTE each)","PERS_leadership_PartTime","","number 0,999999,1","0","","M1 %contains_word% '5'",NA,NA,NA,NA,NA,NA,NA,NA
 "Seasonal personel (working during e.g. summer; counted as 0.25 FTE each)","PERS_leadership_Seasonal","","number 0,999999,1","0","","M1 %contains_word% '5'",NA,NA,NA,NA,NA,NA,NA,NA
 "Occcasional personel (working few weeks a year; counted as 0.1 FTE each)","PERS_leadership_Occasional","","number 0,999999,1","0","","M1 %contains_word% '5'",NA,NA,NA,NA,NA,NA,NA,NA
-"<script>
-  var total_leadership = 0;
-  $(document).ready(function() {
-    $('form').on('change', function() {
-      total_leadership = 0;
-      var val = 0;
-      // Select all inputs whose name begins with ""PERS_leadership
-      $('input[name^=""PERS_leadership""]').each(function() {
-        // Convert the value to a float; if NaN (missing/empty), default to 0
-        val = parseFloat($(this).val());
-        if (isNaN(val)) {
-          val = 0;
-        }
-        total_leadership += val;
-      });
-    }).trigger(""change"");
-  });
-</script>)","PERS_BlockCodeleadership","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
-"### **Test**","PERS_Blockleadership","","block","","","total_leadership=== 0 && M1 %contains_word%leadership//js_only",NA,NA,NA,NA,NA,NA,NA,NA
+"<div style='color:#ffff'><strong>NOTE</strong> If you leave all personel to 0, the category will be discarded.</div>","PERS_Blockleadership","","block","","","M1 %contains_word% '5' && (PERS_leadership_FullTime + PERS_leadership_PartTime + PERS_leadership_Seasonal + PERS_leadership_Occasional) == 0",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Add a COMMENT","PERS_NeedComment_leadership","","check","","","M1 %contains_word% '5'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### 💡 Add more options or explain anything you think we should know about this workforce category","PERS_Commentleadership","","textarea","","*","PERS_NeedComment_leadership",NA,NA,NA,NA,NA,NA,NA,NA
 "### **Other**","PERS_noteother","","note","","","M1 %contains_word% '6'",NA,NA,NA,NA,NA,NA,NA,NA
@@ -1357,25 +1267,7 @@ li{
 "Part time personel (counted as 0.5 FTE each)","PERS_other_PartTime","","number 0,999999,1","0","","M1 %contains_word% '6'",NA,NA,NA,NA,NA,NA,NA,NA
 "Seasonal personel (working during e.g. summer; counted as 0.25 FTE each)","PERS_other_Seasonal","","number 0,999999,1","0","","M1 %contains_word% '6'",NA,NA,NA,NA,NA,NA,NA,NA
 "Occcasional personel (working few weeks a year; counted as 0.1 FTE each)","PERS_other_Occasional","","number 0,999999,1","0","","M1 %contains_word% '6'",NA,NA,NA,NA,NA,NA,NA,NA
-"<script>
-  var total_other = 0;
-  $(document).ready(function() {
-    $('form').on('change', function() {
-      total_other = 0;
-      var val = 0;
-      // Select all inputs whose name begins with ""PERS_other
-      $('input[name^=""PERS_other""]').each(function() {
-        // Convert the value to a float; if NaN (missing/empty), default to 0
-        val = parseFloat($(this).val());
-        if (isNaN(val)) {
-          val = 0;
-        }
-        total_other += val;
-      });
-    }).trigger(""change"");
-  });
-</script>)","PERS_BlockCodeother","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
-"### **Test**","PERS_Blockother","","block","","","total_other=== 0 && M1 %contains_word%other//js_only",NA,NA,NA,NA,NA,NA,NA,NA
+"<div style='color:#ffff'><strong>NOTE</strong> If you leave all personel to 0, the category will be discarded.</div>","PERS_Blockother","","block","","","M1 %contains_word% '6' && (PERS_other_FullTime + PERS_other_PartTime + PERS_other_Seasonal + PERS_other_Occasional) == 0",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Add a COMMENT","PERS_NeedComment_other","","check","","","M1 %contains_word% '6'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### 💡 Add more options or explain anything you think we should know about this workforce category","PERS_Commentother","","textarea","","*","PERS_NeedComment_other",NA,NA,NA,NA,NA,NA,NA,NA
 "Continue","S5","","submit","","","!M1 %contains_word% '7' && !M1 %contains_word% '8'",NA,NA,NA,NA,NA,NA,NA,NA
@@ -1609,7 +1501,7 @@ li{
 "# <mark style='background-color:#6495ED;color:#FFD700'> Part B: Tell us about this MPA (6 questions) </mark>","P8","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "## 5: Who else is nearby?","Others_note","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Who else operates seasonally or more within or nearby this specific MPA who is *not* formally responsible for working for this MPA?
-💡 Select all that apply.","Others_choice","mc_vertical","mc_multiple","","!","","**Fishers** 🎣","**Divers** 🤿","**Surfers** 🏄️","**Boat operators** ⛵","**None** — no one uses this MPA🏝️","**None of the above**","**I don’t know**",NA
+💡 Select all that apply.","Others_choice","mc_vertical","mc_multiple","","!","","**Fishers** 🎣","**Divers** 🤿","**Surfers** 🏄️","**Boat operators** ⛵","**None** — no one uses this MPA 🏝️","**None of the above**","**I don’t know**",NA
 "<div style='color:#ffff'>The answer <strong>None of the above</strong> cannot be combined with another category</div>","Block_others1","","block","","","(Others_choice %contains_word% '1' | Others_choice %contains_word% '2' | Others_choice %contains_word% '3' | Others_choice %contains_word% '4' | Others_choice %contains_word% '5') && Others_choice %contains_word% '6'",NA,NA,NA,NA,NA,NA,NA,NA
 "<div style='color:#ffff'>The answer <strong>I don't know</strong> cannot be combined with another category</div>","Block_others2","","block","","","(Others_choice %contains_word% '1' | Others_choice %contains_word% '2' | Others_choice %contains_word% '3' | Others_choice %contains_word% '4' | Others_choice %contains_word% '5' | Others_choice %contains_word% '6') && Others_choice %contains_word% '7'",NA,NA,NA,NA,NA,NA,NA,NA
 "<div style='color:#ffff'>The answer <strong>None</strong> cannot be combined with another category</div>","Block_others3","","block","","","(Others_choice %contains_word% '1' | Others_choice %contains_word% '2' | Others_choice %contains_word% '3' | Others_choice %contains_word% '4') && Others_choice %contains_word% '5'",NA,NA,NA,NA,NA,NA,NA,NA
@@ -1743,7 +1635,7 @@ li{
 }
 
 </style>","CSS10","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
-"# <mark style='background-color:#6495ED;color:#FFD700'> Part C: Tell us about you (5 questions) </mark>","P10","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
+"# <mark style='background-color:#6495ED;color:#FFD700'> Part C: Tell us about you (4 questions) </mark>","P10","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "## 1: Your role(s)?","Role_note","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "#### What role(s) do you serve in this MPA?
 💡 Select all that apply.","Role_choice","mc_vertical","mc_multiple","","!","","**Site Focused** — such as rangers and ranger-like roles (with and without enforcement capabilities)","**Stakeholder Focused** — such as education and outreach roles","**Support Focused** — such as supporting staff","**Scientists** — such as those collecting and analyzing data to address questions","**Leadership Focused** — such as decision making","**Other** — for roles unlisted above","**None** — no one works on this MPA in a formal role","**I don't know**"
@@ -1833,7 +1725,7 @@ li{
 }
 
 </style>","CSS11","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
-"# <mark style='background-color:#6495ED;color:#FFD700'> Part C: Tell us about you (5 questions) </mark>","P11","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
+"# <mark style='background-color:#6495ED;color:#FFD700'> Part C: Tell us about you (4 questions) </mark>","P11","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "## 2: Your name?","Name_note","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "#### What is your name?","Name_input","","text","","*","!Anonymous_check",NA,NA,NA,NA,NA,NA,NA,NA
 "#### 🤫 I prefer to remain anonymous","Anonymous_check","","check","","","",NA,NA,NA,NA,NA,NA,NA,NA
@@ -1921,7 +1813,7 @@ li{
 }
 
 </style>","CSS12","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
-"# <mark style='background-color:#6495ED;color:#FFD700'> Part C: Tell us about you (5 questions) </mark>","P12","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
+"# <mark style='background-color:#6495ED;color:#FFD700'> Part C: Tell us about you (4 questions) </mark>","P12","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "## 3: Your email?","Email_note","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "#### What is your email address?","Email_input","","email","","*","!Anonymous_email_check",NA,NA,NA,NA,NA,NA,NA,NA
 "#### 🤫 I prefer to remain anonymous","Anonymous_email_check","","check","","","",NA,NA,NA,NA,NA,NA,NA,NA
@@ -2009,12 +1901,76 @@ li{
 }
 
 </style>","CSS13","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
-"# <mark style='background-color:#6495ED;color:#FFD700'> Part C: Tell us about you (5 questions) </mark>","P13","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
+"# <mark style='background-color:#6495ED;color:#FFD700'> Part C: Tell us about you (4 questions) </mark>","P13","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "## 4: How can we acknowledge you?","Acknowledgement_note","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "#### We can't do this without you! If you would like to be listed in the acknowledgments of the report and other publications, please share how you would like this to appear.
 💙 You may use your first and/or last name. 
 💡If you add nothing, your name will not appear.","Acknowledgement_input","","textarea","","*","",NA,NA,NA,NA,NA,NA,NA,NA
 "Continue","S13","","submit","","","",NA,NA,NA,NA,NA,NA,NA,NA
+"<style>
+.alert {
+  padding: 20px;
+  background-color: #f44336;
+  color: white;
+}
+
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: black;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color:#0B1215;
+}
+
+h4 {
+  margin: 0 0 5px 0;
+}
+
+p {
+  color:#484c50;
+}
+
+li{
+  color:#484c50;
+  font-family:Roboto,Arial,sans-serif;
+  font-weight:400;
+  font-size:120%;
+  margin:0 0 2px 0
+}
+
+.run-container .btn-info {
+  color:#0B1215;
+  border:5px solid rgb(21 45 101);
+}
+.run-container .btn-info:active,
+.run-container .btn-info:focus,
+.run-container .btn-info:hover {
+  background:rgb(21 45 101)!important;
+  border-color:rgb(21 45 101)!important;
+  color:#fff!important
+}
+
+</style>","thanks_CSS","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
+"# <mark style='background-color:#6495ED;color:#FFD700'>Thank you</mark>","thanks_head","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
+"### We greatly appreciate your support for this Global Marine Protected Area Workforce Study—thank you for contributing to this important research initiative.
+#### Before letting you go, we have a couple of additional questions for you...","thanks_note","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
+"Continue","thanks_submit","","submit","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "<style>
 .alert {
   padding: 20px;
