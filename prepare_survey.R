@@ -654,6 +654,10 @@ Anythingelse_comment <- add_element(label = "#### Is there anything else you wou
                                     type = "textarea",
                                     optional = "*")
 
+#Other_MPA <- add_element(label = "Test loopback",
+#                         name = "loopback",
+#                         type = "check")
+
 S9 <- S1; S9$name <- "S9"
 
 # Page 10 ----------------------------------------------------------------------
@@ -928,3 +932,8 @@ write.csv(survey_tbl, file = "cleandata/survey.csv", row.names = FALSE)
 
 # Footer directly added in Run / Settings / General
 # ©Marine Conservation Institute (2025) | [Privacy Policy](https://www.eoceans.org/mpa-workforce-study-2025-appendix) | [About](https://www.eoceans.org/mpa-workforce-study-2025-appendix) | [Report technical issues](mailto:courtiol@izw-berlin.de)
+
+# Feedback text at the end
+# # 🦈 Thank you 🐳
+# ##💡 If you want to fill in the survey for another MPA, just [click here](https://workforce-survey.marine-conservation.org/we-need-you) to launch a new survey.
+
