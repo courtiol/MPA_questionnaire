@@ -360,29 +360,29 @@ add_personel_questions <- function(label = "### **what**",
                     type = "note")
   
   E2 <- add_element(label = "Full time personel\n(working all year; counted as 1 FTE each)",
-                    name = paste0("pers_", category, "_FullTime"),
+                    name = paste0("pers_", category, "_fulltime"),
                     value = value, showif = showif, type = type)
   
   E3 <- add_element(label = "Part time personel\n(counted as 0.5 FTE each)",
-                    name = paste0("pers_", category, "_PartTime"),
+                    name = paste0("pers_", category, "_parttime"),
                     value = value, showif = showif, type = type)
   
   E4 <- add_element(label = "Seasonal personel\n(working during e.g. summer; counted as 0.25 FTE each)",
-                    name = paste0("pers_", category, "_Seasonal"),
+                    name = paste0("pers_", category, "_seasonal"),
                     value = value, showif = showif, type = type)
   
   E5 <- add_element(label = "Occcasional personel\n(working few weeks a year; counted as 0.1 FTE each)",
-                    name = paste0("pers_", category, "_Occasional"),
+                    name = paste0("pers_", category, "_occasional"),
                     value = value, showif = showif, type = type)
   
   # NOT WORKING
   # Block <- add_element(label = "<div style='color:#ffff'><strong>NOTE</strong> If you leave all personel to 0, the category will be discarded.</div>",
   #                     name = paste0("pers_Block", category),
   #                     type = "block",
-  #                     showif = paste0(showif, " && pers_", category, "_FullTime == 0 &&
-  #                                     pers_", category, "_PartTime == 0 &&
-  #                                     pers_", category, "_Seasonal == 0 &&
-  #                                     pers_", category, "_Occasional == 0"))
+  #                     showif = paste0(showif, " && pers_", category, "_fulltime == 0 &&
+  #                                     pers_", category, "_parttime == 0 &&
+  #                                     pers_", category, "_seasonal == 0 &&
+  #                                     pers_", category, "_occasional == 0"))
   
   bind_rows(E1, E2, E3, E4, E5)
 }
@@ -432,7 +432,7 @@ type = "note",
 name = "note_FTE")
 
 FTE_formula <- function(category) {
-  form <- paste0("pers_", category, "_FullTime + pers_", category, "_PartTime*0.5 + pers_", category, "_Seasonal*0.25 + pers_", category, "_Occasional*0.1")
+  form <- paste0("pers_", category, "_fulltime + pers_", category, "_parttime*0.5 + pers_", category, "_seasonal*0.25 + pers_", category, "_occasional*0.1")
   paste0("ifelse(is.na(", form, "), 0,", form, ")")
 }
 
@@ -520,13 +520,13 @@ CSS7 <- CSS; CSS7$name <- "CSS7"
 
 partB_note4 <- partB_note3; partB_note4$name <- "partB_note4"
 
-note_techinMPA <-  add_element(label = "## 4: Technology used to help?",
-                               name = "note_techinMPA",
+note_technoinMPA <-  add_element(label = "## 4: Technology used to help?",
+                               name = "note_technoinMPA",
                                type = "note")
 
-techinMPA <-  add_element(label = "#### If you use technology or other aids to help your MPA workforce expand its effectiveness in THIS specific MPA, please list.
+technoinMPA <-  add_element(label = "#### If you use technology or other aids to help your MPA workforce expand its effectiveness in THIS specific MPA, please list.
 💡 Select all that apply.",
-name = "techinMPA",
+name = "technoinMPA",
 type = "mc_multiple",
 class = "mc_vertical",
 choice1 = "**Satellite technologies**",
@@ -539,31 +539,31 @@ choice7 = "None of the above",
 choice8 = "I don't know",
 optional = "!")
 
-block_none_techinMPA <- add_element(label = "<div style='color:#ffff'>The answer <strong>None of the above</strong> cannot be combined with another category</div>",
-                                    name = "block_none_techinMPA",
+block_none_technoinMPA <- add_element(label = "<div style='color:#ffff'>The answer <strong>None of the above</strong> cannot be combined with another category</div>",
+                                    name = "block_none_technoinMPA",
                                     type = "block",
-                                    showif = "(techinMPA %contains_word% '1' | techinMPA %contains_word% '2' | techinMPA %contains_word% '3' | techinMPA %contains_word% '4' | techinMPA %contains_word% '5' | techinMPA %contains_word% '6') && techinMPA %contains_word% '7'")
+                                    showif = "(technoinMPA %contains_word% '1' | technoinMPA %contains_word% '2' | technoinMPA %contains_word% '3' | technoinMPA %contains_word% '4' | technoinMPA %contains_word% '5' | technoinMPA %contains_word% '6') && technoinMPA %contains_word% '7'")
 
-block_dontknow_techinMPA <- add_element(label = "<div style='color:#ffff'>The answer <strong>I don't know</strong> cannot be combined with another category</div>",
-                                        name = "block_dontknow_techinMPA",
+block_dontknow_technoinMPA <- add_element(label = "<div style='color:#ffff'>The answer <strong>I don't know</strong> cannot be combined with another category</div>",
+                                        name = "block_dontknow_technoinMPA",
                                         type = "block",
-                                        showif = "(techinMPA %contains_word% '1' | techinMPA %contains_word% '2' | techinMPA %contains_word% '3' | techinMPA %contains_word% '4' | techinMPA %contains_word% '5' | techinMPA %contains_word% '6' | techinMPA %contains_word% '7') && techinMPA %contains_word% '8'")
+                                        showif = "(technoinMPA %contains_word% '1' | technoinMPA %contains_word% '2' | technoinMPA %contains_word% '3' | technoinMPA %contains_word% '4' | technoinMPA %contains_word% '5' | technoinMPA %contains_word% '6' | technoinMPA %contains_word% '7') && technoinMPA %contains_word% '8'")
 
-detail_other_techinMPA <- add_element(label = "#### 🦀 Add other technologies that qualify
+detail_other_technoinMPA <- add_element(label = "#### 🦀 Add other technologies that qualify
 🪼 Brand names are fine too.
 💡 After typing, press enter to validate what you added.",
 type = "select_or_add_multiple",
-name = "detail_other_techinMPA",
+name = "detail_other_technoinMPA",
 choice1 = "I can't think of anything",
 optional = "*")
 
-techinMPA_check <- add_element(label = "#### Add a COMMENT",
-                               name = "techinMPA_check",
+technoinMPA_check <- add_element(label = "#### Add a COMMENT",
+                               name = "technoinMPA_check",
                                type = "check")
 
-techinMPA_comment <- add_element(label = "#### 💡 Tell us more, so we fully understand",
-                                 name = "techinMPA_comment",
-                                 showif = "techinMPA_check",
+technoinMPA_comment <- add_element(label = "#### 💡 Tell us more, so we fully understand",
+                                 name = "technoinMPA_comment",
+                                 showif = "technoinMPA_check",
                                  type = "textarea",
                                  optional = "*")
 
@@ -894,7 +894,7 @@ survey_tbl <- bind_rows(CSS0, welcome_text, logos, submit_welcome,
                         CSS5, partB_note2, note_personel, pers1, pers2, pers3, pers4, pers5, pers6, pers_check, pers_comment, submit_pers,
                         CSS6, partB_note3, note_FTE, FTE_leadership, FTE_site, FTE_support, FTE_stakeholder, FTE_scientists, FTE_other,
                         total_note, total_info, total_validate, total_comment_check, total_comment, submit_total,
-                        CSS7, partB_note4, note_techinMPA, techinMPA, block_none_techinMPA, block_dontknow_techinMPA, detail_other_techinMPA, techinMPA_check, techinMPA_comment, submit_tech,
+                        CSS7, partB_note4, note_technoinMPA, technoinMPA, block_none_technoinMPA, block_dontknow_technoinMPA, detail_other_technoinMPA, technoinMPA_check, technoinMPA_comment, submit_tech,
                         CSS8, partB_note5, note_operator, operator, block_none_operator, block_dontknow_operator, detail_fishers_operator, detail_boats_operator, detail_other_operator, operator_check, operator_comment, submit_operator,
                         CSS9, partB_note6, note_anythingelse, anythingelse, submit_anythingelse,
                         CSS10, partC_note1, note_privacy, note_roleself, roleself, block_none_roleself, block_dontknow_roleself, detail_other_roleself, roleself_check, roleself_comment,

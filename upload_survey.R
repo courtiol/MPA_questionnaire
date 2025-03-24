@@ -3,7 +3,7 @@ rm(list = ls())
 library(dplyr)
 
 ## Decide to use a short version for testing things more quickly
-shorten_for_testing <- TRUE
+shorten_for_testing <- FALSE
 
 ## Note: the name of the google sheet must be the same as that of the survey
 survey_tbl <- read.csv("cleandata/survey.csv")

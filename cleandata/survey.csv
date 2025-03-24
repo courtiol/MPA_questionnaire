@@ -1193,58 +1193,58 @@ li{
 💡 Add a COMMENT to add more options or to explain anything you think we should know.","note_personel","","note","","","!roleinMPA %contains_word% '7' && !roleinMPA %contains_word% '8'",NA,NA,NA,NA,NA,NA,NA,NA
 "### **Leadership focused**","pers_noteleadership","","note","","","roleinMPA %contains_word% '1'",NA,NA,NA,NA,NA,NA,NA,NA
 "Full time personel
-(working all year; counted as 1 FTE each)","pers_leadership_FullTime","","number 0,999999,1","0","","roleinMPA %contains_word% '1'",NA,NA,NA,NA,NA,NA,NA,NA
+(working all year; counted as 1 FTE each)","pers_leadership_fulltime","","number 0,999999,1","0","","roleinMPA %contains_word% '1'",NA,NA,NA,NA,NA,NA,NA,NA
 "Part time personel
-(counted as 0.5 FTE each)","pers_leadership_PartTime","","number 0,999999,1","0","","roleinMPA %contains_word% '1'",NA,NA,NA,NA,NA,NA,NA,NA
+(counted as 0.5 FTE each)","pers_leadership_parttime","","number 0,999999,1","0","","roleinMPA %contains_word% '1'",NA,NA,NA,NA,NA,NA,NA,NA
 "Seasonal personel
-(working during e.g. summer; counted as 0.25 FTE each)","pers_leadership_Seasonal","","number 0,999999,1","0","","roleinMPA %contains_word% '1'",NA,NA,NA,NA,NA,NA,NA,NA
+(working during e.g. summer; counted as 0.25 FTE each)","pers_leadership_seasonal","","number 0,999999,1","0","","roleinMPA %contains_word% '1'",NA,NA,NA,NA,NA,NA,NA,NA
 "Occcasional personel
-(working few weeks a year; counted as 0.1 FTE each)","pers_leadership_Occasional","","number 0,999999,1","0","","roleinMPA %contains_word% '1'",NA,NA,NA,NA,NA,NA,NA,NA
+(working few weeks a year; counted as 0.1 FTE each)","pers_leadership_occasional","","number 0,999999,1","0","","roleinMPA %contains_word% '1'",NA,NA,NA,NA,NA,NA,NA,NA
 "### **In-site focused**","pers_notesite","","note","","","roleinMPA %contains_word% '2'",NA,NA,NA,NA,NA,NA,NA,NA
 "Full time personel
-(working all year; counted as 1 FTE each)","pers_site_FullTime","","number 0,999999,1","0","","roleinMPA %contains_word% '2'",NA,NA,NA,NA,NA,NA,NA,NA
+(working all year; counted as 1 FTE each)","pers_site_fulltime","","number 0,999999,1","0","","roleinMPA %contains_word% '2'",NA,NA,NA,NA,NA,NA,NA,NA
 "Part time personel
-(counted as 0.5 FTE each)","pers_site_PartTime","","number 0,999999,1","0","","roleinMPA %contains_word% '2'",NA,NA,NA,NA,NA,NA,NA,NA
+(counted as 0.5 FTE each)","pers_site_parttime","","number 0,999999,1","0","","roleinMPA %contains_word% '2'",NA,NA,NA,NA,NA,NA,NA,NA
 "Seasonal personel
-(working during e.g. summer; counted as 0.25 FTE each)","pers_site_Seasonal","","number 0,999999,1","0","","roleinMPA %contains_word% '2'",NA,NA,NA,NA,NA,NA,NA,NA
+(working during e.g. summer; counted as 0.25 FTE each)","pers_site_seasonal","","number 0,999999,1","0","","roleinMPA %contains_word% '2'",NA,NA,NA,NA,NA,NA,NA,NA
 "Occcasional personel
-(working few weeks a year; counted as 0.1 FTE each)","pers_site_Occasional","","number 0,999999,1","0","","roleinMPA %contains_word% '2'",NA,NA,NA,NA,NA,NA,NA,NA
+(working few weeks a year; counted as 0.1 FTE each)","pers_site_occasional","","number 0,999999,1","0","","roleinMPA %contains_word% '2'",NA,NA,NA,NA,NA,NA,NA,NA
 "### **Support focused**","pers_notesupport","","note","","","roleinMPA %contains_word% '3'",NA,NA,NA,NA,NA,NA,NA,NA
 "Full time personel
-(working all year; counted as 1 FTE each)","pers_support_FullTime","","number 0,999999,1","0","","roleinMPA %contains_word% '3'",NA,NA,NA,NA,NA,NA,NA,NA
+(working all year; counted as 1 FTE each)","pers_support_fulltime","","number 0,999999,1","0","","roleinMPA %contains_word% '3'",NA,NA,NA,NA,NA,NA,NA,NA
 "Part time personel
-(counted as 0.5 FTE each)","pers_support_PartTime","","number 0,999999,1","0","","roleinMPA %contains_word% '3'",NA,NA,NA,NA,NA,NA,NA,NA
+(counted as 0.5 FTE each)","pers_support_parttime","","number 0,999999,1","0","","roleinMPA %contains_word% '3'",NA,NA,NA,NA,NA,NA,NA,NA
 "Seasonal personel
-(working during e.g. summer; counted as 0.25 FTE each)","pers_support_Seasonal","","number 0,999999,1","0","","roleinMPA %contains_word% '3'",NA,NA,NA,NA,NA,NA,NA,NA
+(working during e.g. summer; counted as 0.25 FTE each)","pers_support_seasonal","","number 0,999999,1","0","","roleinMPA %contains_word% '3'",NA,NA,NA,NA,NA,NA,NA,NA
 "Occcasional personel
-(working few weeks a year; counted as 0.1 FTE each)","pers_support_Occasional","","number 0,999999,1","0","","roleinMPA %contains_word% '3'",NA,NA,NA,NA,NA,NA,NA,NA
+(working few weeks a year; counted as 0.1 FTE each)","pers_support_occasional","","number 0,999999,1","0","","roleinMPA %contains_word% '3'",NA,NA,NA,NA,NA,NA,NA,NA
 "### **Stakeholder focused**","pers_notestakeholder","","note","","","roleinMPA %contains_word% '4'",NA,NA,NA,NA,NA,NA,NA,NA
 "Full time personel
-(working all year; counted as 1 FTE each)","pers_stakeholder_FullTime","","number 0,999999,1","0","","roleinMPA %contains_word% '4'",NA,NA,NA,NA,NA,NA,NA,NA
+(working all year; counted as 1 FTE each)","pers_stakeholder_fulltime","","number 0,999999,1","0","","roleinMPA %contains_word% '4'",NA,NA,NA,NA,NA,NA,NA,NA
 "Part time personel
-(counted as 0.5 FTE each)","pers_stakeholder_PartTime","","number 0,999999,1","0","","roleinMPA %contains_word% '4'",NA,NA,NA,NA,NA,NA,NA,NA
+(counted as 0.5 FTE each)","pers_stakeholder_parttime","","number 0,999999,1","0","","roleinMPA %contains_word% '4'",NA,NA,NA,NA,NA,NA,NA,NA
 "Seasonal personel
-(working during e.g. summer; counted as 0.25 FTE each)","pers_stakeholder_Seasonal","","number 0,999999,1","0","","roleinMPA %contains_word% '4'",NA,NA,NA,NA,NA,NA,NA,NA
+(working during e.g. summer; counted as 0.25 FTE each)","pers_stakeholder_seasonal","","number 0,999999,1","0","","roleinMPA %contains_word% '4'",NA,NA,NA,NA,NA,NA,NA,NA
 "Occcasional personel
-(working few weeks a year; counted as 0.1 FTE each)","pers_stakeholder_Occasional","","number 0,999999,1","0","","roleinMPA %contains_word% '4'",NA,NA,NA,NA,NA,NA,NA,NA
+(working few weeks a year; counted as 0.1 FTE each)","pers_stakeholder_occasional","","number 0,999999,1","0","","roleinMPA %contains_word% '4'",NA,NA,NA,NA,NA,NA,NA,NA
 "### **Science focused**","pers_notescientists","","note","","","roleinMPA %contains_word% '5'",NA,NA,NA,NA,NA,NA,NA,NA
 "Full time personel
-(working all year; counted as 1 FTE each)","pers_scientists_FullTime","","number 0,999999,1","0","","roleinMPA %contains_word% '5'",NA,NA,NA,NA,NA,NA,NA,NA
+(working all year; counted as 1 FTE each)","pers_scientists_fulltime","","number 0,999999,1","0","","roleinMPA %contains_word% '5'",NA,NA,NA,NA,NA,NA,NA,NA
 "Part time personel
-(counted as 0.5 FTE each)","pers_scientists_PartTime","","number 0,999999,1","0","","roleinMPA %contains_word% '5'",NA,NA,NA,NA,NA,NA,NA,NA
+(counted as 0.5 FTE each)","pers_scientists_parttime","","number 0,999999,1","0","","roleinMPA %contains_word% '5'",NA,NA,NA,NA,NA,NA,NA,NA
 "Seasonal personel
-(working during e.g. summer; counted as 0.25 FTE each)","pers_scientists_Seasonal","","number 0,999999,1","0","","roleinMPA %contains_word% '5'",NA,NA,NA,NA,NA,NA,NA,NA
+(working during e.g. summer; counted as 0.25 FTE each)","pers_scientists_seasonal","","number 0,999999,1","0","","roleinMPA %contains_word% '5'",NA,NA,NA,NA,NA,NA,NA,NA
 "Occcasional personel
-(working few weeks a year; counted as 0.1 FTE each)","pers_scientists_Occasional","","number 0,999999,1","0","","roleinMPA %contains_word% '5'",NA,NA,NA,NA,NA,NA,NA,NA
+(working few weeks a year; counted as 0.1 FTE each)","pers_scientists_occasional","","number 0,999999,1","0","","roleinMPA %contains_word% '5'",NA,NA,NA,NA,NA,NA,NA,NA
 "### **Other**","pers_noteother","","note","","","roleinMPA %contains_word% '6'",NA,NA,NA,NA,NA,NA,NA,NA
 "Full time personel
-(working all year; counted as 1 FTE each)","pers_other_FullTime","","number 0,999999,1","0","","roleinMPA %contains_word% '6'",NA,NA,NA,NA,NA,NA,NA,NA
+(working all year; counted as 1 FTE each)","pers_other_fulltime","","number 0,999999,1","0","","roleinMPA %contains_word% '6'",NA,NA,NA,NA,NA,NA,NA,NA
 "Part time personel
-(counted as 0.5 FTE each)","pers_other_PartTime","","number 0,999999,1","0","","roleinMPA %contains_word% '6'",NA,NA,NA,NA,NA,NA,NA,NA
+(counted as 0.5 FTE each)","pers_other_parttime","","number 0,999999,1","0","","roleinMPA %contains_word% '6'",NA,NA,NA,NA,NA,NA,NA,NA
 "Seasonal personel
-(working during e.g. summer; counted as 0.25 FTE each)","pers_other_Seasonal","","number 0,999999,1","0","","roleinMPA %contains_word% '6'",NA,NA,NA,NA,NA,NA,NA,NA
+(working during e.g. summer; counted as 0.25 FTE each)","pers_other_seasonal","","number 0,999999,1","0","","roleinMPA %contains_word% '6'",NA,NA,NA,NA,NA,NA,NA,NA
 "Occcasional personel
-(working few weeks a year; counted as 0.1 FTE each)","pers_other_Occasional","","number 0,999999,1","0","","roleinMPA %contains_word% '6'",NA,NA,NA,NA,NA,NA,NA,NA
+(working few weeks a year; counted as 0.1 FTE each)","pers_other_occasional","","number 0,999999,1","0","","roleinMPA %contains_word% '6'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Add a COMMENT","pers_check","","check","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "#### 💡 Add more options or explain anything you think we should know about this workforce category","pers_comment","","textarea","","*","pers_check",NA,NA,NA,NA,NA,NA,NA,NA
 "Continue","submit_pers","","submit","","","!roleinMPA %contains_word% '7' && !roleinMPA %contains_word% '8'",NA,NA,NA,NA,NA,NA,NA,NA
@@ -1318,12 +1318,12 @@ li{
 "## 3: Confirm the number of FTE. 
 #### For each workforce category please review the number of FTE corresponding to your previous choices and <b>adjust</b> the numbers if necessary.
 🦀 FTE = Full-time equivalent.","note_FTE","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
-"### **Leadership focused**","FTE_leadership","","number 0,999999,0.05","ifelse(is.na(pers_leadership_FullTime + pers_leadership_PartTime*0.5 + pers_leadership_Seasonal*0.25 + pers_leadership_Occasional*0.1), 0,pers_leadership_FullTime + pers_leadership_PartTime*0.5 + pers_leadership_Seasonal*0.25 + pers_leadership_Occasional*0.1)","","",NA,NA,NA,NA,NA,NA,NA,NA
-"### **In-site focused**","FTE_site","","number 0,999999,0.05","ifelse(is.na(pers_site_FullTime + pers_site_PartTime*0.5 + pers_site_Seasonal*0.25 + pers_site_Occasional*0.1), 0,pers_site_FullTime + pers_site_PartTime*0.5 + pers_site_Seasonal*0.25 + pers_site_Occasional*0.1)","","",NA,NA,NA,NA,NA,NA,NA,NA
-"### **Support focused**","FTE_support","","number 0,999999,0.05","ifelse(is.na(pers_support_FullTime + pers_support_PartTime*0.5 + pers_support_Seasonal*0.25 + pers_support_Occasional*0.1), 0,pers_support_FullTime + pers_support_PartTime*0.5 + pers_support_Seasonal*0.25 + pers_support_Occasional*0.1)","","",NA,NA,NA,NA,NA,NA,NA,NA
-"### **Stakeholder focused**","FTE_stakeholder","","number 0,999999,0.05","ifelse(is.na(pers_stakeholder_FullTime + pers_stakeholder_PartTime*0.5 + pers_stakeholder_Seasonal*0.25 + pers_stakeholder_Occasional*0.1), 0,pers_stakeholder_FullTime + pers_stakeholder_PartTime*0.5 + pers_stakeholder_Seasonal*0.25 + pers_stakeholder_Occasional*0.1)","","",NA,NA,NA,NA,NA,NA,NA,NA
-"### **Science focused**","FTE_scientists","","number 0,999999,0.05","ifelse(is.na(pers_scientists_FullTime + pers_scientists_PartTime*0.5 + pers_scientists_Seasonal*0.25 + pers_scientists_Occasional*0.1), 0,pers_scientists_FullTime + pers_scientists_PartTime*0.5 + pers_scientists_Seasonal*0.25 + pers_scientists_Occasional*0.1)","","",NA,NA,NA,NA,NA,NA,NA,NA
-"### **Other**","FTE_other","","number 0,999999,0.05","ifelse(is.na(pers_other_FullTime + pers_other_PartTime*0.5 + pers_other_Seasonal*0.25 + pers_other_Occasional*0.1), 0,pers_other_FullTime + pers_other_PartTime*0.5 + pers_other_Seasonal*0.25 + pers_other_Occasional*0.1)","","",NA,NA,NA,NA,NA,NA,NA,NA
+"### **Leadership focused**","FTE_leadership","","number 0,999999,0.05","ifelse(is.na(pers_leadership_fulltime + pers_leadership_parttime*0.5 + pers_leadership_seasonal*0.25 + pers_leadership_occasional*0.1), 0,pers_leadership_fulltime + pers_leadership_parttime*0.5 + pers_leadership_seasonal*0.25 + pers_leadership_occasional*0.1)","","",NA,NA,NA,NA,NA,NA,NA,NA
+"### **In-site focused**","FTE_site","","number 0,999999,0.05","ifelse(is.na(pers_site_fulltime + pers_site_parttime*0.5 + pers_site_seasonal*0.25 + pers_site_occasional*0.1), 0,pers_site_fulltime + pers_site_parttime*0.5 + pers_site_seasonal*0.25 + pers_site_occasional*0.1)","","",NA,NA,NA,NA,NA,NA,NA,NA
+"### **Support focused**","FTE_support","","number 0,999999,0.05","ifelse(is.na(pers_support_fulltime + pers_support_parttime*0.5 + pers_support_seasonal*0.25 + pers_support_occasional*0.1), 0,pers_support_fulltime + pers_support_parttime*0.5 + pers_support_seasonal*0.25 + pers_support_occasional*0.1)","","",NA,NA,NA,NA,NA,NA,NA,NA
+"### **Stakeholder focused**","FTE_stakeholder","","number 0,999999,0.05","ifelse(is.na(pers_stakeholder_fulltime + pers_stakeholder_parttime*0.5 + pers_stakeholder_seasonal*0.25 + pers_stakeholder_occasional*0.1), 0,pers_stakeholder_fulltime + pers_stakeholder_parttime*0.5 + pers_stakeholder_seasonal*0.25 + pers_stakeholder_occasional*0.1)","","",NA,NA,NA,NA,NA,NA,NA,NA
+"### **Science focused**","FTE_scientists","","number 0,999999,0.05","ifelse(is.na(pers_scientists_fulltime + pers_scientists_parttime*0.5 + pers_scientists_seasonal*0.25 + pers_scientists_occasional*0.1), 0,pers_scientists_fulltime + pers_scientists_parttime*0.5 + pers_scientists_seasonal*0.25 + pers_scientists_occasional*0.1)","","",NA,NA,NA,NA,NA,NA,NA,NA
+"### **Other**","FTE_other","","number 0,999999,0.05","ifelse(is.na(pers_other_fulltime + pers_other_parttime*0.5 + pers_other_seasonal*0.25 + pers_other_occasional*0.1), 0,pers_other_fulltime + pers_other_parttime*0.5 + pers_other_seasonal*0.25 + pers_other_occasional*0.1)","","",NA,NA,NA,NA,NA,NA,NA,NA
 "### **TOTAL**
 <script>
 $(document).ready(function() {
@@ -1420,16 +1420,16 @@ li{
 
 </style>","CSS7","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "# <mark> Part B: Tell us about this MPA (6 questions) </mark>","partB_note4","","note","","","!roleinMPA %contains_word% '7' && !roleinMPA %contains_word% '8'",NA,NA,NA,NA,NA,NA,NA,NA
-"## 4: Technology used to help?","note_techinMPA","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
+"## 4: Technology used to help?","note_technoinMPA","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "#### If you use technology or other aids to help your MPA workforce expand its effectiveness in THIS specific MPA, please list.
-💡 Select all that apply.","techinMPA","mc_vertical","mc_multiple","","!","","**Satellite technologies**","**Radar technologies**","**Underwater acoustic technologies**","**Drone technologies**","**MPA evaluation technology** (e.g., [eOceans](https://www.eoceans.org/))","**Reporting tools**: Phone, email, or app reporting for marine species, activities, incidents","None of the above","I don't know"
-"<div style='color:#ffff'>The answer <strong>None of the above</strong> cannot be combined with another category</div>","block_none_techinMPA","","block","","","(techinMPA %contains_word% '1' | techinMPA %contains_word% '2' | techinMPA %contains_word% '3' | techinMPA %contains_word% '4' | techinMPA %contains_word% '5' | techinMPA %contains_word% '6') && techinMPA %contains_word% '7'",NA,NA,NA,NA,NA,NA,NA,NA
-"<div style='color:#ffff'>The answer <strong>I don't know</strong> cannot be combined with another category</div>","block_dontknow_techinMPA","","block","","","(techinMPA %contains_word% '1' | techinMPA %contains_word% '2' | techinMPA %contains_word% '3' | techinMPA %contains_word% '4' | techinMPA %contains_word% '5' | techinMPA %contains_word% '6' | techinMPA %contains_word% '7') && techinMPA %contains_word% '8'",NA,NA,NA,NA,NA,NA,NA,NA
+💡 Select all that apply.","technoinMPA","mc_vertical","mc_multiple","","!","","**Satellite technologies**","**Radar technologies**","**Underwater acoustic technologies**","**Drone technologies**","**MPA evaluation technology** (e.g., [eOceans](https://www.eoceans.org/))","**Reporting tools**: Phone, email, or app reporting for marine species, activities, incidents","None of the above","I don't know"
+"<div style='color:#ffff'>The answer <strong>None of the above</strong> cannot be combined with another category</div>","block_none_technoinMPA","","block","","","(technoinMPA %contains_word% '1' | technoinMPA %contains_word% '2' | technoinMPA %contains_word% '3' | technoinMPA %contains_word% '4' | technoinMPA %contains_word% '5' | technoinMPA %contains_word% '6') && technoinMPA %contains_word% '7'",NA,NA,NA,NA,NA,NA,NA,NA
+"<div style='color:#ffff'>The answer <strong>I don't know</strong> cannot be combined with another category</div>","block_dontknow_technoinMPA","","block","","","(technoinMPA %contains_word% '1' | technoinMPA %contains_word% '2' | technoinMPA %contains_word% '3' | technoinMPA %contains_word% '4' | technoinMPA %contains_word% '5' | technoinMPA %contains_word% '6' | technoinMPA %contains_word% '7') && technoinMPA %contains_word% '8'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### 🦀 Add other technologies that qualify
 🪼 Brand names are fine too.
-💡 After typing, press enter to validate what you added.","detail_other_techinMPA","","select_or_add_multiple","","*","","I can't think of anything",NA,NA,NA,NA,NA,NA,NA
-"#### Add a COMMENT","techinMPA_check","","check","","","",NA,NA,NA,NA,NA,NA,NA,NA
-"#### 💡 Tell us more, so we fully understand","techinMPA_comment","","textarea","","*","techinMPA_check",NA,NA,NA,NA,NA,NA,NA,NA
+💡 After typing, press enter to validate what you added.","detail_other_technoinMPA","","select_or_add_multiple","","*","","I can't think of anything",NA,NA,NA,NA,NA,NA,NA
+"#### Add a COMMENT","technoinMPA_check","","check","","","",NA,NA,NA,NA,NA,NA,NA,NA
+"#### 💡 Tell us more, so we fully understand","technoinMPA_comment","","textarea","","*","technoinMPA_check",NA,NA,NA,NA,NA,NA,NA,NA
 "Continue","submit_tech","","submit","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "<style>
 .alert {
