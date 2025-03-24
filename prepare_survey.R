@@ -33,7 +33,6 @@ convert_label_country <- function(countrylabel) {
 } # convert_label_country(c("France (FRA)", "Canada (CAN)", "France (FRA)", "Antigua + Barbuda (ATG)"))
 
 
-
 # CSS definition ----------------------------------------------------------
 # Note that the CSS definition is only active on the page it is loaded
 # It is possible to define a global CSS but only outside the survey sheet so I prefer to define things here
@@ -107,6 +106,7 @@ li{
 type = "note",
 name = "CSS")
 
+
 # Page 1 ---------------------------------------------
 
 CSS0 <- CSS; CSS0$name <- "CSS0"
@@ -156,12 +156,12 @@ Together, we’re strengthening the global MPA network.</p>
 Beth Pike, Marine Conservation Institute<br>
 Dr. Alexandre Courtiol, Leibniz-IZW</p>
 ",
-                    name = "welcome_text",
-                    type = "note")
+name = "welcome_text",
+type = "note")
 
 submit_welcome <- add_element(label = "Let's begin",
-                  name = "submit_welcome",
-                  type = "submit")
+                              name = "submit_welcome",
+                              type = "submit")
 
 logos <- add_element(label = "
 <style>
@@ -182,43 +182,45 @@ logos <- add_element(label = "
   <li><img src='https://workforce-admin.marine-conservation.org/assets/tmp/admin/TRBFGZWLCDwivtX0xSzF/IZW-logo.jpg?v1740411077' alt='Leibniz-IZW logo' style='height:160px;'></li>
   <li><img src='https://workforce-admin.marine-conservation.org/assets/tmp/admin/H74ABfj3smTa-EcZL_qF/BNA-logo-full-blue-txt-transparent-300x.png?v1742736673' alt='Blue Nature Alliance logo' style='height:140px;'></li>
 </ul>",
-                     type = "note",
-                     name = "logos")
+type = "note",
+name = "logos")
 
 # Page 2 ---------------------------------------------
 
 CSS1 <- CSS; CSS1$name <- "CSS1"
 
-P1 <-  add_element(label = "# <mark> Part A: Let's identify your Marine Protected Area (MPA)<br>(2 Questions)</mark>",
-                   name = "P1",
-                   type = "note")
+partA_note1 <-  add_element(label = "# <mark> Part A: Let's identify your Marine Protected Area (MPA)<br>(2 Questions)</mark>",
+                            name = "partA_note1",
+                            type = "note")
 
-N1 <-  add_element(label = "## 1: Select your country",
-                   name = "N1",
-                   type = "note")
+note_country <-  add_element(label = "## 1: Select your country",
+                             name = "note_country",
+                             type = "note")
 
-Q1 <- add_element(label = "#### Select the country (or overseas land) with the MPA you are responding for
+select_country <- add_element(label = "#### Select the country (or overseas land) with the MPA you are responding for
 🪼 You can search using name, partial name, or ISO code.
 💡 Some overseas lands or islands are listed under their own name, e.g. Guadeloupe is listed under 'Guadeloupe (GLP)' and not under 'France (FRA)'.",
-                  name = "country",
-                  class = "cant_add_choice", 
-                  type = "select_or_add_one countries")
+                              name = "country",
+                              class = "cant_add_choice", 
+                              type = "select_or_add_one countries")
 
-S1 <- add_element(label = "Continue",
-                  name = "S1",
-                  type = "submit")
+submit_blank <- add_element(label = "Continue",
+                            name = "submit_blank",
+                            type = "submit")
+
+submit_country <- submit_blank; submit_country$name <- "submit_country"
 
 # Page 3 ---------------------------------------------
 
 CSS2 <- CSS; CSS2$name <- "CSS2"
 
-P2 <-  add_element(label = "# <mark> Part A: Let's identify your MPA (2 Questions)</mark>",
-                   name = "P2",
-                   type = "note")
+partA_note2 <-  add_element(label = "# <mark> Part A: Let's identify your MPA (2 Questions)</mark>",
+                            name = "partA_note2",
+                            type = "note")
 
-N2 <-  add_element(label = "## 2: Select your MPA",
-                   name = "N2",
-                   type = "note")
+note_MPA <-  add_element(label = "## 2: Select your MPA",
+                         name = "note_MPA",
+                         type = "note")
 
 add_MPAs_country <- function(countrycode) {
   add_element(label = "#### Select the MPA you are responding for
@@ -230,9 +232,9 @@ add_MPAs_country <- function(countrycode) {
               showif = paste0("country == '", convert_country_label(countrycode), "'"))
 }
 
-Q2 <- do.call("rbind", lapply(sort(na.omit(codelist$iso3c)), add_MPAs_country))
+select_MPA <- do.call("rbind", lapply(sort(na.omit(codelist$iso3c)), add_MPAs_country))
 
-C1 <- add_element(label = r"(<script>
+script_protectedplanet <- add_element(label = r"(<script>
 var lengthItems = 0;
 var hasNA = false;
 $(document).ready(function () {
@@ -247,190 +249,190 @@ $(document).ready(function () {
     });
 });
 </script>)",
-                   name = "C1",
-                   type = "note")  ## note that `r"()"` allows for triple quoting which is here needed (R language)
+name = "script_protectedplanet",
+type = "note")  ## note that `r"()"` allows for triple quoting which is here needed (R language)
 
-Qmissing <- add_element(label = "#### 🛟 Please provide a name and relevant links or emails so we can fully understand and include your MPA in our analysis:",
-                        name = "Qmissing",
-                        type = "textarea",
-                        optional = "*",
-                        showif = "hasNA //js_only")
+missing_MPA <- add_element(label = "#### 🛟 Please provide a name and relevant links or emails so we can fully understand and include your MPA in our analysis:",
+                           name = "missing_MPA",
+                           type = "textarea",
+                           optional = "*",
+                           showif = "hasNA //js_only")
 
-N3 <- add_element(label = "#### 🔎 Inspect information on your MPA on Protected Planet by clicking on the link:
+inspect_protectedplanet <- add_element(label = "#### 🔎 Inspect information on your MPA on Protected Planet by clicking on the link:
 ##### <span id='textURLs'style='font-size:150%'></span>",
-                  name = "N3",
-                  showif = "lengthItems > 0 //js_only",
-                  type = "note")
+name = "inspect_protectedplanet",
+showif = "lengthItems > 0 //js_only",
+type = "note")
 
-Q_issue1 <- add_element(label = "#### 🚫 You spotted wrong information on Protected Planet?",
-                        type = "check",
-                        showif = "lengthItems > 0 //js_only",
-                        name = "Q_issue1")
+issue_protectedplanet <- add_element(label = "#### 🚫 You spotted wrong information on Protected Planet?",
+                                     type = "check",
+                                     showif = "lengthItems > 0 //js_only",
+                                     name = "issue_protectedplanet")
 
-Q_issue1_text <- add_element(label = "#### 🛟 Tell us what is wrong:",
-                  name = "Q_issue1_text",
-                  type = "textarea",
-                  optional = "*",
-                  showif = "Q_issue1")
+fix_protectedplanet <- add_element(label = "#### 🛟 Tell us what is wrong:",
+                                   name = "fix_protectedplanet",
+                                   type = "textarea",
+                                   optional = "*",
+                                   showif = "issue_protectedplanet")
 
-Warn_multiple <- add_element(label = r"(
+warn_multiple <- add_element(label = r"(
 <div class='alert'>
 <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
 <div style='font-size:200%'><strong>WARNING!</strong> you selected multiple MPAs.</div>
 <div style='font-size:150%'>💡 If you continue, the MPAs will be merged and treated as a single entity.</div>
 <div style='font-size:150%'>🪼 To fill in separate surveys per MPA, select one above and follow instructions at the end of this survey.</div>
 </div>)",
-                             name = "WarnM_multiple",
-                             type = "note",
-                             showif = "lengthItems > 1 //js_only")
+name = "warn_multiple",
+type = "note",
+showif = "lengthItems > 1 //js_only")
 
-S2 <- S1; S2$name <- "S2"
+submit_MPA <- submit_blank; submit_MPA$name <- "submit_MPA"
 
 # Page 4 -----------------------------------------------------------------------
 
 CSS4 <- CSS; CSS4$name <- "CSS4"
 
-P4 <-  add_element(label = "# <mark> Part B: Tell us about this MPA (6 questions) </mark>", ##FIXME replace "your MPA" by its name
-                   name = "P4",
-                   type = "note")
+partB_note1 <-  add_element(label = "# <mark> Part B: Tell us about this MPA (6 questions) </mark>",
+                            name = "partB_note1",
+                            type = "note")
 
-N4 <-  add_element(label = "## 1: Roles of the people who work on this MPA",
-                   name = "N4",
-                   type = "note")
+note_roleinMPA <-  add_element(label = "## 1: Roles of the people who work on this MPA",
+                               name = "note_roleinMPA",
+                               type = "note")
 
-M1 <- add_element(label = "#### Including yourself, what formal roles are involved in working on this specific MPA to contribute to achieving its goals?
+roleinMPA <- add_element(label = "#### Including yourself, what formal roles are involved in working on this specific MPA to contribute to achieving its goals?
 💡 Select all that apply.",
-                 name = "M1",
-                 type = "mc_multiple",
-                 class = "mc_vertical",
-                 choice1 = "**Leadership focused** — e.g., manager, superintendent, decision maker",
-                 choice2 = "**In-site focused** — e.g., ranger and ranger-like roles working in the MPA, with and without enforcement capabilities",
-                 choice3 = "**Support focused** — e.g., supporting staff, administrative support, finance",
-                 choice4 = "**Stakeholder focused** — e.g., education and outreach",
-                 choice5 = "**Science focused** — e.g., collecting and analyzing data to address questions",
-                 choice6 = "**Other** — for roles not listed above",
-                 choice7 = "None — no one works on this MPA in a formal role",
-                 choice8 = "I don't know",
-                 optional = "!")
+name = "roleinMPA",
+type = "mc_multiple",
+class = "mc_vertical",
+choice1 = "**Leadership focused** — e.g., manager, superintendent, decision maker",
+choice2 = "**In-site focused** — e.g., ranger and ranger-like roles working in the MPA, with and without enforcement capabilities",
+choice3 = "**Support focused** — e.g., supporting staff, administrative support, finance",
+choice4 = "**Stakeholder focused** — e.g., education and outreach",
+choice5 = "**Science focused** — e.g., collecting and analyzing data to address questions",
+choice6 = "**Other** — for roles not listed above",
+choice7 = "None — no one works on this MPA in a formal role",
+choice8 = "I don't know",
+optional = "!")
 
-B1 <- add_element(label = "<div style='color:#ffff'>The answer <strong>None</strong> cannot be combined with another category</div>",
-                  name = "B1",
-                  type = "block",
-                  showif = "(M1 %contains_word% '1' | M1 %contains_word% '2' | M1 %contains_word% '3' | M1 %contains_word% '4' | M1 %contains_word% '5' | M1 %contains_word% '6') && M1 %contains_word% '7'")
+block_none_roleinMPA <- add_element(label = "<div style='color:#ffff'>The answer <strong>None</strong> cannot be combined with another category</div>",
+                                    name = "block_none_roleinMPA",
+                                    type = "block",
+                                    showif = "(roleinMPA %contains_word% '1' | roleinMPA %contains_word% '2' | roleinMPA %contains_word% '3' | roleinMPA %contains_word% '4' | roleinMPA %contains_word% '5' | roleinMPA %contains_word% '6') && roleinMPA %contains_word% '7'")
 
-B2 <- add_element(label = "<div style='color:#ffff'> The answer <strong>I don't know</strong> cannot be combined with another category</div>",
-                  name = "B2",
-                  type = "block",
-                  showif = "(M1 %contains_word% '1' | M1 %contains_word% '2' | M1 %contains_word% '3' | M1 %contains_word% '4' | M1 %contains_word% '5' | M1 %contains_word% '6' | M1 %contains_word% '7') && M1 %contains_word% '8'")
+block_dontknow_roleinMPA <- add_element(label = "<div style='color:#ffff'> The answer <strong>I don't know</strong> cannot be combined with another category</div>",
+                                        name = "block_dontknow_roleinMPA",
+                                        type = "block",
+                                        showif = "(roleinMPA %contains_word% '1' | roleinMPA %contains_word% '2' | roleinMPA %contains_word% '3' | roleinMPA %contains_word% '4' | roleinMPA %contains_word% '5' | roleinMPA %contains_word% '6' | roleinMPA %contains_word% '7') && roleinMPA %contains_word% '8'")
 
-M1missing <- add_element(label = "#### 🛟 If you selected **Other**, please let us know which roles fall under this category:",
-                         name = "M1missing",
-                         type = "textarea",
-                         showif = "M1 %contains_word% '6'",
-                         optional = "*")
+detail_other_roleinMPA <- add_element(label = "#### 🛟 If you selected **Other**, please let us know which roles fall under this category:",
+                                      name = "detail_other_roleinMPA",
+                                      type = "textarea",
+                                      showif = "roleinMPA %contains_word% '6'",
+                                      optional = "*")
 
-S4 <- S1; S4$name <- "S4"
+submit_roleinMPA <- submit_MPA; submit_roleinMPA$name <- "submit_roleinMPA"
 
 # Page 5 -----------------------------------------------------------------------
 
 CSS5 <- CSS; CSS5$name <- "CSS5"
 
-P5 <-  P4; P5$name <- "P5"; P5$showif <- "!M1 %contains_word% '7' && !M1 %contains_word% '8'"
+partB_note2 <-  partB_note1; partB_note2$name <- "partB_note2"; partB_note2$showif <- "!roleinMPA %contains_word% '7' && !roleinMPA %contains_word% '8'"
 
-N5 <-  add_element(label = "## 2: Number of people in each role. 
+note_personel <-  add_element(label = "## 2: Number of people in each role. 
 #### For each workforce category selected previously, indicate the number of formal staff who work on this specific MPA.
 🪼 For each role, report the number of staff in that role or use COMMENT to record in your own way.
 🦀 FTE = Full-time equivalent.
 💡 Add a COMMENT to add more options or to explain anything you think we should know.",
-                   name = "N5",
-                   showif = "!M1 %contains_word% '7' && !M1 %contains_word% '8'",
-                   type = "note")
+name = "note_personel",
+showif = "!roleinMPA %contains_word% '7' && !roleinMPA %contains_word% '8'",
+type = "note")
 
 add_personel_questions <- function(label = "### **what**",
                                    category = "what",
                                    showif = NULL,
                                    value = "0",
                                    type = "number 0,999999,1") {
-
+  
   E1 <- add_element(label = label,
-                    name = paste0("PERS_note", category),
+                    name = paste0("pers_note", category),
                     showif = showif,
                     type = "note")
   
   E2 <- add_element(label = "Full time personel\n(working all year; counted as 1 FTE each)",
-                    name = paste0("PERS_", category, "_FullTime"),
+                    name = paste0("pers_", category, "_FullTime"),
                     value = value, showif = showif, type = type)
   
   E3 <- add_element(label = "Part time personel\n(counted as 0.5 FTE each)",
-                    name = paste0("PERS_", category, "_PartTime"),
+                    name = paste0("pers_", category, "_PartTime"),
                     value = value, showif = showif, type = type)
   
   E4 <- add_element(label = "Seasonal personel\n(working during e.g. summer; counted as 0.25 FTE each)",
-                    name = paste0("PERS_", category, "_Seasonal"),
+                    name = paste0("pers_", category, "_Seasonal"),
                     value = value, showif = showif, type = type)
   
   E5 <- add_element(label = "Occcasional personel\n(working few weeks a year; counted as 0.1 FTE each)",
-                    name = paste0("PERS_", category, "_Occasional"),
+                    name = paste0("pers_", category, "_Occasional"),
                     value = value, showif = showif, type = type)
   
   # NOT WORKING
   # Block <- add_element(label = "<div style='color:#ffff'><strong>NOTE</strong> If you leave all personel to 0, the category will be discarded.</div>",
-  #                     name = paste0("PERS_Block", category),
+  #                     name = paste0("pers_Block", category),
   #                     type = "block",
-  #                     showif = paste0(showif, " && PERS_", category, "_FullTime == 0 &&
-  #                                     PERS_", category, "_PartTime == 0 &&
-  #                                     PERS_", category, "_Seasonal == 0 &&
-  #                                     PERS_", category, "_Occasional == 0"))
+  #                     showif = paste0(showif, " && pers_", category, "_FullTime == 0 &&
+  #                                     pers_", category, "_PartTime == 0 &&
+  #                                     pers_", category, "_Seasonal == 0 &&
+  #                                     pers_", category, "_Occasional == 0"))
   
   bind_rows(E1, E2, E3, E4, E5)
 }
 
-## Those are personnel questions, do make sure that this agrees with category numbers in M1 above!
+## Those are personnel questions, do make sure that this agrees with category numbers in roleinMPA above!
 
-PERS1 <- add_personel_questions(label = "### **Leadership focused**", category = "leadership",
-                                showif = "M1 %contains_word% '1'")
+pers1 <- add_personel_questions(label = "### **Leadership focused**", category = "leadership",
+                                showif = "roleinMPA %contains_word% '1'")
 
-PERS2 <- add_personel_questions(label = "### **In-site focused**", category = "site",
-                                showif = "M1 %contains_word% '2'")
+pers2 <- add_personel_questions(label = "### **In-site focused**", category = "site",
+                                showif = "roleinMPA %contains_word% '2'")
 
-PERS3 <- add_personel_questions(label = "### **Support focused**", category = "support",
-                                showif = "M1 %contains_word% '3'")
+pers3 <- add_personel_questions(label = "### **Support focused**", category = "support",
+                                showif = "roleinMPA %contains_word% '3'")
 
-PERS4 <- add_personel_questions(label = "### **Stakeholder focused**", category = "stakeholder",
-                                showif = "M1 %contains_word% '4'")
+pers4 <- add_personel_questions(label = "### **Stakeholder focused**", category = "stakeholder",
+                                showif = "roleinMPA %contains_word% '4'")
 
-PERS5 <- add_personel_questions(label = "### **Science focused**", category = "scientists",
-                                showif = "M1 %contains_word% '5'")
+pers5 <- add_personel_questions(label = "### **Science focused**", category = "scientists",
+                                showif = "roleinMPA %contains_word% '5'")
 
-PERS6 <- add_personel_questions(label = "### **Other**", category = "other",
-                                showif = "M1 %contains_word% '6'")
+pers6 <- add_personel_questions(label = "### **Other**", category = "other",
+                                showif = "roleinMPA %contains_word% '6'")
 
-PERS_check <- add_element(label = "#### Add a COMMENT",
-                  name = "PERS_check",
-                  type = "check")
+pers_check <- add_element(label = "#### Add a COMMENT",
+                          name = "pers_check",
+                          type = "check")
 
-PERS_comment <- add_element(label = "#### 💡 Add more options or explain anything you think we should know about this workforce category",
-                  name = "PERS_comment",
-                  showif = "PERS_check",
-                  type = "textarea",
-                  optional = "*")
+pers_comment <- add_element(label = "#### 💡 Add more options or explain anything you think we should know about this workforce category",
+                            name = "pers_comment",
+                            showif = "pers_check",
+                            type = "textarea",
+                            optional = "*")
 
-S5 <- S1; S5$name <- "S5"; S5$showif = "!M1 %contains_word% '7' && !M1 %contains_word% '8'"
+submit_pers <- submit_blank; submit_pers$name <- "submit_pers"; submit_pers$showif = "!roleinMPA %contains_word% '7' && !roleinMPA %contains_word% '8'"
 
 # Page 6 (optional) ------------------------------------------------------------
 
 CSS6 <- CSS; CSS6$name <- "CSS6"
 
-P6 <- P4; P6$name <- "P6"
+partB_note3 <- partB_note2; partB_note3$name <- "partB_note3"
 
-SUMM_note <- add_element(label = "## 3: Confirm the number of FTE. 
+note_FTE <- add_element(label = "## 3: Confirm the number of FTE. 
 #### For each workforce category please review the number of FTE corresponding to your previous choices and <b>adjust</b> the numbers if necessary.
 🦀 FTE = Full-time equivalent.",
-                         type = "note",
-                         name = "SUMM_note")
+type = "note",
+name = "note_FTE")
 
 FTE_formula <- function(category) {
-  form <- paste0("PERS_", category, "_FullTime + PERS_", category, "_PartTime*0.5 + PERS_", category, "_Seasonal*0.25 + PERS_", category, "_Occasional*0.1")
+  form <- paste0("pers_", category, "_FullTime + pers_", category, "_PartTime*0.5 + pers_", category, "_Seasonal*0.25 + pers_", category, "_Occasional*0.1")
   paste0("ifelse(is.na(", form, "), 0,", form, ")")
 }
 
@@ -488,12 +490,12 @@ $(document).ready(function() {
   }).trigger("change");
 });
 </script>)",
-                         name = "total_note",
-                         type = "text")
+name = "total_note",
+type = "text")
 
 total_info <- add_element(label = "💡 The TOTAL is just the sum for the categories above; you cannot modify it directly.",
-                        name = "total_info",
-                        type = "note")
+                          name = "total_info",
+                          type = "note")
 
 total_validate <- add_element(label = "#### 🔎 <b>Confirm</b>",
                               name = "total_validate",
@@ -501,173 +503,168 @@ total_validate <- add_element(label = "#### 🔎 <b>Confirm</b>",
                               optional = "!")
 
 total_comment_check <- add_element(label = "#### Add a COMMENT",
-                                        name = "total_comment_check",
-                                        type = "check")
+                                   name = "total_comment_check",
+                                   type = "check")
 
 total_comment <- add_element(label = "#### 💡 Tell us more, so we fully understand",
-                                  name = "total_comment",
-                                  showif = "total_comment_check",
-                                  type = "textarea",
-                                  optional = "*")
+                             name = "total_comment",
+                             showif = "total_comment_check",
+                             type = "textarea",
+                             optional = "*")
 
-S6 <- S1; S6$name <- "S6"
+submit_total <- submit_blank; submit_total$name <- "submit_total"
 
 # Page 7 -----------------------------------------------------------------------
 
 CSS7 <- CSS; CSS7$name <- "CSS7"
 
-P7 <- P4; P7$name <- "P7"
+partB_note4 <- partB_note3; partB_note4$name <- "partB_note4"
 
-Tech_note <-  add_element(label = "## 4: Technology used to help?",
-                          name = "Tech_note",
-                          type = "note")
-                          
-Tech_choice <-  add_element(label = "#### If you use technology or other aids to help your MPA workforce expand its effectiveness in THIS specific MPA, please list.
+note_techinMPA <-  add_element(label = "## 4: Technology used to help?",
+                               name = "note_techinMPA",
+                               type = "note")
+
+techinMPA <-  add_element(label = "#### If you use technology or other aids to help your MPA workforce expand its effectiveness in THIS specific MPA, please list.
 💡 Select all that apply.",
-                            name = "Tech_choice",
-                            type = "mc_multiple",
-                            class = "mc_vertical",
-                            choice1 = "**Satellite technologies**",
-                            choice2 = "**Radar technologies**",
-                            choice3 = "**Underwater acoustic technologies**",
-                            choice4 = "**Drone technologies**",
-                            choice5 = "**MPA evaluation technology** (e.g., [eOceans](https://www.eoceans.org/))",
-                            choice6 = "**Reporting tools**: Phone, email, or app reporting for marine species, activities, incidents",
-                            choice7 = "None of the above",
-                            choice8 = "I don't know",
-                            optional = "!")
+name = "techinMPA",
+type = "mc_multiple",
+class = "mc_vertical",
+choice1 = "**Satellite technologies**",
+choice2 = "**Radar technologies**",
+choice3 = "**Underwater acoustic technologies**",
+choice4 = "**Drone technologies**",
+choice5 = "**MPA evaluation technology** (e.g., [eOceans](https://www.eoceans.org/))",
+choice6 = "**Reporting tools**: Phone, email, or app reporting for marine species, activities, incidents",
+choice7 = "None of the above",
+choice8 = "I don't know",
+optional = "!")
 
-Block_tech1 <- add_element(label = "<div style='color:#ffff'>The answer <strong>None of the above</strong> cannot be combined with another category</div>",
-                           name = "Block_tech1",
-                           type = "block",
-                           showif = "(Tech_choice %contains_word% '1' | Tech_choice %contains_word% '2' | Tech_choice %contains_word% '3' | Tech_choice %contains_word% '4' | Tech_choice %contains_word% '5' | Tech_choice %contains_word% '6') && Tech_choice %contains_word% '7'")
+block_none_techinMPA <- add_element(label = "<div style='color:#ffff'>The answer <strong>None of the above</strong> cannot be combined with another category</div>",
+                                    name = "block_none_techinMPA",
+                                    type = "block",
+                                    showif = "(techinMPA %contains_word% '1' | techinMPA %contains_word% '2' | techinMPA %contains_word% '3' | techinMPA %contains_word% '4' | techinMPA %contains_word% '5' | techinMPA %contains_word% '6') && techinMPA %contains_word% '7'")
 
-Block_tech2 <- add_element(label = "<div style='color:#ffff'>The answer <strong>I don't know</strong> cannot be combined with another category</div>",
-                           name = "Block_tech2",
-                           type = "block",
-                           showif = "(Tech_choice %contains_word% '1' | Tech_choice %contains_word% '2' | Tech_choice %contains_word% '3' | Tech_choice %contains_word% '4' | Tech_choice %contains_word% '5' | Tech_choice %contains_word% '6' | Tech_choice %contains_word% '7') && Tech_choice %contains_word% '8'")
+block_dontknow_techinMPA <- add_element(label = "<div style='color:#ffff'>The answer <strong>I don't know</strong> cannot be combined with another category</div>",
+                                        name = "block_dontknow_techinMPA",
+                                        type = "block",
+                                        showif = "(techinMPA %contains_word% '1' | techinMPA %contains_word% '2' | techinMPA %contains_word% '3' | techinMPA %contains_word% '4' | techinMPA %contains_word% '5' | techinMPA %contains_word% '6' | techinMPA %contains_word% '7') && techinMPA %contains_word% '8'")
 
-Other_tech <- add_element(label = "#### 🦀 Add other technologies that qualify
+detail_other_techinMPA <- add_element(label = "#### 🦀 Add other technologies that qualify
 🪼 Brand names are fine too.
 💡 After typing, press enter to validate what you added.",
-                          type = "select_or_add_multiple",
-                          name = "Other_tech",
-                          choice1 = "I can't think of anything",
-                          optional = "*") ##FIXME decide on whether this should be optional or not
-                                          ##FIXME if I can't think of anything selected, there should be no other answer
+type = "select_or_add_multiple",
+name = "detail_other_techinMPA",
+choice1 = "I can't think of anything",
+optional = "*")
 
-Other_tech_comment_check <- add_element(label = "#### Add a COMMENT",
-                                        name = "Other_tech_comment_check",
-                                        type = "check")
+techinMPA_check <- add_element(label = "#### Add a COMMENT",
+                               name = "techinMPA_check",
+                               type = "check")
 
-Other_tech_comment <- add_element(label = "#### 💡 Tell us more, so we fully understand",
-                                  name = "Other_tech_comment",
-                                  showif = "Other_tech_comment_check",
-                                  type = "textarea",
-                                  optional = "*")
-  
-S7 <- S1; S7$name <- "S7"
+techinMPA_comment <- add_element(label = "#### 💡 Tell us more, so we fully understand",
+                                 name = "techinMPA_comment",
+                                 showif = "techinMPA_check",
+                                 type = "textarea",
+                                 optional = "*")
+
+submit_tech <- submit_blank; submit_tech$name <- "submit_tech"
 
 # Page 8 -----------------------------------------------------------------------
 
 CSS8 <- CSS; CSS8$name <- "CSS8"
 
-P8 <- P4; P8$name <- "P8"
+partB_note5 <- partB_note4; partB_note5$name <- "partB_note5"
 
-Others_note <-  add_element(label = "## 5: Who else is nearby?",
-                            name = "Others_note",
-                            type = "note")
+note_operator <-  add_element(label = "## 5: Who else is nearby?",
+                              name = "note_operator",
+                              type = "note")
 
-Others_choice <-  add_element(label = "#### Who else operates seasonally or more within or nearby this specific MPA who is *not* formally responsible for working for this MPA?
+operator <-  add_element(label = "#### Who else operates seasonally or more within or nearby this specific MPA who is *not* formally responsible for working for this MPA?
 💡 Select all that apply.",
-                            name = "Others_choice",
-                            type = "mc_multiple",
-                            class = "mc_vertical",
-                            choice1 = "**Fishers** 🎣",
-                            choice2 = "**Divers** 🤿",
-                            choice3 = "**Surfers** 🏄️",
-                            choice4 = "**Boat operators** ⛵",
-                            choice5 = "**Other** — for operators not listed above",
-                            choice6 = "None — no one uses this MPA 🏝️",
-                            choice7 = "I don't know",
-                            optional = "!")
+name = "operator",
+type = "mc_multiple",
+class = "mc_vertical",
+choice1 = "**Fishers** 🎣",
+choice2 = "**Divers** 🤿",
+choice3 = "**Surfers** 🏄️",
+choice4 = "**Boat operators** ⛵",
+choice5 = "**Other** — for operators not listed above",
+choice6 = "None — no one uses this MPA 🏝️",
+choice7 = "I don't know",
+optional = "!")
 
-Block_others2 <- add_element(label = "<div style='color:#ffff'>The answer <strong>I don't know</strong> cannot be combined with another category</div>",
-                             name = "Block_others2",
-                             type = "block",
-                             showif = "(Others_choice %contains_word% '1' | Others_choice %contains_word% '2' | Others_choice %contains_word% '3' | Others_choice %contains_word% '4' | Others_choice %contains_word% '5' | Others_choice %contains_word% '6') && Others_choice %contains_word% '7'")
+block_none_operator <- add_element(label = "<div style='color:#ffff'>The answer <strong>None</strong> cannot be combined with another category</div>",
+                                   name = "block_none_operator",
+                                   type = "block",
+                                   showif = "(operator %contains_word% '1' | operator %contains_word% '2' | operator %contains_word% '3' | operator %contains_word% '4' | operator %contains_word% '5') && operator %contains_word% '6'")
 
-Block_others3 <- add_element(label = "<div style='color:#ffff'>The answer <strong>None</strong> cannot be combined with another category</div>",
-                             name = "Block_others3",
-                             type = "block",
-                             showif = "(Others_choice %contains_word% '1' | Others_choice %contains_word% '2' | Others_choice %contains_word% '3' | Others_choice %contains_word% '4' | Others_choice %contains_word% '5') && Others_choice %contains_word% '6'")
+block_dontknow_operator <- add_element(label = "<div style='color:#ffff'>The answer <strong>I don't know</strong> cannot be combined with another category</div>",
+                                       name = "block_dontknow_operator",
+                                       type = "block",
+                                       showif = "(operator %contains_word% '1' | operator %contains_word% '2' | operator %contains_word% '3' | operator %contains_word% '4' | operator %contains_word% '5' | operator %contains_word% '6') && operator %contains_word% '7'")
 
-Fishers <- add_element(label = "#### 🦀 Specify the type of fishers 🎣
+detail_fishers_operator <- add_element(label = "#### 🦀 Specify the type of fishers 🎣
 💡 After typing, press enter to validate what you added.",
 type = "select_or_add_multiple",
-name = "Fishers",
+name = "detail_fishers_operator",
 choice1 = "I can't think of any",
-showif = "Others_choice %contains_word% '1'",
+showif = "operator %contains_word% '1'",
 optional = "*")
 
-Boats <- add_element(label = "#### 🦀 Specify the type of boat operators ⛵
+detail_boats_operator <- add_element(label = "#### 🦀 Specify the type of boat operators ⛵
 💡 After typing, press enter to validate what you added.",
 type = "select_or_add_multiple",
-name = "Boats",
+name = "detail_boats_operator",
 choice1 = "I can't think of any",
-showif = "Others_choice %contains_word% '4'",
+showif = "operator %contains_word% '4'",
 optional = "*")
 
-Others <- add_element(label = "#### 🦀 Add other operators
+detail_other_operator <- add_element(label = "#### 🦀 Add other operators
 💡 After typing, press enter to validate what you added.",
 type = "select_or_add_multiple",
-name = "Others",
+name = "detail_other_operator",
 choice1 = "I can't think of any",
-showif = "Others_choice %contains_word% '5'",
+showif = "operator %contains_word% '5'",
 optional = "*")
 
-Others_comment_check <- add_element(label = "#### Add a COMMENT",
-                                    name = "Others_comment_check",
-                                    type = "check")
+operator_check <- add_element(label = "#### Add a COMMENT",
+                              name = "operator_check",
+                              type = "check")
 
-Others_comment <- add_element(label = "#### 💡 Tell us more, so we fully understand",
-                              name = "Others_comment",
-                              showif = "Others_comment_check",
-                              type = "textarea")
+operator_comment <- add_element(label = "#### 💡 Tell us more, so we fully understand",
+                                name = "operator_comment",
+                                showif = "operator_check",
+                                type = "textarea")
 
-S8 <- S1; S8$name <- "S8"
+submit_operator <- submit_blank; submit_operator$name <- "submit_operator"
 
 # Page 9 -----------------------------------------------------------------------
 
 CSS9 <- CSS; CSS9$name <- "CSS9"
 
-P9 <- P4; P9$name <- "P9"
+partB_note6 <- partB_note5; partB_note6$name <- "partB_note6"
 
-Anythingelse_note <-  add_element(label = "## 6: Anything else?",
-                            name = "Anythingelse_note",
-                            type = "note")
+note_anythingelse <-  add_element(label = "## 6: Anything else?",
+                                  name = "note_anythingelse",
+                                  type = "note")
 
-Anythingelse_comment <- add_element(label = "#### Is there anything else you would like us to know about this specific MPA workforce?
+anythingelse <- add_element(label = "#### Is there anything else you would like us to know about this specific MPA workforce?
 💡 Tell us more, so we fully understand.",
-                                    name = "Anythingelse_comment",
-                                    type = "textarea",
-                                    optional = "*")
+name = "anythingelse",
+type = "textarea",
+optional = "*")
 
-#Other_MPA <- add_element(label = "Test loopback",
-#                         name = "loopback",
-#                         type = "check")
-
-S9 <- S1; S9$name <- "S9"
+submit_anythingelse <- submit_blank; submit_anythingelse$name <- "submit_anythingelse"
 
 # Page 10 ----------------------------------------------------------------------
 
 CSS10 <- CSS; CSS10$name <- "CSS10"
 
-P10 <-  add_element(label = "# <mark> Part C: Tell us about you (4 questions) </mark>",
-                    name = "P10",
-                    type = "note")
+partC_note1 <-  add_element(label = "# <mark> Part C: Tell us about you (4 questions) </mark>",
+                            name = "partC_note1",
+                            type = "note")
 
-E10 <- add_element(label = "## NOTE
+note_privacy <- add_element(label = "## NOTE
 <style>
 p, summary, li{
   color:#484c50;
@@ -688,185 +685,185 @@ p, summary, li{
   </ol>
 </details>
 ",
-name = "E10",
+name = "note_privacy",
 type = "note")
 
-Role_note <-  add_element(label = "## 1: Your role(s)?",
-                          name = "Role_note",
-                          type = "note")
+note_roleself <-  add_element(label = "## 1: Your role(s)?",
+                              name = "note_roleself",
+                              type = "note")
 
-Role_choice <- add_element(label = "#### What role(s) do you serve in this MPA?
+roleself <- add_element(label = "#### What role(s) do you serve in this MPA?
 💡 Select all that apply.",
-                           name = "Role_choice",
-                           type = "mc_multiple",
-                           class = "mc_vertical",
-                           choice1 = "**Leadership focused** — e.g., manager, superintendent, decision maker",
-                           choice2 = "**In-site focused** — e.g., ranger and ranger-like roles working in the MPA, with and without enforcement capabilities",
-                           choice3 = "**Support focused** — e.g., supporting staff, administrative support, finance",
-                           choice4 = "**Stakeholder focused** — e.g., education and outreach",
-                           choice5 = "**Science focused** — e.g., collecting and analyzing data to address questions",
-                           choice6 = "**Other** — for roles not listed above",
-                           choice7 = "None — no one works on this MPA in a formal role",
-                           choice8 = "I don't know",
-                           optional = "!")
+name = "roleself",
+type = "mc_multiple",
+class = "mc_vertical",
+choice1 = "**Leadership focused** — e.g., manager, superintendent, decision maker",
+choice2 = "**In-site focused** — e.g., ranger and ranger-like roles working in the MPA, with and without enforcement capabilities",
+choice3 = "**Support focused** — e.g., supporting staff, administrative support, finance",
+choice4 = "**Stakeholder focused** — e.g., education and outreach",
+choice5 = "**Science focused** — e.g., collecting and analyzing data to address questions",
+choice6 = "**Other** — for roles not listed above",
+choice7 = "None — no one works on this MPA in a formal role",
+choice8 = "I don't know",
+optional = "!")
 
-Role_block1 <- add_element(label = "<div style='color:#ffff'>The answer <strong>None</strong> cannot be combined with another category</div>",
-                           name = "Role_block1",
-                           type = "block",
-                           showif = "(Role_choice %contains_word% '1' | Role_choice %contains_word% '2' | Role_choice %contains_word% '3' | Role_choice %contains_word% '4' | Role_choice %contains_word% '5' | Role_choice %contains_word% '6') && Role_choice %contains_word% '7'")
+block_none_roleself <- add_element(label = "<div style='color:#ffff'>The answer <strong>None</strong> cannot be combined with another category</div>",
+                                   name = "block_none_roleself",
+                                   type = "block",
+                                   showif = "(roleself %contains_word% '1' | roleself %contains_word% '2' | roleself %contains_word% '3' | roleself %contains_word% '4' | roleself %contains_word% '5' | roleself %contains_word% '6') && roleself %contains_word% '7'")
 
-Role_block2 <- add_element(label = "<div style='color:#ffff'>The answer <strong>I don't know</strong> cannot be combined with another category</div>",
-                           name = "Role_block2",
-                           type = "block",
-                           showif = "(Role_choice %contains_word% '1' | Role_choice %contains_word% '2' | Role_choice %contains_word% '3' | Role_choice %contains_word% '4' | Role_choice %contains_word% '5' | Role_choice %contains_word% '6' | Role_choice %contains_word% '7') && Role_choice %contains_word% '8'")
+block_dontknow_roleself <- add_element(label = "<div style='color:#ffff'>The answer <strong>I don't know</strong> cannot be combined with another category</div>",
+                                       name = "block_dontknow_roleself",
+                                       type = "block",
+                                       showif = "(roleself %contains_word% '1' | roleself %contains_word% '2' | roleself %contains_word% '3' | roleself %contains_word% '4' | roleself %contains_word% '5' | roleself %contains_word% '6' | roleself %contains_word% '7') && roleself %contains_word% '8'")
 
-Role_other_details <- add_element(label = "#### 💡 Tell us more about your **Other** role(s) so we fully understand",
-                                  name = "Role_other_details",
-                                  showif = "Role_choice %contains_word% '6'",
-                                  type = "textarea",
-                                  optional = "*")
+detail_other_roleself <- add_element(label = "#### 💡 Tell us more about your **Other** role(s) so we fully understand",
+                                     name = "detail_other_roleself",
+                                     showif = "roleself %contains_word% '6'",
+                                     type = "textarea",
+                                     optional = "*")
 
-Role_comment_check <- add_element(label = "#### Add a COMMENT",
-                                  name = "Role_comment_check",
-                                  type = "check")
+roleself_check <- add_element(label = "#### Add a COMMENT",
+                              name = "roleself_check",
+                              type = "check")
 
-Role_comment <- add_element(label = "#### 💡 Tell us more, so we fully understand",
-                            name = "Role_comment",
-                            showif = "Role_comment_check",
-                            type = "textarea")
+roleself_comment <- add_element(label = "#### 💡 Tell us more, so we fully understand",
+                                name = "roleself_comment",
+                                showif = "roleself_check",
+                                type = "textarea")
 
-Name_note <-  add_element(label = "## 2: Your name?",
-                          name = "Name_note",
+name_note <-  add_element(label = "## 2: Your name?",
+                          name = "name_note",
                           type = "note")
 
-Name_input <- add_element(label = "#### What is your name?",
-                          name = "Name_input",
-                          type = "text",
-                          optional = "*",
-                          showif = "!Anonymous_check")
+name <- add_element(label = "#### What is your name?",
+                    name = "name",
+                    type = "text",
+                    optional = "*",
+                    showif = "!name_anonymous")
 
-Anonymous_check <- add_element(label = "#### 🤫 I prefer to remain anonymous",
-                               name = "Anonymous_check",
-                               type = "check")
+name_anonymous <- add_element(label = "#### 🤫 I prefer to remain anonymous",
+                              name = "name_anonymous",
+                              type = "check")
 
-Anonymous_info <- add_element(label = "#### 💡 Although remaining anonymous may affect how we can include your MPA, your input is still valuable.",
-                              name = "Anonymous_info",
-                              type = "note",
-                              showif = "Anonymous_check")
+name_info <- add_element(label = "#### 💡 Although remaining anonymous may affect how we can include your MPA, your input is still valuable.",
+                         name = "name_info",
+                         type = "note",
+                         showif = "name_anonymous")
 
-Name_comment_check <- add_element(label = "#### Add a COMMENT",
-                                  name = "Name_comment_check",
-                                  type = "check")
+name_check <- add_element(label = "#### Add a COMMENT",
+                          name = "name_check",
+                          type = "check")
 
-Name_comment <- add_element(label = "#### 💡 Tell us more, so we fully understand",
-                            name = "Name_comment",
-                            showif = "Name_comment_check",
+name_comment <- add_element(label = "#### 💡 Tell us more, so we fully understand",
+                            name = "name_comment",
+                            showif = "name_check",
                             type = "textarea")
 
-Email_note <-  add_element(label = "## 3: Your email?",
-                           name = "Email_note",
+email_note <-  add_element(label = "## 3: Your email?",
+                           name = "email_note",
                            type = "note")
 
-Email_input <- add_element(label = "#### What is your email address?",
-                           name = "Email_input",
-                           type = "email",
-                           showif = "!Anonymous_email_check",
-                           optional = "*")
+email <- add_element(label = "#### What is your email address?",
+                     name = "email",
+                     type = "email",
+                     showif = "!email_anonymous",
+                     optional = "*")
 
-Anonymous_email_check <- add_element(label = "#### 🤫 I prefer to remain anonymous",
-                               name = "Anonymous_email_check",
+email_anonymous <- add_element(label = "#### 🤫 I prefer to remain anonymous",
+                               name = "email_anonymous",
                                type = "check")
 
-Anonymous_email_info <- add_element(label = "#### 💡 Without an email, we will not be able to follow up or share updates, but your response is still appreciated.",
-                              name = "Anonymous_email_info",
-                              type = "note",
-                              showif = "Anonymous_email_check")
+email_info <- add_element(label = "#### 💡 Without an email, we will not be able to follow up or share updates, but your response is still appreciated.",
+                          name = "email_info",
+                          type = "note",
+                          showif = "email_anonymous")
 
-Email_comment_check <- add_element(label = "#### Add a COMMENT",
-                                   name = "Email_comment_check",
-                                   type = "check")
+email_check <- add_element(label = "#### Add a COMMENT",
+                           name = "email_check",
+                           type = "check")
 
-Email_comment <- add_element(label = "#### 💡 Tell us more, so we fully understand",
-                             name = "Email_comment",
-                             showif = "Email_comment_check",
+email_comment <- add_element(label = "#### 💡 Tell us more, so we fully understand",
+                             name = "email_comment",
+                             showif = "email_check",
                              type = "textarea")
 
-Acknowledgement_note <-  add_element(label = "## 4: How can we acknowledge you?",
-                                     name = "Acknowledgement_note",
+note_acknowledgement <-  add_element(label = "## 4: How can we acknowledge you?",
+                                     name = "note_acknowledgement",
                                      type = "note")
 
-Acknowledgement_input <- add_element(label = "#### <b>We can't do this without you!</b> If you would like to be listed in the acknowledgments of the report and other publications, please share how you would like this to appear.
+acknowledgement <- add_element(label = "#### <b>We can't do this without you!</b> If you would like to be listed in the acknowledgments of the report and other publications, please share how you would like this to appear.
 🪼 You may use your first and/or last name. 
 💡If you add nothing, your name will not appear.",
-                                     name = "Acknowledgement_input",
-                                     type = "text",
-                                     optional  = "*")
+name = "acknowledgement",
+type = "text",
+optional  = "*")
 
-S13 <- S1; S13$name <- "S13"
+submit_acknowledgement <- submit_blank; submit_acknowledgement$name <- "submit_acknowledgement"
 
 # Page 11 ----------------------------------------------------------------------
 
 CSS11 <- CSS; CSS11$name <- "CSS11"
 
-thanks_head <-  add_element(label = "# <mark>Thank you</mark>",
-                            name = "thanks_head",
+partD_note1 <-  add_element(label = "# <mark>Thank you</mark>",
+                            name = "partD_note1",
                             type = "note")
 
-thanks_note <-  add_element(label = "### We greatly appreciate your support for this Global Marine Protected Area Workforce Study—thank you for contributing to this important research initiative.
+note_thanks <-  add_element(label = "### We greatly appreciate your support for this Global Marine Protected Area Workforce Study—thank you for contributing to this important research initiative.
 #### Before letting you go, we have a couple of additional questions for you...",
-                            name = "thanks_note",
-                            type = "note")
+name = "note_thanks",
+type = "note")
 
 
 P14 <-  add_element(label = "# <mark>Part D: Tell us more? (2 questions) </mark>",
                     name = "P14",
                     type = "note")
 
-Referrals_note <-  add_element(label = "## 1: Referrals?",
-                               name = "Referrals_note",
-                               type = "note")
-
-Referrals_text <- add_element(label = "#### Who else should we hear from for this or other MPAs? Enter their details here or share the link with them and your networks.
-🪼 If an email is provided, we will only send personal messages and will not distribute or store them. 
-💡Add a COMMENT to explain any other suggestions to get wide distribution.",
-                              name = "Referrals_text",
-                              type = "textarea",
-                              optional = "*")
-
-
-Adequate_note <-  add_element(label = "## 2: Is your workforce adequate?",
-                              name = "Adequate_note",
+note_referral <-  add_element(label = "## 1: Referrals?",
+                              name = "note_referral",
                               type = "note")
 
-Adequate_input <- add_element(label = "#### In your opinion, is this current level of workforce adequate for ensuring this specific MPA can successfully achieve the objectives (fulfil the purpose) for which it was established?
+referral <- add_element(label = "#### Who else should we hear from for this or other MPAs? Enter their details here or share the link with them and your networks.
+🪼 If an email is provided, we will only send personal messages and will not distribute or store them. 
+💡Add a COMMENT to explain any other suggestions to get wide distribution.",
+name = "referral",
+type = "textarea",
+optional = "*")
+
+
+note_adequate <-  add_element(label = "## 2: Is your workforce adequate?",
+                              name = "note_adequate",
+                              type = "note")
+
+adequate <- add_element(label = "#### In your opinion, is this current level of workforce adequate for ensuring this specific MPA can successfully achieve the objectives (fulfil the purpose) for which it was established?
 🪼 Adequacy can refer to both the number of personnel and their training/technical skills to meet management needs. 
 💡Add a COMMENT below to explain anything you think we should know.",
-                              name = "Adequate_input",
-                              type = "mc",
-                              class = "mc_vertical",
-                              choice1 = "**Fully Adequate** – Meets or exceeds all requirements and expectations.",
-                              choice2 = "**Mostly Adequate** – Meets nearly all requirements with minor gaps.",
-                              choice3 = "**Moderately Adequate** – Meets most requirements but has room for improvement.",
-                              choice4 = "**Somewhat Adequate** – Meets a few requirements but falls short in key areas.",
-                              choice5 = "**Not Adequate** – Does not meet basic requirements or expectations.",
-                              optional = "*")
+name = "adequate",
+type = "mc",
+class = "mc_vertical",
+choice1 = "**Fully Adequate** – Meets or exceeds all requirements and expectations.",
+choice2 = "**Mostly Adequate** – Meets nearly all requirements with minor gaps.",
+choice3 = "**Moderately Adequate** – Meets most requirements but has room for improvement.",
+choice4 = "**Somewhat Adequate** – Meets a few requirements but falls short in key areas.",
+choice5 = "**Not Adequate** – Does not meet basic requirements or expectations.",
+optional = "*")
 
-Adequate_comment_check <- add_element(label = "#### Add a COMMENT",
-                                      name = "Adequate_comment_check",
-                                      type = "check")
+adequate_check <- add_element(label = "#### Add a COMMENT",
+                              name = "adequate_check",
+                              type = "check")
 
-Adequate_comment <- add_element(label = "#### 💡 Tell us more, so we fully understand",
-                                name = "Adequate_comment",
-                                showif = "Adequate_comment_check",
+adequate_comment <- add_element(label = "#### 💡 Tell us more, so we fully understand",
+                                name = "adequate_comment",
+                                showif = "adequate_check",
                                 type = "textarea")
 
 E15 <- add_element(label = "## NOTE
 #### 🪼 This information will *not* be connected to your personal information or MPA.",
-                   name = "E15",
-                   type = "note")
+name = "E15",
+type = "note")
 
-loopback_note <- add_element(label = "## Can you fill in this survey for another MPA?",
-                             name = "loopback_note",
+note_loopback <- add_element(label = "## Can you fill in this survey for another MPA?",
+                             name = "note_loopback",
                              type = "note")
 
 loopback <- add_element(label = "#### Tell us if you can?",
@@ -877,37 +874,36 @@ loopback <- add_element(label = "#### Tell us if you can?",
                         class = "mc_vertical",
                         optional = "!")
 
-P16 <-  add_element(label = "## 💡 After clicking on *End the survey*, you will be redirected to a new survey.",
-                    name = "P16",
-                    type = "note",
-                    showif = "loopback == '1'")
+loopback_info <-  add_element(label = "## 💡 After clicking on *End the survey*, you will be redirected to a new survey.",
+                              name = "loopback_info",
+                              type = "note",
+                              showif = "loopback == '1'")
 
-S16 <- add_element(label = "End the survey",
-                  name = "S16",
-                  type = "submit")
+submit_end <- add_element(label = "End the survey",
+                          name = "submit_end",
+                          type = "submit")
 
 
 # Save survey -----------------------------------------------------------
 
 survey_tbl <- bind_rows(CSS0, welcome_text, logos, submit_welcome,
-                        CSS1, P1, N1, Q1, S1,
-                        CSS2, P2, N2, Q2, C1, Qmissing, N3, Q_issue1, Q_issue1_text, Warn_multiple, S2,
-                        CSS4, P4, N4, M1, B1, B2, M1missing, S4,
-                        CSS5, P5, N5, PERS1, PERS2, PERS3, PERS4, PERS5, PERS6, PERS_check, PERS_comment, S5,
-                        CSS6, P6, SUMM_note, FTE_leadership, FTE_site, FTE_support, FTE_stakeholder, FTE_scientists, FTE_other,
-                        total_note, total_info, total_validate, total_comment_check, total_comment, S6,
-                        CSS7, P7, Tech_note, Tech_choice, Block_tech1, Block_tech2, Other_tech, Other_tech_comment_check, Other_tech_comment, S7,
-                        CSS8, P8, Others_note, Others_choice, Block_others2, Block_others3, Fishers, Boats, Others, Others_comment_check, Others_comment, S8,
-                        CSS9, P9, Anythingelse_note, Anythingelse_comment, S9,
-                        CSS10, P10, E10, Role_note, Role_choice, Role_block1, Role_block2, Role_other_details, Role_comment_check, Role_comment,
-                        Name_note, Name_input, Anonymous_check, Anonymous_info, Name_comment_check, Name_comment,
-                        Email_note, Email_input, Anonymous_email_check, Anonymous_email_info, Email_comment_check, Email_comment,
-                        Acknowledgement_note, Acknowledgement_input, S13,
-                        CSS11, thanks_head, thanks_note,
-                        Referrals_note, Referrals_text,
-                        Adequate_note, Adequate_input, Adequate_comment_check, Adequate_comment,
-                        loopback_note, loopback, P16, S16
-                        )
+                        CSS1, partA_note1, note_country, select_country, submit_country,
+                        CSS2, partA_note2, note_MPA, select_MPA, script_protectedplanet, 
+                        missing_MPA, inspect_protectedplanet, issue_protectedplanet, fix_protectedplanet, warn_multiple, submit_MPA,
+                        CSS4, partB_note1, note_roleinMPA, roleinMPA, block_none_roleinMPA, block_dontknow_roleinMPA, detail_other_roleinMPA, submit_roleinMPA,
+                        CSS5, partB_note2, note_personel, pers1, pers2, pers3, pers4, pers5, pers6, pers_check, pers_comment, submit_pers,
+                        CSS6, partB_note3, note_FTE, FTE_leadership, FTE_site, FTE_support, FTE_stakeholder, FTE_scientists, FTE_other,
+                        total_note, total_info, total_validate, total_comment_check, total_comment, submit_total,
+                        CSS7, partB_note4, note_techinMPA, techinMPA, block_none_techinMPA, block_dontknow_techinMPA, detail_other_techinMPA, techinMPA_check, techinMPA_comment, submit_tech,
+                        CSS8, partB_note5, note_operator, operator, block_none_operator, block_dontknow_operator, detail_fishers_operator, detail_boats_operator, detail_other_operator, operator_check, operator_comment, submit_operator,
+                        CSS9, partB_note6, note_anythingelse, anythingelse, submit_anythingelse,
+                        CSS10, partC_note1, note_privacy, note_roleself, roleself, block_none_roleself, block_dontknow_roleself, detail_other_roleself, roleself_check, roleself_comment,
+                        name_note, name, name_anonymous, name_info, name_check, name_comment,
+                        email_note, email, email_anonymous, email_info, email_check, email_comment,
+                        note_acknowledgement, acknowledgement, submit_acknowledgement,
+                        CSS11, partD_note1, note_thanks, note_referral, referral,note_adequate, adequate, adequate_check, adequate_comment,
+                        note_loopback, loopback, loopback_info, submit_end
+)
 
 names_tbl <- table(survey_tbl$name)
 if (any(names_tbl > 1)) stop(paste(names(names_tbl)[names_tbl > 1], "duplicated. All name must be unique."))
@@ -919,10 +915,6 @@ write.csv(survey_tbl, file = "cleandata/survey.csv", row.names = FALSE)
 # ©Marine Conservation Institute (2025) | <a href='https://www.eoceans.org/mpa-workforce-study-2025-appendix' target='blank'>Privacy Policy</a> | <a href='https://www.eoceans.org/mpa-workforce-study-2025-appendix' target='blank'>About</a> | [Report technical issues](mailto:courtiol@izw-berlin.de)
 
 # Feedback text at the end
-# # 🦈 Thank you 🐳
-# ##💡 If you want to fill in the survey for another MPA, just [click here](https://workforce-survey.marine-conservation.org/we-need-you) to launch a new survey.
-
-# Alternative
 # # 🦈 Thank you 🐳
 # ##💡 Feel free to share this survey with others: https://workforce-survey.marine-conservation.org/we-need-you
 
