@@ -72,7 +72,7 @@ h6 {
 mark {
  line-height: 2;
  background-color: #0B1215;
- color: #FFD700;
+ color: white;
 }
 
 h4 {
@@ -93,13 +93,13 @@ li{
 
 .run-container .btn-info {
   color:#0B1215;
-  border:5px solid rgb(21 45 101);
+  border:5px solid #0B1215;
 }
 .run-container .btn-info:active,
 .run-container .btn-info:focus,
 .run-container .btn-info:hover {
-  background:rgb(21 45 101)!important;
-  border-color:rgb(21 45 101)!important;
+  background:#0B1215!important;
+  border-color:#0B1215!important;
   color:#fff!important
 }
 
@@ -107,11 +107,11 @@ li{
 type = "note",
 name = "CSS")
 
-# First page of questionnaire ---------------------------------------------
+# Page 1 ---------------------------------------------
 
 CSS0 <- CSS; CSS0$name <- "CSS0"
 
-N0 <-  add_element(label = "
+welcome_text <-  add_element(label = "
 <style>
 p {
   font-size:130%;
@@ -147,7 +147,7 @@ employees, and others who have a formal role actively contributing to achieving 
 
 <p>💡 Click <a href='https://www.eoceans.org/mpa-workforce-study-2025-appendix' target='blank'>here</a> to learn about <em>Data Access</em>, <em>Risks</em>, <em>Support</em>, <em>Funders</em>, and more.</p>
 
-<p>🌟 <strong>Thank you!</strong><br>
+<p>🪼 <strong>Thank you!</strong><br>
 Your input is invaluable to this study and will provide crucial insights for others working on MPAs like you.<br>
 Together, we’re strengthening the global MPA network.</p>
 
@@ -156,11 +156,11 @@ Together, we’re strengthening the global MPA network.</p>
 Beth Pike, Marine Conservation Institute<br>
 Dr. Alexandre Courtiol, Leibniz-IZW</p>
 ",
-                    name = "N0",
-                    type = "note")## FIXME, what to link in [here]?
+                    name = "welcome_text",
+                    type = "note")
 
-S0 <- add_element(label = "Let's begin",
-                  name = "S0",
+submit_welcome <- add_element(label = "Let's begin",
+                  name = "submit_welcome",
                   type = "submit")
 
 logos <- add_element(label = "
@@ -185,7 +185,7 @@ logos <- add_element(label = "
                      type = "note",
                      name = "logos")
 
-# Second page of questionnaire ---------------------------------------------
+# Page 2 ---------------------------------------------
 
 CSS1 <- CSS; CSS1$name <- "CSS1"
 
@@ -198,7 +198,7 @@ N1 <-  add_element(label = "## 1: Select your country",
                    type = "note")
 
 Q1 <- add_element(label = "#### Select the country (or overseas land) with the MPA you are responding for
-🌟 You can search using name, partial name, or ISO code.
+🪼 You can search using name, partial name, or ISO code.
 💡 Some overseas lands or islands are listed under their own name, e.g. Guadeloupe is listed under 'Guadeloupe (GLP)' and not under 'France (FRA)'.",
                   name = "country",
                   class = "cant_add_choice", 
@@ -208,7 +208,7 @@ S1 <- add_element(label = "Continue",
                   name = "S1",
                   type = "submit")
 
-# Page 3 of questionnaire ---------------------------------------------
+# Page 3 ---------------------------------------------
 
 CSS2 <- CSS; CSS2$name <- "CSS2"
 
@@ -222,7 +222,7 @@ N2 <-  add_element(label = "## 2: Select your MPA",
 
 add_MPAs_country <- function(countrycode) {
   add_element(label = "#### Select the MPA you are responding for
-🌟 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
+🪼 You can search using name, partial name, or World Database on Protected Areas (WDPA) PID.
 💡 The sites listed here are those present in WDPA for the country (or overseas land) you have selected above. If you cannot find your MPAs, please select 'MPA not listed'.",
               name = paste0("MPA_", countrycode, "_mc_multiple"),
               class = "cant_add_choice",
@@ -278,7 +278,7 @@ Warn_multiple <- add_element(label = r"(
 <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
 <div style='font-size:200%'><strong>WARNING!</strong> you selected multiple MPAs.</div>
 <div style='font-size:150%'>💡 If you continue, the MPAs will be merged and treated as a single entity.</div>
-<div style='font-size:150%'>🌟 To fill in separate surveys per MPA, select one above and follow instructions at the end of this survey.</div>
+<div style='font-size:150%'>🪼 To fill in separate surveys per MPA, select one above and follow instructions at the end of this survey.</div>
 </div>)",
                              name = "WarnM_multiple",
                              type = "note",
@@ -339,7 +339,7 @@ P5 <-  P4; P5$name <- "P5"; P5$showif <- "!M1 %contains_word% '7' && !M1 %contai
 
 N5 <-  add_element(label = "## 2: Number of people in each role. 
 #### For each workforce category selected previously, indicate the number of formal staff who work on this specific MPA.
-🌟 For each role, report the number of staff in that role or use COMMENT to record in your own way.
+🪼 For each role, report the number of staff in that role or use COMMENT to record in your own way.
 🦀 FTE = Full-time equivalent.
 💡 Add a COMMENT to add more options or to explain anything you think we should know.",
                    name = "N5",
@@ -373,17 +373,6 @@ add_personel_questions <- function(label = "### **what**",
                     name = paste0("PERS_", category, "_Occasional"),
                     value = value, showif = showif, type = type)
   
-  C1 <- add_element(label = "#### Add a COMMENT",
-                    name = paste0("PERS_NeedComment_", category),
-                    showif = showif,
-                    type = "check")
-  
-  C2 <- add_element(label = "#### 💡 Add more options or explain anything you think we should know about this workforce category",
-                    name = paste0("PERS_Comment", category),
-                    showif = paste0("PERS_NeedComment_", category),
-                    type = "textarea",
-                    optional = "*")
-  
   # NOT WORKING
   # Block <- add_element(label = "<div style='color:#ffff'><strong>NOTE</strong> If you leave all personel to 0, the category will be discarded.</div>",
   #                     name = paste0("PERS_Block", category),
@@ -393,7 +382,7 @@ add_personel_questions <- function(label = "### **what**",
   #                                     PERS_", category, "_Seasonal == 0 &&
   #                                     PERS_", category, "_Occasional == 0"))
   
-  bind_rows(E1, E2, E3, E4, E5, C1, C2)
+  bind_rows(E1, E2, E3, E4, E5)
 }
 
 ## Those are personnel questions, do make sure that this agrees with category numbers in M1 above!
@@ -415,6 +404,16 @@ PERS5 <- add_personel_questions(label = "### **Science focused**", category = "s
 
 PERS6 <- add_personel_questions(label = "### **Other**", category = "other",
                                 showif = "M1 %contains_word% '6'")
+
+PERS_check <- add_element(label = "#### Add a COMMENT",
+                  name = "PERS_check",
+                  type = "check")
+
+PERS_comment <- add_element(label = "#### 💡 Add more options or explain anything you think we should know about this workforce category",
+                  name = "PERS_comment",
+                  showif = "PERS_check",
+                  type = "textarea",
+                  optional = "*")
 
 S5 <- S1; S5$name <- "S5"; S5$showif = "!M1 %contains_word% '7' && !M1 %contains_word% '8'"
 
@@ -549,7 +548,7 @@ Block_tech2 <- add_element(label = "<div style='color:#ffff'>The answer <strong>
                            showif = "(Tech_choice %contains_word% '1' | Tech_choice %contains_word% '2' | Tech_choice %contains_word% '3' | Tech_choice %contains_word% '4' | Tech_choice %contains_word% '5' | Tech_choice %contains_word% '6' | Tech_choice %contains_word% '7') && Tech_choice %contains_word% '8'")
 
 Other_tech <- add_element(label = "#### 🦀 Add other technologies that qualify
-🌟 Brand names are fine too.
+🪼 Brand names are fine too.
 💡 After typing, press enter to validate what you added.",
                           type = "select_or_add_multiple",
                           name = "Other_tech",
@@ -668,6 +667,30 @@ P10 <-  add_element(label = "# <mark> Part C: Tell us about you (4 questions) </
                     name = "P10",
                     type = "note")
 
+E10 <- add_element(label = "## NOTE
+<style>
+p, summary, li{
+  color:#484c50;
+  font-family:Roboto,Arial,sans-serif;
+  font-weight:400;
+  font-size:120%;
+  margin:0 0 2px 0
+}
+</style>
+#### 🪼 Personal information won't be distributed, but it is helpful to us.
+<details>
+  <summary>💡 Click <u>here</u> to know why we need this data.</summary>
+  <p>The purpose of collecting personal information includes:</p>
+  <ol type='1'>
+    <li>Requesting follow up information if necessary;</li>
+    <li>Helping us understand your answers; </li>
+    <li>Sharing the report with you when it is complete.</li>
+  </ol>
+</details>
+",
+name = "E10",
+type = "note")
+
 Role_note <-  add_element(label = "## 1: Your role(s)?",
                           name = "Role_note",
                           type = "note")
@@ -712,38 +735,6 @@ Role_comment <- add_element(label = "#### 💡 Tell us more, so we fully underst
                             showif = "Role_comment_check",
                             type = "textarea")
 
-E10 <- add_element(label = "## NOTE
-<style>
-p, summary, li{
-  color:#484c50;
-  font-family:Roboto,Arial,sans-serif;
-  font-weight:400;
-  font-size:120%;
-  margin:0 0 2px 0
-}
-</style>
-#### 🌟 Personal information won't be distributed, but it is helpful to us.
-<details>
-  <summary>💡 Click <u>here</u> to know why we need this data.</summary>
-  <p>The purpose of collecting personal information includes:</p>
-  <ol type='1'>
-    <li>Requesting follow up information if necessary;</li>
-    <li>Helping us understand your answers (e.g., different departments); and </li>
-    <li>Sharing the report with you when it is complete.</li>
-  </ol>
-</details>
-",
-                   name = "E10",
-                   type = "note")
-
-S10 <- S1; S10$name <- "S10"
-
-# Page 11 ----------------------------------------------------------------------
-
-CSS11 <- CSS; CSS11$name <- "CSS11"
-
-P11 <- P10; P11$name <- "P11"
-
 Name_note <-  add_element(label = "## 2: Your name?",
                           name = "Name_note",
                           type = "note")
@@ -771,16 +762,6 @@ Name_comment <- add_element(label = "#### 💡 Tell us more, so we fully underst
                             name = "Name_comment",
                             showif = "Name_comment_check",
                             type = "textarea")
-
-E11 <- E10; E11$name <- "E11"
-
-S11 <- S1; S11$name <- "S11"
-
-# Page 12 ----------------------------------------------------------------------
-
-CSS12 <- CSS; CSS12$name <- "CSS12"
-
-P12 <- P10; P12$name <- "P12"
 
 Email_note <-  add_element(label = "## 3: Your email?",
                            name = "Email_note",
@@ -810,22 +791,12 @@ Email_comment <- add_element(label = "#### 💡 Tell us more, so we fully unders
                              showif = "Email_comment_check",
                              type = "textarea")
 
-E12 <- E10; E12$name <- "E12"
-
-S12 <- S1; S12$name <- "S12"
-
-# Page 13 ----------------------------------------------------------------------
-
-CSS13 <- CSS; CSS13$name <- "CSS13"
-
-P13 <- P10; P13$name <- "P13"
-
 Acknowledgement_note <-  add_element(label = "## 4: How can we acknowledge you?",
                                      name = "Acknowledgement_note",
                                      type = "note")
 
 Acknowledgement_input <- add_element(label = "#### <b>We can't do this without you!</b> If you would like to be listed in the acknowledgments of the report and other publications, please share how you would like this to appear.
-🌟 You may use your first and/or last name. 
+🪼 You may use your first and/or last name. 
 💡If you add nothing, your name will not appear.",
                                      name = "Acknowledgement_input",
                                      type = "text",
@@ -833,9 +804,9 @@ Acknowledgement_input <- add_element(label = "#### <b>We can't do this without y
 
 S13 <- S1; S13$name <- "S13"
 
-# Page 14 ----------------------------------------------------------------------
+# Page 11 ----------------------------------------------------------------------
 
-thanks_CSS <- CSS; thanks_CSS$name <- "thanks_CSS"
+CSS11 <- CSS; CSS11$name <- "CSS11"
 
 thanks_head <-  add_element(label = "# <mark>Thank you</mark>",
                             name = "thanks_head",
@@ -856,7 +827,7 @@ Referrals_note <-  add_element(label = "## 1: Referrals?",
                                type = "note")
 
 Referrals_text <- add_element(label = "#### Who else should we hear from for this or other MPAs? Enter their details here or share the link with them and your networks.
-🌟 If an email is provided, we will only send personal messages and will not distribute or store them. 
+🪼 If an email is provided, we will only send personal messages and will not distribute or store them. 
 💡Add a COMMENT to explain any other suggestions to get wide distribution.",
                               name = "Referrals_text",
                               type = "textarea",
@@ -868,16 +839,16 @@ Adequate_note <-  add_element(label = "## 2: Is your workforce adequate?",
                               type = "note")
 
 Adequate_input <- add_element(label = "#### In your opinion, is this current level of workforce adequate for ensuring this specific MPA can successfully achieve the objectives (fulfil the purpose) for which it was established?
-🌟 Adequacy can refer to both the number of personnel and their training/technical skills to meet management needs. 
+🪼 Adequacy can refer to both the number of personnel and their training/technical skills to meet management needs. 
 💡Add a COMMENT below to explain anything you think we should know.",
                               name = "Adequate_input",
                               type = "mc",
                               class = "mc_vertical",
-                              choice5 = "**Not Adequate** – Does not meet basic requirements or expectations.",
-                              choice4 = "**Somewhat Adequate** – Meets a few requirements but falls short in key areas.",
-                              choice3 = "**Moderately Adequate** – Meets most requirements but has room for improvement.",
-                              choice2 = "**Mostly Adequate** – Meets nearly all requirements with minor gaps.",
                               choice1 = "**Fully Adequate** – Meets or exceeds all requirements and expectations.",
+                              choice2 = "**Mostly Adequate** – Meets nearly all requirements with minor gaps.",
+                              choice3 = "**Moderately Adequate** – Meets most requirements but has room for improvement.",
+                              choice4 = "**Somewhat Adequate** – Meets a few requirements but falls short in key areas.",
+                              choice5 = "**Not Adequate** – Does not meet basic requirements or expectations.",
                               optional = "*")
 
 Adequate_comment_check <- add_element(label = "#### Add a COMMENT",
@@ -890,38 +861,52 @@ Adequate_comment <- add_element(label = "#### 💡 Tell us more, so we fully und
                                 type = "textarea")
 
 E15 <- add_element(label = "## NOTE
-#### 🌟 This information will *not* be connected to your personal information or MPA.",
+#### 🪼 This information will *not* be connected to your personal information or MPA.",
                    name = "E15",
                    type = "note")
 
-P16 <-  add_element(label = "# <mark>THANK YOU</mark>",
+loopback_note <- add_element(label = "## Can you fill in this survey for another MPA?",
+                             name = "loopback_note",
+                             type = "note")
+
+loopback <- add_element(label = "#### Tell us if you can?",
+                        name = "loopback",
+                        choice1 = "Yes",
+                        choice2 = "No",
+                        type = "mc",
+                        class = "mc_vertical",
+                        optional = "!")
+
+P16 <-  add_element(label = "## 💡 After clicking on *End the survey*, you will be redirected to a new survey.",
                     name = "P16",
-                    type = "note")
+                    type = "note",
+                    showif = "loopback == '1'")
 
 S16 <- add_element(label = "End the survey",
                   name = "S16",
-                  type = "submit") ## FIXME: point to new survey
+                  type = "submit")
+
 
 # Save survey -----------------------------------------------------------
 
-survey_tbl <- bind_rows(CSS0, N0, logos, S0,
+survey_tbl <- bind_rows(CSS0, welcome_text, logos, submit_welcome,
                         CSS1, P1, N1, Q1, S1,
-                        CSS2, CSS, P2, N2, Q2, C1, Qmissing, N3, Q_issue1, Q_issue1_text, Warn_multiple, S2,
+                        CSS2, P2, N2, Q2, C1, Qmissing, N3, Q_issue1, Q_issue1_text, Warn_multiple, S2,
                         CSS4, P4, N4, M1, B1, B2, M1missing, S4,
-                        CSS5, P5, N5, PERS1, PERS2, PERS3, PERS4, PERS5, PERS6, S5,
+                        CSS5, P5, N5, PERS1, PERS2, PERS3, PERS4, PERS5, PERS6, PERS_check, PERS_comment, S5,
                         CSS6, P6, SUMM_note, FTE_leadership, FTE_site, FTE_support, FTE_stakeholder, FTE_scientists, FTE_other,
                         total_note, total_info, total_validate, total_comment_check, total_comment, S6,
                         CSS7, P7, Tech_note, Tech_choice, Block_tech1, Block_tech2, Other_tech, Other_tech_comment_check, Other_tech_comment, S7,
                         CSS8, P8, Others_note, Others_choice, Block_others2, Block_others3, Fishers, Boats, Others, Others_comment_check, Others_comment, S8,
                         CSS9, P9, Anythingelse_note, Anythingelse_comment, S9,
-                        CSS10, P10, Role_note, Role_choice, Role_block1, Role_block2, Role_other_details, Role_comment_check, Role_comment, E10, S10,
-                        CSS11, P11, Name_note, Name_input, Anonymous_check, Anonymous_info, Name_comment_check, Name_comment, E11, S11,
-                        CSS12, P12, Email_note, Email_input, Anonymous_email_check, Anonymous_email_info, Email_comment_check, Email_comment, E12, S12,
-                        CSS13, P13, Acknowledgement_note, Acknowledgement_input, S13,
-                        thanks_CSS, thanks_head, thanks_note,
+                        CSS10, P10, E10, Role_note, Role_choice, Role_block1, Role_block2, Role_other_details, Role_comment_check, Role_comment,
+                        Name_note, Name_input, Anonymous_check, Anonymous_info, Name_comment_check, Name_comment,
+                        Email_note, Email_input, Anonymous_email_check, Anonymous_email_info, Email_comment_check, Email_comment,
+                        Acknowledgement_note, Acknowledgement_input, S13,
+                        CSS11, thanks_head, thanks_note,
                         Referrals_note, Referrals_text,
                         Adequate_note, Adequate_input, Adequate_comment_check, Adequate_comment,
-                        S16
+                        loopback_note, loopback, P16, S16
                         )
 
 names_tbl <- table(survey_tbl$name)
@@ -931,9 +916,13 @@ if (!dir.exists("cleandata")) dir.create("cleandata")
 write.csv(survey_tbl, file = "cleandata/survey.csv", row.names = FALSE)
 
 # Footer directly added in Run / Settings / General
-# ©Marine Conservation Institute (2025) | [Privacy Policy](https://www.eoceans.org/mpa-workforce-study-2025-appendix) | [About](https://www.eoceans.org/mpa-workforce-study-2025-appendix) | [Report technical issues](mailto:courtiol@izw-berlin.de)
+# ©Marine Conservation Institute (2025) | <a href='https://www.eoceans.org/mpa-workforce-study-2025-appendix' target='blank'>Privacy Policy</a> | <a href='https://www.eoceans.org/mpa-workforce-study-2025-appendix' target='blank'>About</a> | [Report technical issues](mailto:courtiol@izw-berlin.de)
 
 # Feedback text at the end
 # # 🦈 Thank you 🐳
 # ##💡 If you want to fill in the survey for another MPA, just [click here](https://workforce-survey.marine-conservation.org/we-need-you) to launch a new survey.
+
+# Alternative
+# # 🦈 Thank you 🐳
+# ##💡 Feel free to share this survey with others: https://workforce-survey.marine-conservation.org/we-need-you
 
