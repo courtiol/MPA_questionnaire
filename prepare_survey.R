@@ -126,7 +126,7 @@ p {
 
 <p>As the world moves toward protecting 30% of the ocean by 2030,
 <a href='https://marine-conservation.org/' target='_blank'>Marine Conservation Institute (MPAtlas)</a>,
-<a href='https://www.eoceans.app/' target='_blank'>eOceans</a>,
+<a href='www.eoceans.org/' target='_blank'>eOceans</a>,
 <a href='https://www.izw-berlin.de/en/' target='_blank'>Leibniz-IZW</a>, and
 <a href='https://www.bluenaturealliance.org/' target='_blank'>Blue Nature Alliance</a>
 have partnered to understand the MPA workforce — this includes staff,
@@ -177,10 +177,10 @@ logos <- add_element(label = "
 </style>
 
 <ul class='flex-container'>
-  <li><img src='https://workforce-admin.marine-conservation.org/assets/tmp/admin/5vdmr4voFmgi1so46H7N/MCI_MPAtlas_combo_logo_2023_full.png?v1742736594' alt='Marine Conservation International logo' style='height:100px;'></li>
-  <li><img src='https://workforce-admin.marine-conservation.org/assets/tmp/admin/qoT6H_GyxBSyTZzuiIeu/eOceans_small.jpg?v1742736908' alt='eOceans logo' style='height:100px;'></li>
-  <li><img src='https://workforce-admin.marine-conservation.org/assets/tmp/admin/TRBFGZWLCDwivtX0xSzF/IZW-logo.jpg?v1740411077' alt='Leibniz-IZW logo' style='height:160px;'></li>
-  <li><img src='https://workforce-admin.marine-conservation.org/assets/tmp/admin/H74ABfj3smTa-EcZL_qF/BNA-logo-full-blue-txt-transparent-300x.png?v1742736673' alt='Blue Nature Alliance logo' style='height:140px;'></li>
+  <li><img src='https://workforce-admin.marine-conservation.org/assets/tmp/admin/ZWN0zwkMcoQ3a7U0ojDN/MCI_MPAtlas_combo_logo_2023_full.png?v1742888246' alt='Marine Conservation International logo' style='height:100px;'></li>
+  <li><img src='https://workforce-admin.marine-conservation.org/assets/tmp/admin/ZWN0zwkMcoQ3a7U0ojDN/eOceans_small.jpg?v1742888246' alt='eOceans logo' style='height:100px;'></li>
+  <li><img src='https://workforce-admin.marine-conservation.org/assets/tmp/admin/8W76aVL77zmRysI0giU9/IZW-logo.jpg?v1742888246' alt='Leibniz-IZW logo' style='height:160px;'></li>
+  <li><img src='https://workforce-admin.marine-conservation.org/assets/tmp/admin/ZWN0zwkMcoQ3a7U0ojDN/BNA-logo-full-blue-txt-transparent-300x.png?v1742888246' alt='Blue Nature Alliance logo' style='height:140px;'></li>
 </ul>",
 type = "note",
 name = "logos")
@@ -550,7 +550,7 @@ choice1 = "**Satellite technologies**",
 choice2 = "**Radar technologies**",
 choice3 = "**Underwater acoustic technologies**",
 choice4 = "**Drone technologies**",
-choice5 = "**MPA evaluation technology** (e.g., [eOceans](https://www.eoceans.org/))",
+choice5 = "**MPA evaluation technology** (e.g., [eOceans](https://www.eoceans.org/mpas))",
 choice6 = "**Reporting tools**: Phone, email, or app reporting for marine species, activities, incidents",
 choice7 = "None of the above",
 choice8 = "I don't know",
