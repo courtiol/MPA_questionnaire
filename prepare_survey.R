@@ -252,10 +252,10 @@ $(document).ready(function () {
 name = "script_protectedplanet",
 type = "note")  ## note that `r"()"` allows for triple quoting which is here needed (R language)
 
-missing_MPA <- add_element(label = "#### 🛟 Please provide a name and relevant links or emails so we can fully understand and include your MPA in our analysis:",
+missing_MPA <- add_element(label = "#### 🛟 You selected *MPA not listed*, so please provide a name and relevant links or emails so we can fully understand and include your MPA in our analysis:",
                            name = "missing_MPA",
                            type = "textarea",
-                           optional = "*",
+                           optional = "!",
                            showif = "hasNA //js_only")
 
 inspect_protectedplanet <- add_element(label = "#### 🔎 Inspect information on your MPA on Protected Planet by clicking on the link:
@@ -331,22 +331,38 @@ detail_other_roleinMPA <- add_element(label = "#### 🛟 If you selected **Other
                                       showif = "roleinMPA %contains_word% '6'",
                                       optional = "*")
 
+roleinMPA_check <- add_element(label = "#### Add a COMMENT",
+                          name = "roleinMPA_check",
+                          type = "check")
+
+roleinMPA_comment <- add_element(label = "#### 💡 Tell us more, so we fully understand",
+                            name = "roleinMPA_comment",
+                            showif = "roleinMPA_check",
+                            type = "textarea",
+                            optional = "*")
+
 submit_roleinMPA <- submit_MPA; submit_roleinMPA$name <- "submit_roleinMPA"
 
 # Page 5 -----------------------------------------------------------------------
 
 CSS5 <- CSS; CSS5$name <- "CSS5"
 
-partB_note2 <-  partB_note1; partB_note2$name <- "partB_note2"; partB_note2$showif <- "!roleinMPA %contains_word% '7' && !roleinMPA %contains_word% '8'"
+partB_note2 <-  partB_note1; partB_note2$name <- "partB_note2"#; partB_note2$showif <- "!roleinMPA %contains_word% '7' && !roleinMPA %contains_word% '8'"
 
 note_personel <-  add_element(label = "## 2: Number of people in each role. 
 #### For each workforce category selected previously, indicate the number of formal staff who work on this specific MPA.
 🪼 For each role, report the number of staff in that role or use COMMENT to record in your own way.
 🦀 FTE = Full-time equivalent.
 💡 Add a COMMENT to add more options or to explain anything you think we should know.",
-name = "note_personel",
-showif = "!roleinMPA %contains_word% '7' && !roleinMPA %contains_word% '8'",
-type = "note")
+                              name = "note_personel",
+                              showif = "!roleinMPA %contains_word% '7' && !roleinMPA %contains_word% '8'",
+                              type = "note")
+
+note_no_personel <- add_element(label = "## 2: Number of people in each role. 
+#### You haven't selected any workforce category, so please continue.",
+                                name = "note_no_personel",
+                                showif = "roleinMPA %contains_word% '7' || roleinMPA %contains_word% '8'",
+                                type = "note")
 
 add_personel_questions <- function(label = "### **what**",
                                    category = "what",
@@ -409,7 +425,8 @@ pers6 <- add_personel_questions(label = "### **Other**", category = "other",
 
 pers_check <- add_element(label = "#### Add a COMMENT",
                           name = "pers_check",
-                          type = "check")
+                          type = "check",
+                          showif = "!roleinMPA %contains_word% '7' && !roleinMPA %contains_word% '8'")
 
 pers_comment <- add_element(label = "#### 💡 Add more options or explain anything you think we should know about this workforce category",
                             name = "pers_comment",
@@ -419,7 +436,7 @@ pers_comment <- add_element(label = "#### 💡 Add more options or explain anyth
 
 submit_pers <- submit_blank; submit_pers$name <- "submit_pers"; submit_pers$showif = "!roleinMPA %contains_word% '7' && !roleinMPA %contains_word% '8'"
 
-# Page 6 (optional) ------------------------------------------------------------
+# Page 6 ------------------------------------------------------------
 
 CSS6 <- CSS; CSS6$name <- "CSS6"
 
@@ -890,8 +907,8 @@ survey_tbl <- bind_rows(CSS0, welcome_text, logos, submit_welcome,
                         CSS1, partA_note1, note_country, select_country, submit_country,
                         CSS2, partA_note2, note_MPA, select_MPA, script_protectedplanet, 
                         missing_MPA, inspect_protectedplanet, issue_protectedplanet, fix_protectedplanet, warn_multiple, submit_MPA,
-                        CSS4, partB_note1, note_roleinMPA, roleinMPA, block_none_roleinMPA, block_dontknow_roleinMPA, detail_other_roleinMPA, submit_roleinMPA,
-                        CSS5, partB_note2, note_personel, pers1, pers2, pers3, pers4, pers5, pers6, pers_check, pers_comment, submit_pers,
+                        CSS4, partB_note1, note_roleinMPA, roleinMPA, block_none_roleinMPA, block_dontknow_roleinMPA, detail_other_roleinMPA, roleinMPA_check, roleinMPA_comment, submit_roleinMPA,
+                        CSS5, partB_note2, note_personel, note_no_personel, pers1, pers2, pers3, pers4, pers5, pers6, pers_check, pers_comment, submit_pers,
                         CSS6, partB_note3, note_FTE, FTE_leadership, FTE_site, FTE_support, FTE_stakeholder, FTE_scientists, FTE_other,
                         total_note, total_info, total_validate, total_comment_check, total_comment, submit_total,
                         CSS7, partB_note4, note_technoinMPA, technoinMPA, block_none_technoinMPA, block_dontknow_technoinMPA, detail_other_technoinMPA, technoinMPA_check, technoinMPA_comment, submit_tech,

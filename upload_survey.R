@@ -11,11 +11,11 @@ choices_tbl <- read.csv("cleandata/choices.csv")
 
 if (shorten_for_testing) {
   choices_tbl |>
-    filter((list_name == "countries" & label == "Canada (CAN)") |
-           (list_name == "MPA_CAN")) -> choices_tbl_short
+    filter((list_name == "countries" & label %in% c("Canada (CAN)", "France (FRA)")) |
+           (list_name %in% c("MPA_CAN", "MPA_FRA"))) -> choices_tbl_short
   
   survey_tbl |> 
-    filter(grepl(x = type, pattern = "^(?!.*MPA_(?!CAN).*).*$|MPA_CAN", perl = TRUE)) -> survey_tbl_short
+    filter(grepl(x = type, pattern = "^(?!.*MPA_(?!CAN).*).*$|MPA_CAN", perl = TRUE) | grepl(x = type, pattern = "^(?!.*MPA_(?!FRA).*).*$|MPA_FRA", perl = TRUE)) -> survey_tbl_short
 }
 
 #googlesheets4::gs4_auth(email = "alexandre.courtiol@gmail.com")
