@@ -572,7 +572,7 @@ detail_other_technoinMPA <- add_element(label = "#### 🦀 Add other technologie
 💡 After typing, press enter to validate what you added.",
 type = "select_or_add_multiple",
 name = "detail_other_technoinMPA",
-choice1 = "I can't think of anything",
+choice1 = "Add your item(s)",
 optional = "*")
 
 technoinMPA_check <- add_element(label = "#### Add a COMMENT",
@@ -625,7 +625,7 @@ detail_fishers_operator <- add_element(label = "#### 🦀 Specify the type of fi
 💡 After typing, press enter to validate what you added.",
 type = "select_or_add_multiple",
 name = "detail_fishers_operator",
-choice1 = "I can't think of any",
+choice1 = "Add your item(s)",
 showif = "operator %contains_word% '1'",
 optional = "*")
 
@@ -633,7 +633,7 @@ detail_boats_operator <- add_element(label = "#### 🦀 Specify the type of boat
 💡 After typing, press enter to validate what you added.",
 type = "select_or_add_multiple",
 name = "detail_boats_operator",
-choice1 = "I can't think of any",
+choice1 = "Add your item(s)",
 showif = "operator %contains_word% '4'",
 optional = "*")
 
@@ -641,7 +641,7 @@ detail_other_operator <- add_element(label = "#### 🦀 Add other operators
 💡 After typing, press enter to validate what you added.",
 type = "select_or_add_multiple",
 name = "detail_other_operator",
-choice1 = "I can't think of any",
+choice1 = "Add your item(s)",
 showif = "operator %contains_word% '5'",
 optional = "*")
 

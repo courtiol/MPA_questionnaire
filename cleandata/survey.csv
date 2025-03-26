@@ -969,7 +969,7 @@ $(document).ready(function() {
 "<div style='color:#ffff'>The answer <strong>I don't know</strong> cannot be combined with another category</div>","block_dontknow_technoinMPA","","block","","","(technoinMPA %contains_word% '1' | technoinMPA %contains_word% '2' | technoinMPA %contains_word% '3' | technoinMPA %contains_word% '4' | technoinMPA %contains_word% '5' | technoinMPA %contains_word% '6' | technoinMPA %contains_word% '7') && technoinMPA %contains_word% '8'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### 🦀 Add other technologies that qualify
 🪼 Brand names are fine too.
-💡 After typing, press enter to validate what you added.","detail_other_technoinMPA","","select_or_add_multiple","","*","","I can't think of anything",NA,NA,NA,NA,NA,NA,NA
+💡 After typing, press enter to validate what you added.","detail_other_technoinMPA","","select_or_add_multiple","","*","","Add your item(s)",NA,NA,NA,NA,NA,NA,NA
 "#### Add a COMMENT","technoinMPA_check","","check","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "#### 💡 Tell us more, so we fully understand","technoinMPA_comment","","textarea","","*","technoinMPA_check",NA,NA,NA,NA,NA,NA,NA,NA
 "Continue","submit_tech","","submit","","","",NA,NA,NA,NA,NA,NA,NA,NA
@@ -980,11 +980,11 @@ $(document).ready(function() {
 "<div style='color:#ffff'>The answer <strong>None</strong> cannot be combined with another category</div>","block_none_operator","","block","","","(operator %contains_word% '1' | operator %contains_word% '2' | operator %contains_word% '3' | operator %contains_word% '4' | operator %contains_word% '5') && operator %contains_word% '6'",NA,NA,NA,NA,NA,NA,NA,NA
 "<div style='color:#ffff'>The answer <strong>I don't know</strong> cannot be combined with another category</div>","block_dontknow_operator","","block","","","(operator %contains_word% '1' | operator %contains_word% '2' | operator %contains_word% '3' | operator %contains_word% '4' | operator %contains_word% '5' | operator %contains_word% '6') && operator %contains_word% '7'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### 🦀 Specify the type of fishers 🎣
-💡 After typing, press enter to validate what you added.","detail_fishers_operator","","select_or_add_multiple","","*","operator %contains_word% '1'","I can't think of any",NA,NA,NA,NA,NA,NA,NA
+💡 After typing, press enter to validate what you added.","detail_fishers_operator","","select_or_add_multiple","","*","operator %contains_word% '1'","Add your item(s)",NA,NA,NA,NA,NA,NA,NA
 "#### 🦀 Specify the type of boat operators ⛵
-💡 After typing, press enter to validate what you added.","detail_boats_operator","","select_or_add_multiple","","*","operator %contains_word% '4'","I can't think of any",NA,NA,NA,NA,NA,NA,NA
+💡 After typing, press enter to validate what you added.","detail_boats_operator","","select_or_add_multiple","","*","operator %contains_word% '4'","Add your item(s)",NA,NA,NA,NA,NA,NA,NA
 "#### 🦀 Add other operators
-💡 After typing, press enter to validate what you added.","detail_other_operator","","select_or_add_multiple","","*","operator %contains_word% '5'","I can't think of any",NA,NA,NA,NA,NA,NA,NA
+💡 After typing, press enter to validate what you added.","detail_other_operator","","select_or_add_multiple","","*","operator %contains_word% '5'","Add your item(s)",NA,NA,NA,NA,NA,NA,NA
 "#### Add a COMMENT","operator_check","","check","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "#### 💡 Tell us more, so we fully understand","operator_comment","","textarea","","","operator_check",NA,NA,NA,NA,NA,NA,NA,NA
 "Continue","submit_operator","","submit","","","",NA,NA,NA,NA,NA,NA,NA,NA
