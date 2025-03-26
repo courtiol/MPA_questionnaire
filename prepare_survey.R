@@ -35,7 +35,8 @@ convert_label_country <- function(countrylabel) {
 
 # CSS definition ----------------------------------------------------------
 # Note that the CSS definition is only active on the page it is loaded
-# It is possible to define a global CSS but only outside the survey sheet so I prefer to define things here
+# It could be added to each page, or it could be defined outside the survey directly under
+# RUN/settings/CSS (I am now doing this to reduce the number of items)
 
 CSS <- add_element(label = "<style>
 .alert {
@@ -903,22 +904,22 @@ submit_end <- add_element(label = "End the survey",
 
 # Save survey -----------------------------------------------------------
 
-survey_tbl <- bind_rows(CSS0, welcome_text, logos, submit_welcome,
-                        CSS1, partA_note1, note_country, select_country, submit_country,
-                        CSS2, partA_note2, note_MPA, select_MPA, script_protectedplanet, 
+survey_tbl <- bind_rows(welcome_text, logos, submit_welcome,
+                        partA_note1, note_country, select_country, submit_country,
+                        partA_note2, note_MPA, select_MPA, script_protectedplanet, 
                         missing_MPA, inspect_protectedplanet, issue_protectedplanet, fix_protectedplanet, warn_multiple, submit_MPA,
-                        CSS4, partB_note1, note_roleinMPA, roleinMPA, block_none_roleinMPA, block_dontknow_roleinMPA, detail_other_roleinMPA, roleinMPA_check, roleinMPA_comment, submit_roleinMPA,
-                        CSS5, partB_note2, note_personel, note_no_personel, pers1, pers2, pers3, pers4, pers5, pers6, pers_check, pers_comment, submit_pers,
-                        CSS6, partB_note3, note_FTE, FTE_leadership, FTE_site, FTE_support, FTE_stakeholder, FTE_scientists, FTE_other,
+                        partB_note1, note_roleinMPA, roleinMPA, block_none_roleinMPA, block_dontknow_roleinMPA, detail_other_roleinMPA, roleinMPA_check, roleinMPA_comment, submit_roleinMPA,
+                        partB_note2, note_personel, note_no_personel, pers1, pers2, pers3, pers4, pers5, pers6, pers_check, pers_comment, submit_pers,
+                        partB_note3, note_FTE, FTE_leadership, FTE_site, FTE_support, FTE_stakeholder, FTE_scientists, FTE_other,
                         total_note, total_info, total_validate, total_comment_check, total_comment, submit_total,
-                        CSS7, partB_note4, note_technoinMPA, technoinMPA, block_none_technoinMPA, block_dontknow_technoinMPA, detail_other_technoinMPA, technoinMPA_check, technoinMPA_comment, submit_tech,
-                        CSS8, partB_note5, note_operator, operator, block_none_operator, block_dontknow_operator, detail_fishers_operator, detail_boats_operator, detail_other_operator, operator_check, operator_comment, submit_operator,
-                        CSS9, partB_note6, note_anythingelse, anythingelse, submit_anythingelse,
-                        CSS10, partC_note1, note_privacy, note_roleself, roleself, block_none_roleself, block_dontknow_roleself, detail_other_roleself, roleself_check, roleself_comment,
+                        partB_note4, note_technoinMPA, technoinMPA, block_none_technoinMPA, block_dontknow_technoinMPA, detail_other_technoinMPA, technoinMPA_check, technoinMPA_comment, submit_tech,
+                        partB_note5, note_operator, operator, block_none_operator, block_dontknow_operator, detail_fishers_operator, detail_boats_operator, detail_other_operator, operator_check, operator_comment, submit_operator,
+                        partB_note6, note_anythingelse, anythingelse, submit_anythingelse,
+                        partC_note1, note_privacy, note_roleself, roleself, block_none_roleself, block_dontknow_roleself, detail_other_roleself, roleself_check, roleself_comment,
                         name_note, name, name_anonymous, name_info, name_check, name_comment,
                         email_note, email, email_anonymous, email_info, email_check, email_comment,
                         note_acknowledgement, acknowledgement, submit_acknowledgement,
-                        CSS11, partD_note1, note_thanks, note_referral, referral,note_adequate, adequate, adequate_check, adequate_comment,
+                        partD_note1, note_thanks, note_referral, referral,note_adequate, adequate, adequate_check, adequate_comment,
                         note_loopback, loopback, loopback_info, submit_end
 )
 
