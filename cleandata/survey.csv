@@ -10,7 +10,7 @@ p {
 
 <br>
 
-<p>Thanks for participating in this <b><i>voluntary</i></b> study— your input is valuable. <i>Please consider the information in this <a href='https://www.eoceans.org/mpa-workforce-study-2025-appendix' target='blank'>about</a> document and ask any <a href='mailto:christine@eOceans.co'>questions</a> you may have before deciding if you will participate.</i></p>
+<p>Thanks for participating in this <b><i>voluntary</i></b> study— your input is valuable. <i>Please consider the information in this <a href=' https://www.eoceans.org/mpa-workforce-study-2025-about' target='blank'>about</a> document and ask any <a href='mailto:christine@eOceans.co'>questions</a> you may have before deciding if you will participate.</i></p>
 
 <p>As the world moves toward protecting 30% of the ocean by 2030,
 <a href='https://marine-conservation.org/' target='_blank'>Marine Conservation Institute (MPAtlas)</a>,
@@ -33,7 +33,7 @@ employees, and others who have a formal role actively contributing to achieving 
 </ul>
 </span>
 
-<p>💡 Click <a href='https://www.eoceans.org/mpa-workforce-study-2025-appendix' target='blank'>here</a> to learn about <em>Data Access</em>, <em>Risks</em>, <em>Support</em>, <em>Funders</em>, and more.</p>
+<p>💡 Click <a href=' https://www.eoceans.org/mpa-workforce-study-2025-about' target='blank'>here</a> to learn about <em>Data Access</em>, <em>Risks</em>, <em>Support</em>, <em>Funders</em>, and more.</p>
 
 <p>🪼 <strong>Thank you!</strong><br>
 Your input is invaluable to this study and will provide crucial insights for others working on MPAs like you.<br>
@@ -964,12 +964,12 @@ $(document).ready(function() {
 "# <mark> Part B: Tell us about this MPA (6 questions) </mark>","partB_note4","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "## 4: Technology used to help?","note_technoinMPA","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "#### If you use technology or other aids to help your MPA workforce expand its effectiveness in THIS specific MPA, please list.
-💡 Select all that apply.","technoinMPA","mc_vertical","mc_multiple","","!","","**Satellite technologies**","**Radar technologies**","**Underwater acoustic technologies**","**Drone technologies**","**MPA evaluation technology** (e.g., [eOceans](https://www.eoceans.org/mpas))","**Reporting tools**: Phone, email, or app reporting for marine species, activities, incidents","None of the above","I don't know"
+💡 Select all that apply.","technoinMPA","mc_vertical","mc_multiple","","!","","**Satellite technologies**","**Radar technologies**","**Underwater acoustic technologies**","**Drone technologies**","**MPA evaluation technology** (e.g., <a href='https://www.eoceans.org/mpas' target='_blank'>eOceans</a>)","**Reporting tools**: Phone, email, or app reporting for marine species, activities, incidents","None of the above","I don't know"
 "<div style='color:#ffff'>The answer <strong>None of the above</strong> cannot be combined with another category</div>","block_none_technoinMPA","","block","","","(technoinMPA %contains_word% '1' | technoinMPA %contains_word% '2' | technoinMPA %contains_word% '3' | technoinMPA %contains_word% '4' | technoinMPA %contains_word% '5' | technoinMPA %contains_word% '6') && technoinMPA %contains_word% '7'",NA,NA,NA,NA,NA,NA,NA,NA
 "<div style='color:#ffff'>The answer <strong>I don't know</strong> cannot be combined with another category</div>","block_dontknow_technoinMPA","","block","","","(technoinMPA %contains_word% '1' | technoinMPA %contains_word% '2' | technoinMPA %contains_word% '3' | technoinMPA %contains_word% '4' | technoinMPA %contains_word% '5' | technoinMPA %contains_word% '6' | technoinMPA %contains_word% '7') && technoinMPA %contains_word% '8'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### 🦀 Add other technologies that qualify
 🪼 Brand names are fine too.
-💡 After typing, press enter to validate what you added.","detail_other_technoinMPA","","select_or_add_multiple","","*","","Add your item(s)",NA,NA,NA,NA,NA,NA,NA
+💡 Press **'Enter'** ↩️ after each entry to submit.","detail_other_technoinMPA","","select_or_add_multiple","","*","","Add your item(s) and press 'Enter'",NA,NA,NA,NA,NA,NA,NA
 "#### Add a COMMENT","technoinMPA_check","","check","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "#### 💡 Tell us more, so we fully understand","technoinMPA_comment","","textarea","","*","technoinMPA_check",NA,NA,NA,NA,NA,NA,NA,NA
 "Continue","submit_tech","","submit","","","",NA,NA,NA,NA,NA,NA,NA,NA
@@ -980,11 +980,11 @@ $(document).ready(function() {
 "<div style='color:#ffff'>The answer <strong>None</strong> cannot be combined with another category</div>","block_none_operator","","block","","","(operator %contains_word% '1' | operator %contains_word% '2' | operator %contains_word% '3' | operator %contains_word% '4' | operator %contains_word% '5') && operator %contains_word% '6'",NA,NA,NA,NA,NA,NA,NA,NA
 "<div style='color:#ffff'>The answer <strong>I don't know</strong> cannot be combined with another category</div>","block_dontknow_operator","","block","","","(operator %contains_word% '1' | operator %contains_word% '2' | operator %contains_word% '3' | operator %contains_word% '4' | operator %contains_word% '5' | operator %contains_word% '6') && operator %contains_word% '7'",NA,NA,NA,NA,NA,NA,NA,NA
 "#### 🦀 Specify the type of fishers 🎣
-💡 After typing, press enter to validate what you added.","detail_fishers_operator","","select_or_add_multiple","","*","operator %contains_word% '1'","Add your item(s)",NA,NA,NA,NA,NA,NA,NA
+💡 Press **'Enter'** ↩️ after each entry to submit.","detail_fishers_operator","","select_or_add_multiple","","*","operator %contains_word% '1'","Add your item(s) and press 'Enter'",NA,NA,NA,NA,NA,NA,NA
 "#### 🦀 Specify the type of boat operators ⛵
-💡 After typing, press enter to validate what you added.","detail_boats_operator","","select_or_add_multiple","","*","operator %contains_word% '4'","Add your item(s)",NA,NA,NA,NA,NA,NA,NA
+💡 Press **'Enter'** ↩️ after each entry to submit.","detail_boats_operator","","select_or_add_multiple","","*","operator %contains_word% '4'","Add your item(s) and press 'Enter'",NA,NA,NA,NA,NA,NA,NA
 "#### 🦀 Add other operators
-💡 After typing, press enter to validate what you added.","detail_other_operator","","select_or_add_multiple","","*","operator %contains_word% '5'","Add your item(s)",NA,NA,NA,NA,NA,NA,NA
+💡 Press **'Enter'** ↩️ after each entry to submit.","detail_other_operator","","select_or_add_multiple","","*","operator %contains_word% '5'","Add your item(s) and press 'Enter'",NA,NA,NA,NA,NA,NA,NA
 "#### Add a COMMENT","operator_check","","check","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "#### 💡 Tell us more, so we fully understand","operator_comment","","textarea","","","operator_check",NA,NA,NA,NA,NA,NA,NA,NA
 "Continue","submit_operator","","submit","","","",NA,NA,NA,NA,NA,NA,NA,NA

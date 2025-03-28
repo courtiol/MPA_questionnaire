@@ -123,7 +123,7 @@ p {
 
 <br>
 
-<p>Thanks for participating in this <b><i>voluntary</i></b> study— your input is valuable. <i>Please consider the information in this <a href='https://www.eoceans.org/mpa-workforce-study-2025-appendix' target='blank'>about</a> document and ask any <a href='mailto:christine@eOceans.co'>questions</a> you may have before deciding if you will participate.</i></p>
+<p>Thanks for participating in this <b><i>voluntary</i></b> study— your input is valuable. <i>Please consider the information in this <a href=' https://www.eoceans.org/mpa-workforce-study-2025-about' target='blank'>about</a> document and ask any <a href='mailto:christine@eOceans.co'>questions</a> you may have before deciding if you will participate.</i></p>
 
 <p>As the world moves toward protecting 30% of the ocean by 2030,
 <a href='https://marine-conservation.org/' target='_blank'>Marine Conservation Institute (MPAtlas)</a>,
@@ -146,7 +146,7 @@ employees, and others who have a formal role actively contributing to achieving 
 </ul>
 </span>
 
-<p>💡 Click <a href='https://www.eoceans.org/mpa-workforce-study-2025-appendix' target='blank'>here</a> to learn about <em>Data Access</em>, <em>Risks</em>, <em>Support</em>, <em>Funders</em>, and more.</p>
+<p>💡 Click <a href=' https://www.eoceans.org/mpa-workforce-study-2025-about' target='blank'>here</a> to learn about <em>Data Access</em>, <em>Risks</em>, <em>Support</em>, <em>Funders</em>, and more.</p>
 
 <p>🪼 <strong>Thank you!</strong><br>
 Your input is invaluable to this study and will provide crucial insights for others working on MPAs like you.<br>
@@ -551,7 +551,7 @@ choice1 = "**Satellite technologies**",
 choice2 = "**Radar technologies**",
 choice3 = "**Underwater acoustic technologies**",
 choice4 = "**Drone technologies**",
-choice5 = "**MPA evaluation technology** (e.g., [eOceans](https://www.eoceans.org/mpas))",
+choice5 = "**MPA evaluation technology** (e.g., <a href='https://www.eoceans.org/mpas' target='_blank'>eOceans</a>)",
 choice6 = "**Reporting tools**: Phone, email, or app reporting for marine species, activities, incidents",
 choice7 = "None of the above",
 choice8 = "I don't know",
@@ -569,10 +569,10 @@ block_dontknow_technoinMPA <- add_element(label = "<div style='color:#ffff'>The 
 
 detail_other_technoinMPA <- add_element(label = "#### 🦀 Add other technologies that qualify
 🪼 Brand names are fine too.
-💡 After typing, press enter to validate what you added.",
+💡 Press **'Enter'** ↩️ after each entry to submit.",
 type = "select_or_add_multiple",
 name = "detail_other_technoinMPA",
-choice1 = "Add your item(s)",
+choice1 = "Add your item(s) and press 'Enter'",
 optional = "*")
 
 technoinMPA_check <- add_element(label = "#### Add a COMMENT",
@@ -622,26 +622,26 @@ block_dontknow_operator <- add_element(label = "<div style='color:#ffff'>The ans
                                        showif = "(operator %contains_word% '1' | operator %contains_word% '2' | operator %contains_word% '3' | operator %contains_word% '4' | operator %contains_word% '5' | operator %contains_word% '6') && operator %contains_word% '7'")
 
 detail_fishers_operator <- add_element(label = "#### 🦀 Specify the type of fishers 🎣
-💡 After typing, press enter to validate what you added.",
+💡 Press **'Enter'** ↩️ after each entry to submit.",
 type = "select_or_add_multiple",
 name = "detail_fishers_operator",
-choice1 = "Add your item(s)",
+choice1 = "Add your item(s) and press 'Enter'",
 showif = "operator %contains_word% '1'",
 optional = "*")
 
 detail_boats_operator <- add_element(label = "#### 🦀 Specify the type of boat operators ⛵
-💡 After typing, press enter to validate what you added.",
+💡 Press **'Enter'** ↩️ after each entry to submit.",
 type = "select_or_add_multiple",
 name = "detail_boats_operator",
-choice1 = "Add your item(s)",
+choice1 = "Add your item(s) and press 'Enter'",
 showif = "operator %contains_word% '4'",
 optional = "*")
 
 detail_other_operator <- add_element(label = "#### 🦀 Add other operators
-💡 After typing, press enter to validate what you added.",
+💡 Press **'Enter'** ↩️ after each entry to submit.",
 type = "select_or_add_multiple",
 name = "detail_other_operator",
-choice1 = "Add your item(s)",
+choice1 = "Add your item(s) and press 'Enter'",
 showif = "operator %contains_word% '5'",
 optional = "*")
 
@@ -930,9 +930,9 @@ if (!dir.exists("cleandata")) dir.create("cleandata")
 write.csv(survey_tbl, file = "cleandata/survey.csv", row.names = FALSE)
 
 # Footer directly added in Run / Settings / General
-# ©Marine Conservation Institute (2025) | <a href='https://www.eoceans.org/mpa-workforce-study-2025-appendix' target='blank'>Privacy Policy</a> | <a href='https://www.eoceans.org/mpa-workforce-study-2025-appendix' target='blank'>About</a> | [Report technical issues](mailto:courtiol@izw-berlin.de)
+# ©Marine Conservation Institute (2025) | <a href=' https://www.eoceans.org/mpa-workforce-study-2025-about' target='blank'>Privacy Policy</a> | <a href=' https://www.eoceans.org/mpa-workforce-study-2025-about' target='blank'>About</a> | [Report technical issues](mailto:courtiol@izw-berlin.de)
 
 # Feedback text at the end
 # # 🦈 Thank you 🐳
-# ##💡 Feel free to share this survey with others: https://workforce-survey.marine-conservation.org/we-need-you
+# ##💡 Feel free to share this survey with others: https://workforce-survey.marine-conservation.org/who-protects-the-ocean
 
