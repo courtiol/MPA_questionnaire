@@ -27,7 +27,7 @@ employees, and others who have a formal role actively contributing to achieving 
 <span>
 <ul>
   <li><strong>Part A</strong>: 2 questions: Let's identify your MPA.</li>
-  <li><strong>Part B</strong>: 6 questions: Tell us about this MPA.</li>
+  <li><strong>Part B</strong>: 4 questions: Tell us about this MPA.</li>
   <li><strong>Part C</strong>: 4 questions: Tell us about you. </li>
   <li><strong>Part D</strong>: 2 (optional) questions: Tell us more? </li>
 </ul>
@@ -847,92 +847,63 @@ $(document).ready(function () {
 <div style='font-size:150%'>🪼 To fill in separate surveys per MPA, select one above and follow instructions at the end of this survey.</div>
 </div>","warn_multiple","","note","","","lengthItems > 1 //js_only",NA,NA,NA,NA,NA,NA,NA,NA
 "Continue","submit_MPA","","submit","","","",NA,NA,NA,NA,NA,NA,NA,NA
-"# <mark> Part B: Tell us about this MPA (6 questions) </mark>","partB_note1","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
-"## 1: Roles of the people who work on this MPA","note_roleinMPA","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
-"#### Including yourself, what formal roles are involved in working on this specific MPA to contribute to achieving its goals?
-💡 Select all that apply.","roleinMPA","mc_vertical","mc_multiple","","!","","**Leadership focused** — e.g., manager, superintendent, decision maker","**In-site focused** — e.g., ranger and ranger-like roles working in the MPA, with and without enforcement capabilities","**Support focused** — e.g., supporting staff, administrative support, finance","**Stakeholder focused** — e.g., education and outreach","**Science focused** — e.g., collecting and analyzing data to address questions","**Other** — for roles not listed above","None — no one works on this MPA in a formal role","I don't know"
-"<div style='color:#ffff'>The answer <strong>None</strong> cannot be combined with another category</div>","block_none_roleinMPA","","block","","","(roleinMPA %contains_word% '1' | roleinMPA %contains_word% '2' | roleinMPA %contains_word% '3' | roleinMPA %contains_word% '4' | roleinMPA %contains_word% '5' | roleinMPA %contains_word% '6') && roleinMPA %contains_word% '7'",NA,NA,NA,NA,NA,NA,NA,NA
-"<div style='color:#ffff'> The answer <strong>I don't know</strong> cannot be combined with another category</div>","block_dontknow_roleinMPA","","block","","","(roleinMPA %contains_word% '1' | roleinMPA %contains_word% '2' | roleinMPA %contains_word% '3' | roleinMPA %contains_word% '4' | roleinMPA %contains_word% '5' | roleinMPA %contains_word% '6' | roleinMPA %contains_word% '7') && roleinMPA %contains_word% '8'",NA,NA,NA,NA,NA,NA,NA,NA
-"#### 🛟 If you selected **Other**, please let us know which roles fall under this category:","detail_other_roleinMPA","","textarea","","*","roleinMPA %contains_word% '6'",NA,NA,NA,NA,NA,NA,NA,NA
-"#### Add a COMMENT","roleinMPA_check","","check","","","",NA,NA,NA,NA,NA,NA,NA,NA
-"#### 💡 Tell us more, so we fully understand","roleinMPA_comment","","textarea","","*","roleinMPA_check",NA,NA,NA,NA,NA,NA,NA,NA
-"Continue","submit_roleinMPA","","submit","","","",NA,NA,NA,NA,NA,NA,NA,NA
-"# <mark> Part B: Tell us about this MPA (6 questions) </mark>","partB_note2","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
-"## 2: Number of people in each role. 
-#### For each workforce category selected previously, indicate the number of formal staff who work on this specific MPA.
-🪼 For each role, report the number of staff in that role or use COMMENT to record in your own way.
-🦀 FTE = Full-time equivalent.
-💡 Add a COMMENT to add more options or to explain anything you think we should know.","note_personel","","note","","","!roleinMPA %contains_word% '7' && !roleinMPA %contains_word% '8'",NA,NA,NA,NA,NA,NA,NA,NA
-"## 2: Number of people in each role. 
-#### You haven't selected any workforce category, so please continue.","note_no_personel","","note","","","roleinMPA %contains_word% '7' || roleinMPA %contains_word% '8'",NA,NA,NA,NA,NA,NA,NA,NA
-"### **Leadership focused**","pers_noteleadership","","note","","","roleinMPA %contains_word% '1'",NA,NA,NA,NA,NA,NA,NA,NA
-"Full time personel
-(working all year; counted as 1 FTE each)","pers_leadership_fulltime","","number 0,999999,1","0","","roleinMPA %contains_word% '1'",NA,NA,NA,NA,NA,NA,NA,NA
-"Part time personel
-(counted as 0.5 FTE each)","pers_leadership_parttime","","number 0,999999,1","0","","roleinMPA %contains_word% '1'",NA,NA,NA,NA,NA,NA,NA,NA
-"Seasonal personel
-(working during e.g. summer; counted as 0.25 FTE each)","pers_leadership_seasonal","","number 0,999999,1","0","","roleinMPA %contains_word% '1'",NA,NA,NA,NA,NA,NA,NA,NA
-"Occcasional personel
-(working few weeks a year; counted as 0.1 FTE each)","pers_leadership_occasional","","number 0,999999,1","0","","roleinMPA %contains_word% '1'",NA,NA,NA,NA,NA,NA,NA,NA
-"### **In-site focused**","pers_notesite","","note","","","roleinMPA %contains_word% '2'",NA,NA,NA,NA,NA,NA,NA,NA
-"Full time personel
-(working all year; counted as 1 FTE each)","pers_site_fulltime","","number 0,999999,1","0","","roleinMPA %contains_word% '2'",NA,NA,NA,NA,NA,NA,NA,NA
-"Part time personel
-(counted as 0.5 FTE each)","pers_site_parttime","","number 0,999999,1","0","","roleinMPA %contains_word% '2'",NA,NA,NA,NA,NA,NA,NA,NA
-"Seasonal personel
-(working during e.g. summer; counted as 0.25 FTE each)","pers_site_seasonal","","number 0,999999,1","0","","roleinMPA %contains_word% '2'",NA,NA,NA,NA,NA,NA,NA,NA
-"Occcasional personel
-(working few weeks a year; counted as 0.1 FTE each)","pers_site_occasional","","number 0,999999,1","0","","roleinMPA %contains_word% '2'",NA,NA,NA,NA,NA,NA,NA,NA
-"### **Support focused**","pers_notesupport","","note","","","roleinMPA %contains_word% '3'",NA,NA,NA,NA,NA,NA,NA,NA
-"Full time personel
-(working all year; counted as 1 FTE each)","pers_support_fulltime","","number 0,999999,1","0","","roleinMPA %contains_word% '3'",NA,NA,NA,NA,NA,NA,NA,NA
-"Part time personel
-(counted as 0.5 FTE each)","pers_support_parttime","","number 0,999999,1","0","","roleinMPA %contains_word% '3'",NA,NA,NA,NA,NA,NA,NA,NA
-"Seasonal personel
-(working during e.g. summer; counted as 0.25 FTE each)","pers_support_seasonal","","number 0,999999,1","0","","roleinMPA %contains_word% '3'",NA,NA,NA,NA,NA,NA,NA,NA
-"Occcasional personel
-(working few weeks a year; counted as 0.1 FTE each)","pers_support_occasional","","number 0,999999,1","0","","roleinMPA %contains_word% '3'",NA,NA,NA,NA,NA,NA,NA,NA
-"### **Stakeholder focused**","pers_notestakeholder","","note","","","roleinMPA %contains_word% '4'",NA,NA,NA,NA,NA,NA,NA,NA
-"Full time personel
-(working all year; counted as 1 FTE each)","pers_stakeholder_fulltime","","number 0,999999,1","0","","roleinMPA %contains_word% '4'",NA,NA,NA,NA,NA,NA,NA,NA
-"Part time personel
-(counted as 0.5 FTE each)","pers_stakeholder_parttime","","number 0,999999,1","0","","roleinMPA %contains_word% '4'",NA,NA,NA,NA,NA,NA,NA,NA
-"Seasonal personel
-(working during e.g. summer; counted as 0.25 FTE each)","pers_stakeholder_seasonal","","number 0,999999,1","0","","roleinMPA %contains_word% '4'",NA,NA,NA,NA,NA,NA,NA,NA
-"Occcasional personel
-(working few weeks a year; counted as 0.1 FTE each)","pers_stakeholder_occasional","","number 0,999999,1","0","","roleinMPA %contains_word% '4'",NA,NA,NA,NA,NA,NA,NA,NA
-"### **Science focused**","pers_notescientists","","note","","","roleinMPA %contains_word% '5'",NA,NA,NA,NA,NA,NA,NA,NA
-"Full time personel
-(working all year; counted as 1 FTE each)","pers_scientists_fulltime","","number 0,999999,1","0","","roleinMPA %contains_word% '5'",NA,NA,NA,NA,NA,NA,NA,NA
-"Part time personel
-(counted as 0.5 FTE each)","pers_scientists_parttime","","number 0,999999,1","0","","roleinMPA %contains_word% '5'",NA,NA,NA,NA,NA,NA,NA,NA
-"Seasonal personel
-(working during e.g. summer; counted as 0.25 FTE each)","pers_scientists_seasonal","","number 0,999999,1","0","","roleinMPA %contains_word% '5'",NA,NA,NA,NA,NA,NA,NA,NA
-"Occcasional personel
-(working few weeks a year; counted as 0.1 FTE each)","pers_scientists_occasional","","number 0,999999,1","0","","roleinMPA %contains_word% '5'",NA,NA,NA,NA,NA,NA,NA,NA
-"### **Other**","pers_noteother","","note","","","roleinMPA %contains_word% '6'",NA,NA,NA,NA,NA,NA,NA,NA
-"Full time personel
-(working all year; counted as 1 FTE each)","pers_other_fulltime","","number 0,999999,1","0","","roleinMPA %contains_word% '6'",NA,NA,NA,NA,NA,NA,NA,NA
-"Part time personel
-(counted as 0.5 FTE each)","pers_other_parttime","","number 0,999999,1","0","","roleinMPA %contains_word% '6'",NA,NA,NA,NA,NA,NA,NA,NA
-"Seasonal personel
-(working during e.g. summer; counted as 0.25 FTE each)","pers_other_seasonal","","number 0,999999,1","0","","roleinMPA %contains_word% '6'",NA,NA,NA,NA,NA,NA,NA,NA
-"Occcasional personel
-(working few weeks a year; counted as 0.1 FTE each)","pers_other_occasional","","number 0,999999,1","0","","roleinMPA %contains_word% '6'",NA,NA,NA,NA,NA,NA,NA,NA
-"#### Add a COMMENT","pers_check","","check","","","!roleinMPA %contains_word% '7' && !roleinMPA %contains_word% '8'",NA,NA,NA,NA,NA,NA,NA,NA
-"#### 💡 Add more options or explain anything you think we should know about this workforce category","pers_comment","","textarea","","*","pers_check",NA,NA,NA,NA,NA,NA,NA,NA
-"Continue","submit_pers","","submit","","","!roleinMPA %contains_word% '7' && !roleinMPA %contains_word% '8'",NA,NA,NA,NA,NA,NA,NA,NA
-"# <mark> Part B: Tell us about this MPA (6 questions) </mark>","partB_note3","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
-"## 3: Confirm the number of FTE. 
-#### For each workforce category please review the number of FTE corresponding to your previous choices and <b>adjust</b> the numbers if necessary.
-🦀 FTE = Full-time equivalent.","note_FTE","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
-"### **Leadership focused**","FTE_leadership","","number 0,999999,0.05","ifelse(is.na(pers_leadership_fulltime + pers_leadership_parttime*0.5 + pers_leadership_seasonal*0.25 + pers_leadership_occasional*0.1), 0,pers_leadership_fulltime + pers_leadership_parttime*0.5 + pers_leadership_seasonal*0.25 + pers_leadership_occasional*0.1)","","",NA,NA,NA,NA,NA,NA,NA,NA
-"### **In-site focused**","FTE_site","","number 0,999999,0.05","ifelse(is.na(pers_site_fulltime + pers_site_parttime*0.5 + pers_site_seasonal*0.25 + pers_site_occasional*0.1), 0,pers_site_fulltime + pers_site_parttime*0.5 + pers_site_seasonal*0.25 + pers_site_occasional*0.1)","","",NA,NA,NA,NA,NA,NA,NA,NA
-"### **Support focused**","FTE_support","","number 0,999999,0.05","ifelse(is.na(pers_support_fulltime + pers_support_parttime*0.5 + pers_support_seasonal*0.25 + pers_support_occasional*0.1), 0,pers_support_fulltime + pers_support_parttime*0.5 + pers_support_seasonal*0.25 + pers_support_occasional*0.1)","","",NA,NA,NA,NA,NA,NA,NA,NA
-"### **Stakeholder focused**","FTE_stakeholder","","number 0,999999,0.05","ifelse(is.na(pers_stakeholder_fulltime + pers_stakeholder_parttime*0.5 + pers_stakeholder_seasonal*0.25 + pers_stakeholder_occasional*0.1), 0,pers_stakeholder_fulltime + pers_stakeholder_parttime*0.5 + pers_stakeholder_seasonal*0.25 + pers_stakeholder_occasional*0.1)","","",NA,NA,NA,NA,NA,NA,NA,NA
-"### **Science focused**","FTE_scientists","","number 0,999999,0.05","ifelse(is.na(pers_scientists_fulltime + pers_scientists_parttime*0.5 + pers_scientists_seasonal*0.25 + pers_scientists_occasional*0.1), 0,pers_scientists_fulltime + pers_scientists_parttime*0.5 + pers_scientists_seasonal*0.25 + pers_scientists_occasional*0.1)","","",NA,NA,NA,NA,NA,NA,NA,NA
-"### **Other**","FTE_other","","number 0,999999,0.05","ifelse(is.na(pers_other_fulltime + pers_other_parttime*0.5 + pers_other_seasonal*0.25 + pers_other_occasional*0.1), 0,pers_other_fulltime + pers_other_parttime*0.5 + pers_other_seasonal*0.25 + pers_other_occasional*0.1)","","",NA,NA,NA,NA,NA,NA,NA,NA
-"### **TOTAL**
+"# <mark> Part B: Tell us about this MPA (4 questions) </mark>","partB_note3","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
+"## 1: Who works on this specific MPA?
+### Including yourself, how many formal staff work on this MPA, and in what roles?
+<h4>
+🦀 Report as <b>full-time equivalents</b> (enter values smaller than 1 for less than full time).<br>
+🪼 If staff split their time between roles, please divide them across categories.
+</h4>
+<style>
+  p, summary, li, ol{
+    color:black;
+    font-family:Roboto,Arial,sans-serif;
+    font-weight:400;
+    font-size:16px;
+    margin:0 0 2px 0
+  }
+  li, ol{
+    color:#484c50;
+  }
+</style>
+<details>
+<summary>
+<p>💡 <strong>Examples</strong>:</p>
+<ul>
+<li>1.00 = full-time, working all year</li>
+<li>0.50 = part-time</li>
+<li>0.25 = seasonal</li>
+<li>0.10 = occasional</li>
+</ul>
+Click <u>here</u> to see more detailed examples.</summary>
+  <p, style='color:black'> When filling out more complex workforce numbers, you can estimate how much time each person spends on this specific MPA by using decimals to reflect partial time.<br>
+Here are three quick examples:</p>
+<ol type='1'>
+<li><i>🐙 Split between roles:<br>
+If someone divides their time equally between being a ranger and doing admin/support work, count 0.5 for this person in each of the two appropriate categories.</i></li>
+<li><i>🪼 Split between the MPA and other projects:<br>
+If someone works 50% on this MPA and 50% on other sites or programs (e.g. fisheries or another MPA), count only a total of 0.5 for this person across the appropriate categories.</i></li>
+<li><i>🦈 Count seasonal and occasional workers:<br>
+If someone only works on this MPA for 5 weeks per year, count a total of 0.1 for this person across the appropriate categories.</i></li>
+</ol>
+</details>
+","note_FTE","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
+"<h4><strong>Leadership focused</strong><br>
+e.g., manager, superintendent, decision maker</h4>","FTE_leadership","","number 0,999999,0.05","0","","",NA,NA,NA,NA,NA,NA,NA,NA
+"<h4><strong>In-site focused</strong><br>
+e.g., ranger and ranger-like roles working in the MPA, with and without enforcement capabilities</h4>","FTE_site","","number 0,999999,0.05","0","","",NA,NA,NA,NA,NA,NA,NA,NA
+"<h4><strong>Support focused</strong><br>
+e.g., supporting staff, administrative support, finance</h4>","FTE_support","","number 0,999999,0.05","0","","",NA,NA,NA,NA,NA,NA,NA,NA
+"<h4><strong>Stakeholder focused</strong><br>
+e.g., education and outreach</h4>","FTE_stakeholder","","number 0,999999,0.05","0","","",NA,NA,NA,NA,NA,NA,NA,NA
+"<h4><strong>Science focused</strong><br>
+e.g., collecting and analyzing data to address questions</h4>","FTE_scientists","","number 0,999999,0.05","0","","",NA,NA,NA,NA,NA,NA,NA,NA
+"<h4><strong>Other</strong><br>
+for roles not listed above</h4>","FTE_other","","number 0,999999,0.05","0","","",NA,NA,NA,NA,NA,NA,NA,NA
+"#### 🦀 Specify **Other** roles
+💡 Press **'Enter'** ↩️ after each entry to submit.","detail_FTE_other","","select_or_add_multiple","","*","FTE_other !='0' //js_only","Add the other MPA role(s) and press 'Enter'",NA,NA,NA,NA,NA,NA,NA
+"#### **TOTAL**
+💡 The TOTAL is just the sum for the categories above; you cannot modify it directly.
 <script>
 $(document).ready(function() {
   // Set the total_note field to be readonly on DOM ready
@@ -956,13 +927,12 @@ $(document).ready(function() {
   }).trigger(""change"");
 });
 </script>","total_note","","text","","","",NA,NA,NA,NA,NA,NA,NA,NA
-"💡 The TOTAL is just the sum for the categories above; you cannot modify it directly.","total_info","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
-"#### 🔎 <b>Confirm</b>","total_validate","","check","","!","",NA,NA,NA,NA,NA,NA,NA,NA
+"#### 🔎 <b>Confirm</b>","total_validate","mc_vertical","mc","","!","","I confirm that the total numbers of staff reported above are correct","this is an estimate","I really don't know",NA,NA,NA,NA,NA
 "#### Add a COMMENT","total_comment_check","","check","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "#### 💡 Tell us more, so we fully understand","total_comment","","textarea","","*","total_comment_check",NA,NA,NA,NA,NA,NA,NA,NA
 "Continue","submit_total","","submit","","","",NA,NA,NA,NA,NA,NA,NA,NA
-"# <mark> Part B: Tell us about this MPA (6 questions) </mark>","partB_note4","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
-"## 4: Technology used to help?","note_technoinMPA","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
+"# <mark> Part B: Tell us about this MPA (4 questions) </mark>","partB_note4","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
+"## 2: Technology used to help?","note_technoinMPA","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "#### If you use technology or other aids to help your MPA workforce expand its effectiveness in THIS specific MPA, please list.
 💡 Select all that apply.","technoinMPA","mc_vertical","mc_multiple","","!","","**Satellite technologies**","**Radar technologies**","**Underwater acoustic technologies**","**Drone technologies**","**MPA evaluation technology** (e.g., <a href='https://www.eoceans.org/mpas' target='_blank'>eOceans</a>)","**Reporting tools**: Phone, email, or app reporting for marine species, activities, incidents","None of the above","I don't know"
 "<div style='color:#ffff'>The answer <strong>None of the above</strong> cannot be combined with another category</div>","block_none_technoinMPA","","block","","","(technoinMPA %contains_word% '1' | technoinMPA %contains_word% '2' | technoinMPA %contains_word% '3' | technoinMPA %contains_word% '4' | technoinMPA %contains_word% '5' | technoinMPA %contains_word% '6') && technoinMPA %contains_word% '7'",NA,NA,NA,NA,NA,NA,NA,NA
@@ -973,8 +943,8 @@ $(document).ready(function() {
 "#### Add a COMMENT","technoinMPA_check","","check","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "#### 💡 Tell us more, so we fully understand","technoinMPA_comment","","textarea","","*","technoinMPA_check",NA,NA,NA,NA,NA,NA,NA,NA
 "Continue","submit_tech","","submit","","","",NA,NA,NA,NA,NA,NA,NA,NA
-"# <mark> Part B: Tell us about this MPA (6 questions) </mark>","partB_note5","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
-"## 5: Who else is nearby?","note_operator","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
+"# <mark> Part B: Tell us about this MPA (4 questions) </mark>","partB_note5","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
+"## 3: Who else is nearby?","note_operator","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Who else operates seasonally or more within or nearby this specific MPA who is *not* formally responsible for working for this MPA?
 💡 Select all that apply.","operator","mc_vertical","mc_multiple","","!","","**Fishers** 🎣","**Divers** 🤿","**Surfers** 🏄️","**Boat operators** ⛵","**Other** — for operators not listed above","None — no one uses this MPA 🏝️","I don't know",NA
 "<div style='color:#ffff'>The answer <strong>None</strong> cannot be combined with another category</div>","block_none_operator","","block","","","(operator %contains_word% '1' | operator %contains_word% '2' | operator %contains_word% '3' | operator %contains_word% '4' | operator %contains_word% '5') && operator %contains_word% '6'",NA,NA,NA,NA,NA,NA,NA,NA
@@ -988,8 +958,8 @@ $(document).ready(function() {
 "#### Add a COMMENT","operator_check","","check","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "#### 💡 Tell us more, so we fully understand","operator_comment","","textarea","","","operator_check",NA,NA,NA,NA,NA,NA,NA,NA
 "Continue","submit_operator","","submit","","","",NA,NA,NA,NA,NA,NA,NA,NA
-"# <mark> Part B: Tell us about this MPA (6 questions) </mark>","partB_note6","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
-"## 6: Anything else?","note_anythingelse","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
+"# <mark> Part B: Tell us about this MPA (4 questions) </mark>","partB_note6","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
+"## 4: Anything else?","note_anythingelse","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "#### Is there anything else you would like us to know about this specific MPA workforce?
 💡 Tell us more, so we fully understand.","anythingelse","","textarea","","*","",NA,NA,NA,NA,NA,NA,NA,NA
 "Continue","submit_anythingelse","","submit","","","",NA,NA,NA,NA,NA,NA,NA,NA

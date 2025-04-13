@@ -140,7 +140,7 @@ employees, and others who have a formal role actively contributing to achieving 
 <span>
 <ul>
   <li><strong>Part A</strong>: 2 questions: Let's identify your MPA.</li>
-  <li><strong>Part B</strong>: 6 questions: Tell us about this MPA.</li>
+  <li><strong>Part B</strong>: 4 questions: Tell us about this MPA.</li>
   <li><strong>Part C</strong>: 4 questions: Tell us about you. </li>
   <li><strong>Part D</strong>: 2 (optional) questions: Tell us more? </li>
 </ul>
@@ -290,10 +290,11 @@ showif = "lengthItems > 1 //js_only")
 submit_MPA <- submit_blank; submit_MPA$name <- "submit_MPA"
 
 # Page 4 -----------------------------------------------------------------------
+## NOTE: page removed for simplicity
 
 CSS4 <- CSS; CSS4$name <- "CSS4"
 
-partB_note1 <-  add_element(label = "# <mark> Part B: Tell us about this MPA (6 questions) </mark>",
+partB_note1 <-  add_element(label = "# <mark> Part B: Tell us about this MPA (4 questions) </mark>",
                             name = "partB_note1",
                             type = "note")
 
@@ -345,6 +346,7 @@ roleinMPA_comment <- add_element(label = "#### 💡 Tell us more, so we fully un
 submit_roleinMPA <- submit_MPA; submit_roleinMPA$name <- "submit_roleinMPA"
 
 # Page 5 -----------------------------------------------------------------------
+## NOTE: page removed for simplicity
 
 CSS5 <- CSS; CSS5$name <- "CSS5"
 
@@ -443,9 +445,47 @@ CSS6 <- CSS; CSS6$name <- "CSS6"
 
 partB_note3 <- partB_note2; partB_note3$name <- "partB_note3"
 
-note_FTE <- add_element(label = "## 3: Confirm the number of FTE. 
-#### For each workforce category please review the number of FTE corresponding to your previous choices and <b>adjust</b> the numbers if necessary.
-🦀 FTE = Full-time equivalent.",
+#note_FTE <- add_element(label = "## 3: Confirm the number of FTE.
+note_FTE <- add_element(label = "## 1: Who works on this specific MPA?
+### Including yourself, how many formal staff work on this MPA, and in what roles?
+<h4>
+🦀 Report as <b>full-time equivalents</b> (enter values smaller than 1 for less than full time).<br>
+🪼 If staff split their time between roles, please divide them across categories.
+</h4>
+<style>
+  p, summary, li, ol{
+    color:black;
+    font-family:Roboto,Arial,sans-serif;
+    font-weight:400;
+    font-size:16px;
+    margin:0 0 2px 0
+  }
+  li, ol{
+    color:#484c50;
+  }
+</style>
+<details>
+<summary>
+<p>💡 <strong>Examples</strong>:</p>
+<ul>
+<li>1.00 = full-time, working all year</li>
+<li>0.50 = part-time</li>
+<li>0.25 = seasonal</li>
+<li>0.10 = occasional</li>
+</ul>
+Click <u>here</u> to see more detailed examples.</summary>
+  <p, style='color:black'> When filling out more complex workforce numbers, you can estimate how much time each person spends on this specific MPA by using decimals to reflect partial time.<br>
+Here are three quick examples:</p>
+<ol type='1'>
+<li><i>🐙 Split between roles:<br>
+If someone divides their time equally between being a ranger and doing admin/support work, count 0.5 for this person in each of the two appropriate categories.</i></li>
+<li><i>🪼 Split between the MPA and other projects:<br>
+If someone works 50% on this MPA and 50% on other sites or programs (e.g. fisheries or another MPA), count only a total of 0.5 for this person across the appropriate categories.</i></li>
+<li><i>🦈 Count seasonal and occasional workers:<br>
+If someone only works on this MPA for 5 weeks per year, count a total of 0.1 for this person across the appropriate categories.</i></li>
+</ol>
+</details>
+",
 type = "note",
 name = "note_FTE")
 
@@ -454,37 +494,58 @@ FTE_formula <- function(category) {
   paste0("ifelse(is.na(", form, "), 0,", form, ")")
 }
 
-FTE_leadership <- add_element(label = "### **Leadership focused**",
+FTE_leadership <- add_element(label = "<h4><strong>Leadership focused</strong><br>
+e.g., manager, superintendent, decision maker</h4>",
                               name = "FTE_leadership",
                               type = "number 0,999999,0.05",
-                              value = FTE_formula("leadership"))
+                              #value = FTE_formula("leadership"))
+                              value = "0")
 
-FTE_site <- add_element(label = "### **In-site focused**",
+FTE_site <- add_element(label = "<h4><strong>In-site focused</strong><br>
+e.g., ranger and ranger-like roles working in the MPA, with and without enforcement capabilities</h4>",
                         name = "FTE_site",
                         type = "number 0,999999,0.05",
-                        value = FTE_formula("site"))
+                        #value = FTE_formula("site"))
+                        value = "0")
 
-FTE_support <- add_element(label = "### **Support focused**",
+FTE_support <- add_element(label = "<h4><strong>Support focused</strong><br>
+e.g., supporting staff, administrative support, finance</h4>",
                            name = "FTE_support",
                            type = "number 0,999999,0.05",
-                           value = FTE_formula("support"))
+                           #value = FTE_formula("support"))
+                           value = "0")
 
-FTE_stakeholder <- add_element(label = "### **Stakeholder focused**",
+FTE_stakeholder <- add_element(label = "<h4><strong>Stakeholder focused</strong><br>
+e.g., education and outreach</h4>",
                                name = "FTE_stakeholder",
                                type = "number 0,999999,0.05",
-                               value = FTE_formula("stakeholder"))
+                               #value = FTE_formula("stakeholder"))
+                               value = "0")
 
-FTE_scientists <- add_element(label = "### **Science focused**",
+FTE_scientists <- add_element(label = "<h4><strong>Science focused</strong><br>
+e.g., collecting and analyzing data to address questions</h4>",
                               name = "FTE_scientists",
                               type = "number 0,999999,0.05",
-                              value = FTE_formula("scientists"))
+                              #value = FTE_formula("scientists"))
+                              value = "0")
 
-FTE_other <- add_element(label = "### **Other**",
+FTE_other <- add_element(label = "<h4><strong>Other</strong><br>
+for roles not listed above</h4>",
                          name = "FTE_other",
                          type = "number 0,999999,0.05",
-                         value = FTE_formula("other"))
+                         #value = FTE_formula("other"))
+                         value = "0")
 
-total_note <- add_element(label = r"(### **TOTAL**
+detail_FTE_other <- add_element(label = "#### 🦀 Specify **Other** roles
+💡 Press **'Enter'** ↩️ after each entry to submit.",
+type = "select_or_add_multiple",
+name = "detail_FTE_other",
+choice1 = "Add the other MPA role(s) and press 'Enter'",
+showif = "FTE_other !='0' //js_only",
+optional = "*")
+
+total_note <- add_element(label = r"(#### **TOTAL**
+💡 The TOTAL is just the sum for the categories above; you cannot modify it directly.
 <script>
 $(document).ready(function() {
   // Set the total_note field to be readonly on DOM ready
@@ -517,7 +578,11 @@ total_info <- add_element(label = "💡 The TOTAL is just the sum for the catego
 
 total_validate <- add_element(label = "#### 🔎 <b>Confirm</b>",
                               name = "total_validate",
-                              type = "check",
+                              type = "mc",
+                              class = "mc_vertical",
+                              choice1 = "I confirm that the total numbers of staff reported above are correct",
+                              choice2 = "this is an estimate",
+                              choice3 = "I really don't know",
                               optional = "!")
 
 total_comment_check <- add_element(label = "#### Add a COMMENT",
@@ -538,7 +603,7 @@ CSS7 <- CSS; CSS7$name <- "CSS7"
 
 partB_note4 <- partB_note3; partB_note4$name <- "partB_note4"
 
-note_technoinMPA <-  add_element(label = "## 4: Technology used to help?",
+note_technoinMPA <-  add_element(label = "## 2: Technology used to help?",
                                name = "note_technoinMPA",
                                type = "note")
 
@@ -593,7 +658,7 @@ CSS8 <- CSS; CSS8$name <- "CSS8"
 
 partB_note5 <- partB_note4; partB_note5$name <- "partB_note5"
 
-note_operator <-  add_element(label = "## 5: Who else is nearby?",
+note_operator <-  add_element(label = "## 3: Who else is nearby?",
                               name = "note_operator",
                               type = "note")
 
@@ -662,7 +727,7 @@ CSS9 <- CSS; CSS9$name <- "CSS9"
 
 partB_note6 <- partB_note5; partB_note6$name <- "partB_note6"
 
-note_anythingelse <-  add_element(label = "## 6: Anything else?",
+note_anythingelse <-  add_element(label = "## 4: Anything else?",
                                   name = "note_anythingelse",
                                   type = "note")
 
@@ -908,10 +973,11 @@ survey_tbl <- bind_rows(welcome_text, logos, submit_welcome,
                         partA_note1, note_country, select_country, submit_country,
                         partA_note2, note_MPA, select_MPA, script_protectedplanet, 
                         missing_MPA, inspect_protectedplanet, issue_protectedplanet, fix_protectedplanet, warn_multiple, submit_MPA,
-                        partB_note1, note_roleinMPA, roleinMPA, block_none_roleinMPA, block_dontknow_roleinMPA, detail_other_roleinMPA, roleinMPA_check, roleinMPA_comment, submit_roleinMPA,
-                        partB_note2, note_personel, note_no_personel, pers1, pers2, pers3, pers4, pers5, pers6, pers_check, pers_comment, submit_pers,
+                        #partB_note1, note_roleinMPA, roleinMPA, block_none_roleinMPA, block_dontknow_roleinMPA, detail_other_roleinMPA, roleinMPA_check, roleinMPA_comment, submit_roleinMPA,
+                        #partB_note2, note_personel, note_no_personel, pers1, pers2, pers3, pers4, pers5, pers6, pers_check, pers_comment, submit_pers,
                         partB_note3, note_FTE, FTE_leadership, FTE_site, FTE_support, FTE_stakeholder, FTE_scientists, FTE_other,
-                        total_note, total_info, total_validate, total_comment_check, total_comment, submit_total,
+                        detail_FTE_other, total_note, #total_info,
+                        total_validate, total_comment_check, total_comment, submit_total,
                         partB_note4, note_technoinMPA, technoinMPA, block_none_technoinMPA, block_dontknow_technoinMPA, detail_other_technoinMPA, technoinMPA_check, technoinMPA_comment, submit_tech,
                         partB_note5, note_operator, operator, block_none_operator, block_dontknow_operator, detail_fishers_operator, detail_boats_operator, detail_other_operator, operator_check, operator_comment, submit_operator,
                         partB_note6, note_anythingelse, anythingelse, submit_anythingelse,
