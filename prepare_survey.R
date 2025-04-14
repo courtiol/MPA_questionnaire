@@ -450,7 +450,7 @@ note_FTE <- add_element(label = "## 1: Who works on this specific MPA?
 ### Including yourself, how many formal staff work on this MPA, and in what roles?
 <h4>
 🦀 Report as <b>full-time equivalents</b> (enter values smaller than 1 for less than full time).<br>
-🪼 If staff split their time between roles, please divide them across categories.
+🪼 If staff split their time between roles, please divide them across categories if you can OR choose the one that is most appropriate.
 </h4>
 <style>
   p, summary, li, ol{
@@ -632,7 +632,7 @@ block_dontknow_technoinMPA <- add_element(label = "<div style='color:#ffff'>The 
                                         type = "block",
                                         showif = "(technoinMPA %contains_word% '1' | technoinMPA %contains_word% '2' | technoinMPA %contains_word% '3' | technoinMPA %contains_word% '4' | technoinMPA %contains_word% '5' | technoinMPA %contains_word% '6' | technoinMPA %contains_word% '7') && technoinMPA %contains_word% '8'")
 
-detail_other_technoinMPA <- add_element(label = "#### 🦀 Add other technologies that qualify
+detail_other_technoinMPA <- add_element(label = "#### 🦀 Add other technologies
 🪼 Brand names are fine too.
 💡 Press **'Enter'** ↩️ after each entry to submit.",
 type = "select_or_add_multiple",
@@ -949,7 +949,7 @@ note_loopback <- add_element(label = "## Can you fill in this survey for another
                              name = "note_loopback",
                              type = "note")
 
-loopback <- add_element(label = "#### Tell us if you can?",
+loopback <- add_element(label = "",
                         name = "loopback",
                         choice1 = "Yes",
                         choice2 = "No",

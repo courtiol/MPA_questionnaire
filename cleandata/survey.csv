@@ -852,7 +852,7 @@ $(document).ready(function () {
 ### Including yourself, how many formal staff work on this MPA, and in what roles?
 <h4>
 🦀 Report as <b>full-time equivalents</b> (enter values smaller than 1 for less than full time).<br>
-🪼 If staff split their time between roles, please divide them across categories.
+🪼 If staff split their time between roles, please divide them across categories if you can OR choose the one that is most appropriate.
 </h4>
 <style>
   p, summary, li, ol{
@@ -937,7 +937,7 @@ $(document).ready(function() {
 💡 Select all that apply.","technoinMPA","mc_vertical","mc_multiple","","!","","**Satellite technologies**","**Radar technologies**","**Underwater acoustic technologies**","**Drone technologies**","**MPA evaluation technology** (e.g., <a href='https://www.eoceans.org/mpas' target='_blank'>eOceans</a>)","**Reporting tools**: Phone, email, or app reporting for marine species, activities, incidents","None of the above","I don't know"
 "<div style='color:#ffff'>The answer <strong>None of the above</strong> cannot be combined with another category</div>","block_none_technoinMPA","","block","","","(technoinMPA %contains_word% '1' | technoinMPA %contains_word% '2' | technoinMPA %contains_word% '3' | technoinMPA %contains_word% '4' | technoinMPA %contains_word% '5' | technoinMPA %contains_word% '6') && technoinMPA %contains_word% '7'",NA,NA,NA,NA,NA,NA,NA,NA
 "<div style='color:#ffff'>The answer <strong>I don't know</strong> cannot be combined with another category</div>","block_dontknow_technoinMPA","","block","","","(technoinMPA %contains_word% '1' | technoinMPA %contains_word% '2' | technoinMPA %contains_word% '3' | technoinMPA %contains_word% '4' | technoinMPA %contains_word% '5' | technoinMPA %contains_word% '6' | technoinMPA %contains_word% '7') && technoinMPA %contains_word% '8'",NA,NA,NA,NA,NA,NA,NA,NA
-"#### 🦀 Add other technologies that qualify
+"#### 🦀 Add other technologies
 🪼 Brand names are fine too.
 💡 Press **'Enter'** ↩️ after each entry to submit.","detail_other_technoinMPA","","select_or_add_multiple","","*","","Add your item(s) and press 'Enter'",NA,NA,NA,NA,NA,NA,NA
 "#### Add a COMMENT","technoinMPA_check","","check","","","",NA,NA,NA,NA,NA,NA,NA,NA
@@ -1024,6 +1024,6 @@ p, summary, li{
 "#### Add a COMMENT","adequate_check","","check","","","",NA,NA,NA,NA,NA,NA,NA,NA
 "#### 💡 Tell us more, so we fully understand","adequate_comment","","textarea","","","adequate_check",NA,NA,NA,NA,NA,NA,NA,NA
 "## Can you fill in this survey for another MPA?","note_loopback","","note","","","",NA,NA,NA,NA,NA,NA,NA,NA
-"#### Tell us if you can?","loopback","mc_vertical","mc","","!","","Yes","No",NA,NA,NA,NA,NA,NA
+"","loopback","mc_vertical","mc","","!","","Yes","No",NA,NA,NA,NA,NA,NA
 "## 💡 After clicking on *End the survey*, you will be redirected to a new survey.","loopback_info","","note","","","loopback == '1'",NA,NA,NA,NA,NA,NA,NA,NA
 "End the survey","submit_end","","submit","","","",NA,NA,NA,NA,NA,NA,NA,NA
