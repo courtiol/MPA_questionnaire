@@ -259,3 +259,9 @@ tail(choices_tbl)
 if (!dir.exists("cleandata")) dir.create("cleandata")
 write.csv(choices_tbl, file = "cleandata/choices.csv", row.names = FALSE)
 
+## export for full list (no geometry)
+#d <- left_join(sf::st_drop_geometry(MPA_tbl_clean), sf::st_drop_geometry(cleanMPA_tbl), by = c("id" = "WDPA_PID"))
+#d
+#googlesheets4::gs4_auth(email = "alexandre.courtiol@gmail.com")
+#googlesheets4::gs4_create(name = "MPA_list_used", sheets = list(MPAs = d)) ## if does not exist
+
