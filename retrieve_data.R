@@ -12,7 +12,7 @@ res <- formr_results(survey_name = "MPA_workforce_survey3",
 
 res |> 
   select(where(fn = ~ !all(is.na(.x)))) |>
-  filter(!is.na(country) & (is.na(missing_MPA) | missing_MPA != "TEST"))
+  filter(!is.na(country), !missing_MPA %in% c("test", "TEST"), !is.na(total_validate))
 
 res |> 
   select(where(fn = ~ !all(is.na(.x)))) |>
