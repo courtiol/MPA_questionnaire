@@ -10,13 +10,31 @@ res <- formr_results(survey_name = "MPA_workforce_survey3",
 
 #saveRDS(res, file = "result_backup20250413.RDS")
 
-res |> 
-  select(where(fn = ~ !all(is.na(.x)))) |>
-  filter(!is.na(country), !missing_MPA %in% c("test", "TEST"), !is.na(total_validate))
+nrow(res)
+sum(!is.na(res$ended))
+sum(is.na(res$country))
 
 res |> 
   select(where(fn = ~ !all(is.na(.x)))) |>
-  filter(country == "Australia (AUS)") |>
+  filter(!is.na(country), !missing_MPA %in% c("test", "TEST", "Test"),
+         !anythingelse %in% c("TEST"), !is.na(total_validate)) |>
+  select(country, total_note, total_validate, starts_with("MPA"), email) |>
+  mutate(MPA = lay::lay(pick(starts_with("MPA")), \(x) x[!is.na(x)]),
+         MPA = stringr::str_remove_all(MPA, "[:alpha:]|[:punct:]|="),
+         MPA = stringr::str_replace_all(MPA, "[:blank:]+", "-"),
+         MPA = stringr::str_remove(MPA, "."), 
+         total_validate = case_match(total_validate, 1 ~ "valid",
+                                                     2 ~ "estimate",
+                                                     3 ~ "guesstimate"),
+         email = !is.na(email)) |>
+  select(-starts_with("MPA_")) |>
+  relocate(MPA, .after = country) -> df_clean
+  
+df_clean  
+
+res |>
+  select(where(fn = ~ !all(is.na(.x)))) |>
+  filter(country == "Angola (AGO)") |>
   mutate(across(everything(), as.character)) |>
   pivot_longer(everything()) |>
   filter(!is.na(value)) |>
