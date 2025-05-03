@@ -24,7 +24,11 @@ res <- formr_results(survey_name = "MPA_workforce_survey3",
 #saveRDS(res, file = "responses/result_backup20250413.RDS") ## backup of pre-launch data collection
 
 hash <- digest::digest(res)
-previous_hash <- read_file("responses/lastresult_hash.txt")
+if (file.exists("responses/lastresult_hash.txt")) {
+  previous_hash <- read_file("responses/lastresult_hash.txt")
+} else {
+  previous_hash <- "nohash"
+}
 
 ## do stuff only if the data have changed
 if (hash != previous_hash) {
@@ -56,13 +60,23 @@ if (hash != previous_hash) {
   
   
   ## send the data by email using s-nail in bash
-  ## I create a script called send_data_email.sh with the following
-  ## #!/bin/bash
-  ## file=$(ls responses/*.xlsx -Art | tail -n 1)
-  ## echo $file
-  ## zip -e --password=[a password] responses/lastdata.zip "responses/$file"
-  ## echo 'Here is the latest version of the data' | mailx --subject="MPA update" -a responses/lastdata.zip [an email]
+  ## I create a script called prepare_zip.sh and one called send_data_email.sh as follows:
   
+  ## prepare_zip.sh
+  ## #!/bin/bash
+  ## if test -f responses/lastdata.zip; then
+  ## rm responses/lastdata.zip
+  ## fi
+  ## filexslx=
+  ## filexslx=$(ls responses/*.xlsx -Art | tail -n 1)
+  ## echo $filexslx
+  ## zip -e --password=[password] responses/lastdata.zip "$filexslx"
+  
+  ## send_data_email.sh
+  ## #!/bin/bash
+  ## echo 'Here is the latest version of the data' | mailx --subject="MPA update" -a responses/lastdata.zip [email]
+  
+  if (file.exists("prepare_zip.sh")) system("sh prepare_zip.sh")
   if (file.exists("send_data_email.sh")) system("sh send_data_email.sh")
 } else {
   cat("Nothing to be done (data have not changed)\n")

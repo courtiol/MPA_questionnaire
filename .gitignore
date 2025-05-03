@@ -9,4 +9,5 @@ rawdata
 secret.R
 responses
 result_backup20250413.RDS
+prepare_zip.sh
 send_data_email.sh
