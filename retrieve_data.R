@@ -58,7 +58,7 @@ if (hash != previous_hash) {
   ## send the data by email using s-nail in bash
   ## I create a script called send_data_email.sh with the following
   ## #!/bin/bash
-  ## file=$(ls responses/ -Art | tail -n 1)
+  ## file=$(ls responses/*.xlsx -Art | tail -n 1)
   ## echo $file
   ## zip -e --password=[a password] responses/lastdata.zip "responses/$file"
   ## echo 'Here is the latest version of the data' | mailx --subject="MPA update" -a responses/lastdata.zip [an email]
