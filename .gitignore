@@ -9,3 +9,4 @@ rawdata
 secret.R
 responses
 result_backup20250413.RDS
+send_data_email.sh
