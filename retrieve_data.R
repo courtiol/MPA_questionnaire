@@ -3,7 +3,9 @@
 ## 0 * * * * Rscript [path_to_current_file]
 ## Check output using 'sudo cat /var/log/cron' (on Fedora)
 
-setwd("~/Dropbox/Boulot/Mes_projets_de_recherche/R_packages/MPA_project/MPA_questionnaire_Rscripts_GitHub") ## for CRON job
+if (!interactive()) {
+  setwd("~/Dropbox/Boulot/Mes_projets_de_recherche/R_packages/MPA_project/MPA_questionnaire_Rscripts_GitHub") ## for CRON job
+}
 
 library(formr) ## remotes::install_github("rubenarslan/formr")
 library(tidyverse)
