@@ -1,14 +1,18 @@
-library(formr)
+library(formr) ## remotes::install_github("rubenarslan/formr")
 library(tidyverse)
 
+source("secret.R") ## load credentials
+
 formr_connect(
-  host = "https://workforce-admin.marine-conservation.org"
+  host = "https://workforce-admin.marine-conservation.org",
+  email = secret$email,
+  password = secret$password
 )
 
 res <- formr_results(survey_name = "MPA_workforce_survey3",
                      host = "https://workforce-admin.marine-conservation.org")
 
-#saveRDS(res, file = "result_backup20250413.RDS")
+#saveRDS(res, file = "result_backup20250413.RDS") ## backup of pre-launch data collection
 
 nrow(res)
 sum(!is.na(res$ended))
