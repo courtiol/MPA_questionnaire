@@ -4,7 +4,7 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
-The scripts in this folder are used to create the [Google sheets](https://docs.google.com/spreadsheets/d/1z3A66tx5zHx55JeNii2_TWwg6hMJ0K69jMEhPhuHUJY/edit?usp=sharing) required by the questionnaire.
+The scripts in this folder are used to create the [Google sheets](https://docs.google.com/spreadsheets/d/1vHkE8yP9OJbM0NxXQzAzmpeKvePs_MtpigZJMxjLzxQ/edit?usp=sharing) required by the questionnaire.
 
 **note**: this is WIP and a test google sheet.
 
@@ -30,6 +30,5 @@ So better ask me for the data in case you need them.
 
 ## Useful links
 
-- [test run](https://test-mpa.rforms.org)
-- [admin platform](https://www.rforms.org/admin/)
+- [admin platform](https://workforce-survey.marine-conservation.org/info)
 - [possible items in formr](https://formr.org/documentation/#available_items)
