@@ -1,3 +1,10 @@
+## I have set this up as a CRON job to run hourly:
+## run crontab -e and paste the following:
+## 0 * * * * Rscript [path_to_current_file]
+## Check output using 'sudo cat /var/log/cron' (on Fedora)
+
+setwd(here::here()) ## for CRON job
+
 library(formr) ## remotes::install_github("rubenarslan/formr")
 library(tidyverse)
 
@@ -38,3 +45,13 @@ df_clean |>
                                                      3 ~ "guesstimate"),
          email = !is.na(email)) -> df_clean_short
 
+
+## send the data by email using s-nail in bash
+## I create a script called send_data_email.sh with the following
+## #!/bin/bash
+## file=$(ls responses/ -Art | tail -n 1)
+## echo $file
+## zip -e --password=[a password] responses/lastdata.zip "responses/$file"
+## echo 'Here is the latest version of the data' | mailx --subject="MPA update" -a responses/lastdata.zip [an email]
+
+if (file.exists("send_data_email.sh")) system("sh send_data_email.sh")
