@@ -123,7 +123,7 @@ p {
 
 <br>
 
-<p>Thanks for participating in this <b><i>voluntary</i></b> study— your input is valuable. <i>Please consider the information in this <a href=' https://www.eoceans.org/mpa-workforce-study-2025-about' target='blank'>about</a> document and ask any <a href='mailto:christine@eOceans.co'>questions</a> you may have before deciding if you will participate.</i></p>
+<p>Thanks for participating in this <b><i>voluntary</i></b> study— your input is valuable. <i>Please consider the information in this <a href='https://youtu.be/M3Nm5KuyN_Q?si=-bIdGoTAr2H3lsoV' target='blank'>about</a> document and ask any <a href='mailto:christine@eOceans.co'>questions</a> you may have before deciding if you will participate.</i> You can also watch a short video about why this project matters <a href=' https://www.eoceans.org/mpa-workforce-study-2025-about' target='blank'>here</a>.</p>
 
 <p>As the world moves toward protecting 30% of the ocean by 2030,
 <a href='https://marine-conservation.org/' target='_blank'>the Marine Conservation Institute (MPAtlas)</a>,
@@ -148,7 +148,9 @@ employees, and others who have a formal role actively contributing to achieving 
 </ul>
 </span>
 
-<p>💡 Click <a href=' https://www.eoceans.org/mpa-workforce-study-2025-about' target='blank'>here</a> to learn about <em>Data Access</em>, <em>Risks</em>, <em>Support</em>, <em>Funders</em>, and more.</p>
+<p>️🎬 Before you jump in, don't hesitate to watch a walkthrough of the survey <a href='https://youtu.be/h6fAi9vLI4U?si=95ux3CsgE5EItlUit' target='blank'>here</a>.</p>
+
+<p>💡 Click <a href='https://www.eoceans.org/mpa-workforce-study-2025-about' target='blank'>here</a> to learn about <em>Data Access</em>, <em>Risks</em>, <em>Support</em>, <em>Funders</em>, and more.</p>
 
 <p>🪼 <strong>Thank you!</strong><br>
 Your input is invaluable to this study and will provide crucial insights for others working on MPAs like you.<br>
