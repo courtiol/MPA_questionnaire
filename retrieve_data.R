@@ -22,9 +22,10 @@ res <- formr_results(survey_name = "MPA_workforce_survey3",
 
 nrow(res)
 sum(!is.na(res$ended))
-sum(is.na(res$country))
+nrow(res) - sum(is.na(res$country))
   
 res |> 
+  as_tibble() |> 
   select(where(fn = ~ !all(is.na(.x)))) |>
   filter(!is.na(country), !missing_MPA %in% c("test", "TEST", "Test"),
          !anythingelse %in% c("TEST"), !is.na(total_validate)) |>
