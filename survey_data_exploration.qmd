@@ -1,0 +1,188 @@
+---
+title: "Survey data exploration"
+author: "Alexandre Courtiol"
+format: 
+  html:
+    df-print: "paged"
+editor: visual
+---
+
+```{r}
+setwd("..")
+```
+
+
+## Loading the required packages
+
+```{r}
+library(tidyverse)
+library(sf)
+```
+
+## Loading the data
+
+I load here the dataset for which the total number of personal has been validated.
+
+```{r}
+responses <- readRDS("responses/df_clean_data_280720251508.RDS")
+dim(responses)
+```
+
+I load here the data from protected planet about the MPAs.
+
+```{r}
+MPAs <- readRDS("Robj/cleanMPA_tbl.RDS")
+dim(MPAs)
+```
+
+## Reshape response data
+
+We transform the data so that we have one row per MPA even if the respondent filled in numbers for several MPAs at once:
+
+```{r}
+responses |> 
+  mutate(MPA_split = str_split(MPA, "-"), .after = "MPA") |> 
+  unnest_longer(col = MPA_split) -> responses_long
+dim(responses_long)
+```
+
+We reduce the number of columns and make them more informative:
+
+```{r}
+responses_long |> 
+  select(-c("session", "session_id", "study_id", "modified",
+            "issue_protectedplanet", "total_comment_check", "technoinMPA_check",
+            "operator_check", "roleself_check")) |> 
+  rename(ID = iteration,
+         pooled_MPA = MPA,
+         MPA = MPA_split,
+         comment_WDPA = fix_protectedplanet,
+         FTE_total = total_note,
+         FTE_quality = total_validate,
+         tech_other = detail_other_technoinMPA,
+         comment_tech = technoinMPA_comment,
+         comment_operator_fishers = detail_fishers_operator,
+         comment_operator_boats = detail_boats_operator,
+         comment_operator_other = detail_other_operator,
+         comment_operator = operator_comment,
+         comment_general = anythingelse) |> 
+  mutate(pooled_MPA = if_else(pooled_MPA == MPA, "", pooled_MPA),
+         FTE_quality = as_factor(FTE_quality),
+         FTE_quality = case_match(FTE_quality,
+                                  "I confirm that the total numbers of staff reported above are correct" ~ "high",
+                                  "this is an estimate" ~ "medium",
+                                  "I really don't know" ~ "low")) |> 
+  rowwise() |> 
+  mutate(tech_satellite = grepl(pattern = "1", technoinMPA),
+         tech_radar = grepl(pattern = "2",  technoinMPA),
+         tech_acoustic = grepl(pattern = "3",  technoinMPA),
+         tech_drone = grepl(pattern = "4",  technoinMPA),
+         tech_monitor = grepl(pattern = "5",  technoinMPA),
+         tech_report = grepl(pattern = "6",  technoinMPA),
+         tech_none = grepl(pattern = "7",  technoinMPA),
+         tech_unknown = grepl(pattern = "8",  technoinMPA),
+         .after = "technoinMPA") |> 
+  mutate(operator_fishers = grepl(pattern = "1", operator),
+         operator_divers = grepl(pattern = "2", operator),
+         operator_surfers = grepl(pattern = "3", operator),
+         operator_boat = grepl(pattern = "4", operator),
+         operator_other = grepl(pattern = "5", operator),
+         operator_none = grepl(pattern = "6", operator),
+         operator_unknown = grepl(pattern = "7", operator),
+         .after = "operator") |> 
+  ungroup() |> 
+  select(-c("technoinMPA", "operator")) |> 
+  select(-c("roleself", "detail_other_roleself", 
+            "roleself_comment", "name", "name_anonymous", 
+            "name_check", "name_comment", "email_anonymous", "email_check", 
+            "acknowledgement", "referral", "adequate", "adequate_check", 
+            "adequate_comment", "loopback", "detail_FTE_other")) |> ## for anonymity
+  mutate(email_given = if_else(is.na(email), FALSE, TRUE)) |> 
+  select(- "email") |> 
+  haven::zap_labels() |> 
+  haven::zap_label() -> responses_long
+dim(responses_long)
+```
+
+## Reshape MPA data
+
+We drop the columns we do not need:
+
+```{r}
+MPAs |> 
+  st_drop_geometry() |> 
+  select(-c("CONS_OBJ", "SUPP_INFO", "VERIF", "METADATAID", "SUB_LOC", "PARENT_ISO", 
+         "GEOMETRY_TYPE"))-> MPAs_clean
+```
+
+## Merging the 2 datasets
+
+```{r}
+data_clean <- left_join(responses_long, MPAs_clean, by = c("MPA" = "WDPA_PID"))
+dim(data_clean)
+```
+
+Checking where merging failed:
+
+```{r}
+data_notjoined <- anti_join(responses_long, MPAs_clean, by = c("MPA" = "WDPA_PID"))
+data_notjoined |> select(missing_MPA)
+data_notjoined |> filter(MPA != "") |> 
+  select(country, MPA) |> 
+  arrange(country) |> 
+  distinct()
+```
+
+The merging failed when WDPA numbers are missing from our list. Note that when WDPA numbers are provided (555592581, 555592591, 13939), those correspond to PA categorized as terrestrial according to WDPA but under the category "Terrestrial and Inland Waters Protected Areas".
+
+## Saving clean data
+
+```{r}
+#|eval: FALSE
+source("secret.R")
+googlesheets4::gs4_auth(email = secret$email_sender)
+#googlesheets4::gs4_create(name = "data_anonymized_11072025", sheets = list(data_clean = data_clean))
+sheet_id <- googlesheets4::gs4_find("data_anonymized")[, "id"][[1]]
+googlesheets4::sheet_write(data_clean, ss = sheet_id, sheet = "data_clean_28072025")
+```
+
+
+
+## Checking coverage in responses
+
+Defining targets:
+  
+```{r}
+#|eval: FALSE
+MPAs_clean |> 
+  summarise(nb_MPAs_targetted = n(),
+            surface_area_targetted = sum(AREA_KM2),
+            nb_country_targetted = length(unique(ISO3)),
+            .by = "MARINE") -> targets
+
+data_clean |> 
+   summarise(nb_MPAs_done = length(unique(MPA)),
+   surface_area_done = sum(AREA_KM2),
+   nb_country_done = length(unique(country)),
+   .by = "MARINE") -> achieved
+
+targets_vs_done <- full_join(achieved, targets)
+
+targets_vs_done |> 
+  mutate(`nb_country%` = nb_country_done/nb_country_targetted*100,
+         `nb_MPAs%` = nb_MPAs_done/nb_MPAs_targetted*100,
+         `surface_area%` = surface_area_done/surface_area_targetted*100) -> targets_vs_done
+
+targets_vs_done |> 
+  select(MARINE, sort(colnames(targets_vs_done))) |> 
+  arrange(MARINE) -> targets_vs_done
+
+targets_vs_done |> 
+  select(MARINE, starts_with("nb_country"))
+
+targets_vs_done |> 
+  select(MARINE, starts_with("nb_MPA"))
+
+targets_vs_done |> 
+  select(MARINE, starts_with("surf"))
+```
