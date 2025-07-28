@@ -10,6 +10,7 @@ library(ggplot2)
 library(rnaturalearth)
 data("codelist", package = "countrycode")
 
+#setwd("../")
 cleanMPA_tbl <- readRDS("Robj/cleanMPA_tbl.RDS") ## created in download_WDPA.R
 
 
@@ -178,6 +179,8 @@ table(MPA_tbl_clean$replicate) # should all be 1
 
 MPA_tbl_clean$replicate <- NULL
 nrow(MPA_tbl_clean) # 16777 number of MPA with distinct ID (once no letter appended)
+
+#saveRDS(MPA_tbl_clean, file = "Robj/MPA_tbl_clean.RDS")
 
 data.frame(list_name = paste0("MPA_", MPA_tbl_clean$country_code),
            label_name_ori = MPA_tbl_clean$name_ori,

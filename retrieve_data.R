@@ -20,23 +20,28 @@ formr_connect(
 res <- formr_results(survey_name = "MPA_workforce_survey3",
                      host = "https://workforce-admin.marine-conservation.org")
 
+#saveRDS(res, file = "df_raw_data_freeze_11_072025.RDS")
+
 nrow(res)
 sum(!is.na(res$ended))
 nrow(res) - sum(is.na(res$country))
-  
+
 res |> 
   as_tibble() |> 
   select(where(fn = ~ !all(is.na(.x)))) |>
   filter(!is.na(country), !missing_MPA %in% c("test", "TEST", "Test"),
          !anythingelse %in% c("TEST"), !is.na(total_validate)) |>
   mutate(MPA = lay::lay(pick(starts_with("MPA")), \(x) x[!is.na(x)]),
-         MPA = stringr::str_remove_all(MPA, "[:alpha:]|[:punct:]|="),
+         MPA = stringr::str_remove_all(MPA, "[:alpha:]|[:punct:]|\\+|=|̲"),
          MPA = stringr::str_replace_all(MPA, "[:blank:]+", "-"),
+         MPA = stringr::str_remove(MPA, "\\-$"),
          MPA = stringr::str_remove(MPA, ".")) |>
   select(-starts_with("MPA_")) |>
   relocate(MPA, .after = country) -> df_clean
 
 nrow(df_clean)
+
+#saveRDS(df_clean, file = "df_clean_data_280720251508.RDS")
 
 hash <- digest::digest(df_clean)
 
