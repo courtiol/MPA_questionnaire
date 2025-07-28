@@ -133,7 +133,7 @@ data_notjoined |> filter(MPA != "") |>
   distinct()
 ```
 
-The merging failed when WDPA numbers are missing from our list. Note that when WDPA numbers are provided (555592581, 555592591, 13939), those correspond to PA categorized as terrestrial according to WDPA but under the category "Terrestrial and Inland Waters Protected Areas".
+The merging failed when WDPA numbers are missing from our list. Note that when WDPA numbers are provided (555592581, 555592591, 13939), those correspond to PA categorized as terrestrial according to WDPA but under the category "Terrestrial and Inland Waters Protected Areas". For MPAs that are not matched because they correspond to multiple parcels, we will consider that respondents answered for all parcels and we will take the most common data in case of variation between parcels (TODO).
 
 ## Saving clean data
 
